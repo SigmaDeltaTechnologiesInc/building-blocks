@@ -1,3 +1,6 @@
+# There are meta packages only.
+%define debug_package %{nil}
+
 Name:		building-blocks
 Version:	0.0.1
 Release:	0
@@ -9,6 +12,7 @@ Source0:	%{name}-%{version}.tar.gz
 
 Suggests:	%{name}-root-Headless
 Suggests:	%{name}-root-Kernel
+Suggests:	%{name}-root-UI
 
 %description
 The root of all Tizen building block meta packages.
@@ -27,6 +31,7 @@ Summary:	Enable Tizen Headless Device
 Conflicts:	efl
 Conflicts:	wayland
 Requires:	%{name}-sub1-Headless-Minimal
+Suggests:	%{name}-sub1-Headless-Network
 %description root-Headless
 Enableing this means that you are going to create Tizen headless device.
 This disables all display depending packages.
@@ -40,6 +45,22 @@ Requires:	systemd
 Include minimal set of packages for headless.
 %files sub1-Headless-Minimal
 
+%package sub1-Headless-Network
+Summary:	Headless Network Packages
+Requires:	wpa-supplicant
+Suggests:	bluez
+%description sub1-Headless-Network
+Include network packages for headless.
+%files sub1-Headless-Network
+
+%package root-UI
+Summary:	UI Related Packages
+Requires:	efl
+Requires:	wayland
+%description root-UI
+UI Frameworks of Tizen
+%files root-UI
+
 
 # Note to S-Core
 # 1. How are you going to make "Radio Button" UI for "choose one among these" case?
@@ -47,10 +68,9 @@ Include minimal set of packages for headless.
 # 2. How are you going to support Requires/Suggests on virtual packages?
 %package root-Kernel
 Summary:	Linux Kernel
-Requires:	linux-kernel >= 3.10
-Suggests:	arm64-tm2-linux-kernel
-Suggests:	arm-odroidxu3-linux-kernel
-
+Suggests:	arm64-tm2-linux-kernel >= 3.10
+Suggests:	arm-odroidxu3-linux-kernel >= 3.10
+Suggests:	linux-kernel >= 3.10
 %description root-Kernel
 Include Linux Kernel in the Platform Image
 %files root-Kernel
