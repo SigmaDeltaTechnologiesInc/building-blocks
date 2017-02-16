@@ -9,6 +9,7 @@ Summary:	The Root of All Tizen Meta Packages (building blocks)
 Url:		http://tizen.org
 Group:		Meta
 Source0:	%{name}-%{version}.tar.gz
+Source1:	domain-systemfw.inc
 
 Suggests:	%{name}-root-Headless
 Suggests:	%{name}-root-Kernel
@@ -23,8 +24,12 @@ In Tizen building blocks, "Requires" means mandatory package.
 "Suggests" means optional package.
 "Recommened" is reserved for future usage.
 "Conflicts" is to unselect unconditionally.
+
+
 %files
 
+# Include "systemfw" domain. The script should not execute "include" if the contexst is in GBS service in OBS or GBS-Export
+%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1}"), "f") then print("%include %{SOURCE1}") end}}
 
 %package root-Headless
 Summary:	Enable Tizen Headless Device
