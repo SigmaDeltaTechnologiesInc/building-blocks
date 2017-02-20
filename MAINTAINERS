@@ -1,0 +1,18 @@
+
+	List of maintainers
+
+OVERALL RESOURCES
+M:	MyungJoo Ham <myungjoo.ham@samsung.com>
+F:	RULES
+F:	MAINTAINERS
+F:	packaging/building-blocks.spec
+F:	*
+
+DOMAIN: System-FW
+M:	TBD
+F:	packaging/domain-systemfw.inc
+
+
+DOMAIN: Kernel
+M:	TBD
+F:	packaging/domain-kernel.inc

@@ -1,0 +1,65 @@
+===========================================================================
+			1. Naming Rules
+===========================================================================
+
+1-1. "building-blocks" should be the first prefix.
+
+1-2. The top-single block name is "building-blocks"
+
+1-3. Level prefix = "root" | "sub1" | "sub2"
+
+1-4. Except for the top-single block, Level prfix follows
+	the first prefix.
+	E.g., "building-blocks-sub1-..."
+
+1-5. For "root" building blocks, the naming rule is:
+	[first prefix = "building-blocks"]-[level prefix = "root"]-[NAME]
+	E.g., "building-blocks-root-UI"
+
+1-6. For "sub1" building blocks, which has a "root" building block, "ROOTNAME" as its parent, the naming rule is:
+	[first prefix]-[level prefix = "sub1"]-[root name = "ROOTNAME"]-[NAME]
+	E.g., "building-blocks-sub1-UI-wayland"
+
+1-7. For "sub2" building blocks, which has a "sub1" building block, "SUB1NAME" as its parent, the naming rule is:
+	(SUB1NAME has ROOTNAME as its parent)
+	[first prefix]-[level prefix = "sub2"]-[root name = "ROOTNAME"]-[sub1 name = "SUB1NAME"]-[NAME]
+	E.g., "building-blocks-sub2-UI-wayland-core"
+
+1-8. In order to implement "radio-button" UI (choose only one), the block name starts with "chooseonlyone_"
+	E.g., "building-blocks-root-chooseonlyone_Kernel"
+
+
+
+===========================================================================
+			2. Relations between blocks
+===========================================================================
+
+2-1. Top block (building-blocks) lists all root-level blocks
+	Lists with Suggests (optional) and Requires (mandatory)
+
+2-2. A parent block lists all of its direct child blocks (no grandchild listed)
+	Lists with Suggests (optional) and Requires (mandatory)
+
+2-3. A child block cannot have multiple parents.
+
+2-4. Conflict may be defined between blocks.
+	However, you need to get consents from all related stake-holders.
+
+2-6. There cannot be any other relations defined between blocks.
+
+
+
+===========================================================================
+	3. Relations between a block and (non-block) packages
+===========================================================================
+
+3-1. A block may include non-block (individual) packages with Requires (mandatory) and Suggests (optional)
+
+3-2. A package (not block) can exist in multiple blocks.
+
+3-3. A package may be not included in any of the blocks
+	TIC UI will list such packages in "MISC" section.
+
+
+
+
