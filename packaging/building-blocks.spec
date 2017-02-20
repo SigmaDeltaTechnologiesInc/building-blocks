@@ -12,7 +12,7 @@ Source0:	%{name}-%{version}.tar.gz
 Source1:	domain-systemfw.inc
 
 Suggests:	%{name}-root-Headless
-Suggests:	%{name}-root-Kernel
+Suggests:	%{name}-root-chooseonlyone_Kernel
 Suggests:	%{name}-root-UI
 
 %description
@@ -76,6 +76,6 @@ UI Frameworks of Tizen
 %package root-chooseonlyone_Kernel
 Summary:	Linux Kernel
 Requires:	linux-kernel >= 3.10
-%description root-Kernel
+%description root-chooseonlyone_Kernel
 Include Linux Kernel in the Platform Image
-%files root-Kernel
+%files root-chooseonlyone_Kernel
