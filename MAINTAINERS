@@ -3,16 +3,68 @@
 
 OVERALL RESOURCES
 M:	MyungJoo Ham <myungjoo.ham@samsung.com>
+M:	Geunsik Lim <gesunsik.lim@samsung.com>
 F:	RULES
 F:	MAINTAINERS
 F:	packaging/building-blocks.spec
 F:	*
 
 DOMAIN: System-FW
-M:	TBD
+M:	Kun-Hoon Baik <knhoon.baik@samsung.com>
+M:	Hyotaek Shim <hyotaek.shim@samsung.com>
+M:	SEUNGCHUL CHAE <chae.chae@samsung.com>
 F:	packaging/domain-systemfw.inc
 
 
 DOMAIN: Kernel
-M:	TBD
+M:	Inki Dae <inki.dae@samsung.com>
 F:	packaging/domain-kernel.inc
+
+DOMAIN:	App Framework
+M:	TBD
+F:	packaging/domain-appfw.inc
+
+DOMAIN:	Window System
+M:	TBD
+F:	packaging/domain-window-system.inc
+
+DOMAIN: Graphics
+M:	TBD
+F:	packaging/domain-graphics.inc
+
+DOMAIN:	Network & Connectivity
+M:	TBD
+F:	packaging/domain-network.inc
+
+DOMAIN: Multimedia
+M:	TBD
+F:	packaging/domain-multimedia.inc
+
+DOMAIN: HAL
+M:	TBD
+F:	packaging/domain-hal.inc
+
+DOMAIN:	Service Framework
+M:	TBD
+F:	packaging/domain-service-framework.inc
+
+DOMAIN: UI
+M:	TBD
+F:	packaging/domain-UI.inc
+
+DOMAIN: UIX
+M:	TBD
+F:	packaging/domain-UIX.inc
+
+DOMAIN: Security
+M:	TBD
+F:	packaging/domain-security.inc
+
+
+
+
+EPIC FEATURE: Headless
+M:	Ohoon Kwon <ohoon.kwon@samsung.com>
+F:	packaging/epicfeature-headless.inc
+
+

@@ -9,11 +9,26 @@ Summary:	The Root of All Tizen Meta Packages (building blocks)
 Url:		http://tizen.org
 Group:		Meta
 Source0:	%{name}-%{version}.tar.gz
-Source1:	domain-systemfw.inc
+Source1001:	domain-kernel.inc
+Source1002:	domain-systemfw.inc
 
-Suggests:	%{name}-root-Headless
-Suggests:	%{name}-root-chooseonlyone_Kernel
+Source1010:	domain-appfw.inc
+Source1020:	domain-window-system.inc
+Source1030:	domain-graphics.inc
+Source1040:	domain-network.inc
+Source1050:	domain-multimedia.inc
+Source1060:	domain-hal.inc
+Source1070:	domain-service-framework.inc
+Source1080:	domain-UI.inc
+Source1090:	domain-UIX.inc
+Source1100:	domain-security.inc
+
+Source2001:	epicfeature-headless.inc
+
 Suggests:	%{name}-root-UI
+Suggests:	%{name}-root-Kernel
+Suggests:	%{name}-root-System_FW
+Suggests:	%{name}-root-Headless
 
 %description
 The root of all Tizen building block meta packages.
@@ -28,35 +43,32 @@ In Tizen building blocks, "Requires" means mandatory package.
 
 %files
 
+############## DOMAINS ##################
+
+# Include "Kernel" domain. The script should not execute "include" if the contexst is in GBS service in OBS or GBS-Export
+%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then print("%include %{SOURCE1001}") end}}
+
 # Include "systemfw" domain. The script should not execute "include" if the contexst is in GBS service in OBS or GBS-Export
-%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1}"), "f") then print("%include %{SOURCE1}") end}}
+%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1002}"), "f") then print("%include %{SOURCE1002}") end}}
 
-%package root-Headless
-Summary:	Enable Tizen Headless Device
-Conflicts:	efl
-Conflicts:	wayland
-Requires:	%{name}-sub1-Headless-Minimal
-Suggests:	%{name}-sub1-Headless-Network
-%description root-Headless
-Enableing this means that you are going to create Tizen headless device.
-This disables all display depending packages.
-%files root-Headless
+# And other domains
+%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1010}"), "f") then print("%include %{SOURCE1010}") end}}
+%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1020}"), "f") then print("%include %{SOURCE1020}") end}}
+%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1030}"), "f") then print("%include %{SOURCE1030}") end}}
+%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1040}"), "f") then print("%include %{SOURCE1040}") end}}
+%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1050}"), "f") then print("%include %{SOURCE1050}") end}}
+%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1060}"), "f") then print("%include %{SOURCE1060}") end}}
+%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1070}"), "f") then print("%include %{SOURCE1070}") end}}
+%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1080}"), "f") then print("%include %{SOURCE1080}") end}}
+%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1090}"), "f") then print("%include %{SOURCE1090}") end}}
+%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1100}"), "f") then print("%include %{SOURCE1100}") end}}
 
-%package sub1-Headless-Minimal
-Summary:	Minimal Tizen Image Configuration for Headless
-Requires:	bash
-Requires:	systemd
-%description sub1-Headless-Minimal
-Include minimal set of packages for headless.
-%files sub1-Headless-Minimal
 
-%package sub1-Headless-Network
-Summary:	Headless Network Packages
-Requires:	wpa-supplicant
-Suggests:	bluez
-%description sub1-Headless-Network
-Include network packages for headless.
-%files sub1-Headless-Network
+############## EPIC FEATURES ######################
+
+# Include "headless" epic feature. The script should not execute "include" if the contexst is in GBS service in OBS or GBS-Export
+%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE2001}"), "f") then print("%include %{SOURCE2001}") end}}
+
 
 %package root-UI
 Summary:	UI Related Packages
@@ -66,16 +78,3 @@ Requires:	wayland
 UI Frameworks of Tizen
 %files root-UI
 
-
-# Note to S-Core
-# When a block name is "chooseonlyone_*", its UI-shown name is "*" and the elements are shown with radio-button (choose only one) UI.
-# Recommended: add only one Requires here.
-# TIC is going to choose only one package that provides the "requires" package.
-# In this example, TIC is going to choose one pakcage that Provides linux-kernel >= 3.10 if root-chooseonlyone_Kernel is chosen.
-# By default, any package is going to be chosen unless there is another dependencies.
-%package root-chooseonlyone_Kernel
-Summary:	Linux Kernel
-Requires:	linux-kernel >= 3.10
-%description root-chooseonlyone_Kernel
-Include Linux Kernel in the Platform Image
-%files root-chooseonlyone_Kernel

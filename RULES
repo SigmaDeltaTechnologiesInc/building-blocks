@@ -63,3 +63,17 @@
 
 
 
+
+===========================================================================
+		4. Maintainer and Review Rules
+===========================================================================
+
+4-1. Multiple maintainers (M:) per domain is possible. (limit = 3)
+
+4-2. At least one maintainer per domain
+
+4-3. Please do review in a week for incoming commits after review entry added for the maintainers
+
+4-4. To comitters: add proper maintainers as the reviewers in gerrit.
+
+
