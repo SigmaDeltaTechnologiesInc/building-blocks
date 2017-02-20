@@ -68,14 +68,14 @@ UI Frameworks of Tizen
 
 
 # Note to S-Core
-# 1. How are you going to make "Radio Button" UI for "choose one among these" case?
-#   ; root-Kernel has Requires supplied by Suggests for that case
-# 2. How are you going to support Requires/Suggests on virtual packages?
-%package root-Kernel
+# When a block name is "chooseonlyone_*", its UI-shown name is "*" and the elements are shown with radio-button (choose only one) UI.
+# Recommended: add only one Requires here.
+# TIC is going to choose only one package that provides the "requires" package.
+# In this example, TIC is going to choose one pakcage that Provides linux-kernel >= 3.10 if root-chooseonlyone_Kernel is chosen.
+# By default, any package is going to be chosen unless there is another dependencies.
+%package root-chooseonlyone_Kernel
 Summary:	Linux Kernel
-Suggests:	arm64-tm2-linux-kernel >= 3.10
-Suggests:	arm-odroidxu3-linux-kernel >= 3.10
-Suggests:	linux-kernel >= 3.10
+Requires:	linux-kernel >= 3.10
 %description root-Kernel
 Include Linux Kernel in the Platform Image
 %files root-Kernel
