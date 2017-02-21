@@ -34,7 +34,7 @@ Suggests:	%{name}-root-Headless
 %description
 The root of all Tizen building block meta packages.
 Every root-level Tizen building block should be included by this.
-Any "minimal" reauired packages should be somehow (directly or indirectly)
+Any "minimal" required packages should be somehow (directly or indirectly)
 required (included) by this package.
 In Tizen building blocks, "Requires" means mandatory package.
 "Suggests" means optional package.
@@ -46,10 +46,10 @@ In Tizen building blocks, "Requires" means mandatory package.
 
 ############## DOMAINS ##################
 
-# Include "Kernel" domain. The script should not execute "include" if the contexst is in GBS service in OBS or GBS-Export
+# Include "Kernel" domain. The script should not execute "include" if the contexts is in GBS service in OBS or GBS-Export
 %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then print("%include %{SOURCE1001}") end}}
 
-# Include "systemfw" domain. The script should not execute "include" if the contexst is in GBS service in OBS or GBS-Export
+# Include "systemfw" domain. The script should not execute "include" if the contexts is in GBS service in OBS or GBS-Export
 %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1002}"), "f") then print("%include %{SOURCE1002}") end}}
 
 # And other domains
@@ -67,7 +67,7 @@ In Tizen building blocks, "Requires" means mandatory package.
 
 ############## EPIC FEATURES ######################
 
-# Include "headless" epic feature. The script should not execute "include" if the contexst is in GBS service in OBS or GBS-Export
+# Include "headless" epic feature. The script should not execute "include" if the contexts is in GBS service in OBS or GBS-Export
 %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE2001}"), "f") then print("%include %{SOURCE2001}") end}}
 
 
