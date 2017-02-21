@@ -1,4 +1,5 @@
 # There are meta packages only.
+%define __debug_install_post %{nil}
 %define debug_package %{nil}
 
 Name:		building-blocks
