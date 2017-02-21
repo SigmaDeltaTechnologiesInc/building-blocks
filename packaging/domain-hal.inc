@@ -14,6 +14,56 @@ Suggests:	%{name}-sub1-HAL-bluetooth
 Tizen HAL domain
 %files root-HAL
 
+%package sub1-HAL-sort_by_device
+Summary:	Tizen HAL packages sorted by devices
+Suggests:	%{name}-sub2-HAL-sort_by_device-odroid_xu3
+Suggests:	%{name}-sub2-HAL-sort_by_device-odroid_xu4
+Suggests:	%{name}-sub2-HAL-sort_by_device-TM1
+Suggests:	%{name}-sub2-HAL-sort_by_device-TM2
+%description sub1-HAL-sort_by_device
+Tizen HAL packages sorted by devices
+%files sub1-HAL-sort_by_device
+
+%package sub2-HAL-sort_by_device-odroid_xu3
+Summary:	Tizen HAL packages for Device Odroid Xu3
+Requires:	libdrm
+Requires:	libtbm-exynos
+Requires:	libtdm-exynos
+Suggests:	arm-odroidxu3-linux-kernel
+%description sub2-HAL-sort_by_device-odroid_xu3
+Tizen HAL packages for the Device ODROID XU3
+%files sub2-HAL-sort_by_device-odroid_xu3
+
+%package sub2-HAL-sort_by_device-odroid_xu4
+Summary:	Tizen HAL packages for Device Odroid Xu4
+Requires:	libdrm
+Requires:	libtbm-exynos
+Requires:	libtdm-exynos
+%description sub2-HAL-sort_by_device-odroid_xu4
+Tizen HAL packages for the Device Odroid XU4
+%files sub2-HAL-sort_by_device-odroid_xu4
+
+%package sub2-HAL-sort_by_device-TM1
+Summary:	Tizen HAL packages for Device TM1
+Requires:	libdrm
+Requires:	libtbm-sprd
+Requires:	libtdm-sprd
+%description sub2-HAL-sort_by_device-TM1
+Tizen HAL packages for the Device TM1
+%files sub2-HAL-sort_by_device-TM1
+
+%package sub2-HAL-sort_by_device-TM2
+Summary:	Tizen HAL packages for Device TM2
+Requires:	libdrm
+Requires:	libtbm-exynos
+Requires:	libtdm-exynos
+Suggests:	arm64-tm2-linux-kernel
+%description sub2-HAL-sort_by_device-TM2
+Tizen HAL packages for the Device TM2
+%files sub2-HAL-sort_by_device-TM2
+
+
+
 %package sub1-HAL-display
 Summary:	Tizen Display HAL
 Suggests:	%{name}-sub2-HAL-display-odroid
