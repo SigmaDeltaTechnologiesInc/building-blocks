@@ -7,6 +7,7 @@
 
 %package root-HAL
 Summary:	Tizen HAL Domain
+Suggests:	%{name}-sub1-HAL-sort_by_device
 Suggests:	%{name}-sub1-HAL-display
 Suggests:	%{name}-sub1-HAL-audio
 Suggests:	%{name}-sub1-HAL-bluetooth
