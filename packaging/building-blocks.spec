@@ -27,9 +27,12 @@ Source1100:	domain-security.inc
 Source2001:	epicfeature-headless.inc
 
 Suggests:	%{name}-root-UI
+Suggests:	%{name}-root-HAL
 Suggests:	%{name}-root-Kernel
 Suggests:	%{name}-root-System_FW
-Suggests:	%{name}-root-Headless
+
+Suggests:	%{name}-root-feature_Headless
+Suggests:	%{name}-root-feature_Headed
 
 %description
 The root of all Tizen building block meta packages.
