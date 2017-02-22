@@ -7,6 +7,7 @@ Summary:	Enable Tizen Headless Device
 Conflicts:	efl
 Conflicts:	wayland
 Conflicts:	%{name}-root-feature_Headed
+# You need to list "Important (commonly-required)" headed-only packages/blocks with Conflicts.
 Requires:	%{name}-sub1-feature_Headless-Minimal
 Suggests:	%{name}-sub1-feature_Headless-Network
 %description root-feature_Headless
@@ -35,6 +36,7 @@ Summary:	Enable Tizen Headed Device (disable headless)
 Conflicts:	%{name}-root-feature_Headless
 Conflicts:	%{name}-sub1-feature_Headless-Minimal
 Conflicts:	%{name}-sub1-feature_Headless-Network
+# You may list ALL headless-ONLY packages/blocks with Conflicts.
 Requires:	bash
 Requires:	systemd
 
