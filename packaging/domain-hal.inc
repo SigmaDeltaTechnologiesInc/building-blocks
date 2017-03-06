@@ -21,6 +21,7 @@ Suggests:	%{name}-sub2-HAL-sort_by_device-odroid_xu3
 Suggests:	%{name}-sub2-HAL-sort_by_device-odroid_xu4
 Suggests:	%{name}-sub2-HAL-sort_by_device-TM1
 Suggests:	%{name}-sub2-HAL-sort_by_device-TM2
+Suggests:	%{name}-sub2-HAL-sort_by_device-RPI3
 %description sub1-HAL-sort_by_device
 Tizen HAL packages sorted by devices
 %files sub1-HAL-sort_by_device
@@ -63,6 +64,16 @@ Suggests:	arm64-tm2-linux-kernel
 Tizen HAL packages for the Device TM2
 %files sub2-HAL-sort_by_device-TM2
 
+%package sub2-HAL-sort_by_device-RPI3
+Summary:	Tizen HAL packages for Device Raspberry Pi 3
+Requires:	libdrm
+Requires:	libtbm
+Requires:	libtdm-drm
+Suggests:	arm64-rpi3-linux-kernel
+Suggests:	arm64-rpi3-linux-kernel-modules
+%description sub2-HAL-sort_by_device-RPI3
+Tizen HAL packages for the Device Raspberry Pi 3
+%files sub2-HAL-sort_by_device-RPI3
 
 
 %package sub1-HAL-display
