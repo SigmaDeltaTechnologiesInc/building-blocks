@@ -27,6 +27,12 @@ Source1100:	domain-security.inc
 Source2001:	epicfeature-headless.inc
 Source2010:	epicfeature-development.inc
 
+
+# Do not try to include files if RPMBUILD has already expanded source files
+# Use Source1001 (domain-kernel) as the probing point.
+%define include_if_mainbuild() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then print("%include "..rpm.expand("%{1}")) end}}
+
+
 Suggests:	%{name}-root-UI
 Suggests:	%{name}-root-HAL
 Suggests:	%{name}-root-Kernel
@@ -34,6 +40,10 @@ Suggests:	%{name}-root-System_FW
 
 Suggests:	%{name}-root-feature_Headless
 Suggests:	%{name}-root-feature_Headed
+
+Suggests:	%{name}-root-feature_Development
+
+Suggests:	%{name}-root-preset
 
 %description
 The root of all Tizen building block meta packages.
@@ -51,30 +61,30 @@ In Tizen building blocks, "Requires" means mandatory package.
 ############## DOMAINS ##################
 
 # Include "Kernel" domain. The script should not execute "include" if the contexts is in GBS service in OBS or GBS-Export
-%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then print("%include %{SOURCE1001}") end}}
+%include_if_mainbuild %{SOURCE1001}
 
 # Include "systemfw" domain. The script should not execute "include" if the contexts is in GBS service in OBS or GBS-Export
-%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1002}"), "f") then print("%include %{SOURCE1002}") end}}
+%include_if_mainbuild %{SOURCE1002}
 
 # And other domains
-%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1010}"), "f") then print("%include %{SOURCE1010}") end}}
-%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1020}"), "f") then print("%include %{SOURCE1020}") end}}
-%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1030}"), "f") then print("%include %{SOURCE1030}") end}}
-%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1040}"), "f") then print("%include %{SOURCE1040}") end}}
-%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1050}"), "f") then print("%include %{SOURCE1050}") end}}
-%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1060}"), "f") then print("%include %{SOURCE1060}") end}}
-%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1070}"), "f") then print("%include %{SOURCE1070}") end}}
-%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1080}"), "f") then print("%include %{SOURCE1080}") end}}
-%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1090}"), "f") then print("%include %{SOURCE1090}") end}}
-%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1100}"), "f") then print("%include %{SOURCE1100}") end}}
-
+%include_if_mainbuild %{SOURCE1010}
+%include_if_mainbuild %{SOURCE1020}
+%include_if_mainbuild %{SOURCE1030}
+%include_if_mainbuild %{SOURCE1040}
+%include_if_mainbuild %{SOURCE1050}
+%include_if_mainbuild %{SOURCE1060}
+%include_if_mainbuild %{SOURCE1070}
+%include_if_mainbuild %{SOURCE1080}
+%include_if_mainbuild %{SOURCE1090}
+%include_if_mainbuild %{SOURCE1100}
 
 ############## EPIC FEATURES ######################
 
 # Include "headless" epic feature. The script should not execute "include" if the contexts is in GBS service in OBS or GBS-Export
-%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE2001}"), "f") then print("%include %{SOURCE2001}") end}}
+%include_if_mainbuild %{SOURCE2001}
 
-%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE2010}"), "f") then print("%include %{SOURCE2010}") end}}
+%include_if_mainbuild %{SOURCE2010}
+
 
 %package root-UI
 Summary:	UI Related Packages
