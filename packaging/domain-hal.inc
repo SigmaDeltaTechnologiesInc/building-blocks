@@ -66,13 +66,12 @@ Tizen HAL packages for the Device TM2
 
 %package sub2-HAL-sort_by_device-RPI3
 Summary:	Tizen HAL packages for Device Raspberry Pi 3
-Requires:	libdrm
-Requires:	libtbm
-Requires:	libtdm-drm
+Requires:	model-config-tm1
 Suggests:	arm64-rpi3-linux-kernel
 Suggests:	arm64-rpi3-linux-kernel-modules
 %description sub2-HAL-sort_by_device-RPI3
 Tizen HAL packages for the Device Raspberry Pi 3
+We do not have RPI3 specific userspace device drivers and reusing some of TM1 packages.
 %files sub2-HAL-sort_by_device-RPI3
 
 
