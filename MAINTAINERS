@@ -67,4 +67,7 @@ EPIC FEATURE: Headless
 M:	Ohoon Kwon <ohoon.kwon@samsung.com>
 F:	packaging/epicfeature-headless.inc
 
+EPIC FEATURE: Development Tools
+M:	MyungJoo Ham <myungjoo.ham@samsung.com>
+F:	packaging/epicfeature-development.inc
 

@@ -25,6 +25,7 @@ Source1090:	domain-UIX.inc
 Source1100:	domain-security.inc
 
 Source2001:	epicfeature-headless.inc
+Source2010:	epicfeature-development.inc
 
 Suggests:	%{name}-root-UI
 Suggests:	%{name}-root-HAL
@@ -73,6 +74,7 @@ In Tizen building blocks, "Requires" means mandatory package.
 # Include "headless" epic feature. The script should not execute "include" if the contexts is in GBS service in OBS or GBS-Export
 %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE2001}"), "f") then print("%include %{SOURCE2001}") end}}
 
+%{expand:%{lua:if posix.access(rpm.expand("%{SOURCE2010}"), "f") then print("%include %{SOURCE2010}") end}}
 
 %package root-UI
 Summary:	UI Related Packages
