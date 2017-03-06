@@ -27,6 +27,7 @@ Source1100:	domain-security.inc
 Source2001:	epicfeature-headless.inc
 Source2010:	epicfeature-development.inc
 
+Source3001:	platform-preset.inc
 
 # Do not try to include files if RPMBUILD has already expanded source files
 # Use Source1001 (domain-kernel) as the probing point.
@@ -84,6 +85,13 @@ In Tizen building blocks, "Requires" means mandatory package.
 %include_if_mainbuild %{SOURCE2001}
 
 %include_if_mainbuild %{SOURCE2010}
+
+
+############# PLATFORM PRESET #####################
+
+# Tizen Platform Presets.
+# Unlike Preset-Recipes of TIC, you cannot deselect packages from these presets.
+%include_if_mainbuild %{SOURCE3001}
 
 
 %package root-UI
