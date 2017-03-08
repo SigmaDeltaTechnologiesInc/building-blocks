@@ -80,10 +80,11 @@ Tizen IoT Device Presets
 Summary:	Mobile-TM1 Preset
 Conflicts:	%{name}-sub2-preset-mobile-tm2
 Conflicts:	%{name}-sub2-preset-mobile-minimal
-%define __preset_mobile_tm1 %{_builddir}/presets/tm1.packages
-%{expand:%{lua:if posix.access(rpm.expand("%{__preset_mobile_tm1}"), "f") then print("%include %{__preset_mobile_tm1}") end}}
+%include_if_mainbuild %{SOURCE3101}
 %description sub2-preset-mobile-tm1
-Tizen Mobile TM1 Preset
+Tizen Mobile TM1 Preset. This is for armv7l architecture only.
+You may need mobile + tm1 MIC post script as well.
+(TIC RECIPE for POST is not READY YET)
 %files sub2-preset-mobile-tm1
 
 %package sub2-preset-mobile-tm2
@@ -91,7 +92,7 @@ Summary:	Mobile-TM2 Preset
 Conflicts:	%{name}-sub2-preset-mobile-tm1
 Conflicts:	%{name}-sub2-preset-mobile-minimal
 %description sub2-preset-mobile-tm2
-Tizen Mobile TM2 Preset
+Tizen Mobile TM2 Preset. This is for aarch64 architecture only.
 %files sub2-preset-mobile-tm2
 
 %package sub2-preset-mobile-minimal

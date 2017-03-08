@@ -27,9 +27,10 @@ Source1100:	domain-security.inc
 Source2001:	epicfeature-headless.inc
 Source2010:	epicfeature-development.inc
 
-Source3001:	platform-preset.inc
+Source3000:	platform-preset.inc
+Source3101:	preset_tm1.packages
 
-# Do not try to include files if RPMBUILD has already expanded source files
+# Do not try to include files unless RPMBUILD has already expanded source files to SOURCES
 # Use Source1001 (domain-kernel) as the probing point.
 %define include_if_mainbuild() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then print("%include "..rpm.expand("%{1}")) end}}
 
@@ -91,7 +92,7 @@ In Tizen building blocks, "Requires" means mandatory package.
 
 # Tizen Platform Presets.
 # Unlike Preset-Recipes of TIC, you cannot deselect packages from these presets.
-%include_if_mainbuild %{SOURCE3001}
+%include_if_mainbuild %{SOURCE3000}
 
 
 %package root-UI
