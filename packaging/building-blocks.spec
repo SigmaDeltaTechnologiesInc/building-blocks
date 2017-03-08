@@ -26,6 +26,7 @@ Source1100:	domain-security.inc
 
 Source2001:	epicfeature-headless.inc
 Source2010:	epicfeature-development.inc
+Source2020:	epicfeature-platform.inc
 
 Source3000:	platform-preset.inc
 Source3101:	preset_tm1.packages
@@ -46,6 +47,7 @@ Suggests:	%{name}-root-feature_Headless
 Suggests:	%{name}-root-feature_Headed
 
 Suggests:	%{name}-root-feature_Development
+Suggests:	%{name}-root-feature_Platform
 
 Suggests:	%{name}-root-preset
 
@@ -87,7 +89,11 @@ In Tizen building blocks, "Requires" means mandatory package.
 # Include "headless" epic feature. The script should not execute "include" if the contexts is in GBS service in OBS or GBS-Export
 %include_if_mainbuild %{SOURCE2001}
 
+# Dev tools
 %include_if_mainbuild %{SOURCE2010}
+
+# Platform features
+%include_if_mainbuild %{SOURCE2020}
 
 
 ############# PLATFORM PRESET #####################
@@ -97,6 +103,7 @@ In Tizen building blocks, "Requires" means mandatory package.
 %include_if_mainbuild %{SOURCE3000}
 
 
+# TODO (move somewhere into headless or ui domain)
 %package root-UI
 Summary:	UI Related Packages
 Requires:	efl
