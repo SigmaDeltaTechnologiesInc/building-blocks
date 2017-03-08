@@ -29,6 +29,8 @@ Source2010:	epicfeature-development.inc
 
 Source3000:	platform-preset.inc
 Source3101:	preset_tm1.packages
+Source3102:	preset_tm2_aarch64.packages
+Source3103:	preset_tm2_armv7l.packages
 
 # Do not try to include files unless RPMBUILD has already expanded source files to SOURCES
 # Use Source1001 (domain-kernel) as the probing point.

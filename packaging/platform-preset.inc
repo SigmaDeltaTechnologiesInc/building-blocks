@@ -21,7 +21,8 @@ Conflicts:	%{name}-sub1-preset-wearable
 Conflicts:	%{name}-sub1-preset-ivi
 Conflicts:	%{name}-sub1-preset-iot
 Suggests:	%{name}-sub2-preset-mobile-tm1
-Suggests:	%{name}-sub2-preset-mobile-tm2
+Suggests:	%{name}-sub2-preset-mobile-tm2-aarch64
+Suggests:	%{name}-sub2-preset-mobile-tm2-armv7l
 Suggests:	%{name}-sub2-preset-mobile-minimal
 %description sub1-preset-mobile
 Tizen Mobile Platform Presets
@@ -75,25 +76,44 @@ Suggests:	%{name}-sub2-preset-iot-rpi3_minimal
 Tizen IoT Device Presets
 %files sub1-preset-iot
 
-
 %package sub2-preset-mobile-tm1
 Summary:	Mobile-TM1 Preset
-Conflicts:	%{name}-sub2-preset-mobile-tm2
+Conflicts:	%{name}-sub2-preset-mobile-tm2-aarch64
+Conflicts:	%{name}-sub2-preset-mobile-tm2-armv7l
 Conflicts:	%{name}-sub2-preset-mobile-minimal
 %include_if_mainbuild %{SOURCE3101}
 %description sub2-preset-mobile-tm1
-Tizen Mobile TM1 Preset. This is for armv7l architecture only.
+Tizen Mobile TM1 Preset, which is using armv7l.
+You may use this preset for other architectures; however,
+please note that the TM1 model itself is for armv7l only.
+This block is allowed for other architectures only to let
+other arch devices start with TM1 packages.
 You may need mobile + tm1 MIC post script as well.
 (TIC RECIPE for POST is not READY YET)
 %files sub2-preset-mobile-tm1
 
-%package sub2-preset-mobile-tm2
+%package sub2-preset-mobile-tm2-aarch64
 Summary:	Mobile-TM2 Preset
 Conflicts:	%{name}-sub2-preset-mobile-tm1
+Conflicts:	%{name}-sub2-preset-mobile-tm2-armv7l
 Conflicts:	%{name}-sub2-preset-mobile-minimal
-%description sub2-preset-mobile-tm2
+%include_if_mainbuild %{SOURCE3102}
+%description sub2-preset-mobile-tm2-aarch64
 Tizen Mobile TM2 Preset. This is for aarch64 architecture only.
-%files sub2-preset-mobile-tm2
+For architectural/post-script note, please refer to tm1 twin.
+%files sub2-preset-mobile-tm2-aarch64
+
+%package sub2-preset-mobile-tm2-armv7l
+Summary:	Mobile-TM2 Preset
+Conflicts:	%{name}-sub2-preset-mobile-tm1
+Conflicts:	%{name}-sub2-preset-mobile-tm2-aarch64
+Conflicts:	%{name}-sub2-preset-mobile-minimal
+%include_if_mainbuild %{SOURCE3103}
+%description sub2-preset-mobile-tm2-armv7l
+Tizen Mobile TM2 Preset. This is for armv7l architecture only.
+Although TM2 has 64bit processor, we may use 32bit userspace binaries for it.
+For architectural/post-script note, please refer to tm1 twin.
+%files sub2-preset-mobile-tm2-armv7l
 
 %package sub2-preset-mobile-minimal
 Summary:	Mobile Minimal Preset
