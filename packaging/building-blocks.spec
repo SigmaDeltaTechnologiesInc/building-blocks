@@ -29,13 +29,42 @@ Source2010:	epicfeature-development.inc
 Source2020:	epicfeature-platform.inc
 
 Source3000:	platform-preset.inc
-Source3101:	preset_tm1.packages
-Source3102:	preset_tm2_aarch64.packages
-Source3103:	preset_tm2_armv7l.packages
+Source3100:	platform-preset-mobile.inc
+Source3200:	platform-preset-wearable.inc
+Source3300:	platform-preset-tv.inc
+Source3400:	platform-preset-ivi.inc
+Source3500:	platform-preset-iot.inc
+Source3600:	platform-preset-common.inc
+Source3700:	platform-preset-home_appliance.inc
+
+# To get .ks files
+BuildRequires:	image-configurations
 
 # Do not try to include files unless RPMBUILD has already expanded source files to SOURCES
 # Use Source1001 (domain-kernel) as the probing point.
-%define include_if_mainbuild() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then print("%include "..rpm.expand("%{1}")) end}}
+%define include_if_mainbuild() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then print("%include "..rpm.expand("%{1}").."\\n") end}}
+
+# Create a target device preset from .ks file used to create device iamge.
+# This script writes build-spec when building the build-spec itself. :)
+# Importing .kg file with list_with_require() based on image-configuration will work
+# after Tizen:Unified starts to generate its own platform images.
+%define list_with_require() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then \
+	local start = 0 \
+	for line in io.lines(rpm.expand("%{1}")) do \
+		if (string.match(line, '%%end')) then break end \
+		if (string.match(line, '%%packages')) then \
+			start = 1 \
+		else \
+			if (start == 1) then \
+				if (string.match(line, '^#')) then \
+				elseif (string.match(line, '^$')) then \
+				else \
+					print("Requires: "..line.."\\n") \
+				end \
+			end \
+		end \
+	end \
+end}}
 
 
 Suggests:	%{name}-root-UI
@@ -60,6 +89,9 @@ In Tizen building blocks, "Requires" means mandatory package.
 "Suggests" means optional package.
 "Recommened" is reserved for future usage.
 "Conflicts" is to unselect unconditionally.
+
+%build
+ls /usr/share/image-configurations/
 
 
 %files

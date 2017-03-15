@@ -71,3 +71,32 @@ EPIC FEATURE: Development Tools
 M:	MyungJoo Ham <myungjoo.ham@samsung.com>
 F:	packaging/epicfeature-development.inc
 
+
+PLATFORM PRESET: Mobile
+M:	TBD
+F:	packaging/platform-preset-mobile.inc
+
+PLATFORM PRESET: Wearable
+M:	TBD
+F:	packaging/platform-preset-wearable.inc
+
+PLATFORM PRESET: TV
+M:	TBD
+F:	packaging/platform-preset-tv.inc
+
+PLATFORM PRESET: IVI
+M:	TBD
+F:	packaging/platform-preset-ivi.inc
+
+PLATFORM PRESET: IoT
+M:	TBD
+F:	packaging/platform-preset-iot.inc
+
+PLATFORM PRESET: Common
+M:	TBD
+F:	packaging/platform-preset-common.inc
+
+PLATFORM PRESET: Home Appliance
+M:	TBD
+F:	packaging/platform-preset-home_appliance.inc
+
