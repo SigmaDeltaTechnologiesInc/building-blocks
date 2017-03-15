@@ -1,16 +1,16 @@
 # Maintainer: ...
 # You need ACK (+1) from the maintainer to be reviewed by building-blocks maintainers.
 
-%package root-System_FW
-Summary:	Tizen System Framework Domain
+%package root-SystemFW
+Summary:	Tizen System Framework
 Suggests:	resourced
 Suggests:	deviced
-
-%description root-System_FW
+%description root-SystemFW
 This domain, "System FW", introduces packages and sub-domains/features
 of Tizen System-FW domain.
 This is maintained by ...
+%files root-SystemFW
+# Keep this empty
 
-%files root-System_FW
 
 # END

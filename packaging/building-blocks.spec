@@ -10,9 +10,9 @@ Summary:	The Root of All Tizen Meta Packages (building blocks)
 Url:		http://tizen.org
 Group:		Meta
 Source0:	%{name}-%{version}.tar.gz
+
 Source1001:	domain-kernel.inc
 Source1002:	domain-systemfw.inc
-
 Source1010:	domain-appfw.inc
 Source1020:	domain-window-system.inc
 Source1030:	domain-graphics.inc
@@ -40,6 +40,40 @@ Source3700:	platform-preset-home_appliance.inc
 # To get .ks files
 BuildRequires:	image-configurations
 
+# Root Domains
+Suggests:	%{name}-root-Kernel
+Suggests:	%{name}-root-SystemFW
+Suggests:	%{name}-root-AppFW
+Suggests:	%{name}-root-Window
+Suggests:	%{name}-root-graphics
+Suggests:	%{name}-root-network
+Suggests:	%{name}-root-multimedia
+Suggests:	%{name}-root-HAL
+Suggests:	%{name}-root-serviceFW
+Suggests:	%{name}-root-UI
+Suggests:	%{name}-root-UIX
+Suggests:	%{name}-root-security
+
+
+Suggests:	%{name}-root-feature_Headless
+Suggests:	%{name}-root-feature_Headed
+
+Suggests:	%{name}-root-feature_Development
+Suggests:	%{name}-root-feature_Platform
+
+Suggests:	%{name}-root-preset
+
+%description
+The root of all Tizen building block meta packages.
+Every root-level Tizen building block should be included by this.
+Any "minimal" required packages should be somehow (directly or indirectly)
+required (included) by this package.
+In Tizen building blocks, "Requires" means mandatory package.
+"Suggests" means optional package.
+"Recommened" is reserved for future usage.
+"Conflicts" is to unselect unconditionally.
+
+
 # Do not try to include files unless RPMBUILD has already expanded source files to SOURCES
 # Use Source1001 (domain-kernel) as the probing point.
 %define include_if_mainbuild() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then print("%include "..rpm.expand("%{1}").."\\n") end}}
@@ -66,29 +100,6 @@ BuildRequires:	image-configurations
 	end \
 end}}
 
-
-Suggests:	%{name}-root-UI
-Suggests:	%{name}-root-HAL
-Suggests:	%{name}-root-Kernel
-Suggests:	%{name}-root-System_FW
-
-Suggests:	%{name}-root-feature_Headless
-Suggests:	%{name}-root-feature_Headed
-
-Suggests:	%{name}-root-feature_Development
-Suggests:	%{name}-root-feature_Platform
-
-Suggests:	%{name}-root-preset
-
-%description
-The root of all Tizen building block meta packages.
-Every root-level Tizen building block should be included by this.
-Any "minimal" required packages should be somehow (directly or indirectly)
-required (included) by this package.
-In Tizen building blocks, "Requires" means mandatory package.
-"Suggests" means optional package.
-"Recommened" is reserved for future usage.
-"Conflicts" is to unselect unconditionally.
 
 %build
 ls /usr/share/image-configurations/
@@ -134,13 +145,4 @@ ls /usr/share/image-configurations/
 # Unlike Preset-Recipes of TIC, you cannot deselect packages from these presets.
 %include_if_mainbuild %{SOURCE3000}
 
-
-# TODO (move somewhere into headless or ui domain)
-%package root-UI
-Summary:	UI Related Packages
-Requires:	efl
-Requires:	wayland
-%description root-UI
-UI Frameworks of Tizen
-%files root-UI
 

@@ -41,7 +41,7 @@ M:	TBD
 F:	packaging/domain-multimedia.inc
 
 DOMAIN: HAL
-M:	TBD
+M:	Inki Dae <inki.dae@samsung.com>
 F:	packaging/domain-hal.inc
 
 DOMAIN:	Service Framework
@@ -71,32 +71,35 @@ EPIC FEATURE: Development Tools
 M:	MyungJoo Ham <myungjoo.ham@samsung.com>
 F:	packaging/epicfeature-development.inc
 
+EPIC FEATURE: Platform Features
+M:	TBD (Tizen PM)
+F:	packaging/epicfeature-development.inc
 
 PLATFORM PRESET: Mobile
-M:	TBD
+M:	TBD (Tizen Mobile PM)
 F:	packaging/platform-preset-mobile.inc
 
 PLATFORM PRESET: Wearable
-M:	TBD
+M:	TBD (Tizen Wearable PM)
 F:	packaging/platform-preset-wearable.inc
 
 PLATFORM PRESET: TV
-M:	TBD
+M:	TBD (Tizen TV PM)
 F:	packaging/platform-preset-tv.inc
 
 PLATFORM PRESET: IVI
-M:	TBD
+M:	TBD (Tizen IVI PM)
 F:	packaging/platform-preset-ivi.inc
 
 PLATFORM PRESET: IoT
-M:	TBD
+M:	TBD (Tizen IoT PM)
 F:	packaging/platform-preset-iot.inc
 
 PLATFORM PRESET: Common
-M:	TBD
+M:	TBD (Tizen Common PM)
 F:	packaging/platform-preset-common.inc
 
 PLATFORM PRESET: Home Appliance
-M:	TBD
+M:	TBD (Tizen Home Appliance PM)
 F:	packaging/platform-preset-home_appliance.inc
 

@@ -4,13 +4,13 @@
 %package root-Kernel
 Summary:	Tizen Kernel Domain
 Suggests:	%{name}-sub1-Kernel-chooseonlyone_Kernel
-
 %description root-Kernel
 This domain, "Kernel", introdues packages and sub-domains/features
 of Tizen Kernel packages.
 This is maintained by Inki Dae.
-
 %files root-Kernel
+# Keep this empty
+
 
 
 # Note to S-Core
@@ -28,6 +28,8 @@ Requires:	linux-kernel >= 3.10
 Include Linux Kernel in the Platform Image
 
 %files sub1-Kernel-chooseonlyone_Kernel
+# Keep this empty
+
 
 
 

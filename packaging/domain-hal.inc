@@ -1,9 +1,5 @@
-# Maintainer: Please Write
+# Maintainer: Inki Dae <inki.dae@samsung.com>
 # You need ACK (+1) from the maintainer to be reviewed by building-blocks maintainers.
-
-
-
-### << PLEASE FILL IN YOUR ROOT/SUB PACKAGES >> ###
 
 %package root-HAL
 Summary:	Tizen HAL Domain
