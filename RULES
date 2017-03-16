@@ -27,6 +27,7 @@
 
 1-8. In order to implement "radio-button" UI (choose only one), the block name starts with "chooseonlyone_"
 	E.g., "building-blocks-root-chooseonlyone_Kernel"
+	#### CAUTION: NOT SUPPORTED. NOT GUARANTEED TO WORK AS SUPPOSED ####
 
 1-9. [NAME] = [a-zA-Z0-9_]+
 

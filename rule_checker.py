@@ -8,6 +8,11 @@
 # This does not check all rules of "RULES"
 # This is a prototype with a lot of work in progress
 
+# TODO: Context-Aware Rule Check. (inter-block relations)
+# Check if root exists for RULE 1-6
+# Check if sub1 exists for RULE 1-7
+# Check if a block is "Suggested/Required" by another block (orphan check)
+
 
 
 from __future__ import print_function
@@ -76,11 +81,27 @@ def ruleCheckInc(file):
 	    report(file, lc, line)
 	    continue
 
-        # RULE 1-5 + 1-9 / there is - in the name
+        # RULE 1-9 for root block (1-5)
         if re.search('^\s*%package\s*root', line) and	\
-            not re.search('^\s*%package\s*root-[a-zA-Z0-9_]*\s*$', line):
+            not re.search('^\s*%package\s*root-[a-zA-Z0-9_]+\s*$', line):
             error += 1
 	    print("ERROR: RULE 1.9 not met with root (RULE 1.5)")
+	    report(file, lc, line)
+	    continue
+
+	# RULE 1-9 for sub1 block (1-6)
+	if re.search('^\s*%package\s*sub1', line) and	\
+	    not re.search('^\s*%package\s*sub1-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+\s*$', line):
+	    error += 1
+	    print("ERROR: RULE 1.9 not met with sub1 (RULE 1.6)")
+	    report(file, lc, line)
+	    continue
+
+	# RULE 1-9 for sub2 block (1-7)
+	if re.search('^\s*%package\s*sub2', line) and	\
+	    not re.search('^\s*%package\s*sub2-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+\s*$', line):
+	    error += 1
+	    print("ERROR: RULE 1.9 not met with sub1 (RULE 1.7)")
 	    report(file, lc, line)
 	    continue
 
