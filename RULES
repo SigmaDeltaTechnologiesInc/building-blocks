@@ -94,3 +94,5 @@
 	We do not have any semantics for building blocks with such relations.
 	When we have definitions for such semantics and have them implemented in
 	TIC, we can allow then.
+
+5.3. A block must NOT have any files included
