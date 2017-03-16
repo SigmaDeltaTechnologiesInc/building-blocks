@@ -8,12 +8,6 @@
 # This does not check all rules of "RULES"
 # This is a prototype with a lot of work in progress
 
-# TODO: Context-Aware Rule Check. (inter-block relations)
-# Check if root exists for RULE 1-6
-# Check if sub1 exists for RULE 1-7
-# Check if a block is "Suggested/Required" by another block (orphan check)
-
-
 
 from __future__ import print_function
 import re
@@ -71,7 +65,7 @@ def ruleCheckInterBlock():
 		    error += 1
 		    print("ERROR: Orphaned sub block. The block "+n+" is not registered at the parent block "+p+" although "+p+" exists.")
 
-        # TODO: Which item?
+        # TODO: Add more rules here?
 
 
 
