@@ -53,6 +53,11 @@ def ruleCheckInc(file):
 	    error += 1
 	    print("ERROR: RULE 1.1 to ensure 1.1, do not use -n option in package name")
 
+        # Implicit / General Rule
+        if re.search('^\s*%package\s', line, re.IGNORECASE) and not re.search('^\s*%package\s', line):
+            error += 1
+            print('ERROR: (General) Please use %package, not '+re.search('^%package'))
+
 	# RULE 1-3
 	if re.search('^\s*%package', line) and not re.search('^\s*%package\s*(root)|(sub1)|(sub2)', line):
 	    error +=1

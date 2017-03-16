@@ -40,6 +40,9 @@ Source3700:	platform-preset-home_appliance.inc
 # To get .ks files
 BuildRequires:	image-configurations
 
+# To check the rules
+BuildRequires:	python
+
 # Root Domains
 Suggests:	%{name}-root-Kernel
 Suggests:	%{name}-root-SystemFW
@@ -100,10 +103,13 @@ In Tizen building blocks, "Requires" means mandatory package.
 	end \
 end}}
 
+%prep
+%setup
 
 %build
-ls /usr/share/image-configurations/
 
+# rule_checker returns non-zero if there is an error in *.inc, breaking the build
+python ./rule_checker.py
 
 %files
 
