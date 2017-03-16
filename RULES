@@ -77,3 +77,17 @@
 4-4. To comitters: add proper maintainers as the reviewers in gerrit.
 
 
+
+
+
+===========================================================================
+		5. Other Coding Rules
+===========================================================================
+
+5-1. A domain cannot add "BuildRequires"
+	Global relations cannot be added by an individual domain.
+
+5.2. A domain cannot add "Recommends", "Provides", "Enhances", "Supplements"
+	We do not have any semantics for building blocks with such relations.
+	When we have definitions for such semantics and have them implemented in
+	TIC, we can allow then.
