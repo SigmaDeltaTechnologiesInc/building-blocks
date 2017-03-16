@@ -306,10 +306,16 @@ def main():
 
     # iterate in the list of ./packaging/
     for file in dirs:
-        if re.search('\.inc', file):
+        if re.search(r'\.inc', file):
 	    result = ruleCheckInc(file)
 	    error += result[0]
 	    warning += result[1]
+	elif re.search(r'^\..*\.sw.', file):
+	    # skip if it is vi swap file
+	    print("There is a garbage in packaging. But let's skip (next version should check git status")
+	elif not file == 'building-blocks.spec':
+	    print("Please do not put garbage files in packaging/ directory: "+file)
+	    error += 1
 
     result = ruleCheckInterBlock()
     error += result[0]
