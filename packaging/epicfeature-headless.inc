@@ -5,7 +5,7 @@
 %package root-feature_Headless
 Summary:	Enable Tizen Headless Device
 Conflicts:	efl
-Conflicts:	wayland
+Conflicts:	libwayland-server
 Conflicts:	%{name}-root-feature_Headed
 # You need to list "Important (commonly-required)" headed-only packages/blocks with Conflicts.
 Requires:	%{name}-sub1-feature_Headless-Minimal

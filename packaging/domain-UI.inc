@@ -4,7 +4,7 @@
 %package root-UI
 Summary:	UI Domain
 Requires:	efl
-Requires:	wayland
+Requires:	libwayland-server
 %description root-UI
 Tizen UI Domain Root Block
 %files root-UI
