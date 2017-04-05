@@ -43,7 +43,24 @@ BuildRequires:	image-configurations
 # To check the rules
 BuildRequires:	python
 
-# Root Domains
+# Root Categories
+Suggests:	%{name}-category-domains
+Suggests:	%{name}-category-epicfeatures
+Suggests:	%{name}-category-presets
+
+%description
+The root of all Tizen building block meta packages.
+Every root-level Tizen building block should be included by this.
+Any "minimal" required packages should be somehow (directly or indirectly)
+required (included) by this package.
+In Tizen building blocks, "Requires" means mandatory package.
+"Suggests" means optional package.
+"Recommened" is reserved for future usage.
+"Conflicts" is to unselect unconditionally.
+
+
+%package	category-domains
+Summary:	Tizen Techinical Domains
 Suggests:	%{name}-root-Kernel
 Suggests:	%{name}-root-SystemFW
 Suggests:	%{name}-root-AppFW
@@ -56,25 +73,36 @@ Suggests:	%{name}-root-serviceFW
 Suggests:	%{name}-root-UI
 Suggests:	%{name}-root-UIX
 Suggests:	%{name}-root-security
+%description	category-domains
+This meta package lists all Tizen blocks (meta packages) designating
+techinical domains.
+%files		category-domains
+# Intentionally empty
 
 
+%package	category-epicfeatures
+Summary:	Tizen Major Features
 Suggests:	%{name}-root-feature_Headless
 Suggests:	%{name}-root-feature_Headed
-
 Suggests:	%{name}-root-feature_Development
 Suggests:	%{name}-root-feature_Platform
+%description	category-epicfeatures
+This meta package lists all Tizen blocks (meta packages) designating
+major features that are supposed to be orthogonal to each other
+and to most domains.
+%files		category-epicfeatures
+# Intentionally empty
 
+
+%package	category-presets
+Summary:	Tizen Presets
 Suggests:	%{name}-root-preset
-
-%description
-The root of all Tizen building block meta packages.
-Every root-level Tizen building block should be included by this.
-Any "minimal" required packages should be somehow (directly or indirectly)
-required (included) by this package.
-In Tizen building blocks, "Requires" means mandatory package.
-"Suggests" means optional package.
-"Recommened" is reserved for future usage.
-"Conflicts" is to unselect unconditionally.
+%description	category-presets
+This meta pacakge lists all Tizen blocks (meta packages) designating
+Tizen platform presets, HAL/device-support presets, and
+presets describing specific products.
+%files		category-presets
+# Intentionally empty
 
 
 # Do not try to include files unless RPMBUILD has already expanded source files to SOURCES
