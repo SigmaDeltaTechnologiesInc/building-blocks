@@ -141,6 +141,8 @@ end}}
 
 %build
 
+ls -l %{_datadir}/image-configurations/*
+
 # rule_checker returns non-zero if there is an error in *.inc, breaking the build
 python ./rule_checker.py
 
