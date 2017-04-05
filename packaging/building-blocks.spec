@@ -118,21 +118,29 @@ presets describing specific products.
 # This script writes build-spec when building the build-spec itself. :)
 # Importing .kg file with list_with_require() based on image-configuration will work
 # after Tizen:Unified starts to generate its own platform images.
+
+# TODO1: How to interpret "- pkg"? just skip? or make it conflicted?
+# TODO2: How to handle "no file error"?
 %define list_with_require() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then \
 	local start = 0 \
-	for line in io.lines(rpm.expand("%{1}")) do \
-		if (string.match(line, '%%end')) then break end \
-		if (string.match(line, '%%packages')) then \
-			start = 1 \
-		else \
-			if (start == 1) then \
-				if (string.match(line, '^#')) then \
-				elseif (string.match(line, '^$')) then \
-				else \
-					print("Requires: "..line.."\\n") \
+	if posix.access(rpm.expand("%{1}")) then \
+		for line in io.lines(rpm.expand("%{1}")) do \
+			if (string.match(line, '%%end')) then break end \
+			if (string.match(line, '%%packages')) then \
+				start = 1 \
+			else \
+				if (start == 1) then \
+					if (string.match(line, '^#')) then \
+					elseif (string.match(line, '^-')) then \
+					elseif (string.match(line, '^$')) then \
+					else \
+						print("Requires: "..line.."\\n") \
+					end \
 				end \
 			end \
 		end \
+	else \
+		print("Requires: CANNOT_FIND_REQUIRED_FILES\\n") \
 	end \
 end}}
 
