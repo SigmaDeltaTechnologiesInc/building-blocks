@@ -16,7 +16,7 @@ Tizen IoT Device Presets
 %package sub1-preset-iot-headless_minimal
 Summary:	IoT Headless Minimal Preset
 Requires:	%{name}-root-feature_Headless
-%description sub1-preset-iot-headless3_minimal
+%description sub1-preset-iot-headless_minimal
 Tizen IoT Headless/Minimal Preset
 %files sub1-preset-iot-headless_minimal
 
