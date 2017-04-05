@@ -48,7 +48,7 @@ def ruleCheckInterBlock():
 	if blocks[n].level == 0:
 	    if not n in root_suggested:
 	        error += 1
-		print("ERROR: Orphaned root block. Add Suggests: %{name}-root-"+n+" at building-blocks.spec")
+		print("ERROR: Orphaned root block. Add Suggests: %{name}-root-"+n+" at building-blocks.spec or in its categories.")
 	else: # subX
 	    p = blocks[n].parent
 	    if not p in blocks:
@@ -116,6 +116,10 @@ def ruleCheckInc(file):
 		report(file, lc, line)
 		continue
 	    else:
+	        # If it's just a package, skip checking.
+	        c = re.sub(r'^\s*((Suggests)|(Requires)):\s*%{name}-', r'', line)
+		if c == line:
+		    continue
 	        c = re.sub(r'^\s*((Suggests)|(Requires)):\s*%{name}-sub[12]-', r'', line)
 		c = re.sub(r'\s*', r'', c)
 		c = re.sub(r'\n', r'', c)
