@@ -1,22 +1,23 @@
 # Maintainer: Tizen IoT PM
 # You need ACK (+1) from the maintainer to be reviewed by building-blocks maintainers.
 
-%package sub1-preset-iot
+%package root-preset-iot
 Summary:	IOT Device Presets
-Conflicts:	%{name}-sub1-preset-mobile
-Conflicts:	%{name}-sub1-preset-tv
-Conflicts:	%{name}-sub1-preset-wearable
-Conflicts:	%{name}-sub1-preset-ivi
-Suggests:	%{name}-sub2-preset-iot-rpi3_minimal
-%description sub1-preset-iot
+Conflicts:	%{name}-root-preset-mobile
+Conflicts:	%{name}-root-preset-tv
+Conflicts:	%{name}-root-preset-wearable
+Conflicts:	%{name}-root-preset-ivi
+Suggests:	%{name}-sub1-preset-iot-headless_minimal
+%description root-preset-iot
 Tizen IoT Device Presets
-%files sub1-preset-iot
+%files root-preset-iot
 
 
-%package sub2-preset-iot-rpi3_minimal
-Summary:	IoT RPI3 Headless/Minimal Preset
-%description sub2-preset-iot-rpi3_minimal
-Tizen IoT Headless/Minimal Preset for RPI3
-%files sub2-preset-iot-rpi3_minimal
+%package sub1-preset-iot-headless_minimal
+Summary:	IoT Headless Minimal Preset
+Requires:	%{name}-root-feature_Headless
+%description sub1-preset-iot-headless3_minimal
+Tizen IoT Headless/Minimal Preset
+%files sub1-preset-iot-headless_minimal
 
 

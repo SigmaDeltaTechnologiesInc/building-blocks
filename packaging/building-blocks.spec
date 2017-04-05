@@ -96,7 +96,13 @@ and to most domains.
 
 %package	category-presets
 Summary:	Tizen Presets
-Suggests:	%{name}-root-preset
+Suggests:	%{name}-root-preset-mobile
+Suggests:	%{name}-root-preset-tv
+Suggests:	%{name}-root-preset-wearable
+Suggests:	%{name}-root-preset-ivi
+Suggests:	%{name}-root-preset-iot
+Suggests:	%{name}-root-preset-common
+Suggests:	%{name}-root-preset-home_appliance
 %description	category-presets
 This meta pacakge lists all Tizen blocks (meta packages) designating
 Tizen platform presets, HAL/device-support presets, and
@@ -177,6 +183,12 @@ python ./rule_checker.py
 
 # Tizen Platform Presets.
 # Unlike Preset-Recipes of TIC, you cannot deselect packages from these presets.
-%include_if_mainbuild %{SOURCE3000}
+%include_if_mainbuild %{SOURCE3100}
+%include_if_mainbuild %{SOURCE3200}
+%include_if_mainbuild %{SOURCE3300}
+%include_if_mainbuild %{SOURCE3400}
+%include_if_mainbuild %{SOURCE3500}
+%include_if_mainbuild %{SOURCE3600}
+%include_if_mainbuild %{SOURCE3700}
 
 

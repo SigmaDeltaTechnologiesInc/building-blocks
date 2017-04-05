@@ -1,22 +1,22 @@
 # Maintainer: Tizen IVI PM
 # You need ACK (+1) from the maintainer to be reviewed by building-blocks maintainers.
 
-%package sub1-preset-ivi
+%package root-preset-ivi
 Summary:	IVI Profile Presets
-Conflicts:	%{name}-sub1-preset-mobile
-Conflicts:	%{name}-sub1-preset-tv
-Conflicts:	%{name}-sub1-preset-wearable
-Conflicts:	%{name}-sub1-preset-iot
-Suggests:	%{name}-sub2-preset-ivi-proto
-%description sub1-preset-ivi
+Conflicts:	%{name}-root-preset-mobile
+Conflicts:	%{name}-root-preset-tv
+Conflicts:	%{name}-root-preset-wearable
+Conflicts:	%{name}-root-preset-iot
+Suggests:	%{name}-sub1-preset-ivi-proto
+%description root-preset-ivi
 Tizen IVI Platform Presets
-%files sub1-preset-ivi
+%files root-preset-ivi
 
-%package sub2-preset-ivi-proto
-Summary:	IVI Prototype Preset
+%package sub1-preset-ivi-proto
+Summary:	IVI OdroidXU3 Prototype Preset
 # image-configuration must have this file supplied.
 %list_with_require %{_datadir}/image-configurations/ivi-target-odroidxu3.ks
-%description sub2-preset-ivi-proto
+%description sub1-preset-ivi-proto
 Tizen IVI Prototype Preset
-%files sub2-preset-ivi-proto
+%files sub1-preset-ivi-proto
 
