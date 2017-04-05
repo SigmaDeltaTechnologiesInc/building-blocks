@@ -8,7 +8,6 @@ Conflicts:	%{name}-root-preset-wearable
 Conflicts:	%{name}-root-preset-ivi
 Conflicts:	%{name}-root-preset-iot
 Suggests:	%{name}-sub1-preset-tv-odroid
-%list_with_require %{SOURCE4001}
 %description root-preset-tv
 Tizen TV Platform Presets
 %files root-preset-tv
