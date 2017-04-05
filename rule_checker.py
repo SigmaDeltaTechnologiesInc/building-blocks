@@ -117,12 +117,35 @@ def ruleCheckInc(file):
 		continue
 	    else:
 	        # If it's just a package, skip checking.
-	        c = re.sub(r'^\s*((Suggests)|(Requires)):\s*%{name}-', r'', line)
-		if c == line:
+	        cname = re.sub(r'^\s*((Suggests)|(Requires)):\s*%{name}-', r'', line)
+		if cname == line:
 		    continue
 	        c = re.sub(r'^\s*((Suggests)|(Requires)):\s*%{name}-sub[12]-', r'', line)
 		c = re.sub(r'\s*', r'', c)
 		c = re.sub(r'\n', r'', c)
+
+		# RULE 5.4
+		if n[:6] != "preset" and n[:7] != "feature":
+		    level = blocks[n].level
+		    clevel = 0
+		    if cname[:4] == 'root':
+		        clevel = 0
+		    elif cname[:4] == 'sub1':
+		        clevel = 1
+		    elif cname[:4] == 'sub2':
+		        clevel = 2
+		    elif cname[:4] == 'sub3':
+		        clevel = 3
+		    if (clevel - 1) != level:
+		        error += 1
+			print("ERROR: RULE 5.4. Non preset/feature block cannot have non-direct chile block as its dependents (Requires/Suggests). Level Mismatch")
+			report(file, lc, line)
+			continue
+		    if c[:len(n)] != n:
+		        error += 1
+			print("ERROR: RULE 5.4. Non preset/feature block cannot have non-direct chile block as its dependents (Requires/Suggests). Child from another hierarchy.")
+			report(file, lc, line)
+			continue
 
 		cs = blocks[n].children
 		cs.append(c)
