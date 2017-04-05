@@ -28,7 +28,6 @@ Source2001:	epicfeature-headless.inc
 Source2010:	epicfeature-development.inc
 Source2020:	epicfeature-platform.inc
 
-Source3000:	platform-preset.inc
 Source3100:	platform-preset-mobile.inc
 Source3200:	platform-preset-wearable.inc
 Source3300:	platform-preset-tv.inc
@@ -96,13 +95,13 @@ and to most domains.
 
 %package	category-presets
 Summary:	Tizen Presets
-Suggests:	%{name}-root-preset-mobile
-Suggests:	%{name}-root-preset-tv
-Suggests:	%{name}-root-preset-wearable
-Suggests:	%{name}-root-preset-ivi
-Suggests:	%{name}-root-preset-iot
-Suggests:	%{name}-root-preset-common
-Suggests:	%{name}-root-preset-home_appliance
+Suggests:	%{name}-root-preset_mobile
+Suggests:	%{name}-root-preset_tv
+Suggests:	%{name}-root-preset_wearable
+Suggests:	%{name}-root-preset_ivi
+Suggests:	%{name}-root-preset_iot
+Suggests:	%{name}-root-preset_common
+Suggests:	%{name}-root-preset_home_appliance
 %description	category-presets
 This meta pacakge lists all Tizen blocks (meta packages) designating
 Tizen platform presets, HAL/device-support presets, and

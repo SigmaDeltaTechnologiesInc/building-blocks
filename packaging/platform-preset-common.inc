@@ -2,13 +2,13 @@
 # You need ACK (+1) from the maintainer to be reviewed by building-blocks maintainers.
 
 
-%package root-preset-common
+%package root-preset_common
 Summary:	Common Profile Presets
-Conflicts:	%{name}-root-preset-mobile
-Conflicts:	%{name}-root-preset-tv
-Conflicts:	%{name}-root-preset-wearable
-Conflicts:	%{name}-root-preset-iot
-Conflicts:	%{name}-root-preset-ivi
-%description root-preset-common
+Conflicts:	%{name}-root-preset_mobile
+Conflicts:	%{name}-root-preset_tv
+Conflicts:	%{name}-root-preset_wearable
+Conflicts:	%{name}-root-preset_iot
+Conflicts:	%{name}-root-preset_ivi
+%description root-preset_common
 Tizen Platform Presets for "Common Profile"
-%files root-preset-common
+%files root-preset_common
