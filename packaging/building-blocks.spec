@@ -35,6 +35,7 @@ Source3400:	platform-preset-ivi.inc
 Source3500:	platform-preset-iot.inc
 Source3600:	platform-preset-common.inc
 Source3700:	platform-preset-home_appliance.inc
+Source3800:	platform-preset-boards.inc
 
 # To get .ks files
 BuildRequires:	image-configurations
@@ -95,6 +96,7 @@ and to most domains.
 
 %package	category-presets
 Summary:	Tizen Presets
+Suggests:	%{name}-root-preset_boards
 Suggests:	%{name}-root-preset_mobile
 Suggests:	%{name}-root-preset_tv
 Suggests:	%{name}-root-preset_wearable
@@ -200,5 +202,6 @@ python ./rule_checker.py
 %include_if_mainbuild %{SOURCE3500}
 %include_if_mainbuild %{SOURCE3600}
 %include_if_mainbuild %{SOURCE3700}
+%include_if_mainbuild %{SOURCE3800}
 
 
