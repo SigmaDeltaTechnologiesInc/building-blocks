@@ -97,9 +97,9 @@ def ruleCheckInc(file):
 	        files = 0
 	    else:
 	        if re.search(r'^\s*[^#\s]+', line) and \
-		   not re.search(r'^\s*%include', line):
+		   not re.search(r'^\s*(%include)|(%endif)|(%ifarch)', line):
 		    error += 1
-		    print("ERROR: RULE 5.3 a block must not have a file included")
+		    print("ERROR: RULE 5.3 a block must not have a file included (%files section must be empty)")
 		    report(file, lc, line)
 		    continue
 
