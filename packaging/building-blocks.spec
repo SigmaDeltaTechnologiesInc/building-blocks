@@ -114,7 +114,7 @@ presets describing specific products.
 
 # Do not try to include files unless RPMBUILD has already expanded source files to SOURCES
 # Use Source1001 (domain-kernel) as the probing point.
-%define include_if_mainbuild() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then print("%include "..rpm.expand("%{1}").."\\n") end}}
+%define include_if_mainbuild() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then print("%include "..rpm.expand("%{1}")) end}}
 
 # Create a target device preset from .ks file used to create device iamge.
 # This script writes build-spec when building the build-spec itself. :)
@@ -136,7 +136,7 @@ presets describing specific products.
 					elseif (string.match(line, '^-')) then \
 					elseif (string.match(line, '^$')) then \
 					else \
-						print("Requires: "..line.."\\n") \
+						print("Requires: "..line) \
 					end \
 				end \
 			end \
@@ -162,46 +162,46 @@ python ./rule_checker.py
 ############## DOMAINS ##################
 
 # Include "Kernel" domain. The script should not execute "include" if the contexts is in GBS service in OBS or GBS-Export
-%include_if_mainbuild %{SOURCE1001}
+%{include_if_mainbuild %{SOURCE1001}}
 
 # Include "systemfw" domain. The script should not execute "include" if the contexts is in GBS service in OBS or GBS-Export
-%include_if_mainbuild %{SOURCE1002}
+%{include_if_mainbuild %{SOURCE1002}}
 
 # And other domains
-%include_if_mainbuild %{SOURCE1010}
-%include_if_mainbuild %{SOURCE1020}
-%include_if_mainbuild %{SOURCE1030}
-%include_if_mainbuild %{SOURCE1040}
-%include_if_mainbuild %{SOURCE1050}
-%include_if_mainbuild %{SOURCE1060}
-%include_if_mainbuild %{SOURCE1070}
-%include_if_mainbuild %{SOURCE1080}
-%include_if_mainbuild %{SOURCE1090}
-%include_if_mainbuild %{SOURCE1100}
+%{include_if_mainbuild %{SOURCE1010}}
+%{include_if_mainbuild %{SOURCE1020}}
+%{include_if_mainbuild %{SOURCE1030}}
+%{include_if_mainbuild %{SOURCE1040}}
+%{include_if_mainbuild %{SOURCE1050}}
+%{include_if_mainbuild %{SOURCE1060}}
+%{include_if_mainbuild %{SOURCE1070}}
+%{include_if_mainbuild %{SOURCE1080}}
+%{include_if_mainbuild %{SOURCE1090}}
+%{include_if_mainbuild %{SOURCE1100}}
 
 ############## EPIC FEATURES ######################
 
 # Include "headless" epic feature. The script should not execute "include" if the contexts is in GBS service in OBS or GBS-Export
-%include_if_mainbuild %{SOURCE2001}
+%{include_if_mainbuild %{SOURCE2001}}
 
 # Dev tools
-%include_if_mainbuild %{SOURCE2010}
+%{include_if_mainbuild %{SOURCE2010}}
 
 # Platform features
-%include_if_mainbuild %{SOURCE2020}
+%{include_if_mainbuild %{SOURCE2020}}
 
 
 ############# PLATFORM PRESET #####################
 
 # Tizen Platform Presets.
 # Unlike Preset-Recipes of TIC, you cannot deselect packages from these presets.
-%include_if_mainbuild %{SOURCE3100}
-%include_if_mainbuild %{SOURCE3200}
-%include_if_mainbuild %{SOURCE3300}
-%include_if_mainbuild %{SOURCE3400}
-%include_if_mainbuild %{SOURCE3500}
-%include_if_mainbuild %{SOURCE3600}
-%include_if_mainbuild %{SOURCE3700}
-%include_if_mainbuild %{SOURCE3800}
+%{include_if_mainbuild %{SOURCE3100}}
+%{include_if_mainbuild %{SOURCE3200}}
+%{include_if_mainbuild %{SOURCE3300}}
+%{include_if_mainbuild %{SOURCE3400}}
+%{include_if_mainbuild %{SOURCE3500}}
+%{include_if_mainbuild %{SOURCE3600}}
+%{include_if_mainbuild %{SOURCE3700}}
+%{include_if_mainbuild %{SOURCE3800}}
 
 
