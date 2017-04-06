@@ -15,6 +15,12 @@ import os
 import sys
 import collections
 
+verbose = 0
+def print_v(*args):
+    global verbose
+    if verbose:
+        print(*args)
+
 Block = collections.namedtuple('Block', 'name level parent children description files')
 blocks = {}
 
@@ -74,7 +80,7 @@ def ruleCheckInterBlock():
 def ruleCheckInc(file):
     global blocks
 
-    print("Checking "+file)
+    print_v("Checking "+file)
 
     error = 0
     warning = 0
@@ -150,7 +156,7 @@ def ruleCheckInc(file):
 		cs = blocks[n].children
 		cs.append(c)
 		blocks[n]._replace(children = cs)
-		print("Children added to "+n+" of "+c)
+		print_v("Children added to "+n+" of "+c)
 
         # RULE 5.1
 	if re.search(r'^\s*BuildRequires', line, re.IGNORECASE):
@@ -264,7 +270,7 @@ def ruleCheckInc(file):
 		    p = re.sub(r'^([a-zA-Z0-9_]+-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+)-.*', r'\1', n)
 		p = re.sub(r'\n', r'', p) # remove trailing \n
 
-	        print("Block: "+n+", level = "+str(l)+", parent = ["+p+"]")
+	        print_v("Block: "+n+", level = "+str(l)+", parent = ["+p+"]")
 		lastpkg = n
 
 		newBlock = Block(name=n, level=l, parent=p, children=[], description=0, files=0)
@@ -342,7 +348,17 @@ def ruleCheckInc(file):
 
 
 def main():
-    global blocks
+    global blocks, verbose
+
+    if len(sys.argv) > 1:
+        count = 0
+        for option in sys.argv:
+	    count+=1
+            if (count == 1):
+		continue
+	    if option == '-v':
+	        verbose = 1
+
 
     dirs = os.listdir("packaging/")
     error = 0
@@ -356,9 +372,9 @@ def main():
 	    warning += result[1]
 	elif re.search(r'^\..*\.sw.', file):
 	    # skip if it is vi swap file
-	    print("There is a garbage in packaging. But let's skip (next version should check git status")
+	    print_v("There is a garbage in packaging. But let's skip (next version should check git status")
 	elif not file == 'building-blocks.spec':
-	    print("Please do not put garbage files in packaging/ directory: "+file)
+	    print("ERROR: Please do not put garbage files in packaging/ directory: "+file)
 	    error += 1
 
     result = ruleCheckInterBlock()
