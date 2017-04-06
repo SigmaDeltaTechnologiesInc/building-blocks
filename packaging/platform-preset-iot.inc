@@ -15,7 +15,7 @@ Tizen IoT Device Presets
 %files root-preset_iot
 
 %package sub1-preset_iot-boards
-Summary:	IOT Device Board (Hardware Set) Presets
+Summary:	IOT Device Board (BSP) Presets
 Suggests:	%{name}-sub2-preset_iot-boards-RPI3_headlessBSP
 Suggests:	%{name}-sub2-preset_iot-boards-RPI3_fullBSP
 Suggests:	%{name}-sub2-preset_iot-boards-OdroidXU3_fullBSP
@@ -34,7 +34,7 @@ Tizen IoT Presets of Software Plaforms independent from specific hardware/BSPs.
 %files sub1-preset_iot-platforms
 
 %package sub1-preset_iot-combined
-Summary:	IOT Device Board (Hardware Set) Presets
+Summary:	IOT Device Board and SW Platform Presets
 %ifarch aarch64 armv7l
 Suggests:	%{name}-sub2-preset_iot-combined-RPI3_headless_devboard
 Suggests:	%{name}-sub2-preset_iot-combined-RPI3_headless_networkhub
@@ -48,6 +48,7 @@ Suggests:	%{name}-sub2-preset_iot-combined-ODROID_headed_full
 %endif
 %description sub1-preset_iot-combined
 Tizen IoT Presets of specific devices, which have both BSPs and software platforms.
+An item in this section is intended to represent a whole OS image.
 %files sub1-preset_iot-combined
 
 
