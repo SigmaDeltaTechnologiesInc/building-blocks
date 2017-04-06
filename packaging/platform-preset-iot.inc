@@ -35,11 +35,17 @@ Tizen IoT Presets of Software Plaforms independent from specific hardware/BSPs.
 
 %package sub1-preset_iot-combined
 Summary:	IOT Device Board (Hardware Set) Presets
+%ifarch aarch64 armv7l
 Suggests:	%{name}-sub2-preset_iot-combined-RPI3_headless_devboard
 Suggests:	%{name}-sub2-preset_iot-combined-RPI3_headless_networkhub
 Suggests:	%{name}-sub2-preset_iot-combined-RPI3_headless_minimal
 Suggests:	%{name}-sub2-preset_iot-combined-RPI3_headless
+%endif
+%ifarch armv7l
 Suggests:	%{name}-sub2-preset_iot-combined-ARTIK_headless
+Suggests:	%{name}-sub2-preset_iot-combined-ARTIK_headed_full
+Suggests:	%{name}-sub2-preset_iot-combined-ODROID_headed_full
+%endif
 %description sub1-preset_iot-combined
 Tizen IoT Presets of specific devices, which have both BSPs and software platforms.
 %files sub1-preset_iot-combined
@@ -86,6 +92,7 @@ Tizen IoT Headed/Minimal Preset
 %files sub2-preset_iot-platforms-headed_minimal
 
 
+%ifarch aarch64 armv7l
 %package sub2-preset_iot-combined-RPI3_headless_devboard
 Summary:	RPI3 Headless for Developers
 Requires:	%{name}-sub2-preset_iot-platforms-headless_minimal
@@ -96,7 +103,9 @@ Suggests:	make
 Suggests:	cmake
 %description sub2-preset_iot-combined-RPI3_headless_devboard
 %files sub2-preset_iot-combined-RPI3_headless_devboard
+%endif
 
+%ifarch aarch64 armv7l
 %package sub2-preset_iot-combined-RPI3_headless_networkhub
 Summary:	RPI3 Headless Network Hub
 Requires:	%{name}-sub2-preset_iot-platforms-headless_minimal
@@ -104,24 +113,57 @@ Requires:	%{name}-sub2-preset_iot-boards-RPI3_headlessBSP
 Requires:	%{name}-root-network
 %description sub2-preset_iot-combined-RPI3_headless_networkhub
 %files sub2-preset_iot-combined-RPI3_headless_networkhub
+%endif
 
+%ifarch aarch64 armv7l
 %package sub2-preset_iot-combined-RPI3_headless_minimal
 Summary:	RPI3 Minimal Headless
 Requires:	%{name}-sub2-preset_iot-platforms-headless_minimal
 Requires:	%{name}-sub2-preset_iot-boards-RPI3_headlessBSP
 %description sub2-preset_iot-combined-RPI3_headless_minimal
 %files sub2-preset_iot-combined-RPI3_headless_minimal
+%endif
 
+%ifarch aarch64 armv7l
 %package sub2-preset_iot-combined-RPI3_headless
 Summary:	RPI3 Headless Tizen Official Example
 %list_with_require %{_datadir}/image-configurations/common-headless-2parts-armv7l-rpi3.ks
 %description sub2-preset_iot-combined-RPI3_headless
 Replication of Tizen IoT RPI3 Snapshot Release (download.tizen.org/snapshots/tizen/unified)
+This is from common-headless-2parts-armv7l-rpi3. (armv7l)
+Userspace rootfs only.
 %files sub2-preset_iot-combined-RPI3_headless
+%endif
 
+%ifarch armv7l
 %package sub2-preset_iot-combined-ARTIK_headless
 Summary:	ARTIK Headless Tizen Official Example
 %list_with_require %{_datadir}/image-configurations/common-headless-3parts-armv7l-artik.ks
 %description sub2-preset_iot-combined-ARTIK_headless
 Replication of Tizen IoT ARTIK Snapshot Release (download.tizen.org/snapshots/tizen/unified)
+This is from common-headless-3parts-armv7l-artik. (armv7l)
+Userspace rootfs only
 %files sub2-preset_iot-combined-ARTIK_headless
+%endif
+
+%ifarch armv7l
+%package sub2-preset_iot-combined-ARTIK_headed_full
+Summary:	ARTIK Headed Tizen Official Example (common/full)
+%list_with_require %{_datadir}/image-configurations/common-wayland-3parts-armv7l-artik.ks
+%description sub2-preset_iot-combined-ARTIK_headed_full
+Replication of Tizen IoT ARTIK Headed/Wayland Snapshot Release (download.tizen.org/snapshots/tizen/unified)
+This is from common-wayland-3parts-armv7l-artik. (armv7l)
+Userspace rootfs only
+%files sub2-preset_iot-combined-ARTIK_headed_full
+%endif
+
+%ifarch armv7l
+%package sub2-preset_iot-combined-ODROID_headed_full
+Summary:	ODROID U3/XU3 Headed Tizen Official Example (common/full)
+%list_with_require %{_datadir}/image-configurations/common-wayland-3parts-armv7l-odroidu3.ks
+%description sub2-preset_iot-combined-ODROID_headed_full
+Replication of Tizen IoT Odroid U3/XU3 Headed/Wayland Snapshot Release (download.tizen.org/snapshots/tizen/unified)
+This is from common-wayland-3parts-armv7l-odroidu3. (armv7l)
+Userspace rootfs only
+%files sub2-preset_iot-combined-ODROID_headed_full
+%endif
