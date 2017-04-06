@@ -6,7 +6,10 @@
 
 1-2. The top-single block name is "building-blocks"
 
-1-3. Level prefix = "root" | "sub1" | "sub2"
+1-3. Level prefix = "root" | "sub1" | "sub2" | "sub3"
+	However, using deep down to sub3 is not recommended (WARNING)
+
+1-3-A. Using "sub3" is not recommended (WARNING)
 
 1-4. Except for the top-single block, Level prfix follows
 	the first prefix.
@@ -20,10 +23,10 @@
 	[first prefix]-[level prefix = "sub1"]-[root name = "ROOTNAME"]-[NAME]
 	E.g., "building-blocks-sub1-UI-wayland"
 
-1-7. For "sub2" building blocks, which has a "sub1" building block, "SUB1NAME" as its parent, the naming rule is:
-	(SUB1NAME has ROOTNAME as its parent)
-	[first prefix]-[level prefix = "sub2"]-[root name = "ROOTNAME"]-[sub1 name = "SUB1NAME"]-[NAME]
-	E.g., "building-blocks-sub2-UI-wayland-core"
+1-7. For "sub{N}" (N>1) building blocks, which has a "sub{N-1}" building block, "SUB{M}NAME" as its parent at level M (M < N), the naming rule is:
+	[first prefix]-sub{N}-[root name = "ROOTNAME"]-[sub1 name = "SUB1NAME"]-...-[sub{N-1} name = "SUB{N-1}NAME"]-[NAME]
+	E.g., "building-blocks-sub2-UI-wayland-core",
+		"building-blocks-sub3-UI-wayland-core-extension_super"
 
 1-8. In order to implement "radio-button" UI (choose only one), the block name starts with "chooseonlyone_"
 	E.g., "building-blocks-root-chooseonlyone_Kernel"
@@ -49,6 +52,9 @@
 	However, you need to get consents from all related stake-holders.
 
 2-6. There cannot be any other relations defined between blocks.
+	Exception: preset and features blocks may Requires/Suggests
+	   other blocks to populate themselves with higher readability.
+	   Refer to RULE 5-4.
 
 
 
@@ -98,6 +104,6 @@
 5.3. A block must NOT have any files included
 
 5.4. A block that is not preset/feature cannot add "Requires"/"Suggests" on
-another block that is not a direct child of it
+another block that is not a direct child of it (ref. RULE 2.6)
 	E.g., sub2-* cannot Requires/Suggests another root/sub1/sub2
 	E.g., sub1-A cannot Requires/Suggests sub2-B-X

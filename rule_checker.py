@@ -5,8 +5,8 @@
 #############################################################
 # Building Block Rule Checker                               #
 #############################################################
-# This does not check all rules of "RULES"
-# This is a prototype with a lot of work in progress
+# This does not check all rules of "RULES".
+# The level of subblocks is limited to 3.
 
 
 from __future__ import print_function
@@ -120,7 +120,7 @@ def ruleCheckInc(file):
 	        cname = re.sub(r'^\s*((Suggests)|(Requires)):\s*%{name}-', r'', line)
 		if cname == line:
 		    continue
-	        c = re.sub(r'^\s*((Suggests)|(Requires)):\s*%{name}-sub[12]-', r'', line)
+	        c = re.sub(r'^\s*((Suggests)|(Requires)):\s*%{name}-sub[123]-', r'', line)
 		c = re.sub(r'\s*', r'', c)
 		c = re.sub(r'\n', r'', c)
 
@@ -193,11 +193,17 @@ def ruleCheckInc(file):
 
 	# RULE 1-3 / 1-4
 	if re.search(r'^\s*%package', line) and	\
-	    not re.search(r'^\s*%package\s*((root)|(sub1)|(sub2))', line):
-	    error +=1
-	    print("ERROR: RULE 1.3 the send prefix should be root, sub1, or sub2.")
-	    report(file, lc, line)
-	    continue
+	    not re.search(r'^\s*%package\s*((root)|(sub1)|(sub2))-', line):
+
+	    if re.search(r'^\s*%package\s*sub3-', line):
+	        warning += 1
+		print("WARNING: RULE 1-3-A. Try not to use sub3 level subblocks")
+		report(file, lc, fline)
+	    else:
+	        error +=1
+	        print("ERROR: RULE 1.3 the send prefix should be root, sub1, sub2, or sub3.")
+	        report(file, lc, line)
+	        continue
 
         # RULE 1-9 for root block (1-5)
         if re.search(r'^\s*%package\s*root', line) and	\
@@ -219,14 +225,22 @@ def ruleCheckInc(file):
 	if re.search(r'^\s*%package\s*sub2', line) and	\
 	    not re.search(r'^\s*%package\s*sub2-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+\s*$', line):
 	    error += 1
-	    print("ERROR: RULE 1.9 not met with sub1 (RULE 1.7)")
+	    print("ERROR: RULE 1.9 not met with sub2 (RULE 1.7)")
+	    report(file, lc, line)
+	    continue
+
+	# RULE 1-9 for sub3 block (1-7)
+	if re.search(r'^\s*%package\s*sub3', line) and	\
+	    not re.search(r'^\s*%package\s*sub3-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+\s*$', line):
+	    error += 1
+	    print("ERROR: RULE 1.9 not met with sub3 (RULE 1.7)")
 	    report(file, lc, line)
 	    continue
 
 	# Adding a new package. Register to the data structure for context-aware check
-	if re.search(r'^\s*%package\s*((root)|(sub1)|(sub2))-', line):
+	if re.search(r'^\s*%package\s*((root)|(sub1)|(sub2)|(sub3))-', line):
 	    # remove tag & prefixes
-	    n = re.sub(r'^\s*%package\s*((root)|(sub1)|(sub2))-', r'', line)
+	    n = re.sub(r'^\s*%package\s*((root)|(sub1)|(sub2)|(sub3))-', r'', line)
 	    # remove tailing whitespaces
 	    n = re.sub(r'\s*', r'', n)
 	    # remove trailing \n
@@ -245,6 +259,9 @@ def ruleCheckInc(file):
 		elif re.search(r'^\s*%package\s*sub2-', line):
 		    l = 2
 		    p = re.sub(r'^([a-zA-Z0-9_]+-[a-zA-Z0-9_]+)-.*', r'\1', n)
+		elif re.search(r'^\s*%package\s*sub3-', line):
+		    l = 3
+		    p = re.sub(r'^([a-zA-Z0-9_]+-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+)-.*', r'\1', n)
 		p = re.sub(r'\n', r'', p) # remove trailing \n
 
 	        print("Block: "+n+", level = "+str(l)+", parent = ["+p+"]")
@@ -292,7 +309,7 @@ def ruleCheckInc(file):
 	    # remove tag
 	    n = re.sub(r'^\s*%files\s+', r'', line)
 	    # prefixes
-	    n = re.sub(r'^((root)|(sub1)|(sub2))-', r'', n)
+	    n = re.sub(r'^((root)|(sub1)|(sub2)|(sub3))-', r'', n)
 	    #remove trailing whitespaces / \n
 	    n = re.sub(r'\s*', r'', n)
 	    n = re.sub(r'\n', r'', n)
