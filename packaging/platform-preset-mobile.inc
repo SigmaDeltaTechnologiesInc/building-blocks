@@ -34,7 +34,7 @@ You may need mobile + tm1 MIC post script as well.
 %files sub1-preset_mobile-tm1
 
 %package sub1-preset_mobile-tm2_aarch64
-Summary:	Mobile-TM2 Preset
+Summary:	Mobile-TM2 Preset (aarch64. 64bit)
 Conflicts:	%{name}-sub1-preset_mobile-tm1
 Conflicts:	%{name}-sub1-preset_mobile-tm2_armv7l
 Conflicts:	%{name}-sub1-preset_mobile-minimal
@@ -46,7 +46,7 @@ For architectural/post-script note, please refer to tm1 twin.
 %files sub1-preset_mobile-tm2_aarch64
 
 %package sub1-preset_mobile-tm2_armv7l
-Summary:	Mobile-TM2 Preset
+Summary:	Mobile-TM2 Preset (armv7l. 32bit)
 Conflicts:	%{name}-sub1-preset_mobile-tm1
 Conflicts:	%{name}-sub1-preset_mobile-tm2_aarch64
 Conflicts:	%{name}-sub1-preset_mobile-minimal

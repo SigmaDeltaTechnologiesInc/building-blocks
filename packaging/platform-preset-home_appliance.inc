@@ -3,7 +3,7 @@
 
 
 %package root-preset_home_appliance
-Summary:	Common Profile Presets
+Summary:	Presets for Home Appliances
 Conflicts:	%{name}-root-preset_mobile
 Conflicts:	%{name}-root-preset_tv
 Conflicts:	%{name}-root-preset_wearable
