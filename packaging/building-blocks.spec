@@ -5,7 +5,7 @@
 Name:		building-blocks
 Version:	0.0.1
 Release:	0
-License:	Apache-2
+License:	Apache-2.0
 Summary:	The Root of All Tizen Meta Packages (building blocks)
 Url:		http://tizen.org
 Group:		Meta
@@ -149,6 +149,7 @@ end}}
 
 %build
 
+# Auto require generation still requires further decision making. This shows the basic data for it in the build log.
 ls -l %{_datadir}/image-configurations/*
 
 # rule_checker returns non-zero if there is an error in *.inc, breaking the build
