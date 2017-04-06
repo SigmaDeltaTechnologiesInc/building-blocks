@@ -1,11 +1,11 @@
 # Maintainer: Please Write
 # You need ACK (+1) from the maintainer to be reviewed by building-blocks maintainers.
 
-%package root-graphics
+%package root-domain_graphics
 Summary:	Graphics
-%description root-graphics
+%description root-domain_graphics
 The domain, "Graphics".
-%files root-graphics
+%files root-domain_graphics
 # Keep this empty
 
 

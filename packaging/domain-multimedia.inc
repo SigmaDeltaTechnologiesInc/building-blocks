@@ -1,11 +1,11 @@
 # Maintainer: Please Write
 # You need ACK (+1) from the maintainer to be reviewed by building-blocks maintainers.
 
-%package root-multimedia
+%package root-domain_multimedia
 Summary:	Multimedia
-%description root-multimedia
+%description root-domain_multimedia
 The domain, "Multimedia".
-%files root-multimedia
+%files root-domain_multimedia
 # Keep this empty
 
 

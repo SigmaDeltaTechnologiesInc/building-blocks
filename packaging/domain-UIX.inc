@@ -1,11 +1,11 @@
 # Maintainer: Please Write
 # You need ACK (+1) from the maintainer to be reviewed by building-blocks maintainers.
 
-%package root-UIX
+%package root-domain_UIX
 Summary:	UIX
-%description root-UIX
+%description root-domain_UIX
 The domain, "UIX".
-%files root-UIX
+%files root-domain_UIX
 # Keep this empty
 
 

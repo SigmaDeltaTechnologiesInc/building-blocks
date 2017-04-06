@@ -1,11 +1,11 @@
 # Maintainer: Please Write
 # You need ACK (+1) from the maintainer to be reviewed by building-blocks maintainers.
 
-%package root-network
+%package root-domain_network
 Summary:	Network
-%description root-network
+%description root-domain_network
 The domain, "Network".
-%files root-network
+%files root-domain_network
 # Keep this empty
 
 

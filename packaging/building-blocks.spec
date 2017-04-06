@@ -61,18 +61,18 @@ In Tizen building blocks, "Requires" means mandatory package.
 
 %package	category-domains
 Summary:	Tizen Techinical Domains
-Suggests:	%{name}-root-Kernel
-Suggests:	%{name}-root-SystemFW
-Suggests:	%{name}-root-AppFW
-Suggests:	%{name}-root-Window
-Suggests:	%{name}-root-graphics
-Suggests:	%{name}-root-network
-Suggests:	%{name}-root-multimedia
-Suggests:	%{name}-root-HAL
-Suggests:	%{name}-root-serviceFW
-Suggests:	%{name}-root-UI
-Suggests:	%{name}-root-UIX
-Suggests:	%{name}-root-security
+Suggests:	%{name}-root-domain_Kernel
+Suggests:	%{name}-root-domain_SystemFW
+Suggests:	%{name}-root-domain_AppFW
+Suggests:	%{name}-root-domain_Window
+Suggests:	%{name}-root-domain_graphics
+Suggests:	%{name}-root-domain_network
+Suggests:	%{name}-root-domain_multimedia
+Suggests:	%{name}-root-domain_HAL
+Suggests:	%{name}-root-domain_serviceFW
+Suggests:	%{name}-root-domain_UI
+Suggests:	%{name}-root-domain_UIX
+Suggests:	%{name}-root-domain_security
 %description	category-domains
 This meta package lists all Tizen blocks (meta packages) designating
 techinical domains.
@@ -94,21 +94,21 @@ and to most domains.
 # Intentionally empty
 
 
-%package	category-presets
+%package	category-Preset
 Summary:	Tizen Presets
-Suggests:	%{name}-root-preset_boards
-Suggests:	%{name}-root-preset_mobile
-Suggests:	%{name}-root-preset_tv
-Suggests:	%{name}-root-preset_wearable
-Suggests:	%{name}-root-preset_ivi
-Suggests:	%{name}-root-preset_iot
-Suggests:	%{name}-root-preset_common
-Suggests:	%{name}-root-preset_home_appliance
-%description	category-presets
+Suggests:	%{name}-root-Preset_boards
+Suggests:	%{name}-root-Preset_mobile
+Suggests:	%{name}-root-Preset_tv
+Suggests:	%{name}-root-Preset_wearable
+Suggests:	%{name}-root-Preset_ivi
+Suggests:	%{name}-root-Preset_iot
+Suggests:	%{name}-root-Preset_common
+Suggests:	%{name}-root-Preset_home_appliance
+%description	category-Preset
 This meta pacakge lists all Tizen blocks (meta packages) designating
 Tizen platform presets, HAL/device-support presets, and
 presets describing specific products.
-%files		category-presets
+%files		category-Preset
 # Intentionally empty
 
 

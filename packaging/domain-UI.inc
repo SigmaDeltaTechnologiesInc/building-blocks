@@ -1,13 +1,13 @@
 # Maintainer: Please Write
 # You need ACK (+1) from the maintainer to be reviewed by building-blocks maintainers.
 
-%package root-UI
+%package root-domain_UI
 Summary:	UI Domain
 Requires:	efl
 Requires:	libwayland-server
-%description root-UI
+%description root-domain_UI
 Tizen UI Domain Root Block
-%files root-UI
+%files root-domain_UI
 
 ### << PLEASE FILL IN YOUR ROOT/SUB PACKAGES >> ###
 

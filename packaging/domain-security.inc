@@ -2,11 +2,11 @@
 # You need ACK (+1) from the maintainer to be reviewed by building-blocks maintainers.
 
 
-%package root-security
+%package root-domain_security
 Summary:	Security
-%description root-security
+%description root-domain_security
 The domain, "Security".
-%files root-security
+%files root-domain_security
 # Keep this empty
 
 

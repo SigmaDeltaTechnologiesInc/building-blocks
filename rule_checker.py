@@ -131,7 +131,7 @@ def ruleCheckInc(file):
 		c = re.sub(r'\n', r'', c)
 
 		# RULE 5.4
-		if n[:6] != "preset" and n[:7] != "feature":
+		if n[:6] != "Preset" and n[:7] != "feature":
 		    level = blocks[n].level
 		    clevel = 0
 		    if cname[:4] == 'root':
@@ -144,12 +144,12 @@ def ruleCheckInc(file):
 		        clevel = 3
 		    if (clevel - 1) != level:
 		        error += 1
-			print("ERROR: RULE 5.4. Non preset/feature block cannot have non-direct chile block as its dependents (Requires/Suggests). Level Mismatch")
+			print("ERROR: RULE 5.4. Non Preset/feature block cannot have non-direct chile block as its dependents (Requires/Suggests). Level Mismatch")
 			report(file, lc, line)
 			continue
 		    if c[:len(n)] != n:
 		        error += 1
-			print("ERROR: RULE 5.4. Non preset/feature block cannot have non-direct chile block as its dependents (Requires/Suggests). Child from another hierarchy.")
+			print("ERROR: RULE 5.4. Non Preset/feature block cannot have non-direct chile block as its dependents (Requires/Suggests). Child from another hierarchy.")
 			report(file, lc, line)
 			continue
 
