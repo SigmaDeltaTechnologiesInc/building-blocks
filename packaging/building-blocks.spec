@@ -114,7 +114,7 @@ presets describing specific products.
 
 # Do not try to include files unless RPMBUILD has already expanded source files to SOURCES
 # Use Source1001 (domain-kernel) as the probing point.
-%define include_if_mainbuild() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then print("%include "..rpm.expand("%{1}")) end}}
+%define include_if_mainbuild() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then print("%include "..rpm.expand("%{1}").." ") end}}
 
 # Create a target device preset from .ks file used to create device iamge.
 # This script writes build-spec when building the build-spec itself. :)
@@ -132,11 +132,12 @@ presets describing specific products.
 				start = 1 \
 			else \
 				if (start == 1) then \
-					if (string.match(line, '^#')) then \
-					elseif (string.match(line, '^-')) then \
-					elseif (string.match(line, '^$')) then \
+					if (string.match(line, '#')) then \
+					elseif (string.sub(line, 1, 1) == '-') then \
+					elseif (string.len(line) == 0) then\
 					else \
 						print("Requires: "..line) \
+						print("\\n") \
 					end \
 				end \
 			end \
