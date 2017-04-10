@@ -56,6 +56,8 @@
 	   other blocks to populate themselves with higher readability.
 	   Refer to RULE 5-4.
 
+2.7. Do not refer to (or declare as a child) a block that does not exist
+	in this repository.
 
 
 ===========================================================================

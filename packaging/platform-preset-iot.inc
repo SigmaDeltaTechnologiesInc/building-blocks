@@ -85,7 +85,7 @@ Suggests:	cmake
 Summary:	RPI3 Headless Network Hub
 Requires:	%{name}-sub2-Preset_iot-platforms-headless_minimal
 Requires:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
-Requires:	%{name}-root-network
+Requires:	%{name}-root-domain_network
 %description sub2-Preset_iot-examples-RPI3_headless_networkhub
 %files sub2-Preset_iot-examples-RPI3_headless_networkhub
 %endif

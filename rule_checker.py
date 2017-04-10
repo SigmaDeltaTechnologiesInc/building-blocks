@@ -23,6 +23,7 @@ def print_v(*args):
 
 Block = collections.namedtuple('Block', 'name level parent children description files')
 blocks = {}
+referedblock = []
 
 def report(file, lc, code):
     print(file + ":Line " + str(lc) + " |"+code)
@@ -30,6 +31,8 @@ def report(file, lc, code):
 
 def ruleCheckInterBlock():
     global blocks
+    global referedblock
+
     error = 0
     warning = 0
     root_suggested = {}
@@ -70,8 +73,16 @@ def ruleCheckInterBlock():
 		if found == 0:
 		    error += 1
 		    print("ERROR: Orphaned sub block. The block "+n+" is not registered at the parent block "+p+" although "+p+" exists.")
-
         # TODO: Add more rules here?
+
+
+    # Check if Required/Suggested blocks exist in this repo
+    for refered in referedblock:
+        if not refered in blocks:
+            error += 1
+	    print("ERROR: A nonexisting block '"+refered+"' is refered.")
+
+
 
 
 
@@ -79,6 +90,7 @@ def ruleCheckInterBlock():
 
 def ruleCheckInc(file):
     global blocks
+    global referedblock
 
     print_v("Checking "+file)
 
@@ -152,6 +164,8 @@ def ruleCheckInc(file):
 			print("ERROR: RULE 5.4. Non Preset/feature block cannot have non-direct chile block as its dependents (Requires/Suggests). Child from another hierarchy.")
 			report(file, lc, line)
 			continue
+
+		referedblock.append(cname[5:].strip())
 
 		cs = blocks[n].children
 		cs.append(c)

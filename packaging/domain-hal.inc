@@ -121,6 +121,21 @@ Tizen Audio HAL domain
 %files sub1-domain_HAL-audio
 
 
+%package sub2-domain_HAL-audio-odroid
+Summary:	HAL packages for Odroid AUdio
+%description sub2-domain_HAL-audio-odroid
+%files sub2-domain_HAL-audio-odroid
+
+%package sub2-domain_HAL-audio-TM2
+Summary:	HAL packages for TM2 Audio
+%description sub2-domain_HAL-audio-TM2
+%files sub2-domain_HAL-audio-TM2
+
+%package sub2-domain_HAL-audio-TM1
+Summary:	HAL packages for TM1 Audio
+%description sub2-domain_HAL-audio-TM1
+%files sub2-domain_HAL-audio-TM1
+
 
 
 
@@ -132,5 +147,18 @@ Suggests:	%{name}-sub2-domain_HAL-bluetooth-TM1
 %description sub1-domain_HAL-bluetooth
 Tizen Bluetooth HAL domain
 %files sub1-domain_HAL-bluetooth
+
+
+%package sub2-domain_HAL-bluetooth-TM2
+Summary:	HAL packages for TM2 Bluetooth
+%description sub2-domain_HAL-bluetooth-TM2
+%files sub2-domain_HAL-bluetooth-TM2
+
+
+%package sub2-domain_HAL-bluetooth-TM1
+Summary:	HAL packages for TM1 Bluetooth
+%description sub2-domain_HAL-bluetooth-TM1
+%files sub2-domain_HAL-bluetooth-TM1
+
 
 # END
