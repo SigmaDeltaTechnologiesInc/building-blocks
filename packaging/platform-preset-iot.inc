@@ -71,7 +71,7 @@ Tizen IoT Headed/Minimal Preset
 %package sub2-Preset_iot-examples-RPI3_headless_devboard
 Summary:	RPI3 Headless for Developers
 Requires:	%{name}-sub2-Preset_iot-platforms-headless_minimal
-Requires:	%{name}-sub2-Preset_iot-boards-RPI3_headlessBSP
+Requires:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
 Requires:	rpm
 Suggests:	gcc
 Suggests:	make
@@ -84,7 +84,7 @@ Suggests:	cmake
 %package sub2-Preset_iot-examples-RPI3_headless_networkhub
 Summary:	RPI3 Headless Network Hub
 Requires:	%{name}-sub2-Preset_iot-platforms-headless_minimal
-Requires:	%{name}-sub2-Preset_iot-boards-RPI3_headlessBSP
+Requires:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
 Requires:	%{name}-root-network
 %description sub2-Preset_iot-examples-RPI3_headless_networkhub
 %files sub2-Preset_iot-examples-RPI3_headless_networkhub
@@ -94,7 +94,7 @@ Requires:	%{name}-root-network
 %package sub2-Preset_iot-examples-RPI3_headless_minimal
 Summary:	RPI3 Minimal Headless
 Requires:	%{name}-sub2-Preset_iot-platforms-headless_minimal
-Requires:	%{name}-sub2-Preset_iot-boards-RPI3_headlessBSP
+Requires:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
 %description sub2-Preset_iot-examples-RPI3_headless_minimal
 %files sub2-Preset_iot-examples-RPI3_headless_minimal
 %endif
