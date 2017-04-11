@@ -36,6 +36,7 @@ Source3500:	platform-preset-iot.inc
 Source3600:	platform-preset-common.inc
 Source3700:	platform-preset-home_appliance.inc
 Source3800:	platform-preset-boards.inc
+Source3900:	platform-preset-smart.inc
 
 # To get .ks files
 BuildRequires:	image-configurations
@@ -97,13 +98,8 @@ and to most domains.
 %package	category-Preset
 Summary:	Tizen Presets
 Suggests:	%{name}-root-Preset_boards
-Suggests:	%{name}-root-Preset_mobile
-Suggests:	%{name}-root-Preset_tv
-Suggests:	%{name}-root-Preset_wearable
-Suggests:	%{name}-root-Preset_ivi
+Suggests:	%{name}-root-Preset_sd
 Suggests:	%{name}-root-Preset_iot
-Suggests:	%{name}-root-Preset_common
-Suggests:	%{name}-root-Preset_home_appliance
 %description	category-Preset
 This meta pacakge lists all Tizen blocks (meta packages) designating
 Tizen platform presets, HAL/device-support presets, and
