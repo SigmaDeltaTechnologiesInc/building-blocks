@@ -9,6 +9,7 @@ Conflicts:	%{name}-sub1-Preset_sd-ivi
 Conflicts:	%{name}-sub1-Preset_sd-home_appliance
 Conflicts:	%{name}-root-Preset-iot
 Suggests:	%{name}-sub2-Preset_sd-tv-odroid
+%list_suggest /usr/share/package-groups/tv/ tv sub2-Preset_sd-tv-
 %description sub1-Preset_sd-tv
 Tizen TV Platform Presets
 %files sub1-Preset_sd-tv
@@ -22,3 +23,5 @@ Summary:	TV-Odroid
 Tizen TV Odroid Preset
 %files sub2-Preset_sd-tv-odroid
 
+
+%list_require /usr/share/package-groups/tv/ tv sub2-Preset_sd-tv-

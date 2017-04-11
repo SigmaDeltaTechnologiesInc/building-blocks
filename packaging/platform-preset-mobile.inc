@@ -11,6 +11,7 @@ Suggests:	%{name}-sub2-Preset_sd-mobile-tm1
 Suggests:	%{name}-sub2-Preset_sd-mobile-tm2_aarch64
 Suggests:	%{name}-sub2-Preset_sd-mobile-tm2_armv7l
 Suggests:	%{name}-sub2-Preset_sd-mobile-minimal
+%list_suggest /usr/share/package-groups/mobile/ mobile sub2-Preset_sd-mobile-
 %description sub1-Preset_sd-mobile
 Tizen Mobile Platform Presets
 %files sub1-Preset_sd-mobile
@@ -68,3 +69,6 @@ Tizen Mobile Minimal Platform Preset
 Mobile-PM: fill in minimal API sets for mobile profile.
 
 %files sub2-Preset_sd-mobile-minimal
+
+
+%list_require /usr/share/package-groups/mobile/ mobile sub2-Preset_sd-mobile-

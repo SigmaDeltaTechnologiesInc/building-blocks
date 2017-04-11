@@ -41,6 +41,13 @@ Source3900:	platform-preset-smart.inc
 # To get .ks files
 BuildRequires:	image-configurations
 
+# To get blocked .yaml files, idea from YD Seo.
+BuildRequires:	meta-common
+BuildRequires:	meta-mobile
+BuildRequires:	meta-wearable
+BuildRequires:	meta-tv
+BuildRequires:	meta-ivi
+
 # To check the rules
 BuildRequires:	python
 
@@ -116,9 +123,6 @@ presets describing specific products.
 # This script writes build-spec when building the build-spec itself. :)
 # Importing .kg file with list_with_require() based on image-configuration will work
 # after Tizen:Unified starts to generate its own platform images.
-
-# TODO1: How to interpret "- pkg"? just skip? or make it conflicted?
-# TODO2: How to handle "no file error"?
 %define list_with_require() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then \
 	local start = 0 \
 	if posix.access(rpm.expand("%{1}")) then \
@@ -140,6 +144,76 @@ presets describing specific products.
 		end \
 	else \
 		print("Requires: CANNOT_FIND_REQUIRED_FILES\\n") \
+	end \
+end}}
+
+# Create Suggests List of blocks with yaml file list
+# DIRECTORY, Prefix-To-Be-Removed, Prefix-for-block-name
+%define list_suggest() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then \
+	for f in posix.files(rpm.expand("%{1}")) do \
+		local line =  string.sub(f, string.len(rpm.expand("%{2}"))+2) \
+		local prefix = string.sub(f, 1, string.len(rpm.expand("%{2}"))) \
+		if (string.sub(line, 1, 10) == 'adaptation') then \
+		elseif (string.sub(line, 1, 4) == 'boot') then \
+		elseif (prefix == rpm.expand("%{2}")) then \
+			print("Suggests: "..rpm.expand("%{3}").."zblock_"..line) \
+			print("\\n") \
+		end \
+	end \
+end}}
+
+
+# Create Requires List of packages for all blocks with yaml file list
+# DIRECTORY, Prefix-To-Be-Removed, Prefix-for-block-name
+%define list_require() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then \
+	for f in posix.files(rpm.expand("%{1}")) do \
+		local line =  string.sub(f, string.len(rpm.expand("%{2}"))+2) \
+		local prefix = string.sub(f, 1, string.len(rpm.expand("%{2}"))) \
+		if (string.sub(line, 1, 10) == 'adaptation') then \
+		elseif (string.sub(line, 1, 4) == 'boot') then \
+		elseif (prefix == rpm.expand("%{2}")) then \
+			local pkg = rpm.expand("%{3}").."zblock_"..line \
+			local summary_available = 0 \
+			local filename = rpm.expand("%{1}").."/"..f \
+			print("\\n") \
+			print("%%package "..pkg.."\\n") \
+			if posix.access(filename) then \
+				for tag in io.lines(filename) do \
+					if (string.sub(tag, 1, 8) == "Summary:") then \
+						print(tag) \
+						print("\\n") \
+						summary_available = 1 \
+						break \
+					end \
+				end \
+			end \
+			if (summary_available == 0) then \
+				print("Summary: "..f) \
+				print("\\n") \
+			end \
+			if posix.access(filename) then \
+				for line in io.lines(rpm.expand("%{1}").."/"..f) do \
+					if (string.match(line, 'Packages:')) then \
+						start = 1 \
+					elseif (string.sub(line, 1, 2) == '- ') then \
+						if (start == 1) then \
+							print("Requires: "..string.sub(line, 3)) \
+							print("\\n") \
+						end \
+					elseif (string.sub(line, 1, 1) == '#') then \
+					elseif (string.len(line) == 0) then \
+					else \
+						start = 0
+					end \
+				end \
+			else \
+				print("Requires: CANNOT_FIND_REQUIRED_FILES\\n") \
+			end \
+			print("%%description "..pkg.."\\n") \
+			print("Auto Generated Block (zblock) of "..f.."\\n") \
+			print("%%files "..pkg.."\\n") \
+			print("\\n\\n\\n") \
+		end \
 	end \
 end}}
 

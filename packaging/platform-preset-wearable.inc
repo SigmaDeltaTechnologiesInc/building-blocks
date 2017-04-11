@@ -9,6 +9,7 @@ Conflicts:	%{name}-sub1-Preset_sd-ivi
 Conflicts:	%{name}-sub1-Preset_sd-home_appliance
 Conflicts:	%{name}-root-Preset-iot
 Suggests:	%{name}-sub2-Preset_sd-wearable-tw2
+%list_suggest /usr/share/package-groups/wearable/ wearable sub2-Preset_sd-wearable-
 %description sub1-Preset_sd-wearable
 Tizen Wearable Platform Presets
 %files sub1-Preset_sd-wearable
@@ -22,3 +23,4 @@ Summary:	Wearable-TW2
 Tizen Wearable TW1 (Gear 2) Preset
 %files sub2-Preset_sd-wearable-tw2
 
+%list_require /usr/share/package-groups/wearable/ wearable sub2-Preset_sd-wearable-

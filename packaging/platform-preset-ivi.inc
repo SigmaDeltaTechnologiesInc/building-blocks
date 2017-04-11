@@ -9,9 +9,11 @@ Conflicts:	%{name}-sub1-Preset_sd-wearable
 Conflicts:	%{name}-sub1-Preset_sd-home_appliance
 Conflicts:	%{name}-root-Preset-iot
 Suggests:	%{name}-sub2-Preset_sd-ivi-proto
+%list_suggest /usr/share/package-groups/ivi/ ivi sub2-Preset_sd-ivi-
 %description sub1-Preset_sd-ivi
 Tizen IVI Platform Presets
 %files sub1-Preset_sd-ivi
+
 
 %package sub2-Preset_sd-ivi-proto
 Summary:	IVI OdroidXU3 Prototype
@@ -20,4 +22,7 @@ Summary:	IVI OdroidXU3 Prototype
 %description sub2-Preset_sd-ivi-proto
 Tizen IVI Prototype Preset from OdroidXU3 as an example
 %files sub2-Preset_sd-ivi-proto
+
+
+%list_require /usr/share/package-groups/ivi/ ivi sub2-Preset_sd-ivi-
 
