@@ -2,7 +2,8 @@
 # You need ACK (+1) from the maintainer to be reviewed by building-blocks maintainers.
 
 %package root-Preset_iot
-Summary:	IOT Device Presets
+Summary:	Presets for IOT Devices
+Conflicts:	%{name}-root-Preset_sd
 Conflicts:	%{name}-root-Preset_mobile
 Conflicts:	%{name}-root-Preset_tv
 Conflicts:	%{name}-root-Preset_wearable

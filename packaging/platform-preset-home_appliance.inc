@@ -2,14 +2,14 @@
 # You need ACK (+1) from the maintainer to be reviewed by building-blocks maintainers.
 
 
-%package root-Preset_home_appliance
-Summary:	Presets for Home Appliances
-Conflicts:	%{name}-root-Preset_mobile
-Conflicts:	%{name}-root-Preset_tv
-Conflicts:	%{name}-root-Preset_wearable
-Conflicts:	%{name}-root-Preset_iot
-Conflicts:	%{name}-root-Preset_ivi
-Conflicts:	%{name}-root-Preset_common
-%description root-Preset_home_appliance
+%package sub1-Preset_sd-home_appliance
+Summary:	Home Appliances Presets (no profile)
+Conflicts:	%{name}-sub1-Preset_sd-mobile
+Conflicts:	%{name}-sub1-Preset_sd-tv
+Conflicts:	%{name}-sub1-Preset_sd-wearable
+Conflicts:	%{name}-root-Preset-iot
+Conflicts:	%{name}-sub1-Preset_sd-ivi
+Conflicts:	%{name}-sub1-Preset_sd-common
+%description sub1-Preset_sd-home_appliance
 Tizen Platform Presets for "Home Appliances"
-%files root-Preset_home_appliance
+%files sub1-Preset_sd-home_appliance

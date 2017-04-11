@@ -1,23 +1,24 @@
 # Maintainer: Tizen Wearable PM
 # You need ACK (+1) from the maintainer to be reviewed by building-blocks maintainers.
 
-%package root-Preset_wearable
+%package sub1-Preset_sd-wearable
 Summary:	Wearable Profile Presets
-Conflicts:	%{name}-root-Preset_mobile
-Conflicts:	%{name}-root-Preset_tv
-Conflicts:	%{name}-root-Preset_ivi
-Conflicts:	%{name}-root-Preset_iot
-Suggests:	%{name}-sub1-Preset_wearable-tw2
-%description root-Preset_wearable
+Conflicts:	%{name}-sub1-Preset_sd-mobile
+Conflicts:	%{name}-sub1-Preset_sd-tv
+Conflicts:	%{name}-sub1-Preset_sd-ivi
+Conflicts:	%{name}-sub1-Preset_sd-home_appliance
+Conflicts:	%{name}-root-Preset-iot
+Suggests:	%{name}-sub2-Preset_sd-wearable-tw2
+%description sub1-Preset_sd-wearable
 Tizen Wearable Platform Presets
-%files root-Preset_wearable
+%files sub1-Preset_sd-wearable
 
 
-%package sub1-Preset_wearable-tw2
-Summary:	Wearable-TW2 Preset
+%package sub2-Preset_sd-wearable-tw2
+Summary:	Wearable-TW2
 # image-configuration must have this file supplied.
 %list_with_require %{_datadir}/image-configurations/wearable-wayland-armv7l-tw2.ks
-%description sub1-Preset_wearable-tw2
+%description sub2-Preset_sd-wearable-tw2
 Tizen Wearable TW1 (Gear 2) Preset
-%files sub1-Preset_wearable-tw2
+%files sub2-Preset_sd-wearable-tw2
 
