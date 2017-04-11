@@ -34,6 +34,17 @@ Requires:	system-plugin-init_wrapper
 Requires:	system-plugin-rpi3
 # Mobileap is only required with mobileap...?
 Suggests:	mobileap-agent-extension-RPi
+
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-ARTIK_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-OdroidXU3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM1_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_32b
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_64b
+Conflicts:	%{name}-sub1-Preset_boards-TM3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TW1_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TW2_fullBSP
+
 %description sub1-Preset_boards-RPI3_headlessBSP
 These are manually extracted from common-headless-2parts-armv7l-rpi3.ks
 %files sub1-Preset_boards-RPI3_headlessBSP
@@ -46,6 +57,17 @@ Requires:	system-plugin-headless
 Requires:	system-plugin-init_wrapper
 Requires:	system-plugin-rpi3
 Requires:	mobileap-agent-extension-RPi
+
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
+Conflicts:	%{name}-sub1-Preset_boards-ARTIK_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-OdroidXU3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM1_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_32b
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_64b
+Conflicts:	%{name}-sub1-Preset_boards-TM3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TW1_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TW2_fullBSP
+
 %description sub1-Preset_boards-RPI3_fullBSP
 %files sub1-Preset_boards-RPI3_fullBSP
 %endif
@@ -62,6 +84,17 @@ Requires:	mmfw-sysconf-target-artik10
 Requires:	model-config-artik
 Requires:	system-plugin-init_wrapper
 Requires:	system-plugin-u3
+
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-OdroidXU3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM1_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_32b
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_64b
+Conflicts:	%{name}-sub1-Preset_boards-TM3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TW1_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TW2_fullBSP
+
 %description sub1-Preset_boards-ARTIK_fullBSP
 These are manually extracted from
 common-wayland-3parts-armv7l-artik710.ks and
@@ -82,6 +115,17 @@ Requires:	libwayland-egl
 Requires:	mmfw-sysconf-target-u3
 Requires:	model-config-xu3
 Requires:	system-plugin-u3
+
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-ARTIK_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM1_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_32b
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_64b
+Conflicts:	%{name}-sub1-Preset_boards-TM3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TW1_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TW2_fullBSP
+
 %description sub1-Preset_boards-OdroidXU3_fullBSP
 Manually created from common/odroidu2/arm32 ks
 %files sub1-Preset_boards-OdroidXU3_fullBSP
@@ -129,6 +173,17 @@ Requires:	ug-setting-wifidirect-efl
 Requires:	wifi-direct-manager-extension-TM1
 Requires:	wifi-direct-plugin-wpasupplicant-extension-TM1
 Requires:	wpa_supplicant-extension-TM1
+
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-ARTIK_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-OdroidXU3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_32b
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_64b
+Conflicts:	%{name}-sub1-Preset_boards-TM3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TW1_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TW2_fullBSP
+
 %description sub1-Preset_boards-TM1_fullBSP
 Manually created from mobile/tm1/arm32 ks
 %files sub1-Preset_boards-TM1_fullBSP
@@ -168,6 +223,17 @@ Requires:	ug-nfc-efl
 Requires:	ug-setting-mobileap-efl
 Requires:	ug-setting-wifidirect-efl
 Requires:	wpa_supplicant-extension-TM2
+
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-ARTIK_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-OdroidXU3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM1_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_64b
+Conflicts:	%{name}-sub1-Preset_boards-TM3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TW1_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TW2_fullBSP
+
 %description sub1-Preset_boards-TM2_fullBSP_32b
 Manually created from mobile/tm2/arm32 ks
 %files sub1-Preset_boards-TM2_fullBSP_32b
@@ -207,6 +273,17 @@ Requires:	ug-nfc-efl
 Requires:	ug-setting-mobileap-efl
 Requires:	ug-setting-wifidirect-efl
 Requires:	wpa_supplicant-extension-TM2
+
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-ARTIK_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-OdroidXU3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM1_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_32b
+Conflicts:	%{name}-sub1-Preset_boards-TM3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TW1_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TW2_fullBSP
+
 %description sub1-Preset_boards-TM2_fullBSP_64b
 Manually created from mobile/tm2/arm64 ks
 %files sub1-Preset_boards-TM2_fullBSP_64b
@@ -214,7 +291,18 @@ Manually created from mobile/tm2/arm64 ks
 
 %ifarch aarch64
 %package sub1-Preset_boards-TM3_fullBSP
-Summary:	BSP for TM3 (Exynos9)
+Summary:	BSP for TM3 (Exynos9) (WIP)
+
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-ARTIK_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-OdroidXU3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM1_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_32b
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_64b
+Conflicts:	%{name}-sub1-Preset_boards-TW1_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TW2_fullBSP
+
 %description sub1-Preset_boards-TM3_fullBSP
 Not Generated Yet.
 %files sub1-Preset_boards-TM3_fullBSP
@@ -251,6 +339,17 @@ Requires:	swap-probe-elf
 Requires:	system-plugin
 Requires:	system-plugin-circle
 Requires:	ug-nfc-efl
+
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-ARTIK_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-OdroidXU3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM1_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_32b
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_64b
+Conflicts:	%{name}-sub1-Preset_boards-TM3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TW2_fullBSP
+
 %description sub1-Preset_boards-TW1_fullBSP
 Created from wearable/tw1 ks. Importing all "Adaptation" section
 %files sub1-Preset_boards-TW1_fullBSP
@@ -287,6 +386,17 @@ Requires:	swap-probe-elf
 Requires:	system-plugin
 Requires:	system-plugin-circle
 Requires:	ug-nfc-efl
+
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
+Conflicts:	%{name}-sub1-Preset_boards-RPI3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-ARTIK_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-OdroidXU3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM1_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_32b
+Conflicts:	%{name}-sub1-Preset_boards-TM2_fullBSP_64b
+Conflicts:	%{name}-sub1-Preset_boards-TM3_fullBSP
+Conflicts:	%{name}-sub1-Preset_boards-TW1_fullBSP
+
 %description sub1-Preset_boards-TW2_fullBSP
 Created from wearable/tw2 ks. Importing all "Adaptation" section
 %files sub1-Preset_boards-TW2_fullBSP
