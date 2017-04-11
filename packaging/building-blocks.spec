@@ -274,5 +274,6 @@ python ./rule_checker.py
 %{include_if_mainbuild %{SOURCE3600}}
 %{include_if_mainbuild %{SOURCE3700}}
 %{include_if_mainbuild %{SOURCE3800}}
+%{include_if_mainbuild %{SOURCE3900}}
 
 
