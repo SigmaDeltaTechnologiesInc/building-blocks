@@ -156,6 +156,7 @@ end}}
 		if (string.sub(line, 1, 10) == 'adaptation') then \
 		elseif (string.sub(line, 1, 4) == 'boot') then \
 		elseif (prefix == rpm.expand("%{2}")) then \
+			line = string.gsub(line, "-", "_")
 			print("Suggests: "..rpm.expand("%{3}").."zblock_"..line) \
 			print("\\n") \
 		end \
@@ -172,7 +173,7 @@ end}}
 		if (string.sub(line, 1, 10) == 'adaptation') then \
 		elseif (string.sub(line, 1, 4) == 'boot') then \
 		elseif (prefix == rpm.expand("%{2}")) then \
-			local pkg = rpm.expand("%{3}").."zblock_"..line \
+			local pkg = string.gsub(rpm.expand("%{3}").."zblock_"..line, "-", "_") \
 			local summary_available = 0 \
 			local filename = rpm.expand("%{1}").."/"..f \
 			print("\\n") \
