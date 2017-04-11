@@ -54,7 +54,7 @@ BuildRequires:	python
 # Root Categories
 Suggests:	%{name}-category-domains
 Suggests:	%{name}-category-epicfeatures
-Suggests:	%{name}-category-presets
+Suggests:	%{name}-category-Presets
 
 %description
 The root of all Tizen building block meta packages.
