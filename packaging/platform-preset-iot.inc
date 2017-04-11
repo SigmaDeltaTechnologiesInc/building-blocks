@@ -15,7 +15,7 @@ Tizen IoT Device Presets
 
 
 %package sub1-Preset_iot-platforms
-Summary:	IOT Software Platform Presets
+Summary:	IOT Software Platform Presets (Test)
 Suggests:	%{name}-sub2-Preset_iot-platforms-headless_minimal
 Suggests:	%{name}-sub2-Preset_iot-platforms-headless_speaker
 Suggests:	%{name}-sub2-Preset_iot-platforms-headed_minimal
