@@ -109,3 +109,20 @@
 another block that is not a direct child of it (ref. RULE 2.6)
 	E.g., sub2-* cannot Requires/Suggests another root/sub1/sub2
 	E.g., sub1-A cannot Requires/Suggests sub2-B-X
+
+5.5. A UI Block is a block that cannot be chosen or have relation with other blocks
+or packages, but is used to provide UI elements in TIC.
+
+    5.5.1. A UI Block has the same naming rule with others.
+    5.5.2. A block becomes a UI block if it satisfies the following regex:
+	/__UI__..$/
+    5.5.3. The last two characters (.. in the regex above) are "tag" that consists of
+	the placement of the block.
+        5.5.3.1. Tags are:
+            BR or br: blank line
+            HR or hr: <hr>
+            SD or sd: shaded blank line
+            SM or sm: summary text is shown (HTML tags works)
+            HT or ht: HTML tags from summary text is used. (same with SM/sm...)
+
+5.6. Blocks in TIC are placed sorted by package name. (ascending order)

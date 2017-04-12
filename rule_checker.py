@@ -100,6 +100,7 @@ def ruleCheckInc(file):
 
     files = 0 # Start checking if %files section have files (error if exists)
     lastpkg = ''
+    uipkg_checking = 0 # 1 if we are in a context of uipkg (after %package, before %description/%files/...)
 
     try:
         f = open("packaging/"+file, 'r')
@@ -113,6 +114,7 @@ def ruleCheckInc(file):
 	if (files == 1):
 	    if re.search(r'^\s*(%package)|(%build)|(%description)|(%prep)|(%clean)|(%install)|(%post)|(%pre)', line):
 	        files = 0
+		uipkg_checking = 0
 	    else:
 	        if re.search(r'^\s*[^#\s]+', line) and \
 		   not re.search(r'^\s*(%include)|(%endif)|(%ifarch)|(%list_require)', line):
@@ -122,6 +124,13 @@ def ruleCheckInc(file):
 		    continue
 
 	if re.search(r'^\s*((Suggests)|(Requires))', line, re.IGNORECASE):
+	    # RULE 5.5
+	    if uipkg_checking == 1:
+	        error += 1
+		print("ERROR: RULE 5.5 a UI block cannot have relation with others.")
+		report(file, lc, line)
+		continue
+
 	    if not re.search(r'^\s*((Suggests)|(Requires)):', line):
 	        error += 1
 		print("ERROR: Use case sensitive put : directly after the keyword")
@@ -224,6 +233,8 @@ def ruleCheckInc(file):
 	        print("ERROR: RULE 1.3 the send prefix should be root, sub1, sub2, or sub3.")
 	        report(file, lc, line)
 	        continue
+	    if re.search(r'^.*__UI__..$', line):
+	        uipkg_checking = 1
 
         # RULE 1-9 for root block (1-5)
         if re.search(r'^\s*%package\s*root', line) and	\
