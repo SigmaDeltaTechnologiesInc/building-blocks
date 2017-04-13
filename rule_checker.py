@@ -100,7 +100,9 @@ def ruleCheckInc(file):
 
     files = 0 # Start checking if %files section have files (error if exists)
     lastpkg = ''
+    descpkg = ''
     uipkg_checking = 0 # 1 if we are in a context of uipkg (after %package, before %description/%files/...)
+    description = 0 # 1 if it is next line of description
 
     try:
         f = open("packaging/"+file, 'r')
@@ -110,6 +112,18 @@ def ruleCheckInc(file):
         return (0, 1)
     for line in f:
         lc += 1
+
+        # RULE 5.7
+	if description == 1:
+	    description = 0
+	    if re.search(r'^__KS_URL__', line):
+	        if not re.search(r'Preset_boards-', descpkg):
+		    error += 1
+		    print("ERROR: Rule 5.7.1. The package: "+descpkg)
+		    report(file, lc, line)
+		    continue
+	if re.search(r'^\s*%description', line):
+	    description = 1
 
 	if (files == 1):
 	    if re.search(r'^\s*(%package)|(%build)|(%description)|(%prep)|(%clean)|(%install)|(%post)|(%pre)', line):
@@ -308,6 +322,7 @@ def ruleCheckInc(file):
 
 	# Check for %description entry
 	if re.search(r'^\s*%description\s+', line):
+	    descpkg = lastpkg
 	    lastpkg = ''
 
 	    # remove tag

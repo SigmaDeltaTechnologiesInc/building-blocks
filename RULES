@@ -126,3 +126,13 @@ or packages, but is used to provide UI elements in TIC.
             HT or ht: HTML tags from summary text is used. (same with SM/sm...)
 
 5.6. Blocks in TIC are placed sorted by package name. (ascending order)
+
+5.7. If the first line of %description starts with __KS_URL__, it denotes for
+the model ks file URL to be interpreted by TIC.
+
+    5.7.1. Only platform-preset-boards may use such keywords
+    5.7.2. Only one package with such keyword is effective. If there are two packages
+        with such keywords are chosen simultaneously, the behavior is "undefined".
+    5.7.3. The section of "%packages" in the linked ks file is ignored.
+    5.7.4. If the URL points to a directory index, any ks file in the directory can be
+	used. (ending with /)

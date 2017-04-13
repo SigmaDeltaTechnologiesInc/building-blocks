@@ -46,6 +46,7 @@ Conflicts:	%{name}-sub1-Preset_boards-TW1_fullBSP
 Conflicts:	%{name}-sub1-Preset_boards-TW2_fullBSP
 
 %description sub1-Preset_boards-RPI3_headlessBSP
+__KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/common-headless-2parts-armv7l-rpi3/
 These are manually extracted from common-headless-2parts-armv7l-rpi3.ks
 %files sub1-Preset_boards-RPI3_headlessBSP
 %endif
