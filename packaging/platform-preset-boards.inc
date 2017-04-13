@@ -22,6 +22,7 @@ Suggests:	%{name}-sub1-Preset_boards-TW1_fullBSP
 Suggests:	%{name}-sub1-Preset_boards-TW2_fullBSP
 %endif
 %description root-Preset_boards
+__EXPAND__: TAB1_O
 Note that kernel binaries may be required to be installed in a separated partition
 and you might be not allowed to include kernel binaries in the platform image.
 %files root-Preset_boards
@@ -70,6 +71,7 @@ Conflicts:	%{name}-sub1-Preset_boards-TW1_fullBSP
 Conflicts:	%{name}-sub1-Preset_boards-TW2_fullBSP
 
 %description sub1-Preset_boards-RPI3_fullBSP
+__KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/common-headless-2parts-armv7l-rpi3/
 %files sub1-Preset_boards-RPI3_fullBSP
 %endif
 
@@ -97,10 +99,9 @@ Conflicts:	%{name}-sub1-Preset_boards-TW1_fullBSP
 Conflicts:	%{name}-sub1-Preset_boards-TW2_fullBSP
 
 %description sub1-Preset_boards-ARTIK_fullBSP
+__KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/common-wayland-3parts-armv7l-artik710/
 These are manually extracted from
-common-wayland-3parts-armv7l-artik710.ks and
-common-wayland-3parts-armv7l-artik.ks
-(Both had same for these)
+common-wayland-3parts-armv7l-artik710.ks
 %files sub1-Preset_boards-ARTIK_fullBSP
 %endif
 
@@ -128,6 +129,7 @@ Conflicts:	%{name}-sub1-Preset_boards-TW1_fullBSP
 Conflicts:	%{name}-sub1-Preset_boards-TW2_fullBSP
 
 %description sub1-Preset_boards-OdroidXU3_fullBSP
+__KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/common-wayland-3parts-armv7l-odroidu3/
 Manually created from common/odroidu2/arm32 ks
 %files sub1-Preset_boards-OdroidXU3_fullBSP
 %endif
@@ -186,6 +188,7 @@ Conflicts:	%{name}-sub1-Preset_boards-TW1_fullBSP
 Conflicts:	%{name}-sub1-Preset_boards-TW2_fullBSP
 
 %description sub1-Preset_boards-TM1_fullBSP
+__KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/mobile-wayland-armv7l-tm1/
 Manually created from mobile/tm1/arm32 ks
 %files sub1-Preset_boards-TM1_fullBSP
 %endif
@@ -236,6 +239,7 @@ Conflicts:	%{name}-sub1-Preset_boards-TW1_fullBSP
 Conflicts:	%{name}-sub1-Preset_boards-TW2_fullBSP
 
 %description sub1-Preset_boards-TM2_fullBSP_32b
+__KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/mobile-wayland-armv7l-tm2/
 Manually created from mobile/tm2/arm32 ks
 %files sub1-Preset_boards-TM2_fullBSP_32b
 %endif
@@ -286,6 +290,7 @@ Conflicts:	%{name}-sub1-Preset_boards-TW1_fullBSP
 Conflicts:	%{name}-sub1-Preset_boards-TW2_fullBSP
 
 %description sub1-Preset_boards-TM2_fullBSP_64b
+__KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/mobile-wayland-arm64-tm2/
 Manually created from mobile/tm2/arm64 ks
 %files sub1-Preset_boards-TM2_fullBSP_64b
 %endif
@@ -352,6 +357,7 @@ Conflicts:	%{name}-sub1-Preset_boards-TM3_fullBSP
 Conflicts:	%{name}-sub1-Preset_boards-TW2_fullBSP
 
 %description sub1-Preset_boards-TW1_fullBSP
+__KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/wearable-wayland-armv7l-tw1/
 Created from wearable/tw1 ks. Importing all "Adaptation" section
 %files sub1-Preset_boards-TW1_fullBSP
 %endif
@@ -399,6 +405,7 @@ Conflicts:	%{name}-sub1-Preset_boards-TM3_fullBSP
 Conflicts:	%{name}-sub1-Preset_boards-TW1_fullBSP
 
 %description sub1-Preset_boards-TW2_fullBSP
+__KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/wearable-wayland-armv7l-tw2/
 Created from wearable/tw2 ks. Importing all "Adaptation" section
 %files sub1-Preset_boards-TW2_fullBSP
 %endif
