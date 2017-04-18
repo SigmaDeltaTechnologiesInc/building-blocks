@@ -10,6 +10,8 @@ Conflicts:	%{name}-root-Preset_wearable
 Conflicts:	%{name}-root-Preset_ivi
 Suggests:	%{name}-sub1-Preset_iot-headless_minimal
 Suggests:	%{name}-sub1-Preset_iot-headless_speaker
+Suggests:	%{name}-sub1-Preset_iot-headless_net
+Suggests:	%{name}-sub1-Preset_iot-headless_controller
 Suggests:	%{name}-sub1-Preset_iot-headed_minimal
 %description root-Preset_iot
 __EXPAND__: TAB1_O
@@ -78,6 +80,24 @@ Tizen IoT Headed/Minimal Preset
 %files sub1-Preset_iot-headed_minimal
 
 
+%package sub1-Preset_iot-headless_net
+Summary:	IoT Headless
+Requires:	%{name}-root-feature_Headless
+%description sub1-Preset_iot-headless_net
+Tizen IoT Headless Preset
+%files sub1-Preset_iot-headless_net
+
+
+%package sub1-Preset_iot-headless_controller
+Summary:	IoT Headless
+Requires:	%{name}-root-feature_Headless
+%description sub1-Preset_iot-headless_controller
+Tizen IoT Headless Preset
+%files sub1-Preset_iot-headless_controller
+
+
+
+
 %ifarch aarch64 armv7l
 %package sub1-Preset_1iot_examples-3_RPI3_headless_devboard
 Summary:	RPI3 Headless for Developers
@@ -96,7 +116,6 @@ Suggests:	cmake
 Summary:	RPI3 Headless Network Hub
 Requires:	%{name}-sub1-Preset_iot-headless_minimal
 Requires:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
-Requires:	%{name}-root-domain_network
 %description sub1-Preset_1iot_examples-3_RPI3_headless_networkhub
 %files sub1-Preset_1iot_examples-3_RPI3_headless_networkhub
 %endif

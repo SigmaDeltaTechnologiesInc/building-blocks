@@ -11,18 +11,20 @@ Url:		http://tizen.org
 Group:		Meta
 Source0:	%{name}-%{version}.tar.gz
 
-Source1001:	domain-kernel.inc
-Source1002:	domain-systemfw.inc
-Source1010:	domain-appfw.inc
-Source1020:	domain-window-system.inc
-Source1030:	domain-graphics.inc
-Source1040:	domain-network.inc
-Source1050:	domain-multimedia.inc
-Source1060:	domain-hal.inc
-Source1070:	domain-service-framework.inc
-Source1080:	domain-UI.inc
-Source1090:	domain-UIX.inc
-Source1100:	domain-security.inc
+# Domains are rearranged by API sets according to developer.tizen.org
+#Source1001:	domain-kernel.inc
+#Source1002:	domain-systemfw.inc
+#Source1010:	domain-appfw.inc
+#Source1020:	domain-window-system.inc
+#Source1030:	domain-graphics.inc
+#Source1040:	domain-network.inc
+#Source1050:	domain-multimedia.inc
+#Source1060:	domain-hal.inc
+#Source1070:	domain-service-framework.inc
+#Source1080:	domain-UI.inc
+#Source1090:	domain-UIX.inc
+#Source1100:	domain-security.inc
+Source1200:	domain-apis.inc
 
 Source2001:	epicfeature-headless.inc
 Source2010:	epicfeature-development.inc
@@ -69,18 +71,7 @@ In Tizen building blocks, "Requires" means mandatory package.
 
 %package	category-domains
 Summary:	Tizen Techinical Domains
-Suggests:	%{name}-root-domain_Kernel
-Suggests:	%{name}-root-domain_SystemFW
-Suggests:	%{name}-root-domain_AppFW
-Suggests:	%{name}-root-domain_Window
-Suggests:	%{name}-root-domain_graphics
-Suggests:	%{name}-root-domain_network
-Suggests:	%{name}-root-domain_multimedia
-Suggests:	%{name}-root-domain_HAL
-Suggests:	%{name}-root-domain_serviceFW
-Suggests:	%{name}-root-domain_UI
-Suggests:	%{name}-root-domain_UIX
-Suggests:	%{name}-root-domain_security
+Suggests:	%{name}-root-domain_API
 %description	category-domains
 This meta package lists all Tizen blocks (meta packages) designating
 techinical domains.
@@ -118,13 +109,13 @@ presets describing specific products.
 
 # Do not try to include files unless RPMBUILD has already expanded source files to SOURCES
 # Use Source1001 (domain-kernel) as the probing point.
-%define include_if_mainbuild() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then print("%include "..rpm.expand("%{1}").." ") end}}
+%define include_if_mainbuild() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1200}"), "f") then print("%include "..rpm.expand("%{1}").." ") end}}
 
 # Create a target device preset from .ks file used to create device iamge.
 # This script writes build-spec when building the build-spec itself. :)
 # Importing .kg file with list_with_require() based on image-configuration will work
 # after Tizen:Unified starts to generate its own platform images.
-%define list_with_require() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then \
+%define list_with_require() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1200}"), "f") then \
 	local start = 0 \
 	if posix.access(rpm.expand("%{1}")) then \
 		for line in io.lines(rpm.expand("%{1}")) do \
@@ -150,7 +141,7 @@ end}}
 
 # Create Suggests List of blocks with yaml file list
 # DIRECTORY, Prefix-To-Be-Removed, Prefix-for-block-name
-%define list_suggest() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then \
+%define list_suggest() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1200}"), "f") then \
 	for f in posix.files(rpm.expand("%{1}")) do \
 		local line =  string.sub(f, string.len(rpm.expand("%{2}"))+2) \
 		local prefix = string.sub(f, 1, string.len(rpm.expand("%{2}"))) \
@@ -167,7 +158,7 @@ end}}
 
 # Create Requires List of packages for all blocks with yaml file list
 # DIRECTORY, Prefix-To-Be-Removed, Prefix-for-block-name
-%define list_require() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1001}"), "f") then \
+%define list_require() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1200}"), "f") then \
 	for f in posix.files(rpm.expand("%{1}")) do \
 		local line =  string.sub(f, string.len(rpm.expand("%{2}"))+2) \
 		local prefix = string.sub(f, 1, string.len(rpm.expand("%{2}"))) \
@@ -233,24 +224,7 @@ python ./rule_checker.py
 %files
 
 ############## DOMAINS ##################
-
-# Include "Kernel" domain. The script should not execute "include" if the contexts is in GBS service in OBS or GBS-Export
-%{include_if_mainbuild %{SOURCE1001}}
-
-# Include "systemfw" domain. The script should not execute "include" if the contexts is in GBS service in OBS or GBS-Export
-%{include_if_mainbuild %{SOURCE1002}}
-
-# And other domains
-%{include_if_mainbuild %{SOURCE1010}}
-%{include_if_mainbuild %{SOURCE1020}}
-%{include_if_mainbuild %{SOURCE1030}}
-%{include_if_mainbuild %{SOURCE1040}}
-%{include_if_mainbuild %{SOURCE1050}}
-%{include_if_mainbuild %{SOURCE1060}}
-%{include_if_mainbuild %{SOURCE1070}}
-%{include_if_mainbuild %{SOURCE1080}}
-%{include_if_mainbuild %{SOURCE1090}}
-%{include_if_mainbuild %{SOURCE1100}}
+%{include_if_mainbuild %{SOURCE1200}}
 
 ############## EPIC FEATURES ######################
 
