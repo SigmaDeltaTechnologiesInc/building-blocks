@@ -59,6 +59,10 @@ Summary:	<b>Examples Not Verified</b>
 %package sub1-Preset_iot-headless_minimal
 Summary:	IoT Headless Minimal Preset
 Requires:	%{name}-root-feature_Headless
+Requires:	bash
+Requires:	systemd
+Suggests:	rpm
+Suggests:	%{name}-sub2-domain_API-Network-IoTCon
 %description sub1-Preset_iot-headless_minimal
 Tizen IoT Headless/Minimal Preset
 %files sub1-Preset_iot-headless_minimal
@@ -67,6 +71,17 @@ Tizen IoT Headless/Minimal Preset
 %package sub1-Preset_iot-headless_speaker
 Summary:	IoT Headless Speaker (Minimal) Preset
 Requires:	%{name}-root-feature_Headless
+Requires:	%{name}-sub2-domain_API-Multimedia-AudioIO
+Requires:	%{name}-sub2-domain_API-Multimedia-SoundManager
+Requires:	%{name}-sub2-domain_API-Multimedia-WAVPlayer
+Requires:	%{name}-sub2-domain_API-Network-Bluetooth
+Requires:	%{name}-sub2-domain_API-Network-Connection
+Requires:	%{name}-sub2-domain_API-Network-WiFiDirect
+Requires:	%{name}-sub2-domain_API-Network-WiFi
+Suggests:	%{name}-sub2-domain_API-Network-IoTCon
+Suggests:	%{name}-sub2-domain_API-Multimedia-Radio
+Suggests:	%{name}-sub2-domain_API-Multimedia-Recorder
+Suggests:	rpm
 %description sub1-Preset_iot-headless_speaker
 Tizen IoT Speaker/Minimal Preset
 %files sub1-Preset_iot-headless_speaker
@@ -75,6 +90,13 @@ Tizen IoT Speaker/Minimal Preset
 %package sub1-Preset_iot-headed_minimal
 Summary:	IoT Headed (GUI support) Minimal Preset
 Requires:	%{name}-root-feature_Headed
+Requires:	%{name}-sub2-domain_API-UI-EFL
+Suggests:	%{name}-sub2-domain_API-UI-DALi
+Suggests:	%{name}-sub2-domain_API-UI-Cairo
+Suggests:	%{name}-sub2-domain_API-Network-IoTCon
+Requires:	bash
+Requires:	systemd
+Suggests:	rpm
 %description sub1-Preset_iot-headed_minimal
 Tizen IoT Headed/Minimal Preset
 %files sub1-Preset_iot-headed_minimal
@@ -83,6 +105,16 @@ Tizen IoT Headed/Minimal Preset
 %package sub1-Preset_iot-headless_net
 Summary:	IoT Headless
 Requires:	%{name}-root-feature_Headless
+Requires:	%{name}-sub2-domain_API-Network-Bluetooth
+Requires:	%{name}-sub2-domain_API-Network-Connection
+Requires:	%{name}-sub2-domain_API-Network-WiFiDirect
+Requires:	%{name}-sub2-domain_API-Network-WiFi
+Suggests:	%{name}-sub2-domain_API-Network-NFC
+Suggests:	%{name}-sub2-domain_API-Network-Smartcard
+Suggests:	%{name}-sub2-domain_API-Network-IoTCon
+Requires:	bash
+Requires:	systemd
+Suggests:	rpm
 %description sub1-Preset_iot-headless_net
 Tizen IoT Headless Preset
 %files sub1-Preset_iot-headless_net
@@ -91,6 +123,20 @@ Tizen IoT Headless Preset
 %package sub1-Preset_iot-headless_controller
 Summary:	IoT Headless
 Requires:	%{name}-root-feature_Headless
+Requires:	%{name}-sub2-domain_API-Network-Bluetooth
+Requires:	%{name}-sub2-domain_API-Network-Connection
+Requires:	%{name}-sub2-domain_API-Network-IoTCon
+Suggests:	%{name}-sub2-domain_API-Network-NFC
+Suggests:	%{name}-sub2-domain_API-Network-WiFiDirect
+Suggests:	%{name}-sub2-domain_API-Network-WiFi
+Requires:	%{name}-sub2-domain_API-Context-ActivityRecognition
+Requires:	%{name}-sub2-domain_API-Context-ContextualHistory
+Requires:	%{name}-sub2-domain_API-Context-ContextualTrigger
+Requires:	%{name}-sub2-domain_API-AppFramework-MessagePort
+Requires:	%{name}-sub2-domain_API-AppFramework-ServiceApplication
+Requires:	bash
+Requires:	systemd
+Suggests:	rpm
 %description sub1-Preset_iot-headless_controller
 Tizen IoT Headless Preset
 %files sub1-Preset_iot-headless_controller
