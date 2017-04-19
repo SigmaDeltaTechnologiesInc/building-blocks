@@ -26,7 +26,6 @@ Source0:	%{name}-%{version}.tar.gz
 #Source1100:	domain-security.inc
 Source1200:	domain-apis.inc
 
-Source2001:	epicfeature-headless.inc
 Source2010:	epicfeature-development.inc
 Source2020:	epicfeature-platform.inc
 
@@ -81,8 +80,6 @@ techinical domains.
 
 %package	category-epicfeatures
 Summary:	Tizen Major Features
-Suggests:	%{name}-root-feature_Headless
-Suggests:	%{name}-root-feature_Headed
 Suggests:	%{name}-root-feature_Development
 Suggests:	%{name}-root-feature_Platform
 %description	category-epicfeatures
@@ -227,9 +224,6 @@ python ./rule_checker.py
 %{include_if_mainbuild %{SOURCE1200}}
 
 ############## EPIC FEATURES ######################
-
-# Include "headless" epic feature. The script should not execute "include" if the contexts is in GBS service in OBS or GBS-Export
-%{include_if_mainbuild %{SOURCE2001}}
 
 # Dev tools
 %{include_if_mainbuild %{SOURCE2010}}
