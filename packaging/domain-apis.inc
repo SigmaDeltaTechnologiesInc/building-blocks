@@ -2,7 +2,7 @@
 # You need ACK (+1) from the maintainer to be reviewed by building-blocks maintainers.
 
 %package root-domain_API
-Summary:	Tizen API sets
+Summary:	Tizen API Sets
 Suggests:	%{name}-sub1-domain_API-Account
 Suggests:	%{name}-sub1-domain_API-AppFramework
 Suggests:	%{name}-sub1-domain_API-Base
@@ -181,7 +181,7 @@ Tizen block (set of packages) for API sets of domain API-AppFramework-Widget
 
 
 %package sub1-domain_API-Base
-Summary:	API-Base
+Summary:	Base
 Requires:	capi-base-common
 Suggests:	glib2
 Requires:	glibc
@@ -198,7 +198,7 @@ Tizen block (set of packages) for API sets of domain API-Base
 
 
 %package sub1-domain_API-Content
-Summary:	API-Content
+Summary:	Content
 Suggests:	%{name}-sub2-domain_API-Content-Download
 Suggests:	%{name}-sub2-domain_API-Content-MIMEType
 Suggests:	%{name}-sub2-domain_API-Content-MediaContent
@@ -231,7 +231,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-Content-MediaConte
 
 
 %package sub1-domain_API-Context
-Summary:	API-Context
+Summary:	Context
 Suggests:	%{name}-sub2-domain_API-Context-ActivityRecognition
 Suggests:	%{name}-sub2-domain_API-Context-ContextualHistory
 Suggests:	%{name}-sub2-domain_API-Context-ContextualTrigger
@@ -272,7 +272,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-Context-GestureRec
 
 
 %package sub1-domain_API-Location
-Summary:	API-Location
+Summary:	Location
 Suggests:	%{name}-sub2-domain_API-Location-GeofenceManager
 Suggests:	%{name}-sub2-domain_API-Location-LocationManager
 Suggests:	%{name}-sub2-domain_API-Location-MapsService
@@ -306,7 +306,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-Location-MapsServi
 
 
 %package sub1-domain_API-Messaging
-Summary:	API-Messaging
+Summary:	Messaging
 Suggests:	%{name}-sub2-domain_API-Messaging-Email
 Suggests:	%{name}-sub2-domain_API-Messaging-Messages
 Suggests:	%{name}-sub2-domain_API-Messaging-Push
@@ -341,7 +341,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-Messaging-Push
 
 
 %package sub1-domain_API-Multimedia
-Summary:	API-Multimedia
+Summary:	Multimedia
 Suggests:	%{name}-sub2-domain_API-Multimedia-AudioIO
 Suggests:	%{name}-sub2-domain_API-Multimedia-Camera
 Suggests:	%{name}-sub2-domain_API-Multimedia-ImageUtil
@@ -544,7 +544,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-libEXIF
 
 
 %package sub1-domain_API-Network
-Summary:	API-Network
+Summary:	Network
 Suggests:	%{name}-sub2-domain_API-Network-Bluetooth
 Suggests:	%{name}-sub2-domain_API-Network-Connection
 Suggests:	libcurl
@@ -655,7 +655,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-Network-WiFiDirect
 
 
 %package sub1-domain_API-Security
-Summary:	API-Security
+Summary:	Security
 Suggests:	%{name}-sub2-domain_API-Security-CSR
 Suggests:	%{name}-sub2-domain_API-Security-DevicePolicyManager
 Suggests:	%{name}-sub2-domain_API-Security-KeyManager
@@ -719,7 +719,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-Security-YACA
 
 
 %package sub1-domain_API-Social
-Summary:	API-Social
+Summary:	Social
 Suggests:	%{name}-sub2-domain_API-Social-Calendar
 Suggests:	%{name}-sub2-domain_API-Social-Contacts
 Suggests:	%{name}-sub2-domain_API-Social-PhonenumberUtils
@@ -753,7 +753,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-Social-Phonenumber
 
 
 %package sub1-domain_API-System
-Summary:	API-System
+Summary:	System
 Suggests:	%{name}-sub2-domain_API-System-Device
 Suggests:	%{name}-sub2-domain_API-System-Feedback
 Suggests:	%{name}-sub2-domain_API-System-MediaKey
@@ -864,7 +864,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-System-dlog
 
 
 %package sub1-domain_API-Telephony
-Summary:	API-Telephony
+Summary:	Telephony
 Requires:	capi-telephony
 %description sub1-domain_API-Telephony
 Tizen block (set of packages) for API sets of domain API-Telephony
@@ -872,7 +872,7 @@ Tizen block (set of packages) for API sets of domain API-Telephony
 
 
 %package sub1-domain_API-UI
-Summary:	API-UI
+Summary:	UI
 Suggests:	%{name}-sub2-domain_API-UI-Cairo
 Suggests:	%{name}-sub2-domain_API-UI-ClipboardHistoryManager
 Suggests:	%{name}-sub2-domain_API-UI-DALi
@@ -996,7 +996,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-UI-Vulkan
 
 
 %package sub1-domain_API-UIX
-Summary:	API-UIX
+Summary:	UIX
 Suggests:	%{name}-sub2-domain_API-UIX-InputMethod
 Suggests:	%{name}-sub2-domain_API-UIX-InputMethodManager
 Suggests:	%{name}-sub2-domain_API-UIX-STT
@@ -1054,7 +1054,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-UIX-VoiceControlEl
 
 
 %package sub1-domain_API-Web
-Summary:	API-Web
+Summary:	Web
 Suggests:	libjson-glib
 Suggests:	chromium-efl
 %description sub1-domain_API-Web
