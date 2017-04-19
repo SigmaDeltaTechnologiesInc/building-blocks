@@ -14,7 +14,7 @@ Suggests:	%{name}-sub1-Preset_iot-headless_net
 Suggests:	%{name}-sub1-Preset_iot-headless_controller
 Suggests:	%{name}-sub1-Preset_iot-headed_minimal
 %description root-Preset_iot
-__EXPAND__: TAB1_O
+__EXPAND__: preset
 Tizen IoT Presets of Software Plaforms independent from specific hardware/BSPs.
 %files root-Preset_iot
 
@@ -35,7 +35,7 @@ Suggests:	%{name}-sub1-Preset_1iot_examples-3_RPI3_headless_networkhub
 Suggests:	%{name}-sub1-Preset_1iot_examples-3_RPI3_headless_minimal
 %endif
 %description root-Preset_1iot_examples
-__EXPAND__: TAB1_O
+__EXPAND__: preset
 Tizen IoT Presets of specific devices, which have both BSPs and software platforms.
 An item in this section is intended to represent a whole OS image.
 %files root-Preset_1iot_examples

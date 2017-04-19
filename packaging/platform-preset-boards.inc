@@ -22,7 +22,7 @@ Suggests:	%{name}-sub1-Preset_boards-TW1_fullBSP
 Suggests:	%{name}-sub1-Preset_boards-TW2_fullBSP
 %endif
 %description root-Preset_boards
-__EXPAND__: TAB1_O
+__EXPAND__: preset
 Note that kernel binaries may be required to be installed in a separated partition
 and you might be not allowed to include kernel binaries in the platform image.
 %files root-Preset_boards

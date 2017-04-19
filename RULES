@@ -136,11 +136,17 @@ the model ks file URL to be interpreted by TIC.
     5.7.3. The section of "%packages" in the linked ks file is ignored.
     5.7.4. If the URL points to a directory index, any ks file in the directory can be
 	used. (ending with /)
+    5.7.5. Adding __KS_URL__ requires consulting building-block maintainers and
+	release engineers to ensure its availability.
 
 5.8. If the first line of %description starts with __EXPAND__, the block is
 expanded in TIC as default
 
     5.8.1. A following word of __EXPAND__ may denote keywords for TIC that
         show when to expand and collapse.
-        e.g., __EXPAND__: TAB1 (expanded with preset tab only)
-        e.g., __EXPAND__: TAB1_O (expanded with preset tab, collapsed with others)
+        e.g., __EXPAND__: preset (expanded with preset tab)
+        e.g., __EXPAND__: all (expanded with all tab)
+    5.8.2. Using __EXPAND__ option requires consulting with building-block maintainers
+    5.8.3. Using __EXPAND__ is allowed only for root blocks
+
+

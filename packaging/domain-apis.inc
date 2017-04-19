@@ -20,6 +20,7 @@ Suggests:	%{name}-sub1-domain_API-UI
 Suggests:	%{name}-sub1-domain_API-UIX
 Suggests:	%{name}-sub1-domain_API-Web
 %description root-domain_API
+__EXPAND__: domains
 Tizen packages blocked and sorted by API sets defined in https://developer.tizen.org/development/api-references/native-application
 %files root-domain_API
 
