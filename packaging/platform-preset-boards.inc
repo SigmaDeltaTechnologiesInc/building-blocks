@@ -114,7 +114,6 @@ Requires:	libtdm-exynos
 Requires:	libtpl-egl
 Requires:	libwayland-egl
 Requires:	mmfw-sysconf-target-u3
-Requires:	model-config-xu3
 Requires:	system-plugin-u3
 
 Conflicts:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
