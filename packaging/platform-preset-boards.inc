@@ -22,14 +22,13 @@ Suggests:	%{name}-sub1-Preset_boards-TW1_fullBSP
 Suggests:	%{name}-sub1-Preset_boards-TW2_fullBSP
 %endif
 %description root-Preset_boards
-__EXPAND__: preset
 Note that kernel binaries may be required to be installed in a separated partition
 and you might be not allowed to include kernel binaries in the platform image.
 %files root-Preset_boards
 
 %ifarch armv7l aarch64
 %package sub1-Preset_boards-RPI3_headlessBSP
-Summary:	BSP for RPI3 (headless)
+Summary:	RPI3 (headless)
 Requires:	system-plugin-headless
 Requires:	system-plugin-init_wrapper
 Requires:	system-plugin-rpi3
@@ -54,7 +53,7 @@ These are manually extracted from common-headless-2parts-armv7l-rpi3.ks
 
 %ifarch armv7l aarch64
 %package sub1-Preset_boards-RPI3_fullBSP
-Summary:	BSP for RPI3 (full)
+Summary:	RPI3 (full)
 Requires:	system-plugin-headless
 Requires:	system-plugin-init_wrapper
 Requires:	system-plugin-rpi3
@@ -77,7 +76,7 @@ __KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/stan
 
 %ifarch armv7l
 %package sub1-Preset_boards-ARTIK_fullBSP
-Summary:	BSP for ARTIK (full)
+Summary:	ARTIK (full)
 Requires:	alsa-ucm-data-ak4953
 Requires:	audio-hal-ak4953
 Requires:	bluetooth-firmware-bcm-artik
@@ -107,7 +106,7 @@ common-wayland-3parts-armv7l-artik710.ks
 
 %ifarch armv7l
 %package sub1-Preset_boards-OdroidXU3_fullBSP
-Summary:	BSP for OdroidXU3 (full)
+Summary:	OdroidXU3 (full)
 Requires:	device-manager-plugin-odroid
 Requires:	libomxil-e54xx
 Requires:	libtbm-exynos
@@ -136,7 +135,7 @@ Manually created from common/odroidu2/arm32 ks
 
 %ifarch armv7l
 %package sub1-Preset_boards-TM1_fullBSP
-Summary:	BSP for TM1 (Z3-variant)
+Summary:	TM1 (Z3-variant)
 Requires:	libwayland-tbm-client
 Requires:	libwayland-tbm-server
 Requires:	audio-config-sc-TM1-sc7730
@@ -195,7 +194,7 @@ Manually created from mobile/tm1/arm32 ks
 
 %ifarch armv7l
 %package sub1-Preset_boards-TM2_fullBSP_32b
-Summary:	BSP for TM2 (Exynos7) (armv7l)
+Summary:	TM2 (Exynos7) (armv7l)
 Requires:	libwayland-tbm-client
 Requires:	libwayland-tbm-server
 Requires:	alsa-ucm-data-wm5110
@@ -246,7 +245,7 @@ Manually created from mobile/tm2/arm32 ks
 
 %ifarch aarch64
 %package sub1-Preset_boards-TM2_fullBSP_64b
-Summary:	BSP for TM2 (Exynos7) (aarch64)
+Summary:	TM2 (Exynos7) (aarch64)
 Requires:	libwayland-tbm-client
 Requires:	libwayland-tbm-server
 Requires:	alsa-ucm-data-wm5110
@@ -297,7 +296,7 @@ Manually created from mobile/tm2/arm64 ks
 
 %ifarch aarch64
 %package sub1-Preset_boards-TM3_fullBSP
-Summary:	BSP for TM3 (Exynos9) (WIP)
+Summary:	TM3 (Exynos9) (WIP)
 
 Conflicts:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
 Conflicts:	%{name}-sub1-Preset_boards-RPI3_fullBSP
@@ -316,7 +315,7 @@ Not Generated Yet.
 
 %ifarch armv7l
 %package sub1-Preset_boards-TW1_fullBSP
-Summary:	BSP for TW1 (Gear 2)
+Summary:	TW1 (Gear 2)
 Requires:	audio-config-wm1831-orbis
 Requires:	audio-hal-wm1831
 Requires:	bluetooth-firmware-bcm-exynos3250
@@ -364,7 +363,7 @@ Created from wearable/tw1 ks. Importing all "Adaptation" section
 
 %ifarch armv7l
 %package sub1-Preset_boards-TW2_fullBSP
-Summary:	BSP for TW2 (Gear S3)
+Summary:	TW2 (Gear S3)
 Requires:	audio-config-wm1831-tw2
 Requires:	audio-hal-wm1831-tw2
 Requires:	bluetooth-firmware-bcm-exynos7270

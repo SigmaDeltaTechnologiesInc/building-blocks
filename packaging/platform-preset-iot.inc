@@ -26,7 +26,6 @@ Suggests:	%{name}-sub1-Preset_1iot_examples-1_ARTIK_headless
 Suggests:	%{name}-sub1-Preset_1iot_examples-1_ARTIK_headed_full
 Suggests:	%{name}-sub1-Preset_1iot_examples-1_ODROID_headed_full
 %endif
-Suggests:	%{name}-sub1-Preset_1iot_examples-1_ZZZBLANK1__UI__HR
 Suggests:	%{name}-sub1-Preset_1iot_examples-1_ZZZBLANK2__UI__SM
 %ifarch aarch64 armv7l
 Suggests:	%{name}-sub1-Preset_1iot_examples-1_RPI3_headless
@@ -45,13 +44,8 @@ Summary:	<b>Examples of Official Tizen Snapshot Images</b>
 %description sub1-Preset_1iot_examples-1_AAA_BLANK1__UI__SM
 %files sub1-Preset_1iot_examples-1_AAA_BLANK1__UI__SM
 
-%package sub1-Preset_1iot_examples-1_ZZZBLANK1__UI__HR
-Summary:	UI Blank
-%description sub1-Preset_1iot_examples-1_ZZZBLANK1__UI__HR
-%files sub1-Preset_1iot_examples-1_ZZZBLANK1__UI__HR
-
 %package sub1-Preset_1iot_examples-1_ZZZBLANK2__UI__SM
-Summary:	<b>Examples Not Verified</b>
+Summary:	<b>Conceptual Examples</b>
 %description sub1-Preset_1iot_examples-1_ZZZBLANK2__UI__SM
 %files sub1-Preset_1iot_examples-1_ZZZBLANK2__UI__SM
 
@@ -103,7 +97,7 @@ Tizen IoT Headed/Minimal Preset
 
 
 %package sub1-Preset_iot-headless_net
-Summary:	IoT Headless
+Summary:	IoT Headless with Rich Networking
 Requires:	%{name}-sub1-feature_Platform-Headless
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth
 Requires:	%{name}-sub2-domain_API-Network-Connection
@@ -121,7 +115,7 @@ Tizen IoT Headless Preset
 
 
 %package sub1-Preset_iot-headless_controller
-Summary:	IoT Headless
+Summary:	IoT Headless with Contollers
 Requires:	%{name}-sub1-feature_Platform-Headless
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth
 Requires:	%{name}-sub2-domain_API-Network-Connection
