@@ -18,6 +18,7 @@ Suggests:	llvm
 Suggests:	clang
 Suggests:	make
 Suggests:	cmake
+Suggests:	dotnet-build-tools
 %description sub1-feature_Development-Build
 Build tools and compilers from Tizen
 %files sub1-feature_Development-Build

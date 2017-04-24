@@ -2,7 +2,7 @@
 # You need ACK (+1) from the maintainer to be reviewed by building-blocks maintainers.
 
 %package root-domain_API
-Summary:	Tizen API Sets
+Summary:	Tizen Native API Sets
 Suggests:	%{name}-sub1-domain_API-Account
 Suggests:	%{name}-sub1-domain_API-AppFramework
 Suggests:	%{name}-sub1-domain_API-Base

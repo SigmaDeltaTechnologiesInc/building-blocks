@@ -25,6 +25,8 @@ Source0:	%{name}-%{version}.tar.gz
 #Source1090:	domain-UIX.inc
 #Source1100:	domain-security.inc
 Source1200:	domain-apis.inc
+Source1210:	domain-csapis.inc
+Source1220:	domain-webapis.inc
 
 Source2010:	epicfeature-development.inc
 Source2020:	epicfeature-platform.inc
@@ -71,6 +73,8 @@ In Tizen building blocks, "Requires" means mandatory package.
 %package	category-domains
 Summary:	Tizen Techinical Domains
 Suggests:	%{name}-root-domain_API
+Suggests:	%{name}-root-domain_CSAPI
+Suggests:	%{name}-root-domain_WebAPI
 %description	category-domains
 This meta package lists all Tizen blocks (meta packages) designating
 techinical domains.
@@ -222,6 +226,8 @@ python ./rule_checker.py
 
 ############## DOMAINS ##################
 %{include_if_mainbuild %{SOURCE1200}}
+%{include_if_mainbuild %{SOURCE1210}}
+%{include_if_mainbuild %{SOURCE1220}}
 
 ############## EPIC FEATURES ######################
 
