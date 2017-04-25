@@ -132,7 +132,7 @@ or packages, but is used to provide UI elements in TIC.
 5.7. If the first line of %description starts with __KS_URL__, it denotes for
 the model ks file URL to be interpreted by TIC.
 
-    5.7.1. Only platform-preset-boards may use such keywords
+    5.7.1. Only platform-Preset_boards/sd may use such keywords
     5.7.2. Only one package with such keyword is effective. If there are two packages
         with such keywords are chosen simultaneously, the behavior is "undefined".
     5.7.3. The section of "%packages" in the linked ks file is ignored.
