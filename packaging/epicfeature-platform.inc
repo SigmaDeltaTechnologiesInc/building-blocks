@@ -27,7 +27,7 @@ Conflicts:	efl
 Conflicts:	libwayland-server
 Conflicts:	%{name}-sub1-feature_Platform-Headed
 # You need to list "Important (commonly-required)" headed-only packages/blocks with Conflicts.
-Requires:	%{name}-sub2-feature_Platform-Headless-Minimal
+Suggests:	%{name}-sub2-feature_Platform-Headless-Minimal
 Suggests:	%{name}-sub2-feature_Platform-Headless-Network
 %description sub1-feature_Platform-Headless
 Enabling this means that you are going to create Tizen headless device.
@@ -36,6 +36,7 @@ This disables all display depending packages.
 
 %package sub2-feature_Platform-Headless-Minimal
 Summary:	Minimal Tizen Image Configuration for Headless
+Requires:	%{name}-sub1-feature_Platform-Headless
 Requires:	bash
 Requires:	systemd
 %description sub2-feature_Platform-Headless-Minimal
@@ -44,8 +45,11 @@ Include minimal set of packages for headless.
 
 %package sub2-feature_Platform-Headless-Network
 Summary:	Headless Network Packages
-Requires:	wpa-supplicant
-Suggests:	bluez
+Requires:	%{name}-sub1-feature_Platform-Headless
+Requires:	%{name}-sub2-feature_Platform-Headless-Minimal
+Requires:	%{name}-sub2-domain_API-Network-IoTCon
+Requires:	%{name}-sub2-domain_API-Network-WiFi
+Requires:	%{name}-sub2-domain_API-Network-Bluetooth
 %description sub2-feature_Platform-Headless-Network
 Include network packages for headless.
 %files sub2-feature_Platform-Headless-Network
