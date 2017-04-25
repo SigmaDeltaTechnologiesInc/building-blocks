@@ -27,6 +27,7 @@ Summary:	Tizen Wearable Reference TW1
 # image-configuration must have this file supplied.
 %list_with_require %{_datadir}/image-configurations/wearable-wayland-armv7l-tw1.ks
 %description sub2-Preset_sd-wearable-tw1
+__KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/wearable-wayland-armv7l-tw1/
 Tizen Wearable TW1 (Gear 2) Preset
 %files sub2-Preset_sd-wearable-tw1
 
@@ -35,6 +36,7 @@ Summary:	Tizen Wearable Reference TW2
 # image-configuration must have this file supplied.
 %list_with_require %{_datadir}/image-configurations/wearable-wayland-armv7l-tw2.ks
 %description sub2-Preset_sd-wearable-tw2
+__KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/wearable-wayland-armv7l-tw2/
 Tizen Wearable TW2 (Gear S2) Preset
 %files sub2-Preset_sd-wearable-tw2
 

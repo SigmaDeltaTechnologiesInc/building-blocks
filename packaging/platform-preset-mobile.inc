@@ -32,6 +32,7 @@ Conflicts:	%{name}-sub2-Preset_sd-mobile-minimal
 # image-configuration must have this file supplied.
 %list_with_require %{_datadir}/image-configurations/mobile-wayland-armv7l-tm1.ks
 %description sub2-Preset_sd-mobile-tm1
+__KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/mobile-wayland-armv7l-tm1/
 Tizen Mobile TM1 Preset, which is using armv7l.
 You may use this preset for other architectures; however,
 please note that the TM1 model itself is for armv7l only.
@@ -50,6 +51,7 @@ Conflicts:	%{name}-sub2-Preset_sd-mobile-general
 # image-configuration must have this file supplied.
 %list_with_require %{_datadir}/image-configurations/mobile-wayland-arm64-tm2.ks
 %description sub2-Preset_sd-mobile-tm2_aarch64
+__KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/mobile-wayland-arm64-tm2/
 Tizen Mobile TM2 Preset. This is for aarch64 architecture only.
 For architectural/post-script note, please refer to tm1 twin.
 %files sub2-Preset_sd-mobile-tm2_aarch64
@@ -63,6 +65,7 @@ Conflicts:	%{name}-sub2-Preset_sd-mobile-general
 # image-configuration must have this file supplied.
 %list_with_require %{_datadir}/image-configurations/mobile-wayland-armv7l-tm2.ks
 %description sub2-Preset_sd-mobile-tm2_armv7l
+__KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/mobile-wayland-armv7l-tm2/
 Tizen Mobile TM2 Preset. This is for armv7l architecture only.
 Although TM2 has 64bit processor, we may use 32bit userspace binaries for it.
 For architectural/post-script note, please refer to tm1 twin.

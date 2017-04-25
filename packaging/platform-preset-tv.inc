@@ -27,6 +27,7 @@ Summary:	Tizen TV Reference Image with Odroid
 # image-configuration must have this file supplied.
 %list_with_require %{_datadir}/image-configurations/tv-wayland-armv7l-odroidu3.ks
 %description sub2-Preset_sd-tv-odroid
+__KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/tv-wayland-armv7l-odroidu3/
 Tizen TV Odroid Preset
 %files sub2-Preset_sd-tv-odroid
 
