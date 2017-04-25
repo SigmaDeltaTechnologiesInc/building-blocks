@@ -65,7 +65,6 @@ Tizen IoT Headless/Minimal Preset
 %package sub1-Preset_iot-headless_speaker
 Summary:	IoT Headless Speaker (Minimal) Preset
 Requires:	%{name}-sub1-feature_Platform-Headless
-Requires:	%{name}-sub2-domain_API-Multimedia-AudioIO
 Requires:	%{name}-sub2-domain_API-Multimedia-SoundManager
 Requires:	%{name}-sub2-domain_API-Multimedia-WAVPlayer
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth
@@ -74,7 +73,8 @@ Requires:	%{name}-sub2-domain_API-Network-WiFiDirect
 Requires:	%{name}-sub2-domain_API-Network-WiFi
 Suggests:	%{name}-sub2-domain_API-Network-IoTCon
 Suggests:	%{name}-sub2-domain_API-Multimedia-Radio
-Suggests:	%{name}-sub2-domain_API-Multimedia-Recorder
+Suggests:	%{name}-sub2-domain_API-Multimedia-TonePlayer
+Requires:	%{name}-sub2-domain_API-Multimedia-MediaController
 Suggests:	rpm
 %description sub1-Preset_iot-headless_speaker
 Tizen IoT Speaker/Minimal Preset
@@ -124,10 +124,7 @@ Suggests:	%{name}-sub2-domain_API-Network-NFC
 Suggests:	%{name}-sub2-domain_API-Network-WiFiDirect
 Suggests:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Context-ActivityRecognition
-Requires:	%{name}-sub2-domain_API-Context-ContextualHistory
-Requires:	%{name}-sub2-domain_API-Context-ContextualTrigger
 Requires:	%{name}-sub2-domain_API-AppFramework-MessagePort
-Requires:	%{name}-sub2-domain_API-AppFramework-ServiceApplication
 Requires:	bash
 Requires:	systemd
 Suggests:	rpm
