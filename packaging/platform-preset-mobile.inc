@@ -7,18 +7,25 @@ Conflicts:	%{name}-sub1-Preset_sd-tv
 Conflicts:	%{name}-sub1-Preset_sd-wearable
 Conflicts:	%{name}-sub1-Preset_sd-ivi
 Conflicts:	%{name}-root-Preset_iot
+Suggests:	%{name}-sub2-Preset_sd-mobile-minimal
+Suggests:	%{name}-sub2-Preset_sd-mobile-general
 Suggests:	%{name}-sub2-Preset_sd-mobile-tm1
 Suggests:	%{name}-sub2-Preset_sd-mobile-tm2_aarch64
 Suggests:	%{name}-sub2-Preset_sd-mobile-tm2_armv7l
-Suggests:	%{name}-sub2-Preset_sd-mobile-minimal
+Suggests:	%{name}-sub2-Preset_sd-mobile-zAA__UI__QT
 %list_suggest /usr/share/package-groups/mobile/ mobile sub2-Preset_sd-mobile-
 %description sub1-Preset_sd-mobile
 Tizen Mobile Platform Presets
 %files sub1-Preset_sd-mobile
 
+%package sub2-Preset_sd-mobile-zAA__UI__QT
+Summary:	Quarter Line
+%description sub2-Preset_sd-mobile-zAA__UI__QT
+%files sub2-Preset_sd-mobile-zAA__UI__QT
+
 
 %package sub2-Preset_sd-mobile-tm1
-Summary:	Mobile-TM1
+Summary:	Tizen Reference TM1 (armv7l, mobile phone)
 Conflicts:	%{name}-sub2-Preset_sd-mobile-tm2_aarch64
 Conflicts:	%{name}-sub2-Preset_sd-mobile-tm2_armv7l
 Conflicts:	%{name}-sub2-Preset_sd-mobile-minimal
@@ -35,10 +42,11 @@ You may need mobile + tm1 MIC post script as well.
 %files sub2-Preset_sd-mobile-tm1
 
 %package sub2-Preset_sd-mobile-tm2_aarch64
-Summary:	Mobile-TM2 (aarch64. 64bit)
+Summary:	Tizen Reference TM2 (aarch64. 64bit, mobile phone)
 Conflicts:	%{name}-sub2-Preset_sd-mobile-tm1
 Conflicts:	%{name}-sub2-Preset_sd-mobile-tm2_armv7l
 Conflicts:	%{name}-sub2-Preset_sd-mobile-minimal
+Conflicts:	%{name}-sub2-Preset_sd-mobile-general
 # image-configuration must have this file supplied.
 %list_with_require %{_datadir}/image-configurations/mobile-wayland-arm64-tm2.ks
 %description sub2-Preset_sd-mobile-tm2_aarch64
@@ -47,10 +55,11 @@ For architectural/post-script note, please refer to tm1 twin.
 %files sub2-Preset_sd-mobile-tm2_aarch64
 
 %package sub2-Preset_sd-mobile-tm2_armv7l
-Summary:	Mobile-TM2 (armv7l. 32bit)
+Summary:	Tizen Reference TM2 (armv7l. 32bit, mobile phone)
 Conflicts:	%{name}-sub2-Preset_sd-mobile-tm1
 Conflicts:	%{name}-sub2-Preset_sd-mobile-tm2_aarch64
 Conflicts:	%{name}-sub2-Preset_sd-mobile-minimal
+Conflicts:	%{name}-sub2-Preset_sd-mobile-general
 # image-configuration must have this file supplied.
 %list_with_require %{_datadir}/image-configurations/mobile-wayland-armv7l-tm2.ks
 %description sub2-Preset_sd-mobile-tm2_armv7l
@@ -63,10 +72,97 @@ For architectural/post-script note, please refer to tm1 twin.
 Summary:	Mobile Minimal Preset
 Conflicts:	%{name}-sub2-Preset_sd-mobile-tm1
 Conflicts:	%{name}-sub2-Preset_sd-mobile-tm2
-%description sub2-Preset_sd-mobile-minimal
-Tizen Mobile Minimal Platform Preset
+Conflicts:	%{name}-sub2-Preset_sd-mobile-tm2_aarch64
+Conflicts:	%{name}-sub2-Preset_sd-mobile-general
+Requires:	%{name}-sub1-domain_API-Account
+Requires:	%{name}-sub1-domain_API-AppFramework
+Requires:	%{name}-sub1-domain_API-Base
+Requires:	%{name}-sub1-domain_API-Content
+Requires:	%{name}-sub1-domain_API-Context
+Requires:	%{name}-sub1-domain_API-Location
+Requires:	%{name}-sub1-domain_API-Messaging
+Requires:	%{name}-sub1-domain_API-Multimedia
+Requires:	%{name}-sub1-domain_API-Network
+Requires:	%{name}-sub1-domain_API-Security
+Requires:	%{name}-sub1-domain_API-Social
+Requires:	%{name}-sub1-domain_API-System
+Requires:	%{name}-sub1-domain_API-Telephony
+Requires:	%{name}-sub1-domain_API-UI
+Requires:	%{name}-sub1-domain_API-UIX
+Requires:	%{name}-sub1-domain_API-Web
 
-Mobile-PM: fill in minimal API sets for mobile profile.
+Suggests:	%{name}-root-domain_WebAPI
+Suggests:	webapi-plugins-profile_mobile
+
+Suggests:	csapi-account-fido-client
+Suggests:	csapi-account-manager
+Suggests:	csapi-account-oauth2
+Suggests:	csapi-application
+Suggests:	csapi-application-alarm
+Suggests:	csapi-application-common
+Suggests:	csapi-application-message-port
+Suggests:	csapi-application-notification
+Suggests:	csapi-application-package-manager
+Suggests:	csapi-application-preference
+Suggests:	csapi-application-service
+Suggests:	csapi-application-toastmessage
+Suggests:	csapi-application-ui
+Suggests:	csapi-badge
+Suggests:	csapi-calendar-service
+Suggests:	csapi-contacts-service
+Suggests:	csapi-data-control
+Suggests:	csapi-download
+Suggests:	csapi-feedback
+Suggests:	csapi-geofence
+Suggests:	csapi-information
+Suggests:	csapi-location
+Suggests:	csapi-maps
+Suggests:	csapi-media-content
+Suggests:	csapi-media-key
+Suggests:	csapi-messaging
+Suggests:	csapi-mime-type
+Suggests:	csapi-multimedia
+Suggests:	csapi-network-bluetooth
+Suggests:	csapi-network-connection
+Suggests:	csapi-network-iotconnectivity
+Suggests:	csapi-network-nfc
+Suggests:	csapi-network-smartcard
+Suggests:	csapi-network-wifi
+Suggests:	csapi-network-wifi-direct
+Suggests:	csapi-nui
+Suggests:	csapi-phonenumber-utils
+Suggests:	csapi-push
+Suggests:	csapi-security
+Suggests:	csapi-sensor
+Suggests:	csapi-storage
+Suggests:	csapi-system
+Suggests:	csapi-system-settings
+Suggests:	csapi-telephony
+Suggests:	csapi-tizen
+Suggests:	csapi-trace
+Suggests:	csapi-uix-inputmethod-manager
+Suggests:	csapi-uix-stt
+Suggests:	csapi-uix-tts
+Suggests:	csapi-uix-voicecontrol
+Suggests:	csapi-webview
+Suggests:	csapi-widget-application
+Suggests:	csapi-widget-control
+Suggests:	csapi-widget-viewer
+
+%description sub2-Preset_sd-mobile-minimal
+Tizen Mobile Minimal Platform Preset (Adds mobile native APIs only)
+
+%files sub2-Preset_sd-mobile-minimal
+
+%package sub2-Preset_sd-mobile-general
+Summary:	Mobile Minimal Preset
+Conflicts:	%{name}-sub2-Preset_sd-mobile-tm1
+Conflicts:	%{name}-sub2-Preset_sd-mobile-tm2
+Conflicts:	%{name}-sub2-Preset_sd-mobile-tm2_aarch64
+Conflicts:	%{name}-sub2-Preset_sd-mobile-minimal
+%list_suggest_linkreq /usr/share/package-groups/mobile/ mobile sub2-Preset_sd-mobile-
+%description sub2-Preset_sd-mobile-general
+Tizen Mobile General Platform Preset (Adds all mobile's non adaptation packages)
 
 %files sub2-Preset_sd-mobile-minimal
 

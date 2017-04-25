@@ -150,7 +150,24 @@ end}}
 		elseif (string.sub(line, 1, 4) == 'boot') then \
 		elseif (prefix == rpm.expand("%{2}")) then \
 			line = string.gsub(line, "-", "_")
-			print("Suggests: "..rpm.expand("%{3}").."zblock_"..line) \
+			print("Suggests: %{name}-"..rpm.expand("%{3}").."zblock_"..line) \
+			print("\\n") \
+		end \
+	end \
+end}}
+
+
+# Requires the created suggests list of blocks with yaml file list
+# DIRECTORY, Prefix-To-Be-Removed, Prefix-for-block-name
+%define list_suggest_linkreq() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1200}"), "f") then \
+	for f in posix.files(rpm.expand("%{1}")) do \
+		local line =  string.sub(f, string.len(rpm.expand("%{2}"))+2) \
+		local prefix = string.sub(f, 1, string.len(rpm.expand("%{2}"))) \
+		if (string.sub(line, 1, 10) == 'adaptation') then \
+		elseif (string.sub(line, 1, 4) == 'boot') then \
+		elseif (prefix == rpm.expand("%{2}")) then \
+			line = string.gsub(line, "-", "_")
+			print("Requires: %{name}-"..rpm.expand("%{3}").."zblock_"..line) \
 			print("\\n") \
 		end \
 	end \
@@ -170,7 +187,7 @@ end}}
 			local summary_available = 0 \
 			local filename = rpm.expand("%{1}").."/"..f \
 			print("\\n") \
-			print("%%package "..pkg.."\\n") \
+			print("%package "..pkg.."\\n") \
 			if posix.access(filename) then \
 				for tag in io.lines(filename) do \
 					if (string.sub(tag, 1, 8) == "Summary:") then \
@@ -203,9 +220,9 @@ end}}
 			else \
 				print("Requires: CANNOT_FIND_REQUIRED_FILES\\n") \
 			end \
-			print("%%description "..pkg.."\\n") \
+			print("%description "..pkg.."\\n") \
 			print("Auto Generated Block (zblock) of "..f.."\\n") \
-			print("%%files "..pkg.."\\n") \
+			print("%files "..pkg.."\\n") \
 			print("\\n\\n\\n") \
 		end \
 	end \

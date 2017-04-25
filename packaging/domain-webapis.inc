@@ -4,11 +4,11 @@
 %package root-domain_WebAPI
 Summary:	Tizen Web API Sets
 Requires:	webapi-plugins
-Suggests:	webapi-pluging-common
-Suggests:	webapi-pluging-mobile
-Suggests:	webapi-pluging-ivi
-Suggests:	webapi-pluging-wearable
-Suggests:	webapi-pluging-tv
+Suggests:	webapi-plugins-profile_common
+Suggests:	webapi-plugins-profile_mobile
+Suggests:	webapi-plugins-profile_ivi
+Suggests:	webapi-plugins-profile_wearable
+Suggests:	webapi-plugins-profile_tv
 %description root-domain_WebAPI
 WebAPI Plugins
 %files root-domain_WebAPI

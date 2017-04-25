@@ -9,14 +9,20 @@ Conflicts:	%{name}-sub1-Preset_sd-wearable
 Conflicts:	%{name}-sub1-Preset_sd-home_appliance
 Conflicts:	%{name}-root-Preset-iot
 Suggests:	%{name}-sub2-Preset_sd-ivi-proto
+Suggests:	%{name}-sub2-Preset_sd-ivi-zAA__UI__QT
 %list_suggest /usr/share/package-groups/ivi/ ivi sub2-Preset_sd-ivi-
 %description sub1-Preset_sd-ivi
 Tizen IVI Platform Presets
 %files sub1-Preset_sd-ivi
 
+%package sub2-Preset_sd-ivi-zAA__UI__QT
+Summary:	Quarter Line
+%description sub2-Preset_sd-ivi-zAA__UI__QT
+%files sub2-Preset_sd-ivi-zAA__UI__QT
+
 
 %package sub2-Preset_sd-ivi-proto
-Summary:	IVI OdroidXU3 Prototype
+Summary:	Tizen IVI Reference Image of OdroidXU3
 # image-configuration must have this file supplied.
 %list_with_require %{_datadir}/image-configurations/ivi-target-odroidxu3.ks
 %description sub2-Preset_sd-ivi-proto

@@ -124,6 +124,8 @@ or packages, but is used to provide UI elements in TIC.
             SD or sd: shaded blank line
             SM or sm: summary text is shown (HTML tags works)
             HT or ht: HTML tags from summary text is used. (same with SM/sm...)
+            HF or hf: blank line with half height
+            QT or qt: blank line with quarter height
 
 5.6. Blocks in TIC are placed sorted by package name. (ascending order)
 
@@ -148,5 +150,4 @@ expanded in TIC as default
         e.g., __EXPAND__: all (expanded with all tab)
     5.8.2. Using __EXPAND__ option requires consulting with building-block maintainers
     5.8.3. Using __EXPAND__ is allowed only for root blocks
-
 
