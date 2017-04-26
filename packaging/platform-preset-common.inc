@@ -47,8 +47,8 @@ Example of Tizen snapshot image, "common-wayland-2parts-armv7l"
 %package sub2-Preset_sd-common-wayland_aarch64
 %list_with_require %{_datadir}/image-configurations/common-wayland-3parts-arm64.ks
 Summary:	Example Image of "wayland-3parts-arm654"
-__KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/common-wayland-3parts-arm64/
 %description sub2-Preset_sd-common-wayland_aarch64
+__KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/common-wayland-3parts-arm64/
 Example of Tizen snapshot image, "common-wayland-3parts-arm64"
 %files sub2-Preset_sd-common-wayland_aarch64
 %endif
