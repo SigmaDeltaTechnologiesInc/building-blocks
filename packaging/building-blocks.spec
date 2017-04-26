@@ -86,6 +86,7 @@ techinical domains.
 Summary:	Tizen Major Features
 Suggests:	%{name}-root-feature_Development
 Suggests:	%{name}-root-feature_Platform
+Suggests:	%{name}-root-feature_App
 %description	category-epicfeatures
 This meta package lists all Tizen blocks (meta packages) designating
 major features that are supposed to be orthogonal to each other
