@@ -64,9 +64,10 @@ The root of all Tizen building block meta packages.
 Every root-level Tizen building block should be included by this.
 Any "minimal" required packages should be somehow (directly or indirectly)
 required (included) by this package.
-In Tizen building blocks, "Requires" means mandatory package.
+In Tizen building blocks,
+"Requires" means mandatory package.
 "Suggests" means optional package.
-"Recommened" is reserved for future usage.
+"Recommends" is reserved for future usage.
 "Conflicts" is to unselect unconditionally.
 
 
@@ -77,7 +78,7 @@ Suggests:	%{name}-root-domain_CSAPI
 Suggests:	%{name}-root-domain_WebAPI
 %description	category-domains
 This meta package lists all Tizen blocks (meta packages) designating
-techinical domains.
+technical domains.
 %files		category-domains
 # Intentionally empty
 
@@ -115,7 +116,7 @@ presets describing specific products.
 
 # Create a target device preset from .ks file used to create device iamge.
 # This script writes build-spec when building the build-spec itself. :)
-# Importing .kg file with list_with_require() based on image-configuration will work
+# Importing .ks file with list_with_require() based on image-configuration will work
 # after Tizen:Unified starts to generate its own platform images.
 %define list_with_require() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1200}"), "f") then \
 	local start = 0 \
