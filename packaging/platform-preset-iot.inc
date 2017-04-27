@@ -25,11 +25,11 @@ Suggests:	%{name}-sub1-Preset_1iot_examples-1_AAA_BLANK1__UI__SM
 Suggests:	%{name}-sub1-Preset_1iot_examples-1_ARTIK_headless
 Suggests:	%{name}-sub1-Preset_1iot_examples-1_ARTIK_headed_full
 Suggests:	%{name}-sub1-Preset_1iot_examples-1_ODROID_headed_full
+Suggests:	%{name}-sub1-Preset_1iot_examples-1_RPI3_headless
 %endif
 Suggests:	%{name}-sub1-Preset_1iot_examples-1_ZZZBLANK2__UI__SM
 %ifarch aarch64 armv7l
-Suggests:	%{name}-sub1-Preset_1iot_examples-1_RPI3_headless
-Suggests:	%{name}-sub1-Preset_1iot_examples-3_RPI3_headless_devboard
+Suggests:	%{name}-sub1-Preset_1iot_examples-3_RPI3_headless_zdevboard
 Suggests:	%{name}-sub1-Preset_1iot_examples-3_RPI3_headless_networkhub
 Suggests:	%{name}-sub1-Preset_1iot_examples-3_RPI3_headless_minimal
 %endif
@@ -136,16 +136,24 @@ Tizen IoT Headless Preset
 
 
 %ifarch aarch64 armv7l
-%package sub1-Preset_1iot_examples-3_RPI3_headless_devboard
+%package sub1-Preset_1iot_examples-3_RPI3_headless_zdevboard
 Summary:	RPI3 Headless for Developers
 Requires:	%{name}-sub1-Preset_iot-headless_minimal
 Requires:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
+Requires:	sdbd
+Requires:	gdb
 Requires:	rpm
-Suggests:	gcc
+Requires:	valgrind
+Suggests:	%{name}-sub2-feature_Development-Build-GCC
+Suggests:	%{name}-sub2-feature_Development-Build-LLVM
+Suggests:	diffutils
+Suggests:	findutils
+Suggests:	grep
+Suggests:	vim
 Suggests:	make
 Suggests:	cmake
-%description sub1-Preset_1iot_examples-3_RPI3_headless_devboard
-%files sub1-Preset_1iot_examples-3_RPI3_headless_devboard
+%description sub1-Preset_1iot_examples-3_RPI3_headless_zdevboard
+%files sub1-Preset_1iot_examples-3_RPI3_headless_zdevboard
 %endif
 
 %ifarch aarch64 armv7l
@@ -153,6 +161,23 @@ Suggests:	cmake
 Summary:	RPI3 Headless Network Hub
 Requires:	%{name}-sub1-Preset_iot-headless_minimal
 Requires:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
+Requires:	%{name}-sub1-domain_API-Network
+Requires:	%{name}-sub2-domain_API-Network-Bluetooth
+Requires:	%{name}-sub2-domain_API-Network-WiFi
+Suggests:	%{name}-sub2-domain_API-Network-WiFiDirect
+Suggests:	%{name}-sub2-domain_API-System-USBHost
+Suggests:	%{name}-sub2-domain_API-Network-IoTCon
+Suggests:	%{name}-sub2-domain_API-Network-NFC
+Requires:	%{name}-sub2-domain_API-Network-Connection
+Requires:	%{name}-sub2-domain_API-Network-HTTP
+Requires:	%{name}-sub2-domain_API-Network-VPNService
+Suggests:	%{name}-sub2-domain_API-System-Storage
+Suggests:	%{name}-sub2-domain_API-System-SystemInformation
+Suggests:	%{name}-sub2-domain_API-System-dlog
+Suggests:	%{name}-sub1-domain_API-Telephony
+Requires:	%{name}-sub1-domain_API-Base
+Suggests:	sdbd
+Suggests:	rpm
 %description sub1-Preset_1iot_examples-3_RPI3_headless_networkhub
 %files sub1-Preset_1iot_examples-3_RPI3_headless_networkhub
 %endif
