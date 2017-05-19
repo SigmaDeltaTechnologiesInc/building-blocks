@@ -27,7 +27,6 @@ Summary:	Tizen IVI Reference Image of OdroidXU3
 %list_with_require %{_datadir}/image-configurations/ivi-target-odroidxu3.ks
 %description sub2-Preset_sd-ivi-proto
 __KS_URL__: http://download.tizen.org/snapshots/tizen/unified/latest/images/standard/ivi-target-odroidxu3/
-%description sub2-Preset_sd-ivi-proto
 Tizen IVI Prototype Preset from OdroidXU3 as an example
 %files sub2-Preset_sd-ivi-proto
 
