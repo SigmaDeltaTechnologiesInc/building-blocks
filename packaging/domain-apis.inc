@@ -96,6 +96,10 @@ Tizen block (set of packages) for API sets of domain API-AppFramework
 Summary:	Application
 Suggests:	capi-appfw-alarm
 Requires:	capi-appfw-application
+Requires:	capi-appfw-app-common
+Requires:	capi-appfw-app-control
+Requires:	capi-appfw-event
+Requires:	capi-appfw-preference
 %description sub2-domain_API-AppFramework-Application
 Tizen block (set of packages) for API sets of domain API-AppFramework-Application
 %files sub2-domain_API-AppFramework-Application
@@ -174,7 +178,8 @@ Tizen block (set of packages) for API sets of domain API-AppFramework-Shortcut
 Summary:	Widget
 Requires:	appcore-widget
 Requires:	libwidget_service
-Requires:	libwidget_viewer
+Requires:	libwidget_viewer_evas
+Requires:	libwidget_viewer_dali
 %description sub2-domain_API-AppFramework-Widget
 Tizen block (set of packages) for API sets of domain API-AppFramework-Widget
 %files sub2-domain_API-AppFramework-Widget
@@ -243,28 +248,28 @@ Tizen block (set of packages) for API sets of domain API-Context
 
 %package sub2-domain_API-Context-ActivityRecognition
 Summary:	Activity Recognition
-Requires:	motion
+Requires:	capi-context-motion
 %description sub2-domain_API-Context-ActivityRecognition
 Tizen block (set of packages) for API sets of sub2-domain_API-Context-ActivityRecognition
 %files sub2-domain_API-Context-ActivityRecognition
 
 %package sub2-domain_API-Context-ContextualHistory
 Summary:	Contextual History
-Requires:	context
+Requires:	capi-context
 %description sub2-domain_API-Context-ContextualHistory
 Tizen block (set of packages) for API sets of sub2-domain_API-Context-ContextualHistory
 %files sub2-domain_API-Context-ContextualHistory
 
 %package sub2-domain_API-Context-ContextualTrigger
 Summary:	Contextual Trigger
-Requires:	context
+Requires:	capi-context
 %description sub2-domain_API-Context-ContextualTrigger
 Tizen block (set of packages) for API sets of sub2-domain_API-Context-ContextualTrigger
 %files sub2-domain_API-Context-ContextualTrigger
 
 %package sub2-domain_API-Context-GestureRecognition
 Summary:	Gesture Recognition
-Requires:	motion
+Requires:	capi-context-motion
 %description sub2-domain_API-Context-GestureRecognition
 Tizen block (set of packages) for API sets of sub2-domain_API-Context-GestureRecognition
 %files sub2-domain_API-Context-GestureRecognition
@@ -332,7 +337,17 @@ Tizen block (set of packages) for API sets of sub2-domain_API-Messaging-Messages
 %package sub2-domain_API-Messaging-Push
 Summary:	Push
 Requires:	libpush
+Suggests:	libpush-profile_common
+Suggests:	libpush-profile_tv
+Suggests:	libpush-profile_wearable
 Requires:	push-tool
+Suggests:	push-tool-profile_common
+Suggests:	push-tool-profile_tv
+Suggests:	push-tool-profile_wearable
+Requires:	push-bin
+Suggests:	push-bin-profile_common
+Suggests:	push-bin-profile_tv
+Suggests:	push-bin-profile_wearable
 %description sub2-domain_API-Messaging-Push
 Tizen block (set of packages) for API sets of sub2-domain_API-Messaging-Push
 %files sub2-domain_API-Messaging-Push
@@ -680,13 +695,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-Security-CSR
 %package sub2-domain_API-Security-DevicePolicyManager
 Summary:	DevicePolicyManager
 Requires:	device-policy-manager
-Suggests:	device-policy-manager-full
-Suggests:	device-policy-manager-ext-password
-Suggests:	device-policy-manager-minimal
 Requires:	libdpm
-Suggests:	libdpm-full
-Suggests:	libdpm-ext-password
-Suggests:	libdpm-minimalA\
 Suggests:	libdsm
 %description sub2-domain_API-Security-DevicePolicyManager
 Tizen block (set of packages) for API sets of sub2-domain_API-Security-DevicePolicyManager
@@ -731,13 +740,15 @@ Tizen block (set of packages) for API sets of domain API-Social
 %package sub2-domain_API-Social-Calendar
 Summary:	Calendar
 Requires:	calendar-service
+Suggests:	libcalendar-service
 %description sub2-domain_API-Social-Calendar
 Tizen block (set of packages) for API sets of sub2-domain_API-Social-Calendar
 %files sub2-domain_API-Social-Calendar
 
 %package sub2-domain_API-Social-Contacts
 Summary:	Contacts
-Requires:	contacts-service2
+Requires:	contacts-service
+Suggests:	libcontacts-service
 %description sub2-domain_API-Social-Contacts
 Tizen block (set of packages) for API sets of sub2-domain_API-Social-Contacts
 %files sub2-domain_API-Social-Contacts
@@ -788,6 +799,12 @@ Tizen block (set of packages) for API sets of sub2-domain_API-System-Device
 Summary:	Feedback
 Requires:	libfeedback
 Requires:	svi-data
+Suggests:	svi-data-profile_common
+Suggests:	svi-data-profile_mobile
+Suggests:	svi-data-profile_wearable
+Requires:	feedbackd
+Suggests:	feedbackd-profile_mobile
+Suggests:	feedbackd-profile_wearable
 %description sub2-domain_API-System-Feedback
 Tizen block (set of packages) for API sets of sub2-domain_API-System-Feedback
 %files sub2-domain_API-System-Feedback
@@ -818,6 +835,9 @@ Tizen block (set of packages) for API sets of sub2-domain_API-System-Sensor
 %package sub2-domain_API-System-Storage
 Summary:	Storage
 Requires:	libstorage
+Requires:	storaged
+Suggests:	storaged-module_block
+Suggests:	storaged-module_storage
 %description sub2-domain_API-System-Storage
 Tizen block (set of packages) for API sets of sub2-domain_API-System-Storage
 %files sub2-domain_API-System-Storage
@@ -825,6 +845,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-System-Storage
 %package sub2-domain_API-System-SystemInformation
 Summary:	System Information
 Requires:	capi-system-info
+Suggests:	capi-system-info-extension-emulator
 %description sub2-domain_API-System-SystemInformation
 Tizen block (set of packages) for API sets of sub2-domain_API-System-System Information
 %files sub2-domain_API-System-SystemInformation
@@ -839,6 +860,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-System-System Sett
 %package sub2-domain_API-System-Ttrace
 Summary:	T-trace
 Requires:	ttrace
+Suggests:	ttrace-extension
 %description sub2-domain_API-System-Ttrace
 Tizen block (set of packages) for API sets of sub2-domain_API-System-Ttrace
 %files sub2-domain_API-System-Ttrace
@@ -896,7 +918,9 @@ Tizen block (set of packages) for API sets of domain API-UI
 
 %package sub2-domain_API-UI-Cairo
 Summary:	Cairo
-Requires:	cairo
+Requires:	libcairo
+Suggests:	libcairo-gobject
+Suggests:	libcairo-script-interpreter
 %description sub2-domain_API-UI-Cairo
 Tizen block (set of packages) for API sets of sub2-domain_API-UI-Cairo
 %files sub2-domain_API-UI-Cairo
@@ -918,20 +942,57 @@ Suggests:	dali-adaptor-profile_mobile
 Suggests:	dali-adaptor-profile_tv
 Suggests:	dali-adaptor-profile_wearable
 Requires:	dali-toolkit
+Suggests:	dali-toolkit-resources_480x800
+Suggests:	dali-toolkit-resources_720x1280
+Suggests:	dali-toolkit-resources_1920x1080
+Requires:	dali-core
+
 %description sub2-domain_API-UI-DALi
 Tizen block (set of packages) for API sets of sub2-domain_API-UI-DALi
 %files sub2-domain_API-UI-DALi
 
 %package sub2-domain_API-UI-EFL
 Summary:	EFL
+Requires:	efl
+Requires:	emile
+Requires:	eo
+Requires:	ector
 Requires:	ecore
+Suggests:	ecore-core
+Suggests:	ecore-audio
+Suggests:	ecore-avahi
+Suggests:	ecore-buffer
+Suggests:	ecore-con
+Suggests:	ecore-evas
+Suggests:	ecore-fb
+Suggests:	ecore-file
+Suggests:	ecore-imf
+Suggests:	ecore-imf-evas
+Suggests:	ecore-input
+Suggests:	ecore-input-evas
+Suggests:	ecore-ipc
+Suggests:	ecore-drm
+Suggests:	ecore-wayland
 Requires:	edje
+Suggests:	edje-tools
 Requires:	eet
+Suggests:	eet-tools
 Requires:	eina
+Suggests:	eina-tools
 Requires:	eio
 Requires:	eldbus
 Requires:	elementary
 Requires:	evas
+Requires:	embryo
+Requires:	eeze
+Requires:	efreet
+Requires:	emotion
+Requires:	ethumb
+Requires:	ephysics
+Requires:	eolian
+Requires:	elocation
+Requires:	elua
+
 %description sub2-domain_API-UI-EFL
 Tizen block (set of packages) for API sets of sub2-domain_API-UI-EFL
 %files sub2-domain_API-UI-EFL
@@ -953,6 +1014,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-UI-EflExtension
 %package sub2-domain_API-UI-ExternalOutputManager
 Summary:	External Output Manager
 Requires:	libeom
+Suggests:	libeom-server
 %description sub2-domain_API-UI-ExternalOutputManager
 Tizen block (set of packages) for API sets of sub2-domain_API-UI-ExternalOutputManager
 %files sub2-domain_API-UI-ExternalOutputManager
@@ -988,6 +1050,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-UI-UIViewManager
 %package sub2-domain_API-UI-Vulkan
 Summary:	Vulkan
 Requires:	Vulkan-LoaderAndValidationLayers
+Suggests:	vulkan-wsi-tizen
 %description sub2-domain_API-UI-Vulkan
 Tizen block (set of packages) for API sets of sub2-domain_API-UI-Vulkan
 %files sub2-domain_API-UI-Vulkan
