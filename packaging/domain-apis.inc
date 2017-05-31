@@ -87,6 +87,7 @@ Suggests:	%{name}-sub2-domain_API-AppFramework-Notification
 Suggests:	%{name}-sub2-domain_API-AppFramework-PackageManager
 Suggests:	%{name}-sub2-domain_API-AppFramework-ServiceApplication
 Suggests:	%{name}-sub2-domain_API-AppFramework-Shortcut
+Suggests:	%{name}-sub2-domain_API-AppFramework-WatchApplication
 Suggests:	%{name}-sub2-domain_API-AppFramework-Widget
 %description sub1-domain_API-AppFramework
 Tizen block (set of packages) for API sets of domain API-AppFramework
@@ -173,6 +174,13 @@ Requires:	libshortcut
 %description sub2-domain_API-AppFramework-Shortcut
 Tizen block (set of packages) for API sets of domain API-AppFramework-Shortcut
 %files sub2-domain_API-AppFramework-Shortcut
+
+%package sub2-domain_API-AppFramework-WatchApplication
+Summary:	WatchApplication
+Requires:	appcore-watch
+%description sub2-domain_API-AppFramework-WatchApplication
+Tizen block (set of packages) for wearable watch API sets of domain API-AppFramework-WatchApplication
+%files sub2-domain_API-AppFramework-WatchApplication
 
 %package sub2-domain_API-AppFramework-Widget
 Summary:	Widget
