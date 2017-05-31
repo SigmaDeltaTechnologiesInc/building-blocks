@@ -7,15 +7,7 @@ Suggests:	csapi-account-fido-client
 Suggests:	csapi-account-manager
 Suggests:	csapi-account-oauth2
 Suggests:	csapi-application
-Suggests:	csapi-application-alarm
-Suggests:	csapi-application-common
-Suggests:	csapi-application-message-port
-Suggests:	csapi-application-notification
-Suggests:	csapi-application-package-manager
-Suggests:	csapi-application-preference
-Suggests:	csapi-application-service
-Suggests:	csapi-application-toastmessage
-Suggests:	csapi-application-ui
+Suggests:	csapi-attach-panel
 Suggests:	csapi-badge
 Suggests:	csapi-calendar-service
 Suggests:	csapi-contacts-service
@@ -42,6 +34,7 @@ Suggests:	csapi-nui
 Suggests:	csapi-phonenumber-utils
 Suggests:	csapi-push
 Suggests:	csapi-security
+Suggests:	csapi-security-libteec
 Suggests:	csapi-sensor
 Suggests:	csapi-storage
 Suggests:	csapi-system
