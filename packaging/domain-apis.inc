@@ -3,365 +3,419 @@
 
 %package root-domain_API
 Summary:	Tizen Native API Sets
-Suggests:	%{name}-sub1-domain_API-Account
-Suggests:	%{name}-sub1-domain_API-AppFramework
-Suggests:	%{name}-sub1-domain_API-Base
-Suggests:	%{name}-sub1-domain_API-Content
-Suggests:	%{name}-sub1-domain_API-Context
+Suggests:	%{name}-sub1-domain_API-Account_AccountManager
+Suggests:	%{name}-sub1-domain_API-Account_FIDOClient
+Suggests:	%{name}-sub1-domain_API-Account_OAuth2
+Suggests:	%{name}-sub1-domain_API-Account_SyncManager
+Suggests:	%{name}-sub1-domain_API-Account_libOAuth
+Suggests:	%{name}-sub1-domain_API-AppFramework_Application
+Suggests:	%{name}-sub1-domain_API-AppFramework_ApplicationManager
+Suggests:	%{name}-sub1-domain_API-AppFramework_Badge
+Suggests:	%{name}-sub1-domain_API-AppFramework_Bundle
+Suggests:	%{name}-sub1-domain_API-AppFramework_DataControl
+Suggests:	%{name}-sub1-domain_API-AppFramework_MessagePort
+Suggests:	%{name}-sub1-domain_API-AppFramework_Notification
+Suggests:	%{name}-sub1-domain_API-AppFramework_PackageManager
+Suggests:	%{name}-sub1-domain_API-AppFramework_ServiceApplication
+Suggests:	%{name}-sub1-domain_API-AppFramework_Shortcut
+Suggests:	%{name}-sub1-domain_API-AppFramework_Widget
+Suggests:	%{name}-sub1-domain_API-Content_Download
+Suggests:	%{name}-sub1-domain_API-Content_MIMEType
+Suggests:	%{name}-sub1-domain_API-Context_ActivityRecognition
+Suggests:	%{name}-sub1-domain_API-Context_ContextualHistory
+Suggests:	%{name}-sub1-domain_API-Context_ContextualTrigger
+Suggests:	%{name}-sub1-domain_API-Context_GestureRecognition
 Suggests:	%{name}-sub1-domain_API-Location
-Suggests:	%{name}-sub1-domain_API-Messaging
+Suggests:	%{name}-sub1-domain_API-Maps
+Suggests:	%{name}-sub1-domain_API-Messaging_Email
+Suggests:	%{name}-sub1-domain_API-Messaging_Messages
+Suggests:	%{name}-sub1-domain_API-Messaging_Push
 Suggests:	%{name}-sub1-domain_API-Multimedia
-Suggests:	%{name}-sub1-domain_API-Network
-Suggests:	%{name}-sub1-domain_API-Security
-Suggests:	%{name}-sub1-domain_API-Social
-Suggests:	%{name}-sub1-domain_API-System
+Suggests:	%{name}-sub1-domain_API-Network_Bluetooth
+Suggests:	%{name}-sub1-domain_API-Network_ASP
+Suggests:	%{name}-sub1-domain_API-Network_Connection
+Suggests:	%{name}-sub1-domain_API-Network_Curl
+Suggests:	%{name}-sub1-domain_API-Network_DNSSD
+Suggests:	%{name}-sub1-domain_API-Network_HTTP
+Suggests:	%{name}-sub1-domain_API-Network_IoTCon
+Suggests:	%{name}-sub1-domain_API-Network_MTP
+Suggests:	%{name}-sub1-domain_API-Network_NFC
+Suggests:	%{name}-sub1-domain_API-Network_SSDP
+Suggests:	%{name}-sub1-domain_API-Network_Smartcard
+Suggests:	%{name}-sub1-domain_API-Network_VPNService
+Suggests:	%{name}-sub1-domain_API-Network_WiFi
+Suggests:	%{name}-sub1-domain_API-Network_WiFiDirect
+Suggests:	%{name}-sub1-domain_API-Security_CSR
+Suggests:	%{name}-sub1-domain_API-Security_KeyManager
+Suggests:	%{name}-sub1-domain_API-Security_OpenSSL
+Suggests:	%{name}-sub1-domain_API-Security_YACA
+Suggests:	%{name}-sub1-domain_API-Social_Calendar
+Suggests:	%{name}-sub1-domain_API-Social_Contacts
+Suggests:	%{name}-sub1-domain_API-Social_PhonenumberUtils
+Suggests:	%{name}-sub1-domain_API-System_MediaKey
+Suggests:	%{name}-sub1-domain_API-System_RuntimeInformation
+Suggests:	%{name}-sub1-domain_API-System_Sensor
+Suggests:	%{name}-sub1-domain_API-System_SystemInformation
+Suggests:	%{name}-sub1-domain_API-System_dlog
 Suggests:	%{name}-sub1-domain_API-Telephony
-Suggests:	%{name}-sub1-domain_API-UI
-Suggests:	%{name}-sub1-domain_API-UIX
+Suggests:	%{name}-sub1-domain_API-UI_Cairo
+Suggests:	%{name}-sub1-domain_API-UI_ClipboardHistoryManager
+Suggests:	%{name}-sub1-domain_API-UI_DALi
+Suggests:	%{name}-sub1-domain_API-UI_EFL
+Suggests:	%{name}-sub1-domain_API-UI_EFLUTIL
+Suggests:	%{name}-sub1-domain_API-UI_EflExtension
+Suggests:	%{name}-sub1-domain_API-UI_ExternalOutputManager
+Suggests:	%{name}-sub1-domain_API-UI_FontConfig
+Suggests:	%{name}-sub1-domain_API-UI_Freetype
+Suggests:	%{name}-sub1-domain_API-UI_HarfBuzz
+Suggests:	%{name}-sub1-domain_API-UI_SDL
+Suggests:	%{name}-sub1-domain_API-UI_TBMSurface
+Suggests:	%{name}-sub1-domain_API-UI_TizenWSShell
+Suggests:	%{name}-sub1-domain_API-UI_UIViewManager
+Suggests:	%{name}-sub1-domain_API-UIX_InputMethod
+Suggests:	%{name}-sub1-domain_API-UIX_InputMethodManager
 Suggests:	%{name}-sub1-domain_API-Web
 %description root-domain_API
 __EXPAND__: domains
-Tizen packages blocked and sorted by API sets defined in https://developer.tizen.org/development/api-references/native-application
+Tizen packages blocked and sorted by API sets defined by TPL
 %files root-domain_API
 
 
-%package sub1-domain_API-Account
-Summary:	Account
-Suggests:	%{name}-sub2-domain_API-Account-AccountManager
-Suggests:	%{name}-sub2-domain_API-Account-FIDO
-Suggests:	%{name}-sub2-domain_API-Account-OAuth2
-Suggests:	%{name}-sub2-domain_API-Account-SyncManager
-Suggests:	%{name}-sub2-domain_API-Account-libOAuth
-%description sub1-domain_API-Account
-Tizen block (set of packages) for API sets of domain API-Account
-%files sub1-domain_API-Account
-
-%package sub2-domain_API-Account-AccountManager
+%package sub1-domain_API-Account_AccountManager
 Summary:	Account Manager
 Requires:	libaccount-service
-%description sub2-domain_API-Account-AccountManager
-Tizen block (set of packages) for API sets of domain API-Account-AccountManager
-%files sub2-domain_API-Account-AccountManager
+%description sub1-domain_API-Account_AccountManager
+Tizen block (set of packages) for API sets of domain API-Account_AccountManager
+%files sub1-domain_API-Account_AccountManager
 
-%package sub2-domain_API-Account-FIDO
-Summary:	FIDO
+%package sub1-domain_API-Account_FIDOClient
+Summary:	FIDO Client
 Requires:	fido-client
-%description sub2-domain_API-Account-FIDO
-Tizen block (set of packages) for API sets of domain API-Account-FIDO
-%files sub2-domain_API-Account-FIDO
+%description sub1-domain_API-Account_FIDOClient
+Tizen block (set of packages) for API sets of domain API-Account_FIDOClient
+%files sub1-domain_API-Account_FIDOClient
 
-%package sub2-domain_API-Account-OAuth2
+%package sub1-domain_API-Account_OAuth2
 Summary:	OAuth
 Requires:	oauth2
-%description sub2-domain_API-Account-OAuth2
-Tizen block (set of packages) for API sets of domain API-Account-OAuth
-%files sub2-domain_API-Account-OAuth2
+%description sub1-domain_API-Account_OAuth2
+Tizen block (set of packages) for API sets of domain API-Account_OAuth2
+%files sub1-domain_API-Account_OAuth2
 
-%package sub2-domain_API-Account-SyncManager
-Summary:	SyncManager
-Requires:	sync-service
+%package sub1-domain_API-Account_SyncManager
+Summary:	Sync Manager
 Requires:	libcore-sync-client
-%description sub2-domain_API-Account-SyncManager
-Tizen block (set of packages) for API sets of domain API-Account-SyncManager
-%files sub2-domain_API-Account-SyncManager
+Suggests:	%{name}-sub2-domain_API-Account_SyncManager-SyncAdapter
+%description sub1-domain_API-Account_SyncManager
+Tizen block (set of packages) for API sets of domain API-Account_SyncManager
+%files sub1-domain_API-Account_SyncManager
 
-%package sub2-domain_API-Account-libOAuth
+%package sub2-domain_API-Account_SyncManager-SyncAdapter
+Summary:	Sync Adapter
+Requires:	libcore-sync-client
+%description sub2-domain_API-Account_SyncManager-SyncAdapter
+Tizen block (set of packages) for API sets of sub2-domain_API-Account_SyncManager-SyncAdapter
+%files sub2-domain_API-Account_SyncManager-SyncAdapter
+
+%package sub1-domain_API-Account_libOAuth
 Summary:	libOAuth
 Requires:	liboauth
-%description sub2-domain_API-Account-libOAuth
-Tizen block (set of packages) for API sets of domain API-Account-libOAuth
-%files sub2-domain_API-Account-libOAuth
+%description sub1-domain_API-Account_libOAuth
+Tizen block (set of packages) for API sets of domain API-Account_libOAuth
+%files sub1-domain_API-Account_libOAuth
 
 
-
-%package sub1-domain_API-AppFramework
-Summary:	Application Framework
-Suggests:	%{name}-sub2-domain_API-AppFramework-Application
-Suggests:	%{name}-sub2-domain_API-AppFramework-AppManager
-Suggests:	%{name}-sub2-domain_API-AppFramework-AttachPanel
-Suggests:	%{name}-sub2-domain_API-AppFramework-Badge
-Suggests:	%{name}-sub2-domain_API-AppFramework-Bundle
-Suggests:	%{name}-sub2-domain_API-AppFramework-DataControl
-Suggests:	%{name}-sub2-domain_API-AppFramework-MessagePort
-Suggests:	%{name}-sub2-domain_API-AppFramework-Notification
-Suggests:	%{name}-sub2-domain_API-AppFramework-PackageManager
-Suggests:	%{name}-sub2-domain_API-AppFramework-ServiceApplication
-Suggests:	%{name}-sub2-domain_API-AppFramework-Shortcut
-Suggests:	%{name}-sub2-domain_API-AppFramework-WatchApplication
-Suggests:	%{name}-sub2-domain_API-AppFramework-Widget
-%description sub1-domain_API-AppFramework
-Tizen block (set of packages) for API sets of domain API-AppFramework
-%files sub1-domain_API-AppFramework
-
-%package sub2-domain_API-AppFramework-Application
+%package sub1-domain_API-AppFramework_Application
 Summary:	Application
-Suggests:	capi-appfw-alarm
-Requires:	capi-appfw-application
-Requires:	capi-appfw-app-common
-Requires:	capi-appfw-app-control
-Requires:	capi-appfw-event
-Requires:	capi-appfw-preference
-%description sub2-domain_API-AppFramework-Application
-Tizen block (set of packages) for API sets of domain API-AppFramework-Application
-%files sub2-domain_API-AppFramework-Application
+Suggests:	%{name}-sub2-domain_API-AppFramework_Application-Alarm
+Suggests:	%{name}-sub2-domain_API-AppFramework_Application-AppCommon
+Suggests:	%{name}-sub2-domain_API-AppFramework_Application-AppControl
+Suggests:	%{name}-sub2-domain_API-AppFramework_Application-Event
+Suggests:	%{name}-sub2-domain_API-AppFramework_Application-Internationalization
+Suggests:	%{name}-sub2-domain_API-AppFramework_Application-Preference
+Suggests:	%{name}-sub2-domain_API-AppFramework_Application-ResourceManager
+%description sub1-domain_API-AppFramework_Application
+Tizen block (set of packages) for API sets of domain API-AppFramework_Application
+%files sub1-domain_API-AppFramework_Application
 
-%package sub2-domain_API-AppFramework-AppManager
+%package sub2-domain_API-AppFramework_Application-Alarm
+Summary:	Alarm
+Requires:	capi-appfw-alarm
+%description sub2-domain_API-AppFramework_Application-Alarm
+Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Application-Alarm
+%files sub2-domain_API-AppFramework_Application-Alarm
+
+%package sub2-domain_API-AppFramework_Application-AppCommon
+Summary:	App Common
+Requires:	capi-appfw-app-common
+%description sub2-domain_API-AppFramework_Application-AppCommon
+Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Application-AppCommon
+%files sub2-domain_API-AppFramework_Application-AppCommon
+
+%package sub2-domain_API-AppFramework_Application-AppControl
+Summary:	App Control
+Requires:	capi-appfw-application
+%description sub2-domain_API-AppFramework_Application-AppControl
+Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Application-AppControl
+%files sub2-domain_API-AppFramework_Application-AppControl
+
+%package sub2-domain_API-AppFramework_Application-Event
+Summary:	Event
+Requires:	capi-appfw-event
+%description sub2-domain_API-AppFramework_Application-Event
+Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Application-Event
+%files sub2-domain_API-AppFramework_Application-Event
+
+%package sub2-domain_API-AppFramework_Application-Internationalization
+Summary:	Internationalization
+Requires:	capi-appfw-application
+%description sub2-domain_API-AppFramework_Application-Internationalization
+Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Application-Internationalization
+%files sub2-domain_API-AppFramework_Application-Internationalization
+
+%package sub2-domain_API-AppFramework_Application-Preference
+Summary:	Preference
+Requires:	capi-appfw-preference
+%description sub2-domain_API-AppFramework_Application-Preference
+Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Application-Preference
+%files sub2-domain_API-AppFramework_Application-Preference
+
+%package sub2-domain_API-AppFramework_Application-ResourceManager
+Summary:	Resource Manager
+Requires:	capi-appfw-app-common
+%description sub2-domain_API-AppFramework_Application-ResourceManager
+Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Application-ResourceManager
+%files sub2-domain_API-AppFramework_Application-ResourceManager
+
+
+%package sub1-domain_API-AppFramework_ApplicationManager
 Summary:	AppManager
 Requires:	capi-appfw-app-manager
-%description sub2-domain_API-AppFramework-AppManager
-Tizen block (set of packages) for API sets of domain API-AppFramework-AppManager
-%files sub2-domain_API-AppFramework-AppManager
+Requires:	amd
+%description sub1-domain_API-AppFramework_ApplicationManager
+Tizen block (set of packages) for API sets of domain API-AppFramework_ApplicationManager
+%files sub1-domain_API-AppFramework_ApplicationManager
 
-%package sub2-domain_API-AppFramework-AttachPanel
-Summary:	AttachPanel
-Requires:	attach-panel
-%description sub2-domain_API-AppFramework-AttachPanel
-Tizen block (set of packages) for API sets of domain API-AppFramework-AttachPanel
-%files sub2-domain_API-AppFramework-AttachPanel
-
-%package sub2-domain_API-AppFramework-Badge
+%package sub1-domain_API-AppFramework_Badge
 Summary:	Badge
 Requires:	badge
-%description sub2-domain_API-AppFramework-Badge
-Tizen block (set of packages) for API sets of domain API-AppFramework-Badge
-%files sub2-domain_API-AppFramework-Badge
+Requires:	data-provider-master
+%description sub1-domain_API-AppFramework_Badge
+Tizen block (set of packages) for API sets of domain API-AppFramework_Badge
+%files sub1-domain_API-AppFramework_Badge
 
-%package sub2-domain_API-AppFramework-Bundle
+%package sub1-domain_API-AppFramework_Bundle
 Summary:	Bundle
 Requires:	bundle
-%description sub2-domain_API-AppFramework-Bundle
-Tizen block (set of packages) for API sets of domain API-AppFramework-Bundle
-%files sub2-domain_API-AppFramework-Bundle
+%description sub1-domain_API-AppFramework_Bundle
+Tizen block (set of packages) for API sets of domain API-AppFramework_Bundle
+%files sub1-domain_API-AppFramework_Bundle
 
-%package sub2-domain_API-AppFramework-DataControl
+%package sub1-domain_API-AppFramework_DataControl
 Summary:	DataControl
 Requires:	data-control
-%description sub2-domain_API-AppFramework-DataControl
-Tizen block (set of packages) for API sets of domain API-AppFramework-DataControl
-%files sub2-domain_API-AppFramework-DataControl
+Requires:	amd
+%description sub1-domain_API-AppFramework_DataControl
+Tizen block (set of packages) for API sets of domain API-AppFramework_DataControl
+%files sub1-domain_API-AppFramework_DataControl
 
-%package sub2-domain_API-AppFramework-MessagePort
+%package sub1-domain_API-AppFramework_MessagePort
 Summary:	MessagePort
 Requires:	message-port
-%description sub2-domain_API-AppFramework-MessagePort
-Tizen block (set of packages) for API sets of domain API-AppFramework-MessagePort
-%files sub2-domain_API-AppFramework-MessagePort
+Requires:	amd
+%description sub1-domain_API-AppFramework_MessagePort
+Tizen block (set of packages) for API sets of domain API-AppFramework_MessagePort
+%files sub1-domain_API-AppFramework_MessagePort
 
-%package sub2-domain_API-AppFramework-Notification
+%package sub1-domain_API-AppFramework_Notification
 Summary:	Notification
 Requires:	notification
-%description sub2-domain_API-AppFramework-Notification
-Tizen block (set of packages) for API sets of domain API-AppFramework-Notification
-%files sub2-domain_API-AppFramework-Notification
+Requires:	data-provider-master
+%description sub1-domain_API-AppFramework_Notification
+Tizen block (set of packages) for API sets of domain API-AppFramework_Notification
+%files sub1-domain_API-AppFramework_Notification
 
-%package sub2-domain_API-AppFramework-PackageManager
-Summary:	PackageManager
+%package sub1-domain_API-AppFramework_PackageManager
+Summary:	Package Manager
 Requires:	capi-appfw-package-manager
-%description sub2-domain_API-AppFramework-PackageManager
-Tizen block (set of packages) for API sets of domain API-AppFramework-PackageManager
-%files sub2-domain_API-AppFramework-PackageManager
+%description sub1-domain_API-AppFramework_PackageManager
+Tizen block (set of packages) for API sets of domain API-AppFramework_PackageManager
+%files sub1-domain_API-AppFramework_PackageManager
 
-%package sub2-domain_API-AppFramework-ServiceApplication
-Summary:	ServiceApplication
+%package sub1-domain_API-AppFramework_ServiceApplication
+Summary:	Service Application
 Requires:	appcore-agent
-%description sub2-domain_API-AppFramework-ServiceApplication
-Tizen block (set of packages) for API sets of domain API-AppFramework-ServiceApplication
-%files sub2-domain_API-AppFramework-ServiceApplication
+%description sub1-domain_API-AppFramework_ServiceApplication
+Tizen block (set of packages) for API sets of domain API-AppFramework_ServiceApplication
+%files sub1-domain_API-AppFramework_ServiceApplication
 
-%package sub2-domain_API-AppFramework-Shortcut
+%package sub1-domain_API-AppFramework_Shortcut
 Summary:	Shortcut
 Requires:	libshortcut
-%description sub2-domain_API-AppFramework-Shortcut
-Tizen block (set of packages) for API sets of domain API-AppFramework-Shortcut
-%files sub2-domain_API-AppFramework-Shortcut
+Requires:	data-provider-master
+%description sub1-domain_API-AppFramework_Shortcut
+Tizen block (set of packages) for API sets of domain API-AppFramework_Shortcut
+%files sub1-domain_API-AppFramework_Shortcut
 
-%package sub2-domain_API-AppFramework-WatchApplication
-Summary:	WatchApplication
-Requires:	appcore-watch
-%description sub2-domain_API-AppFramework-WatchApplication
-Tizen block (set of packages) for wearable watch API sets of domain API-AppFramework-WatchApplication
-%files sub2-domain_API-AppFramework-WatchApplication
-
-%package sub2-domain_API-AppFramework-Widget
+%package sub1-domain_API-AppFramework_Widget
 Summary:	Widget
+Suggests:	%{name}-sub2-domain_API-AppFramework_Widget-WidgetApplication
+Suggests:	%{name}-sub2-domain_API-AppFramework_Widget-WidgetService
+Suggests:	%{name}-sub2-domain_API-AppFramework_Widget-WidgetViewer
+Suggests:	%{name}-sub2-domain_API-AppFramework_Widget-WidgetViewerDali
+%description sub1-domain_API-AppFramework_Widget
+Tizen block (set of packages) for API sets of domain API-AppFramework_Widget
+%files sub1-domain_API-AppFramework_Widget
+
+%package sub2-domain_API-AppFramework_Widget-WidgetApplication
+Summary:	Widget Application
 Requires:	appcore-widget
+%description sub2-domain_API-AppFramework_Widget-WidgetApplication
+Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Widget-WidgetApplication
+%files sub2-domain_API-AppFramework_Widget-WidgetApplication
+
+%package sub2-domain_API-AppFramework_Widget-WidgetService
+Summary:	Widget Service
 Requires:	libwidget_service
+%description sub2-domain_API-AppFramework_Widget-WidgetService
+Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Widget-WidgetService
+%files sub2-domain_API-AppFramework_Widget-WidgetService
+
+%package sub2-domain_API-AppFramework_Widget-WidgetViewer
+Summary:	Widget Viewer
 Requires:	libwidget_viewer_evas
+%description sub2-domain_API-AppFramework_Widget-WidgetViewer
+Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Widget-WidgetViewer
+%files sub2-domain_API-AppFramework_Widget-WidgetViewer
+
+%package sub2-domain_API-AppFramework_Widget-WidgetViewerDali
+Summary:	Widget Viewer Dali
 Requires:	libwidget_viewer_dali
-%description sub2-domain_API-AppFramework-Widget
-Tizen block (set of packages) for API sets of domain API-AppFramework-Widget
-%files sub2-domain_API-AppFramework-Widget
+%description sub2-domain_API-AppFramework_Widget-WidgetViewerDali
+Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Widget-WidgetViewerDali
+%files sub2-domain_API-AppFramework_Widget-WidgetViewerDali
 
 
-
-%package sub1-domain_API-Base
-Summary:	Base
-Requires:	capi-base-common
-Suggests:	glib2
-Requires:	glibc
-Suggests:	libxml2
-Suggests:	minizip
-Suggests:	libgomp
-Suggests:	sqlite
-Suggests:	libicu
-Suggests:	zlib
-%description sub1-domain_API-Base
-Tizen block (set of packages) for API sets of domain API-Base
-%files sub1-domain_API-Base
-
-
-
-%package sub1-domain_API-Content
-Summary:	Content
-Suggests:	%{name}-sub2-domain_API-Content-Download
-Suggests:	%{name}-sub2-domain_API-Content-MIMEType
-Suggests:	%{name}-sub2-domain_API-Content-MediaContent
-%description sub1-domain_API-Content
-Tizen block (set of packages) for API sets of domain API-Content
-%files sub1-domain_API-Content
-
-%package sub2-domain_API-Content-Download
+%package sub1-domain_API-Content_Download
 Summary:	Download
 Requires:	capi-web-url-download
-%description sub2-domain_API-Content-Download
-Tizen block (set of packages) for API sets of sub2-domain_API-Content-Download
-%files sub2-domain_API-Content-Download
+Requires:	download-provider
+%description sub1-domain_API-Content_Download
+Tizen block (set of packages) for API sets of domain API-Content_Download
+%files sub1-domain_API-Content_Download
 
-%package sub2-domain_API-Content-MIMEType
+%package sub1-domain_API-Content_MIMEType
 Summary:	MIME Type
 Requires:	capi-content-mime-type
-%description sub2-domain_API-Content-MIMEType
-Tizen block (set of packages) for API sets of sub2-domain_API-Content-MIMEType
-%files sub2-domain_API-Content-MIMEType
-
-%package sub2-domain_API-Content-MediaContent
-Summary:	Media Content
-Requires:	capi-content-media-content
-%description sub2-domain_API-Content-MediaContent
-Tizen block (set of packages) for API sets of sub2-domain_API-Content-MediaContent
-%files sub2-domain_API-Content-MediaContent
+%description sub1-domain_API-Content_MIMEType
+Tizen block (set of packages) for API sets of domain API-Content_MIMEType
+%files sub1-domain_API-Content_MIMEType
 
 
 
-
-%package sub1-domain_API-Context
-Summary:	Context
-Suggests:	%{name}-sub2-domain_API-Context-ActivityRecognition
-Suggests:	%{name}-sub2-domain_API-Context-ContextualHistory
-Suggests:	%{name}-sub2-domain_API-Context-ContextualTrigger
-Suggests:	%{name}-sub2-domain_API-Context-GestureRecognition
-%description sub1-domain_API-Context
-Tizen block (set of packages) for API sets of domain API-Context
-%files sub1-domain_API-Context
-
-%package sub2-domain_API-Context-ActivityRecognition
+%package sub1-domain_API-Context_ActivityRecognition
 Summary:	Activity Recognition
 Requires:	capi-context-motion
-%description sub2-domain_API-Context-ActivityRecognition
-Tizen block (set of packages) for API sets of sub2-domain_API-Context-ActivityRecognition
-%files sub2-domain_API-Context-ActivityRecognition
+Requires:	sensord
+%description sub1-domain_API-Context_ActivityRecognition
+Tizen block (set of packages) for API sets of domain API-Context_ActivityRecognition
+%files sub1-domain_API-Context_ActivityRecognition
 
-%package sub2-domain_API-Context-ContextualHistory
+%package sub1-domain_API-Context_ContextualHistory
 Summary:	Contextual History
 Requires:	capi-context
-%description sub2-domain_API-Context-ContextualHistory
-Tizen block (set of packages) for API sets of sub2-domain_API-Context-ContextualHistory
-%files sub2-domain_API-Context-ContextualHistory
+Requires:	context-app-history
+%description sub1-domain_API-Context_ContextualHistory
+Tizen block (set of packages) for API sets of domain API-Context_ContextualHistory
+%files sub1-domain_API-Context_ContextualHistory
 
-%package sub2-domain_API-Context-ContextualTrigger
+%package sub1-domain_API-Context_ContextualTrigger
 Summary:	Contextual Trigger
 Requires:	capi-context
-%description sub2-domain_API-Context-ContextualTrigger
-Tizen block (set of packages) for API sets of sub2-domain_API-Context-ContextualTrigger
-%files sub2-domain_API-Context-ContextualTrigger
+Requires:	context-job-scheduler
+%description sub1-domain_API-Context_ContextualTrigger
+Tizen block (set of packages) for API sets of domain API-Context_ContextualTrigger
+%files sub1-domain_API-Context_ContextualTrigger
 
-%package sub2-domain_API-Context-GestureRecognition
+%package sub1-domain_API-Context_GestureRecognition
 Summary:	Gesture Recognition
 Requires:	capi-context-motion
-%description sub2-domain_API-Context-GestureRecognition
-Tizen block (set of packages) for API sets of sub2-domain_API-Context-GestureRecognition
-%files sub2-domain_API-Context-GestureRecognition
-
+Requires:	sensord
+%description sub1-domain_API-Context_GestureRecognition
+Tizen block (set of packages) for API sets of domain API-Context_GestureRecognition
+%files sub1-domain_API-Context_GestureRecognition
 
 
 
 %package sub1-domain_API-Location
 Summary:	Location
-Suggests:	%{name}-sub2-domain_API-Location-GeofenceManager
-Suggests:	%{name}-sub2-domain_API-Location-LocationManager
-Suggests:	%{name}-sub2-domain_API-Location-MapsService
+Requires:	capi-location-manager
+Requires:	lbs-server
+Suggests:	%{name}-sub2-domain_API-Location-Geofence
 %description sub1-domain_API-Location
 Tizen block (set of packages) for API sets of domain API-Location
 %files sub1-domain_API-Location
 
-%package sub2-domain_API-Location-GeofenceManager
-Summary:	Geofence Manager
+%package sub2-domain_API-Location-Geofence
+Summary:	Geofence
 Requires:	capi-geofence-manager
-%description sub2-domain_API-Location-GeofenceManager
-Tizen block (set of packages) for API sets of sub2-domain_API-Location-GeofenceManager
-%files sub2-domain_API-Location-GeofenceManager
+Requires:	geofence-server
+%description sub2-domain_API-Location-Geofence
+Tizen block (set of packages) for API sets of sub2-domain_API-Location-Geofence
+%files sub2-domain_API-Location-Geofence
 
-%package sub2-domain_API-Location-LocationManager
-Summary:	Location Manager
-Requires:	capi-location-manager
-%description sub2-domain_API-Location-LocationManager
-Tizen block (set of packages) for API sets of sub2-domain_API-Location-LocationManager
-%files sub2-domain_API-Location-LocationManager
 
-%package sub2-domain_API-Location-MapsService
-Summary:	Maps Service
+%package sub1-domain_API-Maps
+Summary:	Maps
 Requires:	capi-maps-service
-%description sub2-domain_API-Location-MapsService
-Tizen block (set of packages) for API sets of sub2-domain_API-Location-MapsService
-%files sub2-domain_API-Location-MapsService
+Suggests:	%{name}-sub2-domain_API-Maps-HEREPlugin
+Suggests:	%{name}-sub2-domain_API-Maps-MapzenPlugin
+%description sub1-domain_API-Maps
+Tizen block (set of packages) for API sets of domain API-Maps
+%files sub1-domain_API-Maps
+
+%package sub2-domain_API-Maps-HEREPlugin
+Summary:	HERE Plugin
+Requires:	maps-plugin-here
+Requires:	heremaps-uc-launcher
+Requires:	org.tizen.heremaps-uc
+%description sub2-domain_API-Maps-HEREPlugin
+Tizen block (set of packages) for API sets of sub2-domain_API-Maps-HEREPlugin
+%files sub2-domain_API-Maps-HEREPlugin
+
+%package sub2-domain_API-Maps-MapzenPlugin
+Summary:	Mapzen Plugin
+Requires:	maps-plugin-mapzen
+%description sub2-domain_API-Maps-MapzenPlugin
+Tizen block (set of packages) for API sets of sub2-domain_API-Maps-MapzenPlugin
+%files sub2-domain_API-Maps-MapzenPlugin
 
 
 
-
-
-%package sub1-domain_API-Messaging
-Summary:	Messaging
-Suggests:	%{name}-sub2-domain_API-Messaging-Email
-Suggests:	%{name}-sub2-domain_API-Messaging-Messages
-Suggests:	%{name}-sub2-domain_API-Messaging-Push
-%description sub1-domain_API-Messaging
-Tizen block (set of packages) for API sets of domain API-Messaging
-%files sub1-domain_API-Messaging
-
-%package sub2-domain_API-Messaging-Email
+%package sub1-domain_API-Messaging_Email
 Summary:	Email
 Requires:	capi-messaging-email
-%description sub2-domain_API-Messaging-Email
-Tizen block (set of packages) for API sets of sub2-domain_API-Messaging-Email
-%files sub2-domain_API-Messaging-Email
+%description sub1-domain_API-Messaging_Email
+Tizen block (set of packages) for API sets of domain API-Messaging_Email
+%files sub1-domain_API-Messaging_Email
 
-%package sub2-domain_API-Messaging-Messages
+%package sub1-domain_API-Messaging_Messages
 Summary:	Messages
 Requires:	capi-messaging-messages
-%description sub2-domain_API-Messaging-Messages
-Tizen block (set of packages) for API sets of sub2-domain_API-Messaging-Messages
-%files sub2-domain_API-Messaging-Messages
+Requires:	msg-manager
+Requires:	sms-plugin
+Requires:	mms-plugin
+Requires:	msg-service-tools
+%description sub1-domain_API-Messaging_Messages
+Tizen block (set of packages) for API sets of domain API-Messaging_Messages
+%files sub1-domain_API-Messaging_Messages
 
-%package sub2-domain_API-Messaging-Push
+%package sub1-domain_API-Messaging_Push
 Summary:	Push
 Requires:	libpush
-Suggests:	libpush-profile_common
-Suggests:	libpush-profile_tv
-Suggests:	libpush-profile_wearable
-Requires:	push-tool
-Suggests:	push-tool-profile_common
-Suggests:	push-tool-profile_tv
-Suggests:	push-tool-profile_wearable
-Requires:	push-bin
-Suggests:	push-bin-profile_common
-Suggests:	push-bin-profile_tv
-Suggests:	push-bin-profile_wearable
-%description sub2-domain_API-Messaging-Push
-Tizen block (set of packages) for API sets of sub2-domain_API-Messaging-Push
-%files sub2-domain_API-Messaging-Push
-
-
-
+%description sub1-domain_API-Messaging_Push
+Tizen block (set of packages) for API sets of domain API-Messaging_Push
+%files sub1-domain_API-Messaging_Push
 
 
 %package sub1-domain_API-Multimedia
@@ -397,6 +451,7 @@ Tizen block (set of packages) for API sets of domain API-Multimedia
 %package sub2-domain_API-Multimedia-AudioIO
 Summary:	Audio I/O
 Requires:	capi-media-audio-io
+Requires:	capi-media-sound-manager
 %description sub2-domain_API-Multimedia-AudioIO
 Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-AudioIO
 %files sub2-domain_API-Multimedia-AudioIO
@@ -404,6 +459,8 @@ Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-AudioIO
 %package sub2-domain_API-Multimedia-Camera
 Summary:	Camera
 Requires:	capi-media-camera
+Requires:	mmsvc-camera
+Requires:	mused
 %description sub2-domain_API-Multimedia-Camera
 Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-Camera
 %files sub2-domain_API-Multimedia-Camera
@@ -431,7 +488,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-MediaCo
 
 %package sub2-domain_API-Multimedia-MediaDemuxer
 Summary:	Media Demuxer
-Requires:	capi-mediademuxer
+Requires:	capi-mediamuxer
 %description sub2-domain_API-Multimedia-MediaDemuxer
 Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-MediaDemuxer
 %files sub2-domain_API-Multimedia-MediaDemuxer
@@ -565,570 +622,655 @@ Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-libEXIF
 
 
 
-
-
-%package sub1-domain_API-Network
-Summary:	Network
-Suggests:	%{name}-sub2-domain_API-Network-Bluetooth
-Suggests:	%{name}-sub2-domain_API-Network-Connection
-Suggests:	libcurl
-Suggests:	%{name}-sub2-domain_API-Network-DNSSD
-Suggests:	%{name}-sub2-domain_API-Network-HTTP
-Suggests:	%{name}-sub2-domain_API-Network-IoTCon
-Suggests:	%{name}-sub2-domain_API-Network-MTP
-Suggests:	%{name}-sub2-domain_API-Network-NFC
-Suggests:	%{name}-sub2-domain_API-Network-SSDP
-Suggests:	%{name}-sub2-domain_API-Network-Smartcard
-Suggests:	%{name}-sub2-domain_API-Network-VPNService
-Suggests:	%{name}-sub2-domain_API-Network-WiFi
-Suggests:	%{name}-sub2-domain_API-Network-WiFiDirect
-%description sub1-domain_API-Network
-Tizen block (set of packages) for API sets of domain API-Network
-%files sub1-domain_API-Network
-
-%package sub2-domain_API-Network-Bluetooth
+%package sub1-domain_API-Network_Bluetooth
 Summary:	Bluetooth
-Requires:	capi-network-bluetooth
-%description sub2-domain_API-Network-Bluetooth
-Tizen block (set of packages) for API sets of sub2-domain_API-Network-Bluetooth
-%files sub2-domain_API-Network-Bluetooth
+Suggests:	%{name}-sub2-domain_API-Network_Bluetooth-BluetoothAVRCP
+Suggests:	%{name}-sub2-domain_API-Network_Bluetooth-BluetoothAdapter
+Suggests:	%{name}-sub2-domain_API-Network_Bluetooth-BluetoothAudio
+Suggests:	%{name}-sub2-domain_API-Network_Bluetooth-BluetoothDevice
+Suggests:	%{name}-sub2-domain_API-Network_Bluetooth-BluetoothGATT
+Suggests:	%{name}-sub2-domain_API-Network_Bluetooth-BluetoothGATTServer
+Suggests:	%{name}-sub2-domain_API-Network_Bluetooth-BluetoothHDP
+Suggests:	%{name}-sub2-domain_API-Network_Bluetooth-BluetoothHID
+Suggests:	%{name}-sub2-domain_API-Network_Bluetooth-BluetoothLEAdapter
+Suggests:	%{name}-sub2-domain_API-Network_Bluetooth-BluetoothOPP
+Suggests:	%{name}-sub2-domain_API-Network_Bluetooth-BluetoothSocket
+%description sub1-domain_API-Network_Bluetooth
+Tizen block (set of packages) for API sets of domain API-Network_Bluetooth
+%files sub1-domain_API-Network_Bluetooth
 
-%package sub2-domain_API-Network-Connection
+%package sub2-domain_API-Network_Bluetooth-BluetoothAVRCP
+Summary:	Bluetooth AVRCP
+Requires:	capi-network-bluetooth
+Requires:	bluez
+Requires:	bluetooth-tools
+Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-sprd
+%description sub2-domain_API-Network_Bluetooth-BluetoothAVRCP
+Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothAVRCP
+%files sub2-domain_API-Network_Bluetooth-BluetoothAVRCP
+
+%package sub2-domain_API-Network_Bluetooth-BluetoothAdapter
+Summary:	Bluetooth Adapter
+Requires:	capi-network-bluetooth
+Requires:	bluez
+Requires:	bluetooth-tools
+Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-sprd
+%description sub2-domain_API-Network_Bluetooth-BluetoothAdapter
+Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothAdapter
+%files sub2-domain_API-Network_Bluetooth-BluetoothAdapter
+
+%package sub2-domain_API-Network_Bluetooth-BluetoothAudio
+Summary:	Bluetooth Audio
+Requires:	capi-network-bluetooth
+Requires:	bluez
+Requires:	bluetooth-tools
+Requires:	bluetooth-agent
+Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-sprd
+%description sub2-domain_API-Network_Bluetooth-BluetoothAudio
+Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothAudio
+%files sub2-domain_API-Network_Bluetooth-BluetoothAudio
+
+%package sub2-domain_API-Network_Bluetooth-BluetoothDevice
+Summary:	Bluetooth Device
+Requires:	capi-network-bluetooth
+Requires:	bluez
+Requires:	bluetooth-tools
+Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-sprd
+%description sub2-domain_API-Network_Bluetooth-BluetoothDevice
+Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothDevice
+%files sub2-domain_API-Network_Bluetooth-BluetoothDevice
+
+%package sub2-domain_API-Network_Bluetooth-BluetoothGATT
+Summary:	Bluetooth GATT
+Requires:	capi-network-bluetooth
+Requires:	bluez
+Requires:	bluetooth-tools
+Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-sprd
+%description sub2-domain_API-Network_Bluetooth-BluetoothGATT
+Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothGATT
+%files sub2-domain_API-Network_Bluetooth-BluetoothGATT
+
+%package sub2-domain_API-Network_Bluetooth-BluetoothGATTServer
+Summary:	Bluetooth GATT Server
+Requires:	capi-network-bluetooth
+Requires:	bluez
+Requires:	bluetooth-tools
+Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-sprd
+%description sub2-domain_API-Network_Bluetooth-BluetoothGATTServer
+Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothGATTServer
+%files sub2-domain_API-Network_Bluetooth-BluetoothGATTServer
+
+%package sub2-domain_API-Network_Bluetooth-BluetoothHDP
+Summary:	Bluetooth HDP
+Requires:	capi-network-bluetooth
+Requires:	bluez
+Requires:	bluetooth-tools
+Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-sprd
+%description sub2-domain_API-Network_Bluetooth-BluetoothHDP
+Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothHDP
+%files sub2-domain_API-Network_Bluetooth-BluetoothHDP
+
+%package sub2-domain_API-Network_Bluetooth-BluetoothHID
+Summary:	Bluetooth HID
+Requires:	capi-network-bluetooth
+Requires:	bluez
+Requires:	bluetooth-tools
+Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-sprd
+%description sub2-domain_API-Network_Bluetooth-BluetoothHID
+Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothHID
+%files sub2-domain_API-Network_Bluetooth-BluetoothHID
+
+%package sub2-domain_API-Network_Bluetooth-BluetoothLEAdapter
+Summary:	Bluetooth LE Adapter
+Requires:	capi-network-bluetooth
+Requires:	bluez
+Requires:	bluetooth-tools
+Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-sprd
+%description sub2-domain_API-Network_Bluetooth-BluetoothLEAdapter
+Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothLEAdapter
+%files sub2-domain_API-Network_Bluetooth-BluetoothLEAdapter
+
+%package sub2-domain_API-Network_Bluetooth-BluetoothOPP
+Summary:	Bluetooth OPP
+Requires:	capi-network-bluetooth
+Requires:	bluez
+Requires:	bluetooth-tools
+Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-sprd
+%description sub2-domain_API-Network_Bluetooth-BluetoothOPP
+Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothOPP
+%files sub2-domain_API-Network_Bluetooth-BluetoothOPP
+
+%package sub2-domain_API-Network_Bluetooth-BluetoothSocket
+Summary:	Bluetooth Socket
+Requires:	capi-network-bluetooth
+Requires:	bluez
+Requires:	bluetooth-tools
+Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-sprd
+%description sub2-domain_API-Network_Bluetooth-BluetoothSocket
+Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothSocket
+%files sub2-domain_API-Network_Bluetooth-BluetoothSocket
+
+
+%package sub1-domain_API-Network_ASP
+Summary:	ASP
+Requires:	capi-network-asp
+Requires:	asp-manager
+%description sub1-domain_API-Network_ASP
+Tizen block (set of packages) for API sets of domain API-Network_ASP
+%files sub1-domain_API-Network_ASP
+
+
+%package sub1-domain_API-Network_Connection
 Summary:	Connection
 Requires:	capi-network-connection
-%description sub2-domain_API-Network-Connection
-Tizen block (set of packages) for API sets of sub2-domain_API-Network-Connection
-%files sub2-domain_API-Network-Connection
+Requires:	net-config
+Requires:	connman
+Requires:	wpa_supplicant
+%description sub1-domain_API-Network_Connection
+Tizen block (set of packages) for API sets of domain API-Network_Connection
+%files sub1-domain_API-Network_Connection
 
-%package sub2-domain_API-Network-DNSSD
+
+%package sub1-domain_API-Network_Curl
+Summary:	Curl
+Requires:	curl
+%description sub1-domain_API-Network_Curl
+Tizen block (set of packages) for API sets of domain API-Network_Curl
+%files sub1-domain_API-Network_Curl
+
+%package sub1-domain_API-Network_DNSSD
 Summary:	DNSSD
 Requires:	capi-network-nsd
-Requires:	libnsd-dns-sd
-%description sub2-domain_API-Network-DNSSD
-Tizen block (set of packages) for API sets of sub2-domain_API-Network-DNSSD
-%files sub2-domain_API-Network-DNSSD
+Requires:	mDNSResponder
+%description sub1-domain_API-Network_DNSSD
+Tizen block (set of packages) for API sets of domain API-Network_DNSSD
+%files sub1-domain_API-Network_DNSSD
 
-%package sub2-domain_API-Network-HTTP
+%package sub1-domain_API-Network_HTTP
 Summary:	HTTP
 Requires:	capi-network-http
-%description sub2-domain_API-Network-HTTP
-Tizen block (set of packages) for API sets of sub2-domain_API-Network-HTTP
-%files sub2-domain_API-Network-HTTP
+%description sub1-domain_API-Network_HTTP
+Tizen block (set of packages) for API sets of domain API-Network_HTTP
+%files sub1-domain_API-Network_HTTP
 
-%package sub2-domain_API-Network-IoTCon
+%package sub1-domain_API-Network_IoTCon
 Summary:	IoTCon
 Requires:	iotcon
-%description sub2-domain_API-Network-IoTCon
-Tizen block (set of packages) for API sets of sub2-domain_API-Network-IoTCon
-%files sub2-domain_API-Network-IoTCon
+%description sub1-domain_API-Network_IoTCon
+Tizen block (set of packages) for API sets of domain API-Network_IoTCon
+%files sub1-domain_API-Network_IoTCon
 
-%package sub2-domain_API-Network-MTP
+%package sub1-domain_API-Network_MTP
 Summary:	MTP
 Requires:	capi-network-mtp
-%description sub2-domain_API-Network-MTP
-Tizen block (set of packages) for API sets of sub2-domain_API-Network-MTP
-%files sub2-domain_API-Network-MTP
+Requires:	mtp-initiator
+%description sub1-domain_API-Network_MTP
+Tizen block (set of packages) for API sets of domain API-Network_MTP
+%files sub1-domain_API-Network_MTP
 
-%package sub2-domain_API-Network-NFC
+%package sub1-domain_API-Network_NFC
 Summary:	NFC
 Requires:	capi-network-nfc
-%description sub2-domain_API-Network-NFC
-Tizen block (set of packages) for API sets of sub2-domain_API-Network-NFC
-%files sub2-domain_API-Network-NFC
+Requires:	nfc-manager
+%description sub1-domain_API-Network_NFC
+Tizen block (set of packages) for API sets of domain API-Network_NFC
+%files sub1-domain_API-Network_NFC
 
-%package sub2-domain_API-Network-SSDP
+%package sub1-domain_API-Network_SSDP
 Summary:	SSDP
 Requires:	capi-network-nsd
-Requires:	libnsd-ssdp
-%description sub2-domain_API-Network-SSDP
-Tizen block (set of packages) for API sets of sub2-domain_API-Network-SSDP
-%files sub2-domain_API-Network-SSDP
+%description sub1-domain_API-Network_SSDP
+Tizen block (set of packages) for API sets of domain API-Network_SSDP
+%files sub1-domain_API-Network_SSDP
 
-%package sub2-domain_API-Network-Smartcard
+%package sub1-domain_API-Network_Smartcard
 Summary:	Smartcard
 Requires:	capi-network-smartcard
-%description sub2-domain_API-Network-Smartcard
-Tizen block (set of packages) for API sets of sub2-domain_API-Network-Smartcard
-%files sub2-domain_API-Network-Smartcard
+Requires:	smartcard-service
+Suggests:	smartcard-plugin-nfc
+Suggests:	smartcard-plugin-uicc
+%description sub1-domain_API-Network_Smartcard
+Tizen block (set of packages) for API sets of domain API-Network_Smartcard
+%files sub1-domain_API-Network_Smartcard
 
-%package sub2-domain_API-Network-VPNService
+%package sub1-domain_API-Network_VPNService
 Summary:	VPN Service
 Requires:	capi-vpnsvc
-%description sub2-domain_API-Network-VPNService
-Tizen block (set of packages) for API sets of sub2-domain_API-Network-VPNService
-%files sub2-domain_API-Network-VPNService
+%description sub1-domain_API-Network_VPNService
+Tizen block (set of packages) for API sets of domain API-Network_VPNService
+%files sub1-domain_API-Network_VPNService
 
-%package sub2-domain_API-Network-WiFi
+%package sub1-domain_API-Network_WiFi
 Summary:	WiFi
-Requires:	capi-network-wifi-manager
-Requires:	capi-network-wifi
-%description sub2-domain_API-Network-WiFi
-Tizen block (set of packages) for API sets of sub2-domain_API-Network-WiFi
-%files sub2-domain_API-Network-WiFi
+Suggests:	%{name}-sub2-domain_API-Network_WiFi-WiFi
+Suggests:	%{name}-sub2-domain_API-Network_WiFi-WiFiManager
+%description sub1-domain_API-Network_WiFi
+Tizen block (set of packages) for API sets of domain API-Network_WiFi
+%files sub1-domain_API-Network_WiFi
 
-%package sub2-domain_API-Network-WiFiDirect
+%package sub2-domain_API-Network_WiFi-WiFi
+Summary:	WiFi
+Requires:	capi-network-wifi
+Requires:	net-config
+Requires:	connman
+Requires:	wpa_supplicant
+%description sub2-domain_API-Network_WiFi-WiFi
+Tizen block (set of packages) for API sets of sub2-domain_API-Network_WiFi-WiFi
+%files sub2-domain_API-Network_WiFi-WiFi
+
+%package sub2-domain_API-Network_WiFi-WiFiManager
+Summary:	WiFi Manager
+Requires:	capi-network-wifi-manager
+Requires:	net-config
+Requires:	connman
+Requires:	wpa_supplicant
+%description sub2-domain_API-Network_WiFi-WiFiManager
+Tizen block (set of packages) for API sets of sub2-domain_API-Network_WiFi-WiFiManager
+%files sub2-domain_API-Network_WiFi-WiFiManager
+
+
+%package sub1-domain_API-Network_WiFiDirect
 Summary:	WiFi Direct
 Requires:	capi-network-wifi-direct
-Suggests:	capi-network-wifi-direct-extension-features
-%description sub2-domain_API-Network-WiFiDirect
-Tizen block (set of packages) for API sets of sub2-domain_API-Network-WiFiDirect
-%files sub2-domain_API-Network-WiFiDirect
+Requires:	wifi-direct-manager
+Requires:	wpa_supplicant
+%description sub1-domain_API-Network_WiFiDirect
+Tizen block (set of packages) for API sets of domain API-Network_WiFiDirect
+%files sub1-domain_API-Network_WiFiDirect
 
 
-
-
-
-%package sub1-domain_API-Security
-Summary:	Security
-Suggests:	%{name}-sub2-domain_API-Security-CSR
-Suggests:	%{name}-sub2-domain_API-Security-DevicePolicyManager
-Suggests:	%{name}-sub2-domain_API-Security-KeyManager
-Suggests:	libopenssl
-Suggests:	openssl
-Suggests:	%{name}-sub2-domain_API-Security-PrivilegeInfo
-Suggests:	%{name}-sub2-domain_API-Security-YACA
-%description sub1-domain_API-Security
-Tizen block (set of packages) for API sets of domain API-Security
-%files sub1-domain_API-Security
-
-%package sub2-domain_API-Security-CSR
+%package sub1-domain_API-Security_CSR
 Summary:	CSR
-Requires:	csr-framework
-Requires:	libcsr-framework-common
 Requires:	libcsr-framework-client
-%description sub2-domain_API-Security-CSR
-Tizen block (set of packages) for API sets of sub2-domain_API-Security-CSR
-%files sub2-domain_API-Security-CSR
+%description sub1-domain_API-Security_CSR
+Tizen block (set of packages) for API sets of domain API-Security_CSR
+%files sub1-domain_API-Security_CSR
 
-%package sub2-domain_API-Security-DevicePolicyManager
-Summary:	DevicePolicyManager
-Requires:	device-policy-manager
-Requires:	libdpm
-Suggests:	libdsm
-%description sub2-domain_API-Security-DevicePolicyManager
-Tizen block (set of packages) for API sets of sub2-domain_API-Security-DevicePolicyManager
-%files sub2-domain_API-Security-DevicePolicyManager
-
-%package sub2-domain_API-Security-KeyManager
+%package sub1-domain_API-Security_KeyManager
 Summary:	KeyManager
-Requires:	key-manager
-Requires:	libkey-manager-common
 Requires:	libkey-manager-client
-Suggests:	key-manager-pam-plugin
-%description sub2-domain_API-Security-KeyManager
-Tizen block (set of packages) for API sets of sub2-domain_API-Security-KeyManager
-%files sub2-domain_API-Security-KeyManager
+%description sub1-domain_API-Security_KeyManager
+Tizen block (set of packages) for API sets of domain API-Security_KeyManager
+%files sub1-domain_API-Security_KeyManager
 
-%package sub2-domain_API-Security-PrivilegeInfo
-Summary:	PrivilegeInfo
-Requires:	privilege-info
-%description sub2-domain_API-Security-PrivilegeInfo
-Tizen block (set of packages) for API sets of sub2-domain_API-Security-PrivilegeInfo
-%files sub2-domain_API-Security-PrivilegeInfo
+%package sub1-domain_API-Security_OpenSSL
+Summary:	KeyManager
+Requires:	libopenssl
+%description sub1-domain_API-Security_OpenSSL
+Tizen block (set of packages) for API sets of domain API-Security_OpenSSL
+%files sub1-domain_API-Security_OpenSSL
 
-%package sub2-domain_API-Security-YACA
+%package sub1-domain_API-Security_YACA
 Summary:	YACA
 Requires:	yaca
-%description sub2-domain_API-Security-YACA
-Tizen block (set of packages) for API sets of sub2-domain_API-Security-YACA
-%files sub2-domain_API-Security-YACA
+%description sub1-domain_API-Security_YACA
+Tizen block (set of packages) for API sets of domain API-Security_YACA
+%files sub1-domain_API-Security_YACA
 
 
-
-
-%package sub1-domain_API-Social
-Summary:	Social
-Suggests:	%{name}-sub2-domain_API-Social-Calendar
-Suggests:	%{name}-sub2-domain_API-Social-Contacts
-Suggests:	%{name}-sub2-domain_API-Social-PhonenumberUtils
-%description sub1-domain_API-Social
-Tizen block (set of packages) for API sets of domain API-Social
-%files sub1-domain_API-Social
-
-%package sub2-domain_API-Social-Calendar
+%package sub1-domain_API-Social_Calendar
 Summary:	Calendar
-Requires:	calendar-service
-Suggests:	libcalendar-service
-%description sub2-domain_API-Social-Calendar
-Tizen block (set of packages) for API sets of sub2-domain_API-Social-Calendar
-%files sub2-domain_API-Social-Calendar
+Requires:	libcalendar-service
+Suggests:	contacts-service
+%description sub1-domain_API-Social_Calendar
+Tizen block (set of packages) for API sets of domain API-Social_Calendar
+%files sub1-domain_API-Social_Calendar
 
-%package sub2-domain_API-Social-Contacts
+%package sub1-domain_API-Social_Contacts
 Summary:	Contacts
-Requires:	contacts-service
-Suggests:	libcontacts-service
-%description sub2-domain_API-Social-Contacts
-Tizen block (set of packages) for API sets of sub2-domain_API-Social-Contacts
-%files sub2-domain_API-Social-Contacts
+Requires:	libcontacts-service
+%description sub1-domain_API-Social_Contacts
+Tizen block (set of packages) for API sets of domain API-Social_Contacts
+%files sub1-domain_API-Social_Contacts
 
-%package sub2-domain_API-Social-PhonenumberUtils
+%package sub1-domain_API-Social_PhonenumberUtils
 Summary:	Phonenumber Utils
 Requires:	phonenumber-utils
-%description sub2-domain_API-Social-PhonenumberUtils
-Tizen block (set of packages) for API sets of sub2-domain_API-Social-PhonenumberUtils
-%files sub2-domain_API-Social-PhonenumberUtils
+%description sub1-domain_API-Social_PhonenumberUtils
+Tizen block (set of packages) for API sets of domain API-Social_PhonenumberUtils
+%files sub1-domain_API-Social_PhonenumberUtils
 
-
-
-
-
-%package sub1-domain_API-System
-Summary:	System
-Suggests:	%{name}-sub2-domain_API-System-Device
-Suggests:	%{name}-sub2-domain_API-System-Feedback
-Suggests:	%{name}-sub2-domain_API-System-MediaKey
-Suggests:	%{name}-sub2-domain_API-System-RuntimeInformation
-Suggests:	%{name}-sub2-domain_API-System-Sensor
-Suggests:	%{name}-sub2-domain_API-System-Storage
-Suggests:	%{name}-sub2-domain_API-System-SystemInformation
-Suggests:	%{name}-sub2-domain_API-System-SystemSettings
-Suggests:	%{name}-sub2-domain_API-System-Ttrace
-Suggests:	%{name}-sub2-domain_API-System-USBHost
-Suggests:	%{name}-sub2-domain_API-System-dlog
-%description sub1-domain_API-System
-Tizen block (set of packages) for API sets of domain API-System
-%files sub1-domain_API-System
-
-%package sub2-domain_API-System-Device
-Summary:	Device
-Requires:	deviced
-Suggests:	deviced-profile_common
-Suggests:	deviced-profile_ivi
-Suggests:	deviced-profile_mobile
-Suggests:	deviced-profile_tv
-Suggests:	deviced-profile_wearable
-Requires:	libdeviced
-Requires:	deviced-tools
-%description sub2-domain_API-System-Device
-Tizen block (set of packages) for API sets of sub2-domain_API-System-Device
-%files sub2-domain_API-System-Device
-
-%package sub2-domain_API-System-Feedback
-Summary:	Feedback
-Requires:	libfeedback
-Requires:	svi-data
-Suggests:	svi-data-profile_common
-Suggests:	svi-data-profile_mobile
-Suggests:	svi-data-profile_wearable
-Requires:	feedbackd
-Suggests:	feedbackd-profile_mobile
-Suggests:	feedbackd-profile_wearable
-%description sub2-domain_API-System-Feedback
-Tizen block (set of packages) for API sets of sub2-domain_API-System-Feedback
-%files sub2-domain_API-System-Feedback
-
-%package sub2-domain_API-System-MediaKey
+%package sub1-domain_API-System_MediaKey
 Summary:	Media Key
 Requires:	capi-system-media-key
-%description sub2-domain_API-System-MediaKey
-Tizen block (set of packages) for API sets of sub2-domain_API-System-MediaKey
-%files sub2-domain_API-System-MediaKey
+%description sub1-domain_API-System_MediaKey
+Tizen block (set of packages) for API sets of domain API-System_MediaKey
+%files sub1-domain_API-System_MediaKey
 
-%package sub2-domain_API-System-RuntimeInformation
+%package sub1-domain_API-System_RuntimeInformation
 Summary:	Runtime Information
 Requires:	capi-system-runtime-info
-%description sub2-domain_API-System-RuntimeInformation
-Tizen block (set of packages) for API sets of sub2-domain_API-System-RuntimeInformation
-%files sub2-domain_API-System-RuntimeInformation
+Requires:	resourced
+Requires:	buxton2
+Requires:	dbus
+%description sub1-domain_API-System_RuntimeInformation
+Tizen block (set of packages) for API sets of domain API-System_RuntimeInformation
+%files sub1-domain_API-System_RuntimeInformation
 
-%package sub2-domain_API-System-Sensor
+%package sub1-domain_API-System_Sensor
 Summary:	Sensor
+Suggests:	%{name}-sub2-domain_API-System_Sensor-SensorListener
+Suggests:	%{name}-sub2-domain_API-System_Sensor-SensorRecorder
 Requires:	capi-system-sensor
+%description sub1-domain_API-System_Sensor
+Tizen block (set of packages) for API sets of domain API-System_Sensor
+%files sub1-domain_API-System_Sensor
+
+%package sub2-domain_API-System_Sensor-SensorListener
+Summary:	Sensor Listener
 Requires:	sensord
-Requires:	libsensord
-%description sub2-domain_API-System-Sensor
-Tizen block (set of packages) for API sets of sub2-domain_API-System-Sensor
-%files sub2-domain_API-System-Sensor
+%description sub2-domain_API-System_Sensor-SensorListener
+Tizen block (set of packages) for API sets of sub2-domain_API-System_Sensor-SensorListener
+%files sub2-domain_API-System_Sensor-SensorListener
 
-%package sub2-domain_API-System-Storage
-Summary:	Storage
-Requires:	libstorage
-Requires:	storaged
-Suggests:	storaged-module_block
-Suggests:	storaged-module_storage
-%description sub2-domain_API-System-Storage
-Tizen block (set of packages) for API sets of sub2-domain_API-System-Storage
-%files sub2-domain_API-System-Storage
+%package sub2-domain_API-System_Sensor-SensorRecorder
+Summary:	Sensor Recorder
+Requires:	context-sensor-recorder
+%description sub2-domain_API-System_Sensor-SensorRecorder
+Tizen block (set of packages) for API sets of sub2-domain_API-System_Sensor-SensorRecorder
+%files sub2-domain_API-System_Sensor-SensorRecorder
 
-%package sub2-domain_API-System-SystemInformation
+%package sub1-domain_API-System_SystemInformation
 Summary:	System Information
 Requires:	capi-system-info
-Suggests:	capi-system-info-extension-emulator
-%description sub2-domain_API-System-SystemInformation
-Tizen block (set of packages) for API sets of sub2-domain_API-System-System Information
-%files sub2-domain_API-System-SystemInformation
+%description sub1-domain_API-System_SystemInformation
+Tizen block (set of packages) for API sets of domain API-System_SystemInformation
+%files sub1-domain_API-System_SystemInformation
 
-%package sub2-domain_API-System-SystemSettings
-Summary:	System Settings
-Requires:	capi-system-system-settings
-%description sub2-domain_API-System-SystemSettings
-Tizen block (set of packages) for API sets of sub2-domain_API-System-System Settings
-%files sub2-domain_API-System-SystemSettings
-
-%package sub2-domain_API-System-Ttrace
-Summary:	T-trace
-Requires:	ttrace
-Suggests:	ttrace-extension
-%description sub2-domain_API-System-Ttrace
-Tizen block (set of packages) for API sets of sub2-domain_API-System-Ttrace
-%files sub2-domain_API-System-Ttrace
-
-%package sub2-domain_API-System-USBHost
-Summary:	USBHost
-Requires:	capi-system-usbhost
-%description sub2-domain_API-System-USBHost
-Tizen block (set of packages) for API sets of sub2-domain_API-System-USBHost
-%files sub2-domain_API-System-USBHost
-
-%package sub2-domain_API-System-dlog
+%package sub1-domain_API-System_dlog
 Summary:	dlog
-Requires:	dlogutil
-Requires:	libdlog
-Suggests:	dlogbackend-kmsg
-Suggests:	dlogbackend-logger
-%description sub2-domain_API-System-dlog
-Tizen block (set of packages) for API sets of sub2-domain_API-System-dlog
-%files sub2-domain_API-System-dlog
-
-
+Requires:	dlog
+%description sub1-domain_API-System_dlog
+Tizen block (set of packages) for API sets of domain API-System_dlog
+%files sub1-domain_API-System_dlog
 
 
 
 %package sub1-domain_API-Telephony
 Summary:	Telephony
 Requires:	capi-telephony
+Requires:	telephony-daemon
+Requires:	tel-plugin-dbus_tapi
+Requires:	tel-plugin-manager
+Requires:	tel-plugin-database
+Requires:	tel-plugin-vconf
+Suggests:	tel-plugin-packetservice
+Suggests:	tel-plugin-nitz
+Suggests:	tel-plugin-indicator
+Suggests:	telephony-syspopup
+Suggests:	tel-plugin-syspopup
 %description sub1-domain_API-Telephony
 Tizen block (set of packages) for API sets of domain API-Telephony
 %files sub1-domain_API-Telephony
 
 
-%package sub1-domain_API-UI
-Summary:	UI
-Suggests:	%{name}-sub2-domain_API-UI-Cairo
-Suggests:	%{name}-sub2-domain_API-UI-ClipboardHistoryManager
-Suggests:	%{name}-sub2-domain_API-UI-DALi
-Suggests:	%{name}-sub2-domain_API-UI-EFL
-Suggests:	%{name}-sub2-domain_API-UI-EFLUTIL
-Suggests:	%{name}-sub2-domain_API-UI-EflExtension
-Suggests:	%{name}-sub2-domain_API-UI-ExternalOutputManager
-Suggests:	fontconfig
-Suggests:	libfreetype
-Suggests:	libharfbuzz
-Suggests:	%{name}-sub2-domain_API-UI-Minicontrol
-Suggests:	SDL2
-Suggests:	%{name}-sub2-domain_API-UI-TBMSurface
-Suggests:	%{name}-sub2-domain_API-UI-TizenWSShell
-Suggests:	%{name}-sub2-domain_API-UI-UIViewManager
-Suggests:	%{name}-sub2-domain_API-UI-Vulkan
-%description sub1-domain_API-UI
-Tizen block (set of packages) for API sets of domain API-UI
-%files sub1-domain_API-UI
-
-%package sub2-domain_API-UI-Cairo
+%package sub1-domain_API-UI_Cairo
 Summary:	Cairo
 Requires:	libcairo
-Suggests:	libcairo-gobject
-Suggests:	libcairo-script-interpreter
-%description sub2-domain_API-UI-Cairo
-Tizen block (set of packages) for API sets of sub2-domain_API-UI-Cairo
-%files sub2-domain_API-UI-Cairo
+%description sub1-domain_API-UI_Cairo
+Tizen block (set of packages) for API sets of domain API-UI_Cairo
+%files sub1-domain_API-UI_Cairo
 
-%package sub2-domain_API-UI-ClipboardHistoryManager
+%package sub1-domain_API-UI_ClipboardHistoryManager
 Summary:	Clipboard History Manager
 Requires:	cbhm
-%description sub2-domain_API-UI-ClipboardHistoryManager
-Tizen block (set of packages) for API sets of sub2-domain_API-UI-ClipboardHistoryManager
-%files sub2-domain_API-UI-ClipboardHistoryManager
+%description sub1-domain_API-UI_ClipboardHistoryManager
+Tizen block (set of packages) for API sets of domain API-UI_ClipboardHistoryManager
+%files sub1-domain_API-UI_ClipboardHistoryManager
 
-%package sub2-domain_API-UI-DALi
+%package sub1-domain_API-UI_DALi
 Summary:	DALi
-Requires:	dali
-Requires:	dali-adaptor
+Requires:	dali-toolkit
+Suggests:	dali-extension
+Suggests:	dali-extension-key-extension
+Suggests:	%{name}-sub2-domain_API-UI_DALi-DALiAdaptor
+Suggests:	%{name}-sub2-domain_API-UI_DALi-DALiCore
+Suggests:	%{name}-sub2-domain_API-UI_DALi-DALiToolkit
+%description sub1-domain_API-UI_DALi
+Tizen block (set of packages) for API sets of domain API-UI_DALi
+%files sub1-domain_API-UI_DALi
+
+%package sub2-domain_API-UI_DALi-DALiAdaptor
+Summary:	DALi Adaptor
+Requires:	dali-toolkit
+Suggests:	dali-adaptor-dali-feedback-plugin
+Suggests:	dali-adaptor-dali-video-player-plugin
 Suggests:	dali-adaptor-profile_common
-Suggests:	dali-adaptor-profile_ivi
 Suggests:	dali-adaptor-profile_mobile
 Suggests:	dali-adaptor-profile_tv
 Suggests:	dali-adaptor-profile_wearable
+Suggests:	dali-adaptor-profile_ivi
+%description sub2-domain_API-UI_DALi-DALiAdaptor
+Tizen block (set of packages) for API sets of sub2-domain_API-UI_DALi-DALiAdaptor
+%files sub2-domain_API-UI_DALi-DALiAdaptor
+
+%package sub2-domain_API-UI_DALi-DALiCore
+Summary:	DALi Core
+Requires:	dali-toolkit
+%description sub2-domain_API-UI_DALi-DALiCore
+Tizen block (set of packages) for API sets of sub2-domain_API-UI_DALi-DALiCore
+%files sub2-domain_API-UI_DALi-DALiCore
+
+%package sub2-domain_API-UI_DALi-DALiToolkit
+Summary:	DALi Toolkit
 Requires:	dali-toolkit
 Suggests:	dali-toolkit-resources_480x800
 Suggests:	dali-toolkit-resources_720x1280
 Suggests:	dali-toolkit-resources_1920x1080
-Requires:	dali-core
+%description sub2-domain_API-UI_DALi-DALiToolkit
+Tizen block (set of packages) for API sets of sub2-domain_API-UI_DALi-DALiToolkit
+%files sub2-domain_API-UI_DALi-DALiToolkit
 
-%description sub2-domain_API-UI-DALi
-Tizen block (set of packages) for API sets of sub2-domain_API-UI-DALi
-%files sub2-domain_API-UI-DALi
 
-%package sub2-domain_API-UI-EFL
+
+%package sub1-domain_API-UI_EFL
 Summary:	EFL
+Suggests:	%{name}-sub2-domain_API-UI_EFL-Ecore
+Suggests:	%{name}-sub2-domain_API-UI_EFL-Edje
+Suggests:	%{name}-sub2-domain_API-UI_EFL-Eet
+Suggests:	%{name}-sub2-domain_API-UI_EFL-Eina
+Suggests:	%{name}-sub2-domain_API-UI_EFL-Eio
+Suggests:	%{name}-sub2-domain_API-UI_EFL-Eldbus
+Suggests:	%{name}-sub2-domain_API-UI_EFL-Elementary
+Suggests:	%{name}-sub2-domain_API-UI_EFL-Evas
 Requires:	efl
-Requires:	emile
 Requires:	eo
-Requires:	ector
-Requires:	ecore
-Suggests:	ecore-core
-Suggests:	ecore-audio
-Suggests:	ecore-avahi
-Suggests:	ecore-buffer
-Suggests:	ecore-con
-Suggests:	ecore-evas
-Suggests:	ecore-fb
-Suggests:	ecore-file
-Suggests:	ecore-imf
-Suggests:	ecore-imf-evas
-Suggests:	ecore-input
-Suggests:	ecore-input-evas
-Suggests:	ecore-ipc
-Suggests:	ecore-drm
-Suggests:	ecore-wayland
+%description sub1-domain_API-UI_EFL
+Tizen block (set of packages) for API sets of domain API-UI_EFL
+%files sub1-domain_API-UI_EFL
+
+%package sub2-domain_API-UI_EFL-Ecore
+Summary:	Ecore
+Requires:	ecore-core
+Requires:	ecore-input
+Requires:	ecore-buffer
+Requires:	ecore-con
+Requires:	ecore-evas
+Requires:	ecore-file
+Requires:	ecore-imf
+Requires:	ecore-ipc
+Suggests:	ecore
+%description sub2-domain_API-UI_EFL-Ecore
+Tizen block (set of packages) for API sets of sub2-domain_API-UI_EFL-Ecore
+%files sub2-domain_API-UI_EFL-Ecore
+
+%package sub2-domain_API-UI_EFL-Edje
+Summary:	Edje
 Requires:	edje
-Suggests:	edje-tools
+%description sub2-domain_API-UI_EFL-Edje
+Tizen block (set of packages) for API sets of sub2-domain_API-UI_EFL-Edje
+%files sub2-domain_API-UI_EFL-Edje
+
+%package sub2-domain_API-UI_EFL-Eet
+Summary:	Eet
 Requires:	eet
-Suggests:	eet-tools
+%description sub2-domain_API-UI_EFL-Eet
+Tizen block (set of packages) for API sets of sub2-domain_API-UI_EFL-Eet
+%files sub2-domain_API-UI_EFL-Eet
+
+%package sub2-domain_API-UI_EFL-Eina
+Summary:	Eina
 Requires:	eina
-Suggests:	eina-tools
+%description sub2-domain_API-UI_EFL-Eina
+Tizen block (set of packages) for API sets of sub2-domain_API-UI_EFL-Eina
+%files sub2-domain_API-UI_EFL-Eina
+
+%package sub2-domain_API-UI_EFL-Eio
+Summary:	Eio
 Requires:	eio
+%description sub2-domain_API-UI_EFL-Eio
+Tizen block (set of packages) for API sets of sub2-domain_API-UI_EFL-Eio
+%files sub2-domain_API-UI_EFL-Eio
+
+%package sub2-domain_API-UI_EFL-Eldbus
+Summary:	Eldbus
 Requires:	eldbus
+%description sub2-domain_API-UI_EFL-Eldbus
+Tizen block (set of packages) for API sets of sub2-domain_API-UI_EFL-Eldbus
+%files sub2-domain_API-UI_EFL-Eldbus
+
+%package sub2-domain_API-UI_EFL-Elementary
+Summary:	Elementary
 Requires:	elementary
+Requires:	efl-theme-tizen-common
+Requires:	efl-config-profile_common
+Requires:	efl-misc-profile_common
+Requires:	efl-modules-profile_common
+Suggests:	elementary-tizen
+Suggests:	efl-theme-tizen-ivi
+Suggests:	efl-theme-tizen-mobile
+Suggests:	efl-theme-tizen-wearable
+Suggests:	efl-theme-tizen-tv
+Suggests:	efl-config-profile_ivi
+Suggests:	efl-config-profile_mobile
+Suggests:	efl-config-profile_wearable
+Suggests:	efl-config-profile_tv
+Suggests:	efl-misc-profile_ivi
+Suggests:	efl-misc-profile_mobile
+Suggests:	efl-misc-profile_wearable
+Suggests:	efl-misc-profile_tv
+Suggests:	efl-modules-profile_ivi
+Suggests:	efl-modules-profile_mobile
+Suggests:	efl-modules-profile_wearable
+Suggests:	efl-modules-profile_tv
+%description sub2-domain_API-UI_EFL-Elementary
+Tizen block (set of packages) for API sets of sub2-domain_API-UI_EFL-Elementary
+%files sub2-domain_API-UI_EFL-Elementary
+
+%package sub2-domain_API-UI_EFL-Evas
+Summary:	Evas
 Requires:	evas
-Requires:	embryo
-Requires:	eeze
-Requires:	efreet
-Requires:	emotion
-Requires:	ethumb
-Requires:	ephysics
-Requires:	eolian
-Requires:	elocation
-Requires:	elua
+%description sub2-domain_API-UI_EFL-Evas
+Tizen block (set of packages) for API sets of sub2-domain_API-UI_EFL-Evas
+%files sub2-domain_API-UI_EFL-Evas
 
-%description sub2-domain_API-UI-EFL
-Tizen block (set of packages) for API sets of sub2-domain_API-UI-EFL
-%files sub2-domain_API-UI-EFL
 
-%package sub2-domain_API-UI-EFLUTIL
+%package sub1-domain_API-UI_EFLUTIL
 Summary:	EFL UTIL
 Requires:	capi-ui-efl-util
-%description sub2-domain_API-UI-EFLUTIL
-Tizen block (set of packages) for API sets of sub2-domain_API-UI-EFLUTIL
-%files sub2-domain_API-UI-EFLUTIL
+%description sub1-domain_API-UI_EFLUTIL
+Tizen block (set of packages) for API sets of domain API-UI_EFLUTIL
+%files sub1-domain_API-UI_EFLUTIL
 
-%package sub2-domain_API-UI-EflExtension
+%package sub1-domain_API-UI_EflExtension
 Summary:	Efl Extension
 Requires:	efl-extension
-%description sub2-domain_API-UI-EflExtension
-Tizen block (set of packages) for API sets of sub2-domain_API-UI-EflExtension
-%files sub2-domain_API-UI-EflExtension
+%description sub1-domain_API-UI_EflExtension
+Tizen block (set of packages) for API sets of domain API-UI_EflExtension
+%files sub1-domain_API-UI_EflExtension
 
-%package sub2-domain_API-UI-ExternalOutputManager
+%package sub1-domain_API-UI_ExternalOutputManager
 Summary:	External Output Manager
 Requires:	libeom
 Suggests:	libeom-server
-%description sub2-domain_API-UI-ExternalOutputManager
-Tizen block (set of packages) for API sets of sub2-domain_API-UI-ExternalOutputManager
-%files sub2-domain_API-UI-ExternalOutputManager
+Suggests:	e-mod-tizen-eom
+%description sub1-domain_API-UI_ExternalOutputManager
+Tizen block (set of packages) for API sets of domain API-UI_ExternalOutputManager
+%files sub1-domain_API-UI_ExternalOutputManager
 
-%package sub2-domain_API-UI-Minicontrol
-Summary:	Minicontrol
-Requires:	minicontrol
-%description sub2-domain_API-UI-Minicontrol
-Tizen block (set of packages) for API sets of sub2-domain_API-UI-Minicontrol
-%files sub2-domain_API-UI-Minicontrol
+%package sub1-domain_API-UI_FontConfig
+Summary:	FontConfig
+Requires:	fontconfig
+Requires:	default-fonts-fc-sdk
+Requires:	default-fonts-sdk
+%description sub1-domain_API-UI_FontConfig
+Tizen block (set of packages) for API sets of domain API-UI_FontConfig
+%files sub1-domain_API-UI_FontConfig
 
-%package sub2-domain_API-UI-TBMSurface
+%package sub1-domain_API-UI_Freetype
+Summary:	Freetype
+Requires:	freetype
+%description sub1-domain_API-UI_Freetype
+Tizen block (set of packages) for API sets of domain API-UI_Freetype
+%files sub1-domain_API-UI_Freetype
+
+%package sub1-domain_API-UI_HarfBuzz
+Summary:	HarfBuzz
+Requires:	harfbuzz
+%description sub1-domain_API-UI_HarfBuzz
+Tizen block (set of packages) for API sets of domain API-UI_HarfBuzz
+%files sub1-domain_API-UI_HarfBuzz
+
+%package sub1-domain_API-UI_SDL
+Summary:	SDL
+Requires:	SDL2
+%description sub1-domain_API-UI_SDL
+Tizen block (set of packages) for API sets of domain API-UI_SDL
+%files sub1-domain_API-UI_SDL
+
+%package sub1-domain_API-UI_TBMSurface
 Summary:	TBM Surface
 Requires:	libtbm
-%description sub2-domain_API-UI-TBMSurface
-Tizen block (set of packages) for API sets of sub2-domain_API-UI-TBMSurface
-%files sub2-domain_API-UI-TBMSurface
+Suggests:	libtbm-exynos
+Suggests:	libtbm-sprd
+Suggests:	libtbm-vigs
+Suggests:	libtbm-vc4
+%description sub1-domain_API-UI_TBMSurface
+Tizen block (set of packages) for API sets of domain API-UI_TBMSurface
+%files sub1-domain_API-UI_TBMSurface
 
-%package sub2-domain_API-UI-TizenWSShell
+%package sub1-domain_API-UI_TizenWSShell
 Summary:	Tizen WS Shell
 Requires:	tzsh
-%description sub2-domain_API-UI-TizenWSShell
-Tizen block (set of packages) for API sets of sub2-domain_API-UI-TizenWSShell
-%files sub2-domain_API-UI-TizenWSShell
+%description sub1-domain_API-UI_TizenWSShell
+Tizen block (set of packages) for API sets of domain API-UI_TizenWSShell
+%files sub1-domain_API-UI_TizenWSShell
 
-%package sub2-domain_API-UI-UIViewManager
+%package sub1-domain_API-UI_UIViewManager
 Summary:	UI View Manager
 Requires:	ui-viewmgr
-%description sub2-domain_API-UI-UIViewManager
-Tizen block (set of packages) for API sets of sub2-domain_API-UI-UIViewManager
-%files sub2-domain_API-UI-UIViewManager
+%description sub1-domain_API-UI_UIViewManager
+Tizen block (set of packages) for API sets of domain API-UI_UIViewManager
+%files sub1-domain_API-UI_UIViewManager
 
-%package sub2-domain_API-UI-Vulkan
-Summary:	Vulkan
-Requires:	Vulkan-LoaderAndValidationLayers
-Suggests:	vulkan-wsi-tizen
-%description sub2-domain_API-UI-Vulkan
-Tizen block (set of packages) for API sets of sub2-domain_API-UI-Vulkan
-%files sub2-domain_API-UI-Vulkan
-
-
-
-
-
-%package sub1-domain_API-UIX
-Summary:	UIX
-Suggests:	%{name}-sub2-domain_API-UIX-InputMethod
-Suggests:	%{name}-sub2-domain_API-UIX-InputMethodManager
-Suggests:	%{name}-sub2-domain_API-UIX-STT
-Suggests:	%{name}-sub2-domain_API-UIX-TTS
-Suggests:	%{name}-sub2-domain_API-UIX-VoiceControl
-Suggests:	%{name}-sub2-domain_API-UIX-VoiceControlElementary
-%description sub1-domain_API-UIX
-Tizen block (set of packages) for API sets of domain API-UIX
-%files sub1-domain_API-UIX
-
-%package sub2-domain_API-UIX-InputMethod
+%package sub1-domain_API-UIX_InputMethod
 Summary:	Input Method
 Requires:	capi-ui-inputmethod
-%description sub2-domain_API-UIX-InputMethod
-Tizen block (set of packages) for API sets of sub2-domain_API-UIX-InputMethod
-%files sub2-domain_API-UIX-InputMethod
+%description sub1-domain_API-UIX_InputMethod
+Tizen block (set of packages) for API sets of domain API-UIX_InputMethod
+%files sub1-domain_API-UIX_InputMethod
 
-%package sub2-domain_API-UIX-InputMethodManager
+%package sub1-domain_API-UIX_InputMethodManager
 Summary:	Input Method Manager
 Requires:	capi-ui-inputmethod-manager
-%description sub2-domain_API-UIX-InputMethodManager
-Tizen block (set of packages) for API sets of sub2-domain_API-UIX-InputMethodManager
-%files sub2-domain_API-UIX-InputMethodManager
-
-%package sub2-domain_API-UIX-STT
-Summary:	STT
-Requires:	stt
-%description sub2-domain_API-UIX-STT
-Tizen block (set of packages) for API sets of sub2-domain_API-UIX-STT
-%files sub2-domain_API-UIX-STT
-
-%package sub2-domain_API-UIX-TTS
-Summary:	TTS
-Requires:	tts
-%description sub2-domain_API-UIX-TTS
-Tizen block (set of packages) for API sets of sub2-domain_API-UIX-TTS
-%files sub2-domain_API-UIX-TTS
-
-%package sub2-domain_API-UIX-VoiceControl
-Summary:	Voice Control
-Requires:	voice-control
-%description sub2-domain_API-UIX-VoiceControl
-Tizen block (set of packages) for API sets of sub2-domain_API-UIX-VoiceControl
-%files sub2-domain_API-UIX-VoiceControl
-
-%package sub2-domain_API-UIX-VoiceControlElementary
-Summary:	Voice Control Elementary
-Requires:	voice-control-elm
-%description sub2-domain_API-UIX-VoiceControlElementary
-Tizen block (set of packages) for API sets of sub2-domain_API-UIX-VoiceControlElementary
-%files sub2-domain_API-UIX-VoiceControlElementary
-
-
-
-
+%description sub1-domain_API-UIX_InputMethodManager
+Tizen block (set of packages) for API sets of domain API-UIX_InputMethodManager
+%files sub1-domain_API-UIX_InputMethodManager
 
 %package sub1-domain_API-Web
 Summary:	Web
-Suggests:	libjson-glib
-Suggests:	chromium-efl
+Requires:	chromium-efl
 %description sub1-domain_API-Web
 Tizen block (set of packages) for API sets of domain API-Web
 %files sub1-domain_API-Web

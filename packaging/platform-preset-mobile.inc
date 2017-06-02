@@ -77,23 +77,6 @@ Conflicts:	%{name}-sub2-Preset_sd-mobile-tm1
 Conflicts:	%{name}-sub2-Preset_sd-mobile-tm2
 Conflicts:	%{name}-sub2-Preset_sd-mobile-tm2_aarch64
 Conflicts:	%{name}-sub2-Preset_sd-mobile-general
-Requires:	%{name}-sub1-domain_API-Account
-Requires:	%{name}-sub1-domain_API-AppFramework
-Requires:	%{name}-sub1-domain_API-Base
-Requires:	%{name}-sub1-domain_API-Content
-Requires:	%{name}-sub1-domain_API-Context
-Requires:	%{name}-sub1-domain_API-Location
-Requires:	%{name}-sub1-domain_API-Messaging
-Requires:	%{name}-sub1-domain_API-Multimedia
-Requires:	%{name}-sub1-domain_API-Network
-Requires:	%{name}-sub1-domain_API-Security
-Requires:	%{name}-sub1-domain_API-Social
-Requires:	%{name}-sub1-domain_API-System
-Requires:	%{name}-sub1-domain_API-Telephony
-Requires:	%{name}-sub1-domain_API-UI
-Requires:	%{name}-sub1-domain_API-UIX
-Requires:	%{name}-sub1-domain_API-Web
-
 Suggests:	%{name}-root-domain_WebAPI
 Suggests:	webapi-plugins-profile_mobile
 
