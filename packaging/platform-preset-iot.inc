@@ -3,11 +3,6 @@
 
 %package root-Preset_iot
 Summary:	IOT Software Platform Presets
-Conflicts:	%{name}-root-Preset_sd
-Conflicts:	%{name}-root-Preset_mobile
-Conflicts:	%{name}-root-Preset_tv
-Conflicts:	%{name}-root-Preset_wearable
-Conflicts:	%{name}-root-Preset_ivi
 Suggests:	%{name}-sub1-Preset_iot-headless_minimal
 Suggests:	%{name}-sub1-Preset_iot-headless_speaker
 Suggests:	%{name}-sub1-Preset_iot-headless_net
@@ -22,9 +17,7 @@ Tizen IoT Presets of Software Plaforms independent from specific hardware/BSPs.
 Summary:	IoT Device Board and SW Platform Examples
 %ifarch armv7l
 Suggests:	%{name}-sub1-Preset_1iot_examples-1_AAA_BLANK1__UI__SM
-Suggests:	%{name}-sub1-Preset_1iot_examples-1_ARTIK_headless
 Suggests:	%{name}-sub1-Preset_1iot_examples-1_ARTIK_headed_full
-Suggests:	%{name}-sub1-Preset_1iot_examples-1_ODROID_headed_full
 Suggests:	%{name}-sub1-Preset_1iot_examples-1_RPI3_headless
 %endif
 Suggests:	%{name}-sub1-Preset_1iot_examples-1_ZZZBLANK2__UI__SM
@@ -200,40 +193,13 @@ Userspace rootfs only.
 %endif
 
 %ifarch armv7l
-%package sub1-Preset_1iot_examples-1_ARTIK_headless
-Summary:	ARTIK Headless Tizen Official Example
-# TODO: Change it to headlessBSP
-Requires:	%{name}-sub1-Preset_boards-ARTIK_fullBSP
-%list_with_require %{_datadir}/image-configurations/common-headless-3parts-armv7l-artik.ks
-%description sub1-Preset_1iot_examples-1_ARTIK_headless
-Replication of Tizen IoT ARTIK Snapshot Release (download.tizen.org/snapshots/tizen/unified)
-This is from common-headless-3parts-armv7l-artik. (armv7l)
-Userspace rootfs only
-TODO: Change BSP reference to headlessBSP
-%files sub1-Preset_1iot_examples-1_ARTIK_headless
-%endif
-
-%ifarch armv7l
 %package sub1-Preset_1iot_examples-1_ARTIK_headed_full
 Summary:	ARTIK Headed Tizen Official Example (common/full)
 Requires:	%{name}-sub1-Preset_boards-ARTIK_fullBSP
-%list_with_require %{_datadir}/image-configurations/common-headless-3parts-armv7l-artik.ks
 %list_with_require %{_datadir}/image-configurations/common-wayland-3parts-armv7l-artik.ks
 %description sub1-Preset_1iot_examples-1_ARTIK_headed_full
 Replication of Tizen IoT ARTIK Headed/Wayland Snapshot Release (download.tizen.org/snapshots/tizen/unified)
 This is from common-wayland-3parts-armv7l-artik. (armv7l)
 Userspace rootfs only
 %files sub1-Preset_1iot_examples-1_ARTIK_headed_full
-%endif
-
-%ifarch armv7l
-%package sub1-Preset_1iot_examples-1_ODROID_headed_full
-Summary:	ODROID U3/XU3 Headed Tizen Official Example (common/full)
-Requires:	%{name}-sub1-Preset_boards-OdroidXU3_fullBSP
-%list_with_require %{_datadir}/image-configurations/common-wayland-3parts-armv7l-odroidu3.ks
-%description sub1-Preset_1iot_examples-1_ODROID_headed_full
-Replication of Tizen IoT Odroid U3/XU3 Headed/Wayland Snapshot Release (download.tizen.org/snapshots/tizen/unified)
-This is from common-wayland-3parts-armv7l-odroidu3. (armv7l)
-Userspace rootfs only
-%files sub1-Preset_1iot_examples-1_ODROID_headed_full
 %endif

@@ -31,25 +31,11 @@ Source1220:	domain-webapis.inc
 Source2010:	epicfeature-development.inc
 Source2020:	epicfeature-platform.inc
 
-Source3100:	platform-preset-mobile.inc
-Source3200:	platform-preset-wearable.inc
-Source3300:	platform-preset-tv.inc
-Source3400:	platform-preset-ivi.inc
 Source3500:	platform-preset-iot.inc
-Source3600:	platform-preset-common.inc
-Source3700:	platform-preset-home_appliance.inc
 Source3800:	platform-preset-boards.inc
-Source3900:	platform-preset-smart.inc
 
 # To get .ks files
 BuildRequires:	image-configurations
-
-# To get blocked .yaml files, idea from YD Seo.
-BuildRequires:	meta-common
-BuildRequires:	meta-mobile
-BuildRequires:	meta-wearable
-BuildRequires:	meta-tv
-BuildRequires:	meta-ivi
 
 # To check the rules
 BuildRequires:	python
@@ -101,7 +87,6 @@ Summary:	Tizen Presets
 Suggests:	%{name}-root-Preset_1iot_examples
 Suggests:	%{name}-root-Preset_boards
 Suggests:	%{name}-root-Preset_iot
-Suggests:	%{name}-root-Preset_sd
 %description	category-Preset
 This meta pacakge lists all Tizen blocks (meta packages) designating
 Tizen platform presets, HAL/device-support presets, and
@@ -261,14 +246,5 @@ python ./rule_checker.py
 
 # Tizen Platform Presets.
 # Unlike Preset-Recipes of TIC, you cannot deselect packages from these presets.
-%{include_if_mainbuild %{SOURCE3100}}
-%{include_if_mainbuild %{SOURCE3200}}
-%{include_if_mainbuild %{SOURCE3300}}
-%{include_if_mainbuild %{SOURCE3400}}
 %{include_if_mainbuild %{SOURCE3500}}
-%{include_if_mainbuild %{SOURCE3600}}
-%{include_if_mainbuild %{SOURCE3700}}
 %{include_if_mainbuild %{SOURCE3800}}
-%{include_if_mainbuild %{SOURCE3900}}
-
-
