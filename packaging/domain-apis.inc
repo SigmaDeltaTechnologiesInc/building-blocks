@@ -138,7 +138,7 @@ Tizen block (set of packages) for API sets of domain API-Account_SyncManager
 
 
 %package sub2-domain_API-Account_SyncManager-SyncAdapter
-Summary:	Account - Sync Adapter
+Summary:	Account - SyncManager - Sync Adapter
 Requires:	libcore-sync-client
 %description sub2-domain_API-Account_SyncManager-SyncAdapter
 Tizen block (set of packages) for API sets of sub2-domain_API-Account_SyncManager-SyncAdapter
@@ -168,7 +168,7 @@ Tizen block (set of packages) for API sets of domain API-AppFramework_Applicatio
 
 
 %package sub2-domain_API-AppFramework_Application-Alarm
-Summary:	AppFramework - Alarm
+Summary:	AppFramework - Application - Alarm
 Requires:	capi-appfw-alarm
 %description sub2-domain_API-AppFramework_Application-Alarm
 Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Application-Alarm
@@ -176,7 +176,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Appli
 
 
 %package sub2-domain_API-AppFramework_Application-AppCommon
-Summary:	AppFramework - App Common
+Summary:	AppFramework - Application - App Common
 Requires:	capi-appfw-app-common
 %description sub2-domain_API-AppFramework_Application-AppCommon
 Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Application-AppCommon
@@ -184,7 +184,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Appli
 
 
 %package sub2-domain_API-AppFramework_Application-AppControl
-Summary:	AppFramework - App Control
+Summary:	AppFramework - Application - App Control
 Requires:	capi-appfw-application
 %description sub2-domain_API-AppFramework_Application-AppControl
 Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Application-AppControl
@@ -192,7 +192,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Appli
 
 
 %package sub2-domain_API-AppFramework_Application-Event
-Summary:	Appframework - Event
+Summary:	Appframework - Application - Event
 Requires:	capi-appfw-event
 %description sub2-domain_API-AppFramework_Application-Event
 Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Application-Event
@@ -200,7 +200,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Appli
 
 
 %package sub2-domain_API-AppFramework_Application-Internationalization
-Summary:	AppFramework - Internationalization
+Summary:	AppFramework - Application - Internationalization
 Requires:	capi-appfw-application
 %description sub2-domain_API-AppFramework_Application-Internationalization
 Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Application-Internationalization
@@ -208,7 +208,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Appli
 
 
 %package sub2-domain_API-AppFramework_Application-Preference
-Summary:	AppFramework - Preference
+Summary:	AppFramework - Application - Preference
 Requires:	capi-appfw-preference
 %description sub2-domain_API-AppFramework_Application-Preference
 Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Application-Preference
@@ -216,7 +216,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Appli
 
 
 %package sub2-domain_API-AppFramework_Application-ResourceManager
-Summary:	AppFramework - Resource Manager
+Summary:	AppFramework - Application - Resource Manager
 Requires:	capi-appfw-app-common
 %description sub2-domain_API-AppFramework_Application-ResourceManager
 Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Application-ResourceManager
@@ -313,7 +313,7 @@ Tizen block (set of packages) for API sets of domain API-AppFramework_Widget
 
 
 %package sub2-domain_API-AppFramework_Widget-WidgetApplication
-Summary:	AppFramework - Widget Application
+Summary:	AppFramework - Widget - Widget Application
 Requires:	appcore-widget
 %description sub2-domain_API-AppFramework_Widget-WidgetApplication
 Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Widget-WidgetApplication
@@ -321,7 +321,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Widge
 
 
 %package sub2-domain_API-AppFramework_Widget-WidgetService
-Summary:	AppFramework - Widget Service
+Summary:	AppFramework - Widget - Widget Service
 Requires:	libwidget_service
 %description sub2-domain_API-AppFramework_Widget-WidgetService
 Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Widget-WidgetService
@@ -329,7 +329,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Widge
 
 
 %package sub2-domain_API-AppFramework_Widget-WidgetViewer
-Summary:	AppFramework - Widget Viewer
+Summary:	AppFramework - Widget - Widget Viewer
 Requires:	libwidget_viewer_evas
 %description sub2-domain_API-AppFramework_Widget-WidgetViewer
 Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Widget-WidgetViewer
@@ -337,7 +337,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Widge
 
 
 %package sub2-domain_API-AppFramework_Widget-WidgetViewerDali
-Summary:	AppFramework - Widget Viewer Dali
+Summary:	AppFramework - Widget - Widget Viewer Dali
 Requires:	libwidget_viewer_dali
 %description sub2-domain_API-AppFramework_Widget-WidgetViewerDali
 Tizen block (set of packages) for API sets of sub2-domain_API-AppFramework_Widget-WidgetViewerDali
@@ -1125,7 +1125,7 @@ Tizen block (set of packages) for API sets of domain API-UI_DALi
 
 
 %package sub2-domain_API-UI_DALi-DALiAdaptor
-Summary:	UI - DALi Adaptor
+Summary:	UI - DALi - DALi Adaptor
 Requires:	dali-toolkit
 Suggests:	dali-adaptor-dali-feedback-plugin
 Suggests:	dali-adaptor-dali-video-player-plugin
@@ -1140,7 +1140,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-UI_DALi-DALiAdapto
 
 
 %package sub2-domain_API-UI_DALi-DALiCore
-Summary:	UI - DALi Core
+Summary:	UI - DALi - DALi Core
 Requires:	dali-toolkit
 %description sub2-domain_API-UI_DALi-DALiCore
 Tizen block (set of packages) for API sets of sub2-domain_API-UI_DALi-DALiCore
@@ -1148,7 +1148,7 @@ Tizen block (set of packages) for API sets of sub2-domain_API-UI_DALi-DALiCore
 
 
 %package sub2-domain_API-UI_DALi-DALiToolkit
-Summary:	UI - DALi Toolkit
+Summary:	UI - DALi - DALi Toolkit
 Requires:	dali-toolkit
 Suggests:	dali-toolkit-resources_480x800
 Suggests:	dali-toolkit-resources_720x1280
