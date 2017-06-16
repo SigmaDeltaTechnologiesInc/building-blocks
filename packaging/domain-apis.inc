@@ -30,7 +30,30 @@ Suggests:	%{name}-sub1-domain_API-Maps
 Suggests:	%{name}-sub1-domain_API-Messaging_Email
 Suggests:	%{name}-sub1-domain_API-Messaging_Messages
 Suggests:	%{name}-sub1-domain_API-Messaging_Push
-Suggests:	%{name}-sub1-domain_API-Multimedia
+Suggests:	%{name}-sub1-domain_API-Multimedia_AudioIO
+Suggests:	%{name}-sub1-domain_API-Multimedia_Camera
+Suggests:	%{name}-sub1-domain_API-Multimedia_ImageUtil
+Suggests:	%{name}-sub1-domain_API-Multimedia_MediaCodec
+Suggests:	%{name}-sub1-domain_API-Multimedia_MediaController
+Suggests:	%{name}-sub1-domain_API-Multimedia_MediaDemuxer
+Suggests:	%{name}-sub1-domain_API-Multimedia_MediaMuxer
+Suggests:	%{name}-sub1-domain_API-Multimedia_MediaStreamer
+Suggests:	%{name}-sub1-domain_API-Multimedia_MediaTool
+Suggests:	%{name}-sub1-domain_API-Multimedia_MediaVision
+Suggests:	%{name}-sub1-domain_API-Multimedia_MetadataEditor
+Suggests:	%{name}-sub1-domain_API-Multimedia_MetadataExtractor
+Suggests:	%{name}-sub1-domain_API-Multimedia_OpenAL
+Suggests:	%{name}-sub1-domain_API-Multimedia_Player
+Suggests:	%{name}-sub1-domain_API-Multimedia_Radio
+Suggests:	%{name}-sub1-domain_API-Multimedia_Recorder
+Suggests:	%{name}-sub1-domain_API-Multimedia_ScreenMirroring
+Suggests:	%{name}-sub1-domain_API-Multimedia_SoundManager
+Suggests:	%{name}-sub1-domain_API-Multimedia_StreamRecorder
+Suggests:	%{name}-sub1-domain_API-Multimedia_ThumbnailUtil
+Suggests:	%{name}-sub1-domain_API-Multimedia_TonePlayer
+Suggests:	%{name}-sub1-domain_API-Multimedia_VideoUtil
+Suggests:	%{name}-sub1-domain_API-Multimedia_WAVPlayer
+Suggests:	%{name}-sub1-domain_API-Multimedia_libEXIF
 Suggests:	%{name}-sub1-domain_API-Network_Bluetooth
 Suggests:	%{name}-sub1-domain_API-Network_ASP
 Suggests:	%{name}-sub1-domain_API-Network_Connection
@@ -396,8 +419,8 @@ Tizen block (set of packages) for API sets of sub2-domain_API-Location-Geofence
 %package sub1-domain_API-Maps
 Summary:	Maps
 Requires:	capi-maps-service
-Suggests:	%{name}-sub2-domain_API-Maps-HEREPlugin
-Suggests:	%{name}-sub2-domain_API-Maps-MapzenPlugin
+Requires:	%{name}-sub2-domain_API-Maps-HEREPlugin
+Requires:	%{name}-sub2-domain_API-Maps-MapzenPlugin
 %description sub1-domain_API-Maps
 Tizen block (set of packages) for API sets of domain API-Maps
 %files sub1-domain_API-Maps
@@ -449,231 +472,201 @@ Tizen block (set of packages) for API sets of domain API-Messaging_Push
 %files sub1-domain_API-Messaging_Push
 
 
-%package sub1-domain_API-Multimedia
-Summary:	Multimedia
-Suggests:	%{name}-sub2-domain_API-Multimedia-AudioIO
-Suggests:	%{name}-sub2-domain_API-Multimedia-Camera
-Suggests:	%{name}-sub2-domain_API-Multimedia-ImageUtil
-Suggests:	%{name}-sub2-domain_API-Multimedia-MediaCodec
-Suggests:	%{name}-sub2-domain_API-Multimedia-MediaController
-Suggests:	%{name}-sub2-domain_API-Multimedia-MediaDemuxer
-Suggests:	%{name}-sub2-domain_API-Multimedia-MediaMuxer
-Suggests:	%{name}-sub2-domain_API-Multimedia-MediaStreamer
-Suggests:	%{name}-sub2-domain_API-Multimedia-MediaTool
-Suggests:	%{name}-sub2-domain_API-Multimedia-MediaVision
-Suggests:	%{name}-sub2-domain_API-Multimedia-MetadataEditor
-Suggests:	%{name}-sub2-domain_API-Multimedia-MetadataExtractor
-Suggests:	%{name}-sub2-domain_API-Multimedia-OpenAL
-Suggests:	%{name}-sub2-domain_API-Multimedia-Player
-Suggests:	%{name}-sub2-domain_API-Multimedia-Radio
-Suggests:	%{name}-sub2-domain_API-Multimedia-Recorder
-Suggests:	%{name}-sub2-domain_API-Multimedia-ScreenMirroring
-Suggests:	%{name}-sub2-domain_API-Multimedia-SoundManager
-Suggests:	%{name}-sub2-domain_API-Multimedia-StreamRecorder
-Suggests:	%{name}-sub2-domain_API-Multimedia-ThumbnailUtil
-Suggests:	%{name}-sub2-domain_API-Multimedia-TonePlayer
-Suggests:	%{name}-sub2-domain_API-Multimedia-VideoUtil
-Suggests:	%{name}-sub2-domain_API-Multimedia-WAVPlayer
-Suggests:	%{name}-sub2-domain_API-Multimedia-libEXIF
-%description sub1-domain_API-Multimedia
-Tizen block (set of packages) for API sets of domain API-Multimedia
-%files sub1-domain_API-Multimedia
 
-
-%package sub2-domain_API-Multimedia-AudioIO
+%package sub1-domain_API-Multimedia_AudioIO
 Summary:	Multimedia - Audio I/O
 Requires:	capi-media-audio-io
 Requires:	capi-media-sound-manager
-%description sub2-domain_API-Multimedia-AudioIO
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-AudioIO
-%files sub2-domain_API-Multimedia-AudioIO
+%description sub1-domain_API-Multimedia_AudioIO
+Tizen block (set of packages) for API sets of domain API-Multimedia_AudioIO
+%files sub1-domain_API-Multimedia_AudioIO
 
 
-%package sub2-domain_API-Multimedia-Camera
+%package sub1-domain_API-Multimedia_Camera
 Summary:	Multimedia - Camera
 Requires:	capi-media-camera
 Requires:	mmsvc-camera
 Requires:	mused
-%description sub2-domain_API-Multimedia-Camera
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-Camera
-%files sub2-domain_API-Multimedia-Camera
+%description sub1-domain_API-Multimedia_Camera
+Tizen block (set of packages) for API sets of domain API-Multimedia_Camera
+%files sub1-domain_API-Multimedia_Camera
 
 
-%package sub2-domain_API-Multimedia-ImageUtil
+%package sub1-domain_API-Multimedia_ImageUtil
 Summary:	Multimedia - Image Util
 Requires:	capi-media-image-util
-%description sub2-domain_API-Multimedia-ImageUtil
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-ImageUtil
-%files sub2-domain_API-Multimedia-ImageUtil
+%description sub1-domain_API-Multimedia_ImageUtil
+Tizen block (set of packages) for API sets of domain API-Multimedia_ImageUtil
+%files sub1-domain_API-Multimedia_ImageUtil
 
 
-%package sub2-domain_API-Multimedia-MediaCodec
+%package sub1-domain_API-Multimedia_MediaCodec
 Summary:	Multimedia - Media Codec
 Requires:	capi-media-codec
-%description sub2-domain_API-Multimedia-MediaCodec
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-MediaCodec
-%files sub2-domain_API-Multimedia-MediaCodec
+%description sub1-domain_API-Multimedia_MediaCodec
+Tizen block (set of packages) for API sets of domain API-Multimedia_MediaCodec
+%files sub1-domain_API-Multimedia_MediaCodec
 
 
-%package sub2-domain_API-Multimedia-MediaController
+%package sub1-domain_API-Multimedia_MediaController
 Summary:	Multimedia - Media Controller
 Requires:	capi-media-controller
-%description sub2-domain_API-Multimedia-MediaController
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-MediaController
-%files sub2-domain_API-Multimedia-MediaController
+%description sub1-domain_API-Multimedia_MediaController
+Tizen block (set of packages) for API sets of domain API-Multimedia_MediaController
+%files sub1-domain_API-Multimedia_MediaController
 
 
-%package sub2-domain_API-Multimedia-MediaDemuxer
+%package sub1-domain_API-Multimedia_MediaDemuxer
 Summary:	Multimedia - Media Demuxer
 Requires:	capi-mediamuxer
-%description sub2-domain_API-Multimedia-MediaDemuxer
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-MediaDemuxer
-%files sub2-domain_API-Multimedia-MediaDemuxer
+%description sub1-domain_API-Multimedia_MediaDemuxer
+Tizen block (set of packages) for API sets of domain API-Multimedia_MediaDemuxer
+%files sub1-domain_API-Multimedia_MediaDemuxer
 
 
-%package sub2-domain_API-Multimedia-MediaMuxer
+%package sub1-domain_API-Multimedia_MediaMuxer
 Summary:	Multimedia - Media Muxer
 Requires:	capi-mediamuxer
-%description sub2-domain_API-Multimedia-MediaMuxer
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-MediaMuxer
-%files sub2-domain_API-Multimedia-MediaMuxer
+%description sub1-domain_API-Multimedia_MediaMuxer
+Tizen block (set of packages) for API sets of domain API-Multimedia_MediaMuxer
+%files sub1-domain_API-Multimedia_MediaMuxer
 
 
-%package sub2-domain_API-Multimedia-MediaStreamer
+%package sub1-domain_API-Multimedia_MediaStreamer
 Summary:	Multimedia - Media Streamer
 Requires:	capi-media-streamer
-%description sub2-domain_API-Multimedia-MediaStreamer
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-MediaStreamer
-%files sub2-domain_API-Multimedia-MediaStreamer
+%description sub1-domain_API-Multimedia_MediaStreamer
+Tizen block (set of packages) for API sets of domain API-Multimedia_MediaStreamer
+%files sub1-domain_API-Multimedia_MediaStreamer
 
 
-%package sub2-domain_API-Multimedia-MediaTool
+%package sub1-domain_API-Multimedia_MediaTool
 Summary:	Multimedia - Media Tool
 Requires:	capi-media-tool
-%description sub2-domain_API-Multimedia-MediaTool
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-MediaTool
-%files sub2-domain_API-Multimedia-MediaTool
+%description sub1-domain_API-Multimedia_MediaTool
+Tizen block (set of packages) for API sets of domain API-Multimedia_MediaTool
+%files sub1-domain_API-Multimedia_MediaTool
 
 
-%package sub2-domain_API-Multimedia-MediaVision
+%package sub1-domain_API-Multimedia_MediaVision
 Summary:	Multimedia - Media Vision
 Requires:	capi-media-vision
-%description sub2-domain_API-Multimedia-MediaVision
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-MediaVision
-%files sub2-domain_API-Multimedia-MediaVision
+%description sub1-domain_API-Multimedia_MediaVision
+Tizen block (set of packages) for API sets of domain API-Multimedia_MediaVision
+%files sub1-domain_API-Multimedia_MediaVision
 
 
-%package sub2-domain_API-Multimedia-MetadataEditor
+%package sub1-domain_API-Multimedia_MetadataEditor
 Summary:	Multimedia - Metadata Editor
 Requires:	capi-media-metadata-editor
-%description sub2-domain_API-Multimedia-MetadataEditor
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-MetadataEditor
-%files sub2-domain_API-Multimedia-MetadataEditor
+%description sub1-domain_API-Multimedia_MetadataEditor
+Tizen block (set of packages) for API sets of domain API-Multimedia_MetadataEditor
+%files sub1-domain_API-Multimedia_MetadataEditor
 
 
-%package sub2-domain_API-Multimedia-MetadataExtractor
+%package sub1-domain_API-Multimedia_MetadataExtractor
 Summary:	Multimedia - Metadata Extractor
 Requires:	capi-media-metadata-extractor
-%description sub2-domain_API-Multimedia-MetadataExtractor
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-MetadataExtractor
-%files sub2-domain_API-Multimedia-MetadataExtractor
+%description sub1-domain_API-Multimedia_MetadataExtractor
+Tizen block (set of packages) for API sets of domain API-Multimedia_MetadataExtractor
+%files sub1-domain_API-Multimedia_MetadataExtractor
 
 
-%package sub2-domain_API-Multimedia-OpenAL
+%package sub1-domain_API-Multimedia_OpenAL
 Summary:	Multimedia - OpenAL
 Requires:	openal-soft
 Requires:	capi-media-sound-manager
-%description sub2-domain_API-Multimedia-OpenAL
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-OpenAL
-%files sub2-domain_API-Multimedia-OpenAL
+%description sub1-domain_API-Multimedia_OpenAL
+Tizen block (set of packages) for API sets of domain API-Multimedia_OpenAL
+%files sub1-domain_API-Multimedia_OpenAL
 
 
-%package sub2-domain_API-Multimedia-Player
+%package sub1-domain_API-Multimedia_Player
 Summary:	Multimedia - Player
 Requires:	capi-media-player
-%description sub2-domain_API-Multimedia-Player
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-Player
-%files sub2-domain_API-Multimedia-Player
+%description sub1-domain_API-Multimedia_Player
+Tizen block (set of packages) for API sets of domain API-Multimedia_Player
+%files sub1-domain_API-Multimedia_Player
 
 
-%package sub2-domain_API-Multimedia-Radio
+%package sub1-domain_API-Multimedia_Radio
 Summary:	Multimedia - Radio
 Requires:	capi-media-radio
-%description sub2-domain_API-Multimedia-Radio
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-Radio
-%files sub2-domain_API-Multimedia-Radio
+%description sub1-domain_API-Multimedia_Radio
+Tizen block (set of packages) for API sets of domain API-Multimedia_Radio
+%files sub1-domain_API-Multimedia_Radio
 
 
-%package sub2-domain_API-Multimedia-Recorder
+%package sub1-domain_API-Multimedia_Recorder
 Summary:	Multimedia - Recorder
 Requires:	capi-media-recorder
-%description sub2-domain_API-Multimedia-Recorder
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-Recorder
-%files sub2-domain_API-Multimedia-Recorder
+%description sub1-domain_API-Multimedia_Recorder
+Tizen block (set of packages) for API sets of domain API-Multimedia_Recorder
+%files sub1-domain_API-Multimedia_Recorder
 
 
-%package sub2-domain_API-Multimedia-ScreenMirroring
+%package sub1-domain_API-Multimedia_ScreenMirroring
 Summary:	Multimedia - Screen Mirroring
 Requires:	capi-media-screen-mirroring
-%description sub2-domain_API-Multimedia-ScreenMirroring
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-ScreenMirroring
-%files sub2-domain_API-Multimedia-ScreenMirroring
+%description sub1-domain_API-Multimedia_ScreenMirroring
+Tizen block (set of packages) for API sets of domain API-Multimedia_ScreenMirroring
+%files sub1-domain_API-Multimedia_ScreenMirroring
 
 
-%package sub2-domain_API-Multimedia-SoundManager
+%package sub1-domain_API-Multimedia_SoundManager
 Summary:	Multimedia - Sound Manager
 Requires:	capi-media-sound-manager
-%description sub2-domain_API-Multimedia-SoundManager
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-SoundManager
-%files sub2-domain_API-Multimedia-SoundManager
+%description sub1-domain_API-Multimedia_SoundManager
+Tizen block (set of packages) for API sets of domain API-Multimedia_SoundManager
+%files sub1-domain_API-Multimedia_SoundManager
 
 
-%package sub2-domain_API-Multimedia-StreamRecorder
+%package sub1-domain_API-Multimedia_StreamRecorder
 Summary:	Multimedia - StreamRecorder
 Requires:	capi-media-streamrecorder
-%description sub2-domain_API-Multimedia-StreamRecorder
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-StreamRecorder
-%files sub2-domain_API-Multimedia-StreamRecorder
+%description sub1-domain_API-Multimedia_StreamRecorder
+Tizen block (set of packages) for API sets of domain API-Multimedia_StreamRecorder
+%files sub1-domain_API-Multimedia_StreamRecorder
 
 
-%package sub2-domain_API-Multimedia-ThumbnailUtil
+%package sub1-domain_API-Multimedia_ThumbnailUtil
 Summary:	Multimedia - Thumbnail Util
 Requires:	capi-media-thumbnail-util
-%description sub2-domain_API-Multimedia-ThumbnailUtil
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-ThumbnailUtil
-%files sub2-domain_API-Multimedia-ThumbnailUtil
+%description sub1-domain_API-Multimedia_ThumbnailUtil
+Tizen block (set of packages) for API sets of domain API-Multimedia_ThumbnailUtil
+%files sub1-domain_API-Multimedia_ThumbnailUtil
 
 
-%package sub2-domain_API-Multimedia-TonePlayer
+%package sub1-domain_API-Multimedia_TonePlayer
 Summary:	Multimedia - Tone Player
 Requires:	capi-media-tone-player
-%description sub2-domain_API-Multimedia-TonePlayer
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-TonePlayer
-%files sub2-domain_API-Multimedia-TonePlayer
+%description sub1-domain_API-Multimedia_TonePlayer
+Tizen block (set of packages) for API sets of domain API-Multimedia_TonePlayer
+%files sub1-domain_API-Multimedia_TonePlayer
 
 
-%package sub2-domain_API-Multimedia-VideoUtil
+%package sub1-domain_API-Multimedia_VideoUtil
 Summary:	Multimedia - Video Util
 Requires:	capi-media-video-util
-%description sub2-domain_API-Multimedia-VideoUtil
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-VideoUtil
-%files sub2-domain_API-Multimedia-VideoUtil
+%description sub1-domain_API-Multimedia_VideoUtil
+Tizen block (set of packages) for API sets of domain API-Multimedia_VideoUtil
+%files sub1-domain_API-Multimedia_VideoUtil
 
 
-%package sub2-domain_API-Multimedia-WAVPlayer
+%package sub1-domain_API-Multimedia_WAVPlayer
 Summary:	Multimedia - WAV Player
 Requires:	capi-media-wav-player
-%description sub2-domain_API-Multimedia-WAVPlayer
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-WAVPlayer
-%files sub2-domain_API-Multimedia-WAVPlayer
+%description sub1-domain_API-Multimedia_WAVPlayer
+Tizen block (set of packages) for API sets of domain API-Multimedia_WAVPlayer
+%files sub1-domain_API-Multimedia_WAVPlayer
 
 
-%package sub2-domain_API-Multimedia-libEXIF
+%package sub1-domain_API-Multimedia_libEXIF
 Summary:	Multimedia - libEXIF
 Requires:	libexif
-%description sub2-domain_API-Multimedia-libEXIF
-Tizen block (set of packages) for API sets of sub2-domain_API-Multimedia-libEXIF
-%files sub2-domain_API-Multimedia-libEXIF
+%description sub1-domain_API-Multimedia_libEXIF
+Tizen block (set of packages) for API sets of domain API-Multimedia_libEXIF
+%files sub1-domain_API-Multimedia_libEXIF
 
 
 %package sub1-domain_API-Network_Bluetooth

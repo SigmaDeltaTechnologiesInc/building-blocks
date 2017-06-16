@@ -58,16 +58,16 @@ Tizen IoT Headless/Minimal Preset
 %package sub1-Preset_iot-headless_speaker
 Summary:	IoT Headless Speaker (Minimal) Preset
 Requires:	%{name}-sub1-feature_Platform-Headless
-Requires:	%{name}-sub2-domain_API-Multimedia-SoundManager
-Requires:	%{name}-sub2-domain_API-Multimedia-WAVPlayer
+Requires:	%{name}-sub1-domain_API-Multimedia_SoundManager
+Requires:	%{name}-sub1-domain_API-Multimedia_WAVPlayer
 Requires:	%{name}-sub1-domain_API-Network_Bluetooth
 Requires:	%{name}-sub1-domain_API-Network_Connection
 Requires:	%{name}-sub1-domain_API-Network_WiFiDirect
 Requires:	%{name}-sub1-domain_API-Network_WiFi
 Suggests:	%{name}-sub1-domain_API-Network_IoTCon
-Suggests:	%{name}-sub2-domain_API-Multimedia-Radio
-Suggests:	%{name}-sub2-domain_API-Multimedia-TonePlayer
-Requires:	%{name}-sub2-domain_API-Multimedia-MediaController
+Suggests:	%{name}-sub1-domain_API-Multimedia_Radio
+Suggests:	%{name}-sub1-domain_API-Multimedia_TonePlayer
+Requires:	%{name}-sub1-domain_API-Multimedia_MediaController
 Suggests:	rpm
 %description sub1-Preset_iot-headless_speaker
 Tizen IoT Speaker/Minimal Preset
