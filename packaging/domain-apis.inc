@@ -692,7 +692,7 @@ Summary:	Network - Bluetooth - Bluetooth AVRCP
 Requires:	capi-network-bluetooth
 Requires:	bluez
 Requires:	bluetooth-tools
-Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-bcm
 Suggests:	bluetooth-firmware-sprd
 %description sub2-domain_API-Network_Bluetooth-BluetoothAVRCP
 Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothAVRCP
@@ -704,7 +704,7 @@ Summary:	Network - Bluetooth - Bluetooth Adapter
 Requires:	capi-network-bluetooth
 Requires:	bluez
 Requires:	bluetooth-tools
-Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-bcm
 Suggests:	bluetooth-firmware-sprd
 %description sub2-domain_API-Network_Bluetooth-BluetoothAdapter
 Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothAdapter
@@ -717,7 +717,7 @@ Requires:	capi-network-bluetooth
 Requires:	bluez
 Requires:	bluetooth-tools
 Requires:	bluetooth-agent
-Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-bcm
 Suggests:	bluetooth-firmware-sprd
 %description sub2-domain_API-Network_Bluetooth-BluetoothAudio
 Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothAudio
@@ -729,7 +729,7 @@ Summary:	Network - Bluetooth - Bluetooth Device
 Requires:	capi-network-bluetooth
 Requires:	bluez
 Requires:	bluetooth-tools
-Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-bcm
 Suggests:	bluetooth-firmware-sprd
 %description sub2-domain_API-Network_Bluetooth-BluetoothDevice
 Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothDevice
@@ -741,7 +741,7 @@ Summary:	Network - Bluetooth - Bluetooth GATT
 Requires:	capi-network-bluetooth
 Requires:	bluez
 Requires:	bluetooth-tools
-Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-bcm
 Suggests:	bluetooth-firmware-sprd
 %description sub2-domain_API-Network_Bluetooth-BluetoothGATT
 Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothGATT
@@ -753,7 +753,7 @@ Summary:	Network - Bluetooth - Bluetooth GATT Server
 Requires:	capi-network-bluetooth
 Requires:	bluez
 Requires:	bluetooth-tools
-Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-bcm
 Suggests:	bluetooth-firmware-sprd
 %description sub2-domain_API-Network_Bluetooth-BluetoothGATTServer
 Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothGATTServer
@@ -765,7 +765,7 @@ Summary:	Network - Bluetooth - Bluetooth HDP
 Requires:	capi-network-bluetooth
 Requires:	bluez
 Requires:	bluetooth-tools
-Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-bcm
 Suggests:	bluetooth-firmware-sprd
 %description sub2-domain_API-Network_Bluetooth-BluetoothHDP
 Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothHDP
@@ -777,7 +777,7 @@ Summary:	Network - Bluetooth - Bluetooth HID
 Requires:	capi-network-bluetooth
 Requires:	bluez
 Requires:	bluetooth-tools
-Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-bcm
 Suggests:	bluetooth-firmware-sprd
 %description sub2-domain_API-Network_Bluetooth-BluetoothHID
 Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothHID
@@ -789,7 +789,7 @@ Summary:	Network - Bluetooth - Bluetooth LE Adapter
 Requires:	capi-network-bluetooth
 Requires:	bluez
 Requires:	bluetooth-tools
-Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-bcm
 Suggests:	bluetooth-firmware-sprd
 %description sub2-domain_API-Network_Bluetooth-BluetoothLEAdapter
 Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothLEAdapter
@@ -801,7 +801,7 @@ Summary:	Network - Bluetooth - Bluetooth OPP
 Requires:	capi-network-bluetooth
 Requires:	bluez
 Requires:	bluetooth-tools
-Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-bcm
 Suggests:	bluetooth-firmware-sprd
 %description sub2-domain_API-Network_Bluetooth-BluetoothOPP
 Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothOPP
@@ -813,7 +813,7 @@ Summary:	Network - Bluetooth - Bluetooth Socket
 Requires:	capi-network-bluetooth
 Requires:	bluez
 Requires:	bluetooth-tools
-Suggests:	bluetooth-frimware-bcm
+Suggests:	bluetooth-firmware-bcm
 Suggests:	bluetooth-firmware-sprd
 %description sub2-domain_API-Network_Bluetooth-BluetoothSocket
 Tizen block (set of packages) for API sets of sub2-domain_API-Network_Bluetooth-BluetoothSocket

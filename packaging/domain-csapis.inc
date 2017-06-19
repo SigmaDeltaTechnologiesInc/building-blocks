@@ -6,7 +6,16 @@ Summary:	Tizen C# API Sets
 Suggests:	csapi-account-fido-client
 Suggests:	csapi-account-manager
 Suggests:	csapi-account-oauth2
-Suggests:	csapi-application
+Suggests:	csapi-application-alarm
+Suggests:	csapi-application-common
+Suggests:	csapi-application-message-port
+Suggests:	csapi-application-notification
+Suggests:	csapi-application-notificationeventlistener
+Suggests:	csapi-application-package-manager
+Suggests:	csapi-application-preference
+Suggests:	csapi-application-service
+Suggests:	csapi-application-toastmessage
+Suggests:	csapi-application-ui
 Suggests:	csapi-attach-panel
 Suggests:	csapi-badge
 Suggests:	csapi-calendar-service
