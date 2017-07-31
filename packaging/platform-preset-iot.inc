@@ -49,7 +49,7 @@ Requires:	%{name}-sub1-feature_Platform-Headless
 Requires:	bash
 Requires:	systemd
 Suggests:	rpm
-Suggests:	%{name}-sub1-domain_API-Network_IoTCon
+Suggests:	%{name}-sub1-domain_API-Network-IoTCon
 %description sub1-Preset_iot-headless_minimal
 Tizen IoT Headless/Minimal Preset
 %files sub1-Preset_iot-headless_minimal
@@ -58,16 +58,16 @@ Tizen IoT Headless/Minimal Preset
 %package sub1-Preset_iot-headless_speaker
 Summary:	IoT Headless Speaker (Minimal) Preset
 Requires:	%{name}-sub1-feature_Platform-Headless
-Requires:	%{name}-sub1-domain_API-Multimedia_SoundManager
-Requires:	%{name}-sub1-domain_API-Multimedia_WAVPlayer
-Requires:	%{name}-sub1-domain_API-Network_Bluetooth
-Requires:	%{name}-sub1-domain_API-Network_Connection
-Requires:	%{name}-sub1-domain_API-Network_WiFiDirect
-Requires:	%{name}-sub1-domain_API-Network_WiFi
-Suggests:	%{name}-sub1-domain_API-Network_IoTCon
-Suggests:	%{name}-sub1-domain_API-Multimedia_Radio
-Suggests:	%{name}-sub1-domain_API-Multimedia_TonePlayer
-Requires:	%{name}-sub1-domain_API-Multimedia_MediaController
+Requires:	%{name}-sub1-domain_API-Multimedia-Sound_Manager
+Requires:	%{name}-sub1-domain_API-Multimedia-WAV_Player
+Requires:	%{name}-sub1-domain_API-Network-Bluetooth_BREDR
+Requires:	%{name}-sub1-domain_API-Network-Connection
+Requires:	%{name}-sub1-domain_API-Network-WiFi_Direct
+Requires:	%{name}-sub1-domain_API-Network-WiFi
+Suggests:	%{name}-sub1-domain_API-Network-IoTCon
+Suggests:	%{name}-sub1-domain_API-Multimedia-Radio
+Suggests:	%{name}-sub1-domain_API-Multimedia-Tone_Player
+Requires:	%{name}-sub1-domain_API-Multimedia-Media_Controller
 Suggests:	rpm
 %description sub1-Preset_iot-headless_speaker
 Tizen IoT Speaker/Minimal Preset
@@ -77,10 +77,10 @@ Tizen IoT Speaker/Minimal Preset
 %package sub1-Preset_iot-headed_minimal
 Summary:	IoT Headed (GUI support) Minimal Preset
 Requires:	%{name}-sub1-feature_Platform-Headed
-Requires:	%{name}-sub1-domain_API-UI_EFL
-Suggests:	%{name}-sub1-domain_API-UI_DALi
-Suggests:	%{name}-sub1-domain_API-UI_Cairo
-Suggests:	%{name}-sub1-domain_API-Network_IoTCon
+Requires:	%{name}-sub1-domain_API-UI-EFL_NativeUIToolkit
+Suggests:	%{name}-sub1-domain_API-UI-DALi
+Suggests:	%{name}-sub1-domain_API-UI-Cairo
+Suggests:	%{name}-sub1-domain_API-Network-IoTCon
 Requires:	bash
 Requires:	systemd
 Suggests:	rpm
@@ -92,13 +92,13 @@ Tizen IoT Headed/Minimal Preset
 %package sub1-Preset_iot-headless_net
 Summary:	IoT Headless with Rich Networking
 Requires:	%{name}-sub1-feature_Platform-Headless
-Requires:	%{name}-sub1-domain_API-Network_Bluetooth
-Requires:	%{name}-sub1-domain_API-Network_Connection
-Requires:	%{name}-sub1-domain_API-Network_WiFiDirect
-Requires:	%{name}-sub1-domain_API-Network_WiFi
-Suggests:	%{name}-sub1-domain_API-Network_NFC
-Suggests:	%{name}-sub1-domain_API-Network_Smartcard
-Suggests:	%{name}-sub1-domain_API-Network_IoTCon
+Requires:	%{name}-sub1-domain_API-Network-Bluetooth_BREDR
+Requires:	%{name}-sub1-domain_API-Network-Connection
+Requires:	%{name}-sub1-domain_API-Network-WiFi_Direct
+Requires:	%{name}-sub1-domain_API-Network-WiFi
+Suggests:	%{name}-sub1-domain_API-Network-NFC
+Suggests:	%{name}-sub1-domain_API-Network-Smartcard
+Suggests:	%{name}-sub1-domain_API-Network-IoTCon
 Requires:	bash
 Requires:	systemd
 Suggests:	rpm
@@ -110,14 +110,14 @@ Tizen IoT Headless Preset
 %package sub1-Preset_iot-headless_controller
 Summary:	IoT Headless with Contollers
 Requires:	%{name}-sub1-feature_Platform-Headless
-Requires:	%{name}-sub1-domain_API-Network_Bluetooth
-Requires:	%{name}-sub1-domain_API-Network_Connection
-Requires:	%{name}-sub1-domain_API-Network_IoTCon
-Suggests:	%{name}-sub1-domain_API-Network_NFC
-Suggests:	%{name}-sub1-domain_API-Network_WiFiDirect
-Suggests:	%{name}-sub1-domain_API-Network_WiFi
-Requires:	%{name}-sub1-domain_API-Context_ActivityRecognition
-Requires:	%{name}-sub1-domain_API-AppFramework_MessagePort
+Requires:	%{name}-sub1-domain_API-Network-Bluetooth_BREDR
+Requires:	%{name}-sub1-domain_API-Network-Connection
+Requires:	%{name}-sub1-domain_API-Network-IoTCon
+Suggests:	%{name}-sub1-domain_API-Network-NFC
+Suggests:	%{name}-sub1-domain_API-Network-WiFi_Direct
+Suggests:	%{name}-sub1-domain_API-Network-WiFi
+Requires:	%{name}-sub1-domain_API-Context-Activity_Geusture_Recognition
+Requires:	%{name}-sub1-domain_API-AppFramework-Message_Port_API
 Requires:	bash
 Requires:	systemd
 Suggests:	rpm
@@ -154,16 +154,16 @@ Suggests:	cmake
 Summary:	RPI3 Headless Network Hub
 Requires:	%{name}-sub1-Preset_iot-headless_minimal
 Requires:	%{name}-sub1-Preset_boards-RPI3_headlessBSP
-Requires:	%{name}-sub1-domain_API-Network_Bluetooth
-Requires:	%{name}-sub1-domain_API-Network_WiFi
-Suggests:	%{name}-sub1-domain_API-Network_WiFiDirect
-Suggests:	%{name}-sub1-domain_API-Network_IoTCon
-Suggests:	%{name}-sub1-domain_API-Network_NFC
-Requires:	%{name}-sub1-domain_API-Network_Connection
-Requires:	%{name}-sub1-domain_API-Network_HTTP
-Requires:	%{name}-sub1-domain_API-Network_VPNService
-Suggests:	%{name}-sub1-domain_API-System_SystemInformation
-Suggests:	%{name}-sub1-domain_API-System_dlog
+Requires:	%{name}-sub1-domain_API-Network-Bluetooth_BREDR
+Requires:	%{name}-sub1-domain_API-Network-WiFi
+Suggests:	%{name}-sub1-domain_API-Network-WiFi_Direct
+Suggests:	%{name}-sub1-domain_API-Network-IoTCon
+Suggests:	%{name}-sub1-domain_API-Network-NFC
+Requires:	%{name}-sub1-domain_API-Network-Connection
+Requires:	%{name}-sub1-domain_API-Network-HTTP
+Requires:	%{name}-sub1-domain_API-Network-VPN_Service
+Suggests:	%{name}-sub1-domain_API-System-System_Information
+Suggests:	%{name}-sub1-domain_API-System-dlog
 Suggests:	%{name}-sub1-domain_API-Telephony
 Suggests:	sdbd
 Suggests:	rpm

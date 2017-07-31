@@ -47,9 +47,9 @@ Include minimal set of packages for headless.
 Summary:	Headless Network Packages
 Requires:	%{name}-sub1-feature_Platform-Headless
 Requires:	%{name}-sub2-feature_Platform-Headless-Minimal
-Requires:	%{name}-sub1-domain_API-Network_IoTCon
-Requires:	%{name}-sub1-domain_API-Network_WiFi
-Requires:	%{name}-sub1-domain_API-Network_Bluetooth
+Requires:	%{name}-sub1-domain_API-Network-IoTCon
+Requires:	%{name}-sub1-domain_API-Network-WiFi
+Requires:	%{name}-sub1-domain_API-Network-Bluetooth_BREDR
 %description sub2-feature_Platform-Headless-Network
 Include network packages for headless.
 %files sub2-feature_Platform-Headless-Network
