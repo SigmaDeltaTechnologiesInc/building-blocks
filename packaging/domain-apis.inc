@@ -1762,9 +1762,41 @@ Summary:    Vulkan
 
 %package sub2-domain_API-UI-Display_Server
 Summary:    Display_Server
+Requires:   enlightenment
+#Profiles
+Suggests:   e-tizen-data-profile_common
+Suggests:   e-tizen-data-profile_mobile
+Suggests:   e-tizen-data-profile_wearable
+Suggests:   e-tizen-data-profile_tv
+Suggests:   e-tizen-data-profile_ivi
+
+#DisplayHAL-TBM
+Suggests:   libtbm-sprd
+Suggests:   libtbm-exynos
+Suggests:   libtbm-exynos-tgm
+Suggests:   libtbm-nexell
+Suggests:   libtbm-vc4
+Suggests:   libtbm-vigs
+Suggests:   libtbm-dumb
+
+#DisplayHAL-TDM
+Suggests:   libtdm-sprd
+Suggests:   libtdm-exynos
+Suggests:   libtdm-exynos-deconfb
+Suggests:   libtdm-drm
+Suggests:   libtdm-vc4
+
 %description sub2-domain_API-UI-Display_Server
-### TODO ###
-# packakge list
+Tizen block (set of packages) for Group of Display Server
+Display Server Block is core block for UI. It contains the wayland display server,
+modules for server and display HAL for target.
+There are three categories to choose.
+1. Server config for each profile
+   There are 5 profiles(common, mobile, wearable, tv, ivi).
+2. Tizen Buffer Manager(TBM) Backend
+3. Tizen Display Manager(TDM) Backend
+   You should choose a tbm and tdm backend for your target.
+   For example, if you want make binary for TM1, you can choose the libtbm-sprd and the libtdm-sprd
 
 %files sub2-domain_API-UI-Display_Server
 
