@@ -120,124 +120,95 @@ Suggests: %{name}-sub2-domain_API-AppFramework-Attach_Panel
 Tizen block (set of packages) for Group of domain API-AppFramework
 %files sub1-domain_API-AppFramework
 
-### TODO - TPK-Installation ###
-# Summary, description
-
 %package sub2-domain_API-AppFramework-TPK_Installation
-Summary:	TPK-Installation
+Summary: TPK package management
+Requires: pkgmgr-server
+Requires: pkgmgr-tool
 %description sub2-domain_API-AppFramework-TPK_Installation
-
-### TODO ###
-# packakge list
-
+This block supports tpk package management (install/uninstall)
 %files sub2-domain_API-AppFramework-TPK_Installation
 
-### TODO - Native-EFL-UI-app-model ###
-# Summary, description
-
 %package sub2-domain_API-AppFramework-Native_EFL_UI_app_model
-Summary:	Native-EFL-UI-app-model
+Summary: Native EFL UI app model
+Requires: capi-appfw-application
+Requires: amd-mod-cynara-core
+Requires: amd-mod-extractor
+Requires: amd-mod-input
+Requires: amd-mod-launchpad
+Requires: amd-mod-rua
+Requires: amd-mod-share
+Requires: amd-mod-splash-screen
+Requires: amd-mod-ui-core
+Requires: amd-mod-wayland-core
+Requires: %{name}-sub2-domain_API-UI-Display_Server
+Requires: %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
 %description sub2-domain_API-AppFramework-Native_EFL_UI_app_model
-
-### TODO ###
-# packakge list
-
+This block supports native EFL UI application model
 %files sub2-domain_API-AppFramework-Native_EFL_UI_app_model
 
-### TODO - Alarm-API ###
-# Summary, description
-
 %package sub2-domain_API-AppFramework-Alarm_API
-Summary:	Alarm-API
+Summary: Alarm API
+Requires: capi-appfw-alarm
+Requires: alarm-server
 %description sub2-domain_API-AppFramework-Alarm_API
-
-### TODO ###
-# packakge list
-
+This block supports alarm API
 %files sub2-domain_API-AppFramework-Alarm_API
 
-### TODO - Message-Port-API ###
-# Summary, description
-
 %package sub2-domain_API-AppFramework-Message_Port_API
-Summary:	Message-Port-API
+Summary: Message Port API
+Requires: message-port
 %description sub2-domain_API-AppFramework-Message_Port_API
-
-### TODO ###
-# packakge list
-
+This block supports message port API
 %files sub2-domain_API-AppFramework-Message_Port_API
 
-### TODO - Data-Control-API ###
-# Summary, description
-
 %package sub2-domain_API-AppFramework-Data_Control_API
-Summary:	Data-Control-API
+Summary: Data Control API
+Requires: data-control
 %description sub2-domain_API-AppFramework-Data_Control_API
-
-### TODO ###
-# packakge list
-
+This block supports data control API
 %files sub2-domain_API-AppFramework-Data_Control_API
 
-### TODO - Native-EFL-Widget-App-Model ###
-# Summary, description
-
 %package sub2-domain_API-AppFramework-Native_EFL_Widget_App_Model
-Summary:	Native-EFL-Widget-App-Model
+Summary: EFL widget app model
+Requires: %{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
+Requires: appcore-widget
+Requires: libwidget_service
+Requires: libwidget_viewer
+Requires: libwidget_viewer_evas
 %description sub2-domain_API-AppFramework-Native_EFL_Widget_App_Model
-
-### TODO ###
-# packakge list
-
+This block supports native EFL widget app model
 %files sub2-domain_API-AppFramework-Native_EFL_Widget_App_Model
 
-### TODO - Notification-API ###
-# Summary, description
-
 %package sub2-domain_API-AppFramework-Notification_API
-Summary:	Notification-API
+Summary: Notification API
+Requires: notification
+Requires: data-provider-master
 %description sub2-domain_API-AppFramework-Notification_API
-
-### TODO ###
-# packakge list
-
+This block supports notification API
 %files sub2-domain_API-AppFramework-Notification_API
 
-### TODO - Shortcut-API ###
-# Summary, description
-
 %package sub2-domain_API-AppFramework-Shortcut_API
-Summary:	Shortcut-API
+Summary: Shortcut API
+Requires: libshortcut
+Requires: data-provider-master
 %description sub2-domain_API-AppFramework-Shortcut_API
-
-### TODO ###
-# packakge list
-
+This block supports shortcut API
 %files sub2-domain_API-AppFramework-Shortcut_API
 
-### TODO - Badge-API ###
-# Summary, description
-
 %package sub2-domain_API-AppFramework-Badge_API
-Summary:	Badge-API
+Summary: Badge API
+Requires: badge
+Requires: data-provider-master
 %description sub2-domain_API-AppFramework-Badge_API
-
-### TODO ###
-# packakge list
-
+This block supports badge API
 %files sub2-domain_API-AppFramework-Badge_API
 
-### TODO - Media-Key-API ###
-# Summary, description
-
 %package sub2-domain_API-AppFramework-Media_Key_API
-Summary:    Media-Key-API
+Summary: Media Key API
+Requires: capi-system-media-key
+Requires: %{name}-sub2-domain_API-UI-Display_Server
 %description sub2-domain_API-AppFramework-Media_Key_API
-
-### TODO ###
-# packakge list
-
+This block supports media key API
 %files sub2-domain_API-AppFramework-Media_Key_API
 
 ### TODO - Attach-Panel ###
