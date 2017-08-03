@@ -1685,27 +1685,28 @@ Summary:    Minicontrol
 %files sub2-domain_API-UI-Minicontrol
 
 
-### TODO - SDL_GL ##
-# Summary, description
-
 %package sub2-domain_API-UI-SDL_GL
-Summary:    SDL_GL
+Summary:    OpenGL ES with SDL
+Requires:   SDL2
+Requires:   %{name}-sub2-domain_API-UI-Display_Server
 %description sub2-domain_API-UI-SDL_GL
-### TODO ###
-# packakge list
+OpenGL ES is a standard specification, defining a cross-language, and cross-platform OpenGL ES API to write the applications that produce 2D and 3D computer graphics.<br>
+SDL makes much easier to use the OpenGL ES API in Tizen.<br>
+OpenGL ES 1.1, 2.0, 3.0, 3.1 and 3.2 are supported in Tizen.<br>
+Some devices may not support OpenGL ES. So you should check whether OpenGL ES and specific versions support with <a href=https://developer.tizen.org/development/guides/native-application/system/system-information>System information APIs.<br>
+
 
 %files sub2-domain_API-UI-SDL_GL
 
 
-### TODO - SDL_Vulkan ##
-# Summary, description
-
 %package sub2-domain_API-UI-SDL_Vulkan
-Summary:    SDL_Vulkan
+Summary:    Vulkan with SDL
+Requires:   SDL2
+Requires:   %{name}-sub2-domain_API-UI-Vulkan
 %description sub2-domain_API-UI-SDL_Vulkan
-### TODO ###
-# packakge list
-
+Vulkan is a generation API for high-efficiency access to graphics and computing on modern GPUs.<br>
+SDL makes much easier to use the Vulkan API in Tizen.<br>
+The Tizen platform supports the Vulkan API in order to provide the most cutting-edge 3D programming tools for you to create high-quality games and real-time graphics in application.<br>
 %files sub2-domain_API-UI-SDL_Vulkan
 
 
