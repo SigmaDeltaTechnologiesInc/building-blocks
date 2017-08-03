@@ -577,7 +577,7 @@ Suggests:%{name}-sub2-domain_API-Network-WiFi
 
 %description sub2-domain_API-Messaging-Email
 This block supports managing Email service.<br>
-Telephony or WiFi should be selected to use message service.<br>
+Telephony or WiFi should be selected to use Email service.<br>
 Telephony would be available when Telephony is selected.<br>
 Wifi would be available when Wifi is selected.
 
@@ -594,7 +594,7 @@ Requires:mms-plugin
 Requires:%{name}-sub1-domain_API-Telephony
 
 %description sub2-domain_API-Messaging-Messages
-This block supports managing Message service.<br>
+This block supports managing Message service.
 
 %files sub2-domain_API-Messaging-Messages
 
