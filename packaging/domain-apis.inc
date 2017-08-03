@@ -52,27 +52,31 @@ Summary:	Account Manager
 
 %files sub2-domain_API-Account-Account_Manager
 
-### TODO - FIDO Client###
-# Summary, description
-
 %package sub2-domain_API-Account-FIDO_Client
 Summary:	FIDO Client
+
+Requires: fido-client
+Suggests: dummyasm
 %description sub2-domain_API-Account-FIDO_Client
 
-### TODO ###
-# packakge list
+Enabling Fido Client and it is possible to use Fido Client API<br>
+dummyasm should be selected for tct running.<br>
+fido-client needs fido-asm and fido-authenticator according to FIDO UAF Spec 1.0 to which fido-client is comaptible.<br>
+But fido-asm and fido-authenticator are vendor specific modules and to be developed by them.<br>
+So we use dummyasm for verification of fido-client APIs instead of fido-asm and fido-authenticator.
 
 %files sub2-domain_API-Account-FIDO_Client
 
-### TODO - OAuth2.0 ###
-# Summary, description
-
 %package sub2-domain_API-Account-OAuth2
-Summary:	OAuth2.0
+Summary:	OAuth2
+
+Requires: oauth2
+Requires: %{name}-sub2-domain_API-Web-WebView
 %description sub2-domain_API-Account-OAuth2
 
-### TODO ###
-# packakge list
+Enabling OAuth2 and it is possible to use OAuth2 API<br>
+webView is mandatory becasue oauth2 manager api triggers to show web page for user interaction to input user id and password<br>
+which is following oauth 2.0 specification.
 
 %files sub2-domain_API-Account-OAuth2
 
