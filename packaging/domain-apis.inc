@@ -368,15 +368,12 @@ Summary:    Sqlite
 
 %files sub2-domain_API-Base-Sqlite
 
-### TODO - Utils ###
-# Summary, description
 
 %package sub2-domain_API-Base-Utils
-Summary:    Utils
+Summary:    Base-Utils
+Requires: capi-base-utils
 %description sub2-domain_API-Base-Utils
-
-### TODO ###
-# packakge list
+This block supports base-utils API for internationalization and localization
 
 %files sub2-domain_API-Base-Utils
 
