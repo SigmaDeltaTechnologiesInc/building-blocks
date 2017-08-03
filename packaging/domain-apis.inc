@@ -502,28 +502,25 @@ Suggests: %{name}-sub2-domain_API-Location-Geofence_Manager
 Tizen block (set of packages) for Group of domain API-Location
 %files sub1-domain_API-Location
 
-### TODO - Location-Manager ###
-# Summary, description
-
 %package sub2-domain_API-Location-Location_Manager
 Summary:    Location-Manager
+Requires:	capi-location-manager
+Requires:	lbs-server
+Requires:	location-lbs-server
+Suggests:	lbs-plugin-gps-rpi3
 %description sub2-domain_API-Location-Location_Manager
-
-### TODO ###
-# packakge list
-
+This block supports managing Location Service.<br>
+To use Location Service, the appropriate plugin should be selected for the device.
 %files sub2-domain_API-Location-Location_Manager
-
-### TODO - Geofence-Manager ###
-# Summary, description
 
 %package sub2-domain_API-Location-Geofence_Manager
 Summary:    Geofence-Manager
+Requires:	capi-geofence-manager
+Requires:	geofence-server
+Requires:	location-geofence-server
+Requires:	%{name}-sub2-domain_API-Location-Location_Manager
 %description sub2-domain_API-Location-Geofence_Manager
-
-### TODO ###
-# packakge list
-
+This block supports managing Geofence Service.
 %files sub2-domain_API-Location-Geofence_Manager
 
 ##########
@@ -538,36 +535,37 @@ Suggests: %{name}-sub2-domain_API-Maps-Mapzen_Plugin
 Tizen block (set of packages) for Group of domain API-Maps
 %files sub1-domain_API-Maps
 
-### TODO - Maps_Service ###
-# Summary, description
-
 %package sub2-domain_API-Maps-Maps_Service
 Summary:    Masp_Service
-%description sub2-domain_API-Maps-Maps_Service
+Requires:	capi-maps-service
+Suggests:	%{name}-sub2-domain_API-Maps-Here_Plugin
+Suggests:	%{name}-sub2-domain_API-Maps-Mapzen_Plugin
 
-### TODO ###
-# packakge list
+%description sub2-domain_API-Maps-Maps_Service
+This block supports Maps Service.<br>
+One of HERE or MAPZEN plugin must be selected.
+
 
 %files sub2-domain_API-Maps-Maps_Service
 
-### TODO - Here_Plugin ###
-# Summary, description
-
 %package sub2-domain_API-Maps-Here_Plugin
 Summary:    Here_Plugin
-%description sub2-domain_API-Maps-Here_Plugin
+Requires:	maps-plugin-here
+Requires:	heremaps-uc-launcher
+Requires:	org.tizen.heremaps-uc
 
-### TODO ###
-# packakge list
+%description sub2-domain_API-Maps-Here_Plugin
+This block supports HERE Plugin.
+
 
 %files sub2-domain_API-Maps-Here_Plugin
 
-### TODO - Mapzen_Plugin ###
-# Summary, description
-
 %package sub2-domain_API-Maps-Mapzen_Plugin
 Summary:    Mapzen_Plugin
+Requires:	maps-plugin-mapzen
+
 %description sub2-domain_API-Maps-Mapzen_Plugin
+This block supports MAPZEN plugin.
 
 ### TODO ###
 # packakge list
