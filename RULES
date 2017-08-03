@@ -105,7 +105,7 @@
 
 5.3. A block must NOT have any files included
 
-5.4. A block that is not preset/feature cannot add "Requires"/"Suggests" on
+5.4. (DEPRECATED) A block that is not preset/feature cannot add "Requires"/"Suggests" on
 another block that is not a direct child of it (ref. RULE 2.6)
 	E.g., sub2-* cannot Requires/Suggests another root/sub1/sub2
 	E.g., sub1-A cannot Requires/Suggests sub2-B-X
