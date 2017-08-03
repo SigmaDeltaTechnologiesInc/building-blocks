@@ -1317,6 +1317,7 @@ Suggests: %{name}-sub2-domain_API-System-Feedback
 Suggests: %{name}-sub2-domain_API-System-Runtime_information
 Suggests: %{name}-sub2-domain_API-System-Sensor_Listener_Utility
 Suggests: %{name}-sub2-domain_API-System-Sensor_Recorder
+Suggests: %{name}-sub2-domain_API-System-Storage
 Suggests: %{name}-sub2-domain_API-System-System_Information
 Suggests: %{name}-sub2-domain_API-System-System_Settings
 Suggests: %{name}-sub2-domain_API-System-T_Trace
@@ -1435,6 +1436,17 @@ Summary:    Sensor_Recorder
 # packakge list
 
 %files sub2-domain_API-System-Sensor_Recorder
+
+### TODO - Storage ##
+# Summary, description
+
+%package sub2-domain_API-System-Storage
+Summary:    Storage
+%description sub2-domain_API-System-Storage
+### TODO ###
+# packakge list
+
+%files sub2-domain_API-System-Storage
 
 ### TODO - System_Information ##
 # Summary, description
