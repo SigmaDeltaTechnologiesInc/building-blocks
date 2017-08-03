@@ -557,27 +557,33 @@ Suggests: %{name}-sub2-domain_API-Messaging-Push
 Tizen block (set of packages) for Group of domain API-Messaging
 %files sub1-domain_API-Messaging
 
-### TODO - Email ###
-# Summary, description
-
 %package sub2-domain_API-Messaging-Email
-Summary:    Email
-%description sub2-domain_API-Messaging-Email
+Summary:Email
+Requires:capi-messaging-email
+Requires:email-service
+Suggests:%{name}-sub1-domain_API-Telephony
+Suggests:%{name}-sub2-domain_API-Network-WiFi
 
-### TODO ###
-# packakge list
+%description sub2-domain_API-Messaging-Email
+This block supports managing Email service.<br>
+Telephony or WiFi should be selected to use message service.<br>
+Telephony would be available when Telephony is selected.<br>
+Wifi would be available when Wifi is selected.
+
 
 %files sub2-domain_API-Messaging-Email
 
-### TODO - Messages ###
-# Summary, description
-
 %package sub2-domain_API-Messaging-Messages
-Summary:    Messages
-%description sub2-domain_API-Messaging-Messages
+Summary:Messages
+Requires:capi-messaging-messages
+Requires:msg-service
+Requires:msg-manager
+Requires:sms-plugin
+Requires:mms-plugin
+Requires:%{name}-sub1-domain_API-Telephony
 
-### TODO ###
-# packakge list
+%description sub2-domain_API-Messaging-Messages
+This block supports managing Message service.<br>
 
 %files sub2-domain_API-Messaging-Messages
 
@@ -1240,36 +1246,37 @@ Suggests: %{name}-sub2-domain_API-Social-Phonenumber_utils
 Tizen block (set of packages) for Group of domain API-Social
 %files sub1-domain_API-Social
 
-### TODO - Calendar ##
-# Summary, description
-
 %package sub2-domain_API-Social-Calendar
-Summary:    Calendar
+Summary: Calendar
+Requires:libcalendar-service
+Requires:calendar-service
+Suggests:%{name}-sub2-domain_API-Social-Contacts
+
 %description sub2-domain_API-Social-Calendar
-### TODO ###
-# packakge list
+This block supports managing Calendar service.<br>
+Syncing Birthday event to calendar could be available when Contacts is selected.<br>
+This logic is not available in TV profile.
+
 
 %files sub2-domain_API-Social-Calendar
 
-### TODO - Contacts ##
-# Summary, description
-
 %package sub2-domain_API-Social-Contacts
-Summary:    Contacts
+Summary: Contacts
+Requires:libcontacts-service
+Requires:contacts-service
+Requires:session-utils
+
 %description sub2-domain_API-Social-Contacts
-### TODO ###
-# packakge list
+This block supports managing Contacts service
 
 %files sub2-domain_API-Social-Contacts
 
-### TODO - Phonenumber_utils ##
-# Summary, description
-
 %package sub2-domain_API-Social-Phonenumber_utils
-Summary:    Phonenumber_utils
+Summary: Phonenumber_utils
+Requires:phonenumber-utils
+
 %description sub2-domain_API-Social-Phonenumber_utils
-### TODO ###
-# packakge list
+This block supports managing Phonenumber utils
 
 %files sub2-domain_API-Social-Phonenumber_utils
 
@@ -1480,7 +1487,7 @@ Summary:    dlog
 ###############
 %package sub1-domain_API-Telephony
 Summary:	Telephony API
-Requires: capi-telphony
+Requires: capi-telephony
 Requires: telephony-daemon
 Requires: libtapi
 Requires: libtcore
