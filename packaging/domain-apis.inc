@@ -211,15 +211,27 @@ Requires: %{name}-sub2-domain_API-UI-Display_Server
 This block supports media key API
 %files sub2-domain_API-AppFramework-Media_Key_API
 
-### TODO - Attach-Panel ###
-# Summary, description
-
 %package sub2-domain_API-AppFramework-Attach_Panel
 Summary:    Attach-Panel
-%description sub2-domain_API-AppFramework-Attach_Panel
 
-### TODO ###
 # packakge list
+Requires: attach-panel
+Requires: attach-panel-gallery
+Requires: attach-panel-camera
+Requires: attach-panel-document
+Requires: attach-panel-voicerecorder
+
+Requires: %{name}-sub2-domain_API-Multimedia-Camera
+Requires: %{name}-sub2-domain_API-System-Device_Battery
+Requires: %{name}-sub2-domain_API-Multimedia-Recorder
+Requires: %{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
+Requires: %{name}-sub2-domain_API-System-Storage
+
+Suggests: org.tizen.app-selector-profile_mobile
+
+%description sub2-domain_API-AppFramework-Attach_Panel
+Attach panel provides functions to attach images, voices, contacts, events and files. User can attach images, take pictures, record voice and select files to attach into the caller app.
+Currently, only mobile is supported, and if there is a profile you want, you can select the app-selector package corresponding to profile.
 
 %files sub2-domain_API-AppFramework-Attach_Panel
 
