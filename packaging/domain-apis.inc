@@ -380,16 +380,15 @@ Suggests: %{name}-sub2-domain_API-Content-Media_Content
 Tizen block (set of packages) for Group of domain API-Content
 %files sub1-domain_API-Content
 
-### TODO - Download ###
-# Summary, description
-
 %package sub2-domain_API-Content-Download
 Summary:    Download
+Requires:	capi-web-url-download
+Requires:	download-provider
+Requires:	%{name}-sub2-domain_API-Network-WiFi
+Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Content-Download
-
-### TODO ###
-# packakge list
-
+Tizen block (set of packages) for API sets of domain API-Content-Download <br>
+To use this feature, either Data Network or Wi-Fi connection is required.
 %files sub2-domain_API-Content-Download
 
 ### TODO - MIME-Type ###
@@ -983,56 +982,60 @@ Summary:    Bluetooth_LE
 # packakge list
 
 %files sub2-domain_API-Network-Bluetooth_LE
-### TODO - ASP ##
-# Summary, description
 
 %package sub2-domain_API-Network-ASP
 Summary:    ASP
+Requires:	capi-network-asp
+Requires:	asp-manager
+Requires:	%{name}-sub2-domain_API-Network-DNSSD
+Suggests:   %{name}-sub2-domain_API-Network-WiFi_Direct
 %description sub2-domain_API-Network-ASP
-### TODO ###
-# packakge list
-
+Tizen block (set of packages) for API sets of domain API-Network-ASP <br>
+To use this feature, either Data Network or Wi-Fi connection is required <br>
+and you need the package either DNSSD or WiFi Direct. A default is DNSSD.
 %files sub2-domain_API-Network-ASP
-### TODO - Connection ##
-# Summary, description
 
 %package sub2-domain_API-Network-Connection
 Summary:    Connection
+Requires:	capi-network-connection
+Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
+Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-Connection
-### TODO ###
-# packakge list
-
+Tizen block (set of packages) for API sets of domain API-Network-Connection <br>
+To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-Connection
-### TODO - Curl ##
-# Summary, description
 
 %package sub2-domain_API-Network-Curl
 Summary:    Curl
+Requires:	libcurl
+Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
+Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-Curl
-### TODO ###
-# packakge list
-
+Tizen block (set of packages) for API sets of domain API-Network-Curl <br>
+To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-Curl
-### TODO - DNSSD ##
-# Summary, description
 
 %package sub2-domain_API-Network-DNSSD
-Summary:    DNSSD
+Summary:    DNS-SD
+Requires:	libnsd-dns-sd
+Requires:	mdnsresponder
+Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
+Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-DNSSD
-### TODO ###
-# packakge list
-
+Tizen block (set of packages) for API sets of domain API-Network-DNSSD <br>
+To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-DNSSD
-### TODO - HTTP ##
-# Summary, description
 
 %package sub2-domain_API-Network-HTTP
 Summary:    HTTP
+Requires:	capi-network-http
+Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
+Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-HTTP
-### TODO ###
-# packakge list
-
+Tizen block (set of packages) for API sets of domain API-Network-HTTP <br>
+To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-HTTP
+
 ### TODO - IoTCon ##
 # Summary, description
 
@@ -1063,26 +1066,28 @@ Summary:    NFC
 # packakge list
 
 %files sub2-domain_API-Network-NFC
-### TODO - SSDP ##
-# Summary, description
 
 %package sub2-domain_API-Network-SSDP
 Summary:    SSDP
+Requires:	libnsd-ssdp
+Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
+Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-SSDP
-### TODO ###
-# packakge list
-
+Tizen block (set of packages) for API sets of domain API-Network-SSDP <br>
+To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-SSDP
-### TODO - STC ##
-# Summary, description
 
 %package sub2-domain_API-Network-STC
 Summary:    STC
+Requires:	capi-network-stc
+Requires:	stc-manager
+Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
+Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-STC
-### TODO ###
-# packakge list
-
+Tizen block (set of packages) for API sets of domain API-Network-STC <br>
+To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-STC
+
 ### TODO - Smartcard ##
 # Summary, description
 
@@ -1093,45 +1098,114 @@ Summary:    Smartcard
 # packakge list
 
 %files sub2-domain_API-Network-Smartcard
-### TODO - VPN_Service ##
-# Summary, description
 
 %package sub2-domain_API-Network-VPN_Service
 Summary:    VPN_Service
+Requires:	capi-vpnsvc
+#Requires:	net-config
+Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 %description sub2-domain_API-Network-VPN_Service
-### TODO ###
-# packakge list
-
+Tizen block (set of packages) for API sets of domain API-Network-VPN_Service <br>
+To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-VPN_Service
-### TODO - WiFi ##
-# Summary, description
 
 %package sub2-domain_API-Network-WiFi
 Summary:    WiFi
-%description sub2-domain_API-Network-WiFi
-### TODO ###
-# packakge list
+Requires:	capi-network-wifi
+Requires:	net-config
+Requires:	connman
+Requires:	wpa_supplicant
 
+#Profiles
+Suggests:	wpa_supplicant-extension-TM1
+Suggests:	wpa_supplicant-extension-TM2
+Suggests:	wpa_supplicant-profile_common
+Suggests:	wpa_supplicant-profile_tv
+Suggests:	net-config-profile_tv
+Suggests:	connman-extension-ivi
+Suggests:	connman-extension-tv
+
+#Headed/Headless
+Suggests:	net-config-plugin-headed
+
+%description sub2-domain_API-Network-WiFi
+Tizen block (set of packages) for API sets of domain API-Network-WiFi <br>
+TM1 target (headed setting UI) : wpa_supplicant-extension-TM1, net-config-plugin-headed <br>
+TM1 target (headless) : wpa_supplicant-extension-TM1 <br>
+TM2 target (headed settgin UI) : wpa_supplicant-extension-TM2, net-config-plugin-headed <br>
+TM2 target (headless) : wpa_supplicant-extension-TM2 <br>
+TW1 target (headed setting UI) : wpa_supplicant-profile_common, net-config-plugin-headed <br>
+TW1 target (headless) : wpa_supplicant-profile_common <br>
+TW2 target (headed setting UI) : wpa_supplicant-profile_common, net-config-plugin-headed <br>
+TW2 target (headless): wpa_supplicant-profile_common <br>
+tv profile : wpa_supplicant-profile_common, net-config-profile_tv, connman-extension-tv <br>
+ivi profile : wpa_supplicant-profile_common, connman-extension-ivi <br>
+common profile : wpa_supplicant-profile_common <br>
 %files sub2-domain_API-Network-WiFi
-### TODO - WiFi_Manager ##
-# Summary, description
 
 %package sub2-domain_API-Network-WiFi_Manager
 Summary:    WiFi_Manager
-%description sub2-domain_API-Network-WiFi_Manager
-### TODO ###
-# packakge list
+Requires:	capi-network-wifi
+Requires:	net-config
+Requires:	connman
+Requires:	wpa_supplicant
 
+#Profiles
+Suggests:	wpa_supplicant-extension-TM1
+Suggests:	wpa_supplicant-extension-TM2
+Suggests:	wpa_supplicant-profile_common
+Suggests:	wpa_supplicant-profile_tv
+Suggests:	net-config-profile_tv
+Suggests:	connman-extension-ivi
+Suggests:	connman-extension-tv
+
+#Headed/Headless
+Suggests:	net-config-plugin-headed
+
+%description sub2-domain_API-Network-WiFi_Manager
+Tizen block (set of packages) for API sets of domain API-Network-WiFi_Manager <br>
+TM1 target (headed setting UI) : wpa_supplicant-extension-TM1, net-config-plugin-headed <br>
+TM1 target (headless) : wpa_supplicant-extension-TM1 <br>
+TM2 target (headed settgin UI) : wpa_supplicant-extension-TM2, net-config-plugin-headed <br>
+TM2 target (headless) : wpa_supplicant-extension-TM2 <br>
+TW1 target (headed setting UI) : wpa_supplicant-profile_common, net-config-plugin-headed <br>
+TW1 target (headless) : wpa_supplicant-profile_common <br>
+TW2 target (headed setting UI) : wpa_supplicant-profile_common, net-config-plugin-headed <br>
+TW2 target (headless): wpa_supplicant-profile_common <br>
+tv profile : wpa_supplicant-profile_common, net-config-profile_tv, connman-extension-tv <br>
+ivi profile : wpa_supplicant-profile_common, connman-extension-ivi <br>
+common profile : wpa_supplicant-profile_common <br>
 %files sub2-domain_API-Network-WiFi_Manager
-### TODO - WiFi_Direct ##
-# Summary, description
 
 %package sub2-domain_API-Network-WiFi_Direct
 Summary:    WiFi_Direct
-%description sub2-domain_API-Network-WiFi_Direct
-### TODO ###
-# packakge list
+Requires:	capi-network-wifi-direct
+Requires:	wifi-direct-manager
+Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 
+#Profiles
+Suggests:	wifi-direct-manager-profile_common
+Suggests:	wifi-direct-manager-profile_mobile
+Suggests:	wifi-direct-manager-profile_tv
+Suggests:	wifi-direct-manager-profile_wearable
+Suggests:	wifi-direct-manager-extension-TM1
+
+#Plugins
+Suggests:	wifi-direct-plugin-wpasupplicant-extension-TM1
+Suggests:	wifi-direct-plugin-wpasupplicant-profile_common
+Suggests:	wifi-direct-plugin-wpasupplicant-profile_mobile
+Suggests:	wifi-direct-plugin-wpasupplicant-profile_tv
+Suggests:	wifi-direct-plugin-wpasupplicant-profile_wearable
+
+%description sub2-domain_API-Network-WiFi_Direct
+Tizen block (set of packages) for API sets of domain API-Network-WiFiDirect <br>
+TM1 target : wifi-direct-manager-extension-TM1, wifi-direct-manager-profile_mobile, wifi-direct-plugin-wpasupplicant-extension-TM1, wifi-direct-plugin-wpasupplicant-profile_mobile <br>
+TM2 target : wifi-direct-manager-profile_mobile, wifi-direct-plugin-wpasupplicant-profile_mobile <br>
+TW1 target : wifi-direct-manager-profile_wearable, wifi-direct-plugin-wpasupplicant-profile_wearable <br>
+TW2 target : wifi-direct-manager-profile_wearable, wifi-direct-plugin-wpasupplicant-profile_wearable <br>
+tv profile : wifi-direct-manager-profile_tv, wifi-direct-plugin-wpasupplicant-profile_tv <br>
+ivi profile : wifi-direct-manager-profile_common, wifi-direct-plugin-wpasupplicant-profile_common <br>
+common profile : Not supported <br>
 %files sub2-domain_API-Network-WiFi_Direct
 
 ##############
