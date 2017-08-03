@@ -40,16 +40,14 @@ Suggests: %{name}-sub2-domain_API-Account-libOAuth
 Tizen block (set of packages) for Group of domain API-Account
 %files sub1-domain_API-Account
 
-### TODO - Account Manager ###
-# Summary, description
 
 %package sub2-domain_API-Account-Account_Manager
 Summary:	Account Manager
+Requires:	libaccount-service
+Requires:	account-manager
+Requires:	account-parser
 %description sub2-domain_API-Account-Account_Manager
-
-### TODO ###
-# packakge list
-
+This block supports managing account related information. Once you check the Account Manager before Image Creation, it will be included the image.
 %files sub2-domain_API-Account-Account_Manager
 
 ### TODO - FIDO Client###
@@ -76,16 +74,15 @@ Summary:	OAuth2.0
 
 %files sub2-domain_API-Account-OAuth2
 
-### TODO - Sync Manager ###
-# Summary, description
-
 %package sub2-domain_API-Account-Sync_Manager
 Summary:	Sync Manager
+Requires:	libcore-sync-client
+Requires:	%{name}-sub2-domain_API-Account-Account_Manager
+Requires:	%{name}-sub2-domain_API-Social-Contacts
+Suggests:	%{name}-sub1-domain_API-Telephony
+Suggests:	%{name}-sub2-domain_API-Network-WiFi
 %description sub2-domain_API-Account-Sync_Manager
-
-### TODO ###
-# packakge list
-
+This block supports managing data synchronization. Also, to use this feature, either Data Network or Wi-Fi connection is required. Once you check the Sync Manager before Image Creation, it will be included the image.
 %files sub2-domain_API-Account-Sync_Manager
 
 ### TODO - libOAuth ###
@@ -610,16 +607,13 @@ Summary:    Messages
 
 %files sub2-domain_API-Messaging-Messages
 
-### TODO - Push ###
-# Summary, description
-
 %package sub2-domain_API-Messaging-Push
-Summary:    Push
+Summary:	Push Client
+Requires:	libpush
+Suggests:	%{name}-sub1-domain_API-Telephony
+Suggests:	%{name}-sub2-domain_API-Network-WiFi
 %description sub2-domain_API-Messaging-Push
-
-### TODO ###
-# packakge list
-
+This block supports transferation push messages between devices and server. Also, to use this feature, either Data Network or Wi-Fi connection is required. Once you check the Push Client before Image Creation, it will be included the image. For this, either Data Network or Wi-Fi connection is required.
 %files sub2-domain_API-Messaging-Push
 
 ################
