@@ -412,16 +412,15 @@ Summary:    MIME-Type
 
 %files sub2-domain_API-Content-MIME_Type
 
-### TODO - Media-Content ###
-# Summary, description
-
 %package sub2-domain_API-Content-Media_Content
 Summary:    Media-Content
+Requires: capi-content-media-content
+Requires: media-server
+Requires: dcm-service
+Requires: media-thumbnail-server
+Requires: %{name}-sub2-domain_API-Multimedia-Media_Vision_Face
 %description sub2-domain_API-Content-Media_Content
-
-### TODO ###
-# packakge list
-
+Enabling Media Content and it is possible to use Media Content API
 %files sub2-domain_API-Content-Media_Content
 
 #############
@@ -663,15 +662,11 @@ Summary:    Camera
 
 %files sub2-domain_API-Multimedia-Camera
 
-### TODO - Image_Util ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Image_Util
 Summary:    Image_Util
+Requires: capi-media-image-util
 %description sub2-domain_API-Multimedia-Image_Util
-### TODO ###
-# packakge list
-
+Enabling Image Util and it is possible to use Image Util API
 %files sub2-domain_API-Multimedia-Image_Util
 
 ### TODO - Media_Codec ##
@@ -685,15 +680,12 @@ Summary:    Media_Codec
 
 %files sub2-domain_API-Multimedia-Media_Codec
 
-### TODO - Media_Controller ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Media_Controller
 Summary:    Media_Controller
+Requires: capi-media-controller
+Requires: mediacontroller
 %description sub2-domain_API-Multimedia-Media_Controller
-### TODO ###
-# packakge list
-
+Enabling Media Controller and it is possible to use Media Controller API
 %files sub2-domain_API-Multimedia-Media_Controller
 
 ### TODO - Media_Demuxer ##
@@ -784,26 +776,18 @@ Summary:    Media_Vision_Surveillance
 
 %files sub2-domain_API-Multimedia-Media_Vision_Surveillance
 
-### TODO - Metadata_Editor ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Metadata_Editor
 Summary:    Metadata_Editor
+Requires: capi-media-metadata-editor
 %description sub2-domain_API-Multimedia-Metadata_Editor
-### TODO ###
-# packakge list
-
+Enabling Metadata Editor and it is possible to use Metadata Editor API
 %files sub2-domain_API-Multimedia-Metadata_Editor
-
-### TODO - Metadata_Extractor ##
-# Summary, description
 
 %package sub2-domain_API-Multimedia-Metadata_Extractor
 Summary:    Metadata_Extractor
+Requires: capi-media-metadata-extractor
 %description sub2-domain_API-Multimedia-Metadata_Extractor
-### TODO ###
-# packakge list
-
+Enabling Metadata Extractor and it is possible to use Metadata Extractor API
 %files sub2-domain_API-Multimedia-Metadata_Extractor
 
 ### TODO - OpenAL ##
@@ -872,15 +856,13 @@ Summary:    Sound_Manager
 
 %files sub2-domain_API-Multimedia-Sound_Manager
 
-### TODO - Thumbnail_Util ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Thumbnail_Util
 Summary:    Thumbnail_Util
+Requires: capi-media-thumbnail-util
+Requires: media-server
+Requires: media-thumbnail-server
 %description sub2-domain_API-Multimedia-Thumbnail_Util
-### TODO ###
-# packakge list
-
+Enabling Thumbnail Util and it is possible to use Thumbnail Util API
 %files sub2-domain_API-Multimedia-Thumbnail_Util
 
 ### TODO - Tone_Player ##
