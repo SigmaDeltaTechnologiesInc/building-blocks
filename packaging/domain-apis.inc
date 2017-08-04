@@ -1593,8 +1593,8 @@ Summary:    Feedback
 Summary:    Runtime information with Resourced
 Requires:   capi-system-runtime-info
 Requires:   resourced
-Conflicts:  sub2-domain_API-System-Runtime_information_Light
-Conflicts:  sub2-domain_API-System-Runtime_information_Headless
+Conflicts:  %{name}-sub2-domain_API-System-Runtime_information_Light
+Conflicts:  %{name}-sub2-domain_API-System-Runtime_information_Headless
 %description sub2-domain_API-System-Runtime_information
 capi-system-runtime-info provides the current system state.<br>
 To get the process information, it needs resourced.<br>
@@ -1605,8 +1605,8 @@ This building block uses full-featured resourced.
 Summary:    Runtime information with Resourced-light
 Requires:   capi-system-runtime-info
 Requires:   resourced-light
-Conflicts:  sub2-domain_API-System-Runtime_information
-Conflicts:  sub2-domain_API-System-Runtime_information_Headless
+Conflicts:  %{name}-sub2-domain_API-System-Runtime_information
+Conflicts:  %{name}-sub2-domain_API-System-Runtime_information_Headless
 %description sub2-domain_API-System-Runtime_information_Light
 capi-system-runtime-info provides the current system state.<br>
 To get the process information, it needs resourced.<br>
@@ -1619,8 +1619,8 @@ Requires:   capi-system-runtime-info
 Requires:   resourced-headless
 Requires:   resourced-headless-common
 Requires:   resourced-headless-proc-usage
-Conflicts:  sub2-domain_API-System-Runtime_information
-Conflicts:  sub2-domain_API-System-Runtime_information_Light
+Conflicts:  %{name}-sub2-domain_API-System-Runtime_information
+Conflicts:  %{name}-sub2-domain_API-System-Runtime_information_Light
 %description sub2-domain_API-System-Runtime_information_Headless
 capi-system-runtime-info provides the current system state.<br>
 To get the process information, it needs resourced.<br>
