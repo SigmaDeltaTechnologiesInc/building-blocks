@@ -2014,15 +2014,37 @@ Suggests: %{name}-sub2-domain_API-UIX-Voice_control_elementary
 Tizen block (set of packages) for Group of domain API-UIX
 %files sub1-domain_API-UIX
 
-### TODO - Input_Method ##
-# Summary, description
-
 %package sub2-domain_API-UIX-Input_Method
 Summary:    Input_Method
-%description sub2-domain_API-UIX-Input_Method
-### TODO ###
-# packakge list
+Requires: %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
+Requires: isf
+Requires: ise-default
+Requires: capi-ui-inputmethod
+Requires: capi-ui-inputmethod-manager
+Requires: org.tizen.inputmethod-setting
 
+Suggests: isf-config-common
+Suggests: isf-config-ivi
+Suggests: isf-config-mobile
+Suggests: isf-config-tv
+Suggests: isf-config-wearable
+
+Suggests: org.tizen.inputmethod-setting-profile_common
+Suggests: org.tizen.inputmethod-setting-profile_mobile
+Suggests: org.tizen.inputmethod-setting-profile_wearable
+Suggests: org.tizen.inputmethod-setting-profile_wearable-extension-circle
+
+%description sub2-domain_API-UIX-Input_Method
+This block supports Input Method API for starting IME application lifecycle, methods to interact with current UI state of IME, and getting attributes/events.
+And a user can manage the installed IMEs in the system.<br>
+You should add additional packages by referring to the below information.<br>
+
+common profile: isf-config-common, org.tizen.inputmethod-setting-profile_common<br>
+ivi profile: isf-config-ivi<br>
+mobile profile: isf-config-mobile, org.tizen.inputmethod-setting-profile_mobile<br>
+tv profile: isf-config-tv<br>
+wearable profile: isf-config-wearable, org.tizen.inputmethod-setting-profile_wearable<br>
+wearable_circle: isf-config-wearable, org.tizen.inputmethod-setting-profile_wearable-extension-circle<br>
 %files sub2-domain_API-UIX-Input_Method
 
 
