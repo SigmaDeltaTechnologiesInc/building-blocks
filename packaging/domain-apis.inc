@@ -2242,7 +2242,7 @@ Tizen block (set of packages) for Group of domain API-Web
 %package sub2-domain_API-Web-json_Glib
 Summary:    json_Glib
 
-Requires: libjson-lib
+Requires: libjson-glib
 
 %description sub2-domain_API-Web-json_Glib
 Library for JavaScript Object Notation format
