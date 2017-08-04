@@ -1904,50 +1904,59 @@ Summary:    Input_Method
 
 %files sub2-domain_API-UIX-Input_Method
 
-### TODO - STT ##
-# Summary, description
 
 %package sub2-domain_API-UIX-STT
 Summary:    STT
+
+Requires: stt
+Requires: org.tizen.stt-engine-default
+Requires: gawk
+Requires: %{name}-sub2-domain_API-Multimedia-Audio_IO
+Requires: %{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
+
 %description sub2-domain_API-UIX-STT
-### TODO ###
-# packakge list
+STT(Speech-To-Text) provides functions to recognize the speech.
 
 %files sub2-domain_API-UIX-STT
 
 
-### TODO - TTS ##
-# Summary, description
-
 %package sub2-domain_API-UIX-TTS
 Summary:    TTS
+
+Requires: tts
+Requires: org.tizen.tts-engine-default
+Requires: tts-engine-rsc
+Requires: gawk
+Requires: %{name}-sub2-domain_API-Multimedia-Audio_IO
+Requires: %{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
+
 %description sub2-domain_API-UIX-TTS
-### TODO ###
-# packakge list
+TTS(Text-To-Speech) provides functions to synthesize voice from text and play synthesized sound data.
 
 %files sub2-domain_API-UIX-TTS
 
 
-### TODO - Voice_control ##
-# Summary, description
-
 %package sub2-domain_API-UIX-Voice_control
 Summary:    Voice_control
+
+Requires: voice-control
+Requires: vc-engine-default
+Requires: %{name}-sub2-domain_API-UIX-STT
+
 %description sub2-domain_API-UIX-Voice_control
-### TODO ###
-# packakge list
+Voice control provides functions to register commands and get notification when registered command is recognized.
 
 %files sub2-domain_API-UIX-Voice_control
 
 
-### TODO - Voice_control_elementary ##
-# Summary, description
-
 %package sub2-domain_API-UIX-Voice_control_elementary
 Summary:    Voice_control_elementary
+
+Requires: voice-control-elm
+Requires: %{name}-sub2-domain_API-UIX-Voice_control
+
 %description sub2-domain_API-UIX-Voice_control_elementary
-### TODO ###
-# packakge list
+Voice control elementary provides functions to control widget by voice commands.
 
 %files sub2-domain_API-UIX-Voice_control_elementary
 
