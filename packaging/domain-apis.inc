@@ -1498,7 +1498,7 @@ Suggests: %{name}-sub2-domain_API-System-Device_Led
 Suggests: %{name}-sub2-domain_API-System-Device_Power
 Suggests: %{name}-sub2-domain_API-System-Feedback
 Suggests: %{name}-sub2-domain_API-System-Runtime_information
-Suggests: %{name}-sub2-domain_API-System-Sensor_Listener_Utility
+Suggests: %{name}-sub2-domain_API-System-Sensor_Listener
 Suggests: %{name}-sub2-domain_API-System-Sensor_Recorder
 Suggests: %{name}-sub2-domain_API-System-Storage
 Suggests: %{name}-sub2-domain_API-System-System_Information
@@ -1598,25 +1598,31 @@ Summary:    Runtime_information
 
 %files sub2-domain_API-System-Runtime_information
 
-### TODO - Sensor_Listener_Utility ##
-# Summary, description
+%package sub2-domain_API-System-Sensor_Listener
+Summary:    Sensor_Listener
+Requires:   capi-system-sensor
+Requires:   sensord
+Suggests:   sensor-hal-tm1
+Suggests:   sensor-hal-tm2
+Suggests:   sensor-hal-tw1
+Suggests:   sensor-hal-tw2
 
-%package sub2-domain_API-System-Sensor_Listener_Utility
-Summary:    Sensor_Listener_Utility
-%description sub2-domain_API-System-Sensor_Listener_Utility
-### TODO ###
-# packakge list
+%description sub2-domain_API-System-Sensor_Listener
+This block supports sensor listener API to detect sensors and monitor sensor events.<br>
+You should choose HAL packages depends on target and hardware.
+For example, if you want make a binary for TM1, you can choose the sensor-hal-tm1 package.<br>
 
-%files sub2-domain_API-System-Sensor_Listener_Utility
-
-### TODO - Sensor_Recorder ##
-# Summary, description
+%files sub2-domain_API-System-Sensor_Listener
 
 %package sub2-domain_API-System-Sensor_Recorder
 Summary:    Sensor_Recorder
+Requires:   context-sensor-recorder
+Requires:   %{name}-sub2-domain_API-System-Sensor_Listener
+
 %description sub2-domain_API-System-Sensor_Recorder
-### TODO ###
-# packakge list
+This block supports sensor recorder API to record sensor data.<br>
+You should choose HAL packages depends on target and hardware. HAL packages are listed in the Sensor_Listener block.
+For example, if you want make a binary for TM1, you can choose the sensor-hal-tm1 package.<br>
 
 %files sub2-domain_API-System-Sensor_Recorder
 
