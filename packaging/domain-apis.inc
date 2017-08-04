@@ -966,56 +966,172 @@ Tizen block (set of packages) for Group of domain API-Network
 %files sub1-domain_API-Network
 
 
-### TODO - Bluetooth_BREDR ##
-# Summary, description
 
 %package sub2-domain_API-Network-Bluetooth_BREDR
 Summary:    Bluetooth_BREDR
-%description sub2-domain_API-Network-Bluetooth_BREDR
-### TODO ###
-# packakge list
 
+Requires: capi-network-bluetooth
+Requires: bluetooth-frwk-service
+Requires: bluetooth-frwk-core
+Requires: libbluetooth
+Requires: bluez
+Requires: bluetooth-tools
+
+#BREDR only
+Suggests: bluez-extension-bredr
+
+#Firmware
+Suggests: bluetooth-firmware-bcm
+Suggests: bluetooth-firmware-bcm-artik
+Suggests: bluetooth-firmware-bcm-exynos3250
+Suggests: bluetooth-firmware-bcm-exynos7270
+Suggests: bluetooth-firmware-sprd-TM1
+
+#Profiles
+Suggests: bluetooth-frwk-profile_common
+Suggests: bluetooth-frwk-profile_mobile
+Suggests: bluetooth-frwk-profile_wearable
+Suggests: bluetooth-frwk-profile_tv
+Suggests: bluetooth-frwk-profile_ivi
+Suggests: bluetooth-tools-no-firmware
+Suggests: bluetooth-tools-profile_common
+Suggests: bluetooth-tools-profile_ivi
+Suggests: bluetooth-tools-profile_mobile
+Suggests: bluetooth-tools-profile_wearable
+Suggests: bluez-profile_common
+Suggests: bluez-profile_tv
+Suggests: bluez-profile_wearable
+
+#Headed/Headless
+Suggests: bluetooth-frwk-plugin-headed
+Suggests: org.tizen.bt-syspopup
+Suggests: org.tizen.bt-syspopup-profile_wearable
+Suggests: org.tizen.bt-syspopup-profile_common
+
+%description sub2-domain_API-Network-Bluetooth_BREDR
+Enabling Bluetooth BREDR and it is possible to Bluetooth BREDR API<br>
+[Select Packages]<br>
+1. Firmware<br>
+- TM1 : bluetooth-firmware-sprd-TM1<br>
+- TM2 : bluetooth-firmware-bcm<br>
+- TW1 : bluetooth-firmware-bcm-exynos3250<br>
+- TW2 : bluetooth-firmware-bcm-exynos7270<br>
+- Artik : bluetooth-firmware-bcm-artik<br>
+2. BREDR only<br>
+- bluez-extension-bredr<br>
+3. Profiles<br>
+- mobile : bluetooth-frwk-profile_mobile, bluetooth-tools-profile_mobile, bluez-profile_common<br>
+- wearable : bluetooth-frwk-profile_wearable, bluetooth-tools-profile_wearable, bluez-profile_wearable<br>
+- common : bluetooth-frwk-profile_common, bluetooth-tools-profile_common, bluez-profile_common<br>
+- tv : bluetooth-frwk-profile_tv, bluetooth-tools-profile_common, bluez-profile_tv<br>
+- ivi : bluetooth-frwk-profile_ivi, bluetooth-tools-profile_ivi, bluez-profile_common<br>
+4. Headed device<br>
+- wearable : bluetooth-frwk-plugin-headed, org.tizen.bt-syspopup, org.tizen.bt-syspopup-profile_wearable<br>
+- not wearable : bluetooth-frwk-plugin-headed, org.tizen.bt-syspopup, org.tizen.bt-syspopup-profile_common
 %files sub2-domain_API-Network-Bluetooth_BREDR
 
-### TODO - Bluetooth_Call_Audio ##
-# Summary, description
 
 %package sub2-domain_API-Network-Bluetooth_Call_Audio
 Summary:    Bluetooth_Call_Audio
-%description sub2-domain_API-Network-Bluetooth_Call_Audio
-### TODO ###
-# packakge list
 
+Requires: %{name}-sub2-domain_API-Network-Bluetooth_BREDR
+Requires: bluetooth-agent
+
+#Profiles
+Suggests: bluetooth-agent-profile_common
+Suggests: bluetooth-agent-profile_ivi
+Suggests: bluetooth-agent-profile_wearable
+
+%description sub2-domain_API-Network-Bluetooth_Call_Audio
+Enabling Bluetooth Call Audio functionality<br>
+[Select Packages]<br>
+1. Profiles<br>
+- mobile : bluetooth-agent-profile_common<br>
+- ivi : bluetooth-agent-profile_ivi<br>
+- wearable : bluetooth-agent-profile_wearable
 %files sub2-domain_API-Network-Bluetooth_Call_Audio
-### TODO - Bluetooth_Media_Audio ##
-# Summary, description
 
 %package sub2-domain_API-Network-Bluetooth_Media_Audio
 Summary:    Bluetooth_Media_Audio
+
+Requires: %{name}-sub2-domain_API-Network-Bluetooth_BREDR
+Requires: sbc
+Requires: pulseaudio-module-bluetooth
+
 %description sub2-domain_API-Network-Bluetooth_Media_Audio
-### TODO ###
-# packakge list
+Enabling Bluetooth Media Audio functionality
 
 %files sub2-domain_API-Network-Bluetooth_Media_Audio
-### TODO - Bluetooth_Transfer ##
-# Summary, description
 
 %package sub2-domain_API-Network-Bluetooth_Transfer
 Summary:    Bluetooth_Transfer
+
+Requires: %{name}-sub2-domain_API-Network-Bluetooth_BREDR
+Requires: obexd
+
 %description sub2-domain_API-Network-Bluetooth_Transfer
-### TODO ###
-# packakge list
+Enabling Bluetooth Transfer functionality(OPP, PBAP)
 
 %files sub2-domain_API-Network-Bluetooth_Transfer
-### TODO - Bluetooth_LE ##
-# Summary, description
 
 %package sub2-domain_API-Network-Bluetooth_LE
 Summary:    Bluetooth_LE
-%description sub2-domain_API-Network-Bluetooth_LE
-### TODO ###
-# packakge list
 
+Requires: capi-network-bluetooth
+Requires: bluetooth-frwk-service
+Requires: bluetooth-frwk-core
+Requires: libbluetooth
+Requires: bluez
+Requires: bluetooth-tools
+Requires: bluez-extension-le
+
+#Firmware
+Suggests: bluetooth-firmware-bcm
+Suggests: bluetooth-firmware-bcm-artik
+Suggests: bluetooth-firmware-bcm-exynos3250
+Suggests: bluetooth-firmware-bcm-exynos7270
+Suggests: bluetooth-firmware-sprd-TM1
+
+#Profiles
+Suggests: bluetooth-frwk-profile_common
+Suggests: bluetooth-frwk-profile_mobile
+Suggests: bluetooth-frwk-profile_wearable
+Suggests: bluetooth-frwk-profile_tv
+Suggests: bluetooth-frwk-profile_ivi
+Suggests: bluetooth-tools-no-firmware
+Suggests: bluetooth-tools-profile_common
+Suggests: bluetooth-tools-profile_ivi
+Suggests: bluetooth-tools-profile_mobile
+Suggests: bluetooth-tools-profile_wearable
+Suggests: bluez-profile_common
+Suggests: bluez-profile_tv
+Suggests: bluez-profile_wearable
+
+
+#Headed/Headless
+Suggests: bluetooth-frwk-plugin-headed
+Suggests: org.tizen.bt-syspopup
+Suggests: org.tizen.bt-syspopup-profile_wearable
+Suggests: org.tizen.bt-syspopup-profile_common
+
+%description sub2-domain_API-Network-Bluetooth_LE
+Enabling Bluetooth LE Only functionality<br>
+[Select Packages]<br>
+1. Firmware<br>
+- TM1 : bluetooth-firmware-sprd-TM1<br>
+- TM2 : bluetooth-firmware-bcm<br>
+- TW1 : bluetooth-firmware-bcm-exynos3250<br>
+- TW2 : bluetooth-firmware-bcm-exynos7270<br>
+- Artik : bluetooth-firmware-bcm-artik<br>
+2. Profiles<br>
+- mobile : bluetooth-frwk-profile_mobile, bluetooth-tools-profile_mobile, bluez-profile_common<br>
+- wearable : bluetooth-frwk-profile_wearable, bluetooth-tools-profile_wearable, bluez-profile_wearable<br>
+- common : bluetooth-frwk-profile_common, bluetooth-tools-profile_common, bluez-profile_common<br>
+- tv : bluetooth-frwk-profile_tv, bluetooth-tools-profile_common, bluez-profile_tv<br>
+- ivi : bluetooth-frwk-profile_ivi, bluetooth-tools-profile_ivi, bluez-profile_common<br>
+3. Headed device<br>
+- wearable : bluetooth-frwk-plugin-headed, org.tizen.bt-syspopup, org.tizen.bt-syspopup-profile_wearable<br>
+- not wearable : bluetooth-frwk-plugin-headed, org.tizen.bt-syspopup, org.tizen.bt-syspopup-profile_common
 %files sub2-domain_API-Network-Bluetooth_LE
 
 %package sub2-domain_API-Network-ASP
