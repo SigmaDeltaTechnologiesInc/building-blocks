@@ -1800,7 +1800,7 @@ Tizen block (set of packages) for Group of sub domain dlog
 ## Telephony ##
 ###############
 %package sub1-domain_API-Telephony
-Summary:	Telephony API
+Summary:	Telephony API Group
 Requires: capi-telephony
 Requires: telephony-daemon
 Requires: libtapi
