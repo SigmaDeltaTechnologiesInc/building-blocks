@@ -89,15 +89,14 @@ Suggests:	%{name}-sub2-domain_API-Network-WiFi
 This block supports managing data synchronization. Also, to use this feature, either Data Network or Wi-Fi connection is required. Once you check the Sync Manager before Image Creation, it will be included the image.
 %files sub2-domain_API-Account-Sync_Manager
 
-### TODO - libOAuth ###
-# Summary, description
-
 %package sub2-domain_API-Account-libOAuth
 Summary:	libOAuth
+
+Requires: liboauth
 %description sub2-domain_API-Account-libOAuth
 
-### TODO ###
-# packakge list
+Functions implementing the OAuth Core RFC 5849 protocol.
+
 
 %files sub2-domain_API-Account-libOAuth
 
