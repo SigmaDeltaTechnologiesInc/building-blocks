@@ -1856,14 +1856,13 @@ Summary:    Cairo
 
 %files sub2-domain_API-UI-Cairo
 
-### TODO - Clipboard_History_Manager ##
-# Summary, description
-
 %package sub2-domain_API-UI-Clipboard_History_Manager
-Summary:    Clipboard_History_Manager
+Summary:    Clipboard History Manager
+Requires:   cbhm
+Requires:   %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
+
 %description sub2-domain_API-UI-Clipboard_History_Manager
-### TODO ###
-# packakge list
+Tizen Clipboard History Manager Service
 
 %files sub2-domain_API-UI-Clipboard_History_Manager
 
@@ -1880,50 +1879,89 @@ Summary:    DALi
 %files sub2-domain_API-UI-DALi
 
 
-### TODO - EFL_MainLoop ##
-# Summary, description
-
 %package sub2-domain_API-UI-EFL_MainLoop
 Summary:    EFL_MainLoop
+Requires:   ecore-core
+
 %description sub2-domain_API-UI-EFL_MainLoop
-### TODO ###
-# packakge list
+This is the core main-loop, system events and execution layer. This
+handles running the main loop, integrating with external data and
+timing sources (the system clock, file descriptors, system signals),
+and producing an event queue, walking that queue and dispatching
+events to appropriate callbacks.
 
 %files sub2-domain_API-UI-EFL_MainLoop
 
 
-### TODO - EFL_NativeUIToolkit ##
-# Summary, description
-
 %package sub2-domain_API-UI-EFL_NativeUIToolkit
 Summary:    EFL_NativeUIToolkit
+Requires:   ecore-buffer
+Requires:   ecore-drm
+Requires:   elementary
+Requires:   %{name}-sub2-domain_API-UI-Display_Server
+#config
+Suggests:   efl-config-profile_common
+Suggests:   efl-config-profile_mobile
+Suggests:   efl-config-profile_wearable
+Suggests:   efl-config-profile_tv
+Suggests:   efl-config-profile_ivi
+#misc
+Suggests:   efl-misc-profile_common
+Suggests:   efl-misc-profile_mobile
+Suggests:   efl-misc-profile_wearable
+Suggests:   efl-misc-profile_tv
+Suggests:   efl-misc-profile_ivi
+#modules
+Suggests:   efl-modules-profile_common
+Suggests:   efl-modules-profile_mobile
+Suggests:   efl-modules-profile_wearable
+Suggests:   efl-modules-profile_tv
+Suggests:   efl-modules-profile_ivi
+#themes
+Suggests:   efl-theme-tizen-common
+Suggests:   efl-theme-tizen-mobile
+Suggests:   efl-theme-tizen-wearable
+Suggests:   efl-theme-tizen-tv
+Suggests:   efl-theme-tizen-ivi
+#functions
+Suggests:   elementary-tizen
+Suggests:   download-fonts-service
+
 %description sub2-domain_API-UI-EFL_NativeUIToolkit
-### TODO ###
-# packakge list
+NativeUIToolkit block contains widget set(elementary).
+you can consider the following options for this block.
+1. choose misc, config, modules, theme depending on your profile.
+   (common, mobile, wearable, tv, ivi)
+2. elementary-tizen is an alternative package for Tizen devices
+   that uses different set of source code.
+3. download-fonts-service supports third party font apps.
 
 %files sub2-domain_API-UI-EFL_NativeUIToolkit
 
 
-### TODO - EFL_ELM_Accessbility ##
-# Summary, description
-
 %package sub2-domain_API-UI-EFL_ELM_Accessbility
 Summary:    EFL_ELM_Accessbility
+Requires:   libatk-bridge-2_0-0
+Requires:   at-spi2-core
+Requires:   libatspi0
+Requires:   typelib-1_0-Atspi-2_0
+Requires:   org.tizen.screen-reader
+Requires:   e-mod-tizen-screen-reader
+Requires:   %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
+Suggests:   org.tizen.accessibility-setting
 %description sub2-domain_API-UI-EFL_ELM_Accessbility
-### TODO ###
-# packakge list
+EFL_ELM_Accessbility
 
 %files sub2-domain_API-UI-EFL_ELM_Accessbility
 
 
-### TODO - EFF_Extension ##
-# Summary, description
-
 %package sub2-domain_API-UI-EFL_Extension
 Summary:    EFL_Extension
+Requires:   efl-extension
+Requires:   %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
+
 %description sub2-domain_API-UI-EFL_Extension
-### TODO ###
-# packakge list
+EFL extension library
 
 %files sub2-domain_API-UI-EFL_Extension
 
@@ -1940,38 +1978,41 @@ Summary:    External_Output_Manager
 %files sub2-domain_API-UI-External_Output_Manager
 
 
-### TODO - FontConfig ##
-# Summary, description
-
 %package sub2-domain_API-UI-FontConfig
 Summary:    FontConfig
+Requires:   fontconfig
+Requires:   default-fonts-fc-sdk
+Requires:   default-fonts-sdk
+
 %description sub2-domain_API-UI-FontConfig
-### TODO ###
-# packakge list
+Fontconfig is designed to locate fonts within the
+system and select them according to requirements specified by
+applications.
 
 %files sub2-domain_API-UI-FontConfig
 
 
-### TODO - Freetype ##
-# Summary, description
-
 %package sub2-domain_API-UI-Freetype
 Summary:    Freetype
+Requires:   libfreetype
+
 %description sub2-domain_API-UI-Freetype
-### TODO ###
-# packakge list
+The FreeType engine is a free and portable font rendering
+engine, developed to provide advanced font support for a variety of
+platforms and environments. FreeType is a library which can open and
+manages font files as well as efficiently load, hint and render
+individual glyphs. FreeType is not a font server or a complete
+text-rendering library.
 
 %files sub2-domain_API-UI-Freetype
 
 
-### TODO - HarfBuzz ##
-# Summary, description
-
 %package sub2-domain_API-UI-HarfBuzz
 Summary:    HarfBuzz
+Requires:   libharfbuzz
+
 %description sub2-domain_API-UI-HarfBuzz
-### TODO ###
-# packakge list
+HarfBuzz is an OpenType text shaping engine.
 
 %files sub2-domain_API-UI-HarfBuzz
 
@@ -2037,14 +2078,13 @@ Summary:    Tizen_WS_Shell
 %files sub2-domain_API-UI-Tizen_WS_Shell
 
 
-### TODO - UI_View_Manager ##
-# Summary, description
-
 %package sub2-domain_API-UI-UI_View_Manager
-Summary:    UI_View_Manager
+Summary:    ViewManager
+Requires:   ui-viewmgr
+Requires:   %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
+
 %description sub2-domain_API-UI-UI_View_Manager
-### TODO ###
-# packakge list
+View manager library
 
 %files sub2-domain_API-UI-UI_View_Manager
 
