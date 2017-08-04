@@ -92,15 +92,14 @@ Summary:	Sync Manager
 
 %files sub2-domain_API-Account-Sync_Manager
 
-### TODO - libOAuth ###
-# Summary, description
-
 %package sub2-domain_API-Account-libOAuth
 Summary:	libOAuth
+
+Requires: liboauth
 %description sub2-domain_API-Account-libOAuth
 
-### TODO ###
-# packakge list
+Functions implementing the OAuth Core RFC 5849 protocol.
+
 
 %files sub2-domain_API-Account-libOAuth
 
