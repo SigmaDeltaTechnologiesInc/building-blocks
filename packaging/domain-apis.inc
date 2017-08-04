@@ -420,46 +420,34 @@ Enabling Media Content and it is possible to use Media Content API
 Summary:	Context API Group
 Suggests: %{name}-sub2-domain_API-Context-Activity_Geusture_Recognition
 Suggests: %{name}-sub2-domain_API-Context-Contextual_History
-Suggests: %{name}-sub2-domain_API-Context-Contextual_Tirgger
+Suggests: %{name}-sub2-domain_API-Context-Contextual_Trigger
 %description sub1-domain_API-Context
 Tizen block (set of packages) for Group of domain API-Context
 %files sub1-domain_API-Context
 
-### TODO - Activity-Geusture-Recognition ###
-# Summary, description
-
 %package sub2-domain_API-Context-Activity_Geusture_Recognition
-Summary:    Activiti-Geusture-Recognition
+Summary:    Activity/Geusture Recognition
+Requires: capi-context-motion
+Requires: %{name}-sub2-domain_API-System-Sensor_Listener
 %description sub2-domain_API-Context-Activity_Geusture_Recognition
-
-### TODO ###
-# packakge list
-
+Activity/Gesture Recognition provides functions to recognize user activities and gestures.
 %files sub2-domain_API-Context-Activity_Geusture_Recognition
 
-### TODO - Contextual-History ###
-# Summary, description
-
 %package sub2-domain_API-Context-Contextual_History
-Summary:    Contextual-History
+Summary:    Contextual History
+Requires: capi-context
+Requires: context-app-history
 %description sub2-domain_API-Context-Contextual_History
-
-### TODO ###
-# packakge list
-
+Contextual History provides functions to retrieve user's device usage statistics and patterns.
 %files sub2-domain_API-Context-Contextual_History
 
-### TODO - Contextual-Tirgger ###
-# Summary, description
-
-%package sub2-domain_API-Context-Contextual_Tirgger
-Summary:    Contextual-Tirgger
-%description sub2-domain_API-Context-Contextual_Tirgger
-
-### TODO ###
-# packakge list
-
-%files sub2-domain_API-Context-Contextual_Tirgger
+%package sub2-domain_API-Context-Contextual_Trigger
+Summary:    Contextual Trigger
+Requires: capi-context
+Requires: context-job-scheduler
+%description sub2-domain_API-Context-Contextual_Trigger
+Contextual Trigger provides functions to define task triggering rules based on device status and user activities.
+%files sub2-domain_API-Context-Contextual_Trigger
 
 
 
