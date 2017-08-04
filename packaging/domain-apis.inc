@@ -251,15 +251,11 @@ Suggests: %{name}-sub2-domain_API-Base-zlib
 Tizen block (set of packages) for Group of domain API-Base
 %files sub1-domain_API-Base
 
-### TODO - CPP-Standard-library ###
-# Summary, description
-
 %package sub2-domain_API-Base-CPP_Standard_library
-Summary:    C++-Standard-library
+Summary:    C++ Standard library
+Requires: libstdc++
 %description sub2-domain_API-Base-CPP_Standard_library
-
-### TODO ###
-# packakge list
+This Block is possible to user c++ standard library.
 
 %files sub2-domain_API-Base-CPP_Standard_library
 
@@ -335,12 +331,11 @@ Summary:    OpenMP
 
 %files sub2-domain_API-Base-OpenMP
 
-### TODO - Sqlite ###
-# Summary, description
-
 %package sub2-domain_API-Base-Sqlite
 Summary:    Sqlite
+Requires: sqlite
 %description sub2-domain_API-Base-Sqlite
+This block is possible to use sqlite3 and libsqlite.
 
 ### TODO ###
 # packakge list
@@ -1435,14 +1430,11 @@ Summary:    System_Settings
 
 %files sub2-domain_API-System-System_Settings
 
-### TODO - T_Trace ##
-# Summary, description
-
 %package sub2-domain_API-System-T_Trace
 Summary:    T_Trace
+Requires: ttrace
 %description sub2-domain_API-System-T_Trace
-### TODO ###
-# packakge list
+This block is possible to use ttrace.
 
 %files sub2-domain_API-System-T_Trace
 
