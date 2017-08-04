@@ -1071,16 +1071,16 @@ Tizen block (set of packages) for API sets of domain API-Network-HTTP <br>
 To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-HTTP
 
-### TODO - IoTCon ##
-# Summary, description
-
 %package sub2-domain_API-Network-IoTCon
 Summary:    IoTCon
+Requires: iotcon
+Requires: %{name}-sub2-domain_API-Network-WiFi
 %description sub2-domain_API-Network-IoTCon
-### TODO ###
-# packakge list
-
+This block supports Tizen IoT Connectivity Service & Library(Client) based on Iotivity. <br>
+It supports resource management, remote resource management, CRUDN request/response and resource representation. <br>
+To use this feature, Wi-Fi connection is required.
 %files sub2-domain_API-Network-IoTCon
+
 ### TODO - MTP ##
 # Summary, description
 
