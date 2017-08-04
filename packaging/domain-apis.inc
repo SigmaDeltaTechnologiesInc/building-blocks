@@ -660,15 +660,51 @@ Requires: capi-media-image-util
 Enabling Image Util and it is possible to use Image Util API
 %files sub2-domain_API-Multimedia-Image_Util
 
-### TODO - Media_Codec ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Media_Codec
 Summary:    Media_Codec
-%description sub2-domain_API-Multimedia-Media_Codec
-### TODO ###
-# packakge list
+Requires: capi-media-codec
+Requires: gst-libav
+Requires: gst-plugins-bad
+Requires: %{name}-sub2-domain_API-UI-TBM_Surface
 
+Suggests: gst-omx
+Suggests: libomxil-e54xx
+
+#TM1
+Suggests: mmfw-sysconf-target-tm1
+
+#TM2
+Suggests: mmfw-sysconf-target-n4
+
+#TW1
+Suggests: libomxil-e3250-v4l2
+Suggests: mmfw-sysconf-target-tw1
+
+#TW2
+Suggests: libomxil-e7270-v4l2
+Suggests: mmfw-sysconf-target-tw2
+
+#XU3
+Suggests: mmfw-sysconf-target-u3
+
+#RPI3
+Suggests: mmfw-sysconf-target-rpi3
+
+#AT5/10
+Suggests: mmfw-sysconf-target-artik10
+
+
+%description sub2-domain_API-Multimedia-Media_Codec
+Enabling Media Codec and it is possible to user Media Codec API
+About OPTIONAL selection:<br>
+You should choose packages depends on target and hardware.<br>
+Select the config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1).<br>
+TM2(n4) : libomxil-e54xx <br>
+TW1 : libomxil-e3250-v4l2 <br>
+TW2 : libomxil-e7270-v4l2 <br>
+XU3 : libomxil-e54xx <br>
+AT5/10 : libomxil-e54xx <br>
+ARTIK710 : libomxil-e54xx <br>
 %files sub2-domain_API-Multimedia-Media_Codec
 
 %package sub2-domain_API-Multimedia-Media_Controller
@@ -712,15 +748,13 @@ Summary:    Media_Streamer
 
 %files sub2-domain_API-Multimedia-Media_Streamer
 
-### TODO - Media_Tool ##
-# Summary, description
 
 %package sub2-domain_API-Multimedia-Media_Tool
 Summary:    Media_Tool
+Requires: capi-media-tool
+Requires: %{name}-sub2-domain_API-UI-TBM_Surface
 %description sub2-domain_API-Multimedia-Media_Tool
-### TODO ###
-# packakge list
-
+Enabling Media Tool and it is possible to user Media Tool API
 %files sub2-domain_API-Multimedia-Media_Tool
 
 ### TODO - Media_Vision_Barcode ##
