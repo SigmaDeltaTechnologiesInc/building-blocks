@@ -273,69 +273,70 @@ Tizen block (set of packages) for Group of sub domain Common-Error
 
 %files sub2-domain_API-Base-Common_Error
 
-### TODO - Glib ###
 # Summary, description
 
 %package sub2-domain_API-Base-Glib
 Summary:    Glib
+
+Requires: libglib
+Requires: libgio
+Requires: libgmodule
+Requires: libgobject
+Requires: libgthread
+
 %description sub2-domain_API-Base-Glib
 
-### TODO ###
-# packakge list
+General Purpose Utility library
 
 %files sub2-domain_API-Base-Glib
 
-### TODO - Glibc ###
-# Summary, description
 
 %package sub2-domain_API-Base-Glibc
-Summary:    Glib
-%description sub2-domain_API-Base-Glibc
+Summary:    Glibc
 
-### TODO ###
-# packakge list
+Requires:glibc
+
+%description sub2-domain_API-Base-Glibc
+Glibc library
 
 %files sub2-domain_API-Base-Glibc
 
-### TODO - LibXML ###
-# Summary, description
-
 %package sub2-domain_API-Base-LibXML
 Summary:    LibXML
+Requires: libxml2
+
 %description sub2-domain_API-Base-LibXML
 
-### TODO ###
-# packakge list
+A library to manipulate XML files
+
 
 %files sub2-domain_API-Base-LibXML
 
-### TODO - Minizip ###
-# Summary, description
-
 %package sub2-domain_API-Base-Minizip
 Summary:    Minizip
+
+Requires: minizip
+
 %description sub2-domain_API-Base-Minizip
 
-### TODO ###
-# packakge list
+Data Compression Library
+
 
 %files sub2-domain_API-Base-Minizip
 
-### TODO - OpenMP ###
-# Summary, description
-
 %package sub2-domain_API-Base-OpenMP
 Summary:    OpenMP
+Requires: libgomp
 %description sub2-domain_API-Base-OpenMP
 
-### TODO ###
-# packakge list
+an application programming interface (API) that supports multi-platform shared memory multiprocessing
 
 %files sub2-domain_API-Base-OpenMP
 
 %package sub2-domain_API-Base-Sqlite
 Summary:    Sqlite
 Requires: sqlite
+
 %description sub2-domain_API-Base-Sqlite
 This block is possible to use sqlite3 and libsqlite.
 
@@ -348,20 +349,20 @@ This block is possible to use sqlite3 and libsqlite.
 %package sub2-domain_API-Base-Utils
 Summary:    Base-Utils
 Requires: capi-base-utils
+
 %description sub2-domain_API-Base-Utils
 This block supports base-utils API for internationalization and localization
 
 %files sub2-domain_API-Base-Utils
 
-### TODO - zlib ###
-# Summary, description
-
 %package sub2-domain_API-Base-zlib
 Summary:    zlib
+Requires: zlib
+
 %description sub2-domain_API-Base-zlib
 
-### TODO ###
-# packakge list
+Data Compression Library
+
 
 %files sub2-domain_API-Base-zlib
 
@@ -2238,14 +2239,13 @@ Suggests: %{name}-sub2-domain_API-Web-WebView
 Tizen block (set of packages) for Group of domain API-Web
 %files sub1-domain_API-Web
 
-### TODO - json_Glib ##
-# Summary, description
-
 %package sub2-domain_API-Web-json_Glib
 Summary:    json_Glib
+
+Requires: libjson-lib
+
 %description sub2-domain_API-Web-json_Glib
-### TODO ###
-# packakge list
+Library for JavaScript Object Notation format
 
 %files sub2-domain_API-Web-json_Glib
 
