@@ -867,14 +867,49 @@ Summary:    Recorder
 
 %files sub2-domain_API-Multimedia-Recorder
 
-### TODO - Screen_Mirroring ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Screen_Mirroring
-Summary:    Screen_Mirroring
+Summary:Screen_Mirroring
+Requires:capi-media-screen-mirroring
+Requires:libmm-wfd
+Requires:gst-rtsp-server
+Requires:gst-plugins-tizen
+Requires:gst-plugins-base
+Requires:gst-plugins-bad
+Requires:gst-plugins-good
+Requires:gst-plugins-ugly
+Requires:gst-libav
+Requires:gstreamer
+Requires:pulseaudio
+Requires:pulseaudio-module-bluetooth
+Requires:pulseaudio-modules-tizen
+Requires:%{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
+Requires:%{name}-sub2-domain_API-Network-WiFi_Direct
+Requires:%{name}-sub2-domain_API-Network-WiFi_Manager
+Requires:%{name}-sub2-domain_API-UI-TBM_Surface
+
+#TM1
+Suggests:audio-hal-sc7727
+Suggests:audio-config-sc-TM1-sc7730
+
+#TM2
+Suggests:audio-hal-wm5110
+Suggests:alsa-ucm-data-wm5110
+
+#RPI3
+Suggests:audio-hal-bcm2837
+
+#ARTIK710
+Suggests:audio-hal-alc5658
+Suggests:alsa-ucm-data-alc5658
+
+#multimedia-config
+Suggests:mmfw-sysconf-target-artik10
+Suggests:mmfw-sysconf-target-n4
+Suggests:mmfw-sysconf-target-rpi3
+Suggests:mmfw-sysconf-target-tm1
+
 %description sub2-domain_API-Multimedia-Screen_Mirroring
-### TODO ###
-# packakge list
+Screen Mirroiring provides the ability to connect to and disconnect from a screen mirroring source, start, pause, and resume the screen mirroring as a 'SINK' (source: Stream sender, sink:Stream receiver). It follows 'Miracast standard'. OPTIONAL : You should choose packages depends on target and hardware. First, Check config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}(e.g mmfw-sysconf-target-tm1). Second, check audio HAL depends on target. TM1:audio-hal-sc7727,audio-config-sc-TM1-sc7730. TM2(n4):audio-hal-wm5110,alsa-ucm-data-wm5110. RPI3:audio-hal-bcm2837, ARTIK710:audio-hal-alc5658,alsa-ucm-data-alc5658.
 
 %files sub2-domain_API-Multimedia-Screen_Mirroring
 
