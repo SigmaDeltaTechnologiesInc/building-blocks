@@ -2099,15 +2099,15 @@ Summary:    json_Glib
 
 %files sub2-domain_API-Web-json_Glib
 
-### TODO - WebView ##
-# Summary, description
 
 %package sub2-domain_API-Web-WebView
 Summary:    WebView
+
+Requires: chromium-efl
+Requires: %{name}-sub2-domain_API-UI-Display_Server
+Requires: %{name}-sub2-domain_API-UI-FontConfig
+
 %description sub2-domain_API-Web-WebView
-### TODO ###
-# packakge list
+The WebView API provides functions to display web pages and control web pages.
 
 %files sub2-domain_API-Web-WebView
-
-
