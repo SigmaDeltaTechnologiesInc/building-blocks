@@ -1610,7 +1610,7 @@ Suggests:   sensor-hal-tw2
 %description sub2-domain_API-System-Sensor_Listener
 This block supports sensor listener API to detect sensors and monitor sensor events.<br>
 You should choose HAL packages depends on target and hardware.
-For example, if you want make a binary for TM1, you can choose the sensor-hal-tm1 package.<br>
+For example, if you want to make a binary for TM1, you can choose the sensor-hal-tm1 package.<br>
 
 %files sub2-domain_API-System-Sensor_Listener
 
@@ -1622,7 +1622,7 @@ Requires:   %{name}-sub2-domain_API-System-Sensor_Listener
 %description sub2-domain_API-System-Sensor_Recorder
 This block supports sensor recorder API to record sensor data.<br>
 You should choose HAL packages depends on target and hardware. HAL packages are listed in the Sensor_Listener block.
-For example, if you want make a binary for TM1, you can choose the sensor-hal-tm1 package.<br>
+For example, if you want to make a binary for TM1, you can choose the sensor-hal-tm1 package.<br>
 
 %files sub2-domain_API-System-Sensor_Recorder
 
