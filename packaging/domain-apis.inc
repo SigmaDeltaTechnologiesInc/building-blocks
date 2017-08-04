@@ -1184,25 +1184,22 @@ It supports resource management, remote resource management, CRUDN request/respo
 To use this feature, Wi-Fi connection is required.
 %files sub2-domain_API-Network-IoTCon
 
-### TODO - MTP ##
-# Summary, description
-
 %package sub2-domain_API-Network-MTP
 Summary:    MTP
+Requires: capi-network-mtp
+Requires: mtp-initiator
+Requires: libmtp
 %description sub2-domain_API-Network-MTP
-### TODO ###
-# packakge list
-
+Enabling MTP(Media Transfer Protocol) Initiator and it is possible to user MTP API
 %files sub2-domain_API-Network-MTP
-### TODO - NFC ##
-# Summary, description
 
 %package sub2-domain_API-Network-NFC
 Summary:    NFC
+Requires: capi-network-nfc
+Requires: nfc-common-lib
+Requires: nfc-manager
 %description sub2-domain_API-Network-NFC
-### TODO ###
-# packakge list
-
+Enabling NFC Manager and it is possible to user NFC API
 %files sub2-domain_API-Network-NFC
 
 %package sub2-domain_API-Network-SSDP
@@ -1226,15 +1223,19 @@ Tizen block (set of packages) for API sets of domain API-Network-STC <br>
 To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-STC
 
-### TODO - Smartcard ##
-# Summary, description
-
 %package sub2-domain_API-Network-Smartcard
 Summary:    Smartcard
+Requires: capi-network-smartcard
+Requires: smartcard-service-common
+Requires: smartcard-service
+Suggests: smartcard-plugin-nfc
+Suggests: smartcard-plugin-uicc
+Suggests: %{name}-sub2-domain_API-Network-NFC
+Suggests: %{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-Smartcard
-### TODO ###
-# packakge list
-
+Enabling Smartcard(Secure Element) Manager and it is possible to user Smartcard API. <br>
+In case of USIM device, 'smartcard-plugin-uicc' and 'sub1-domain_API-Telephony' have to be chosen. <br>
+In case of embedded SE, 'smartcard-plugin-nfc' and 'sub2-domain_API-Network-NFC' have to be chosen.
 %files sub2-domain_API-Network-Smartcard
 
 %package sub2-domain_API-Network-VPN_Service
