@@ -642,14 +642,37 @@ Summary:    Audio_IO
 
 %files sub2-domain_API-Multimedia-Audio_IO
 
-### TODO - Camera ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Camera
 Summary:    Camera
+Requires:capi-media-camera
+Requires:mmsvc-camera
+Requires:mused
+Requires:pulseaudio
+Requires:pulseaudio-modules-tizen
+Requires:pulseaudio-module-bluetooth
+Requires:%{name}-sub2-domain_API-UI-TBM_Surface
+
+#camera
+Suggests:gst-plugins-camera-n4
+Suggests:gst-plugins-good
+
+#multimedia config
+Suggests:mmfw-sysconf-target-artik10
+Suggests:mmfw-sysconf-target-hawkp
+Suggests:mmfw-sysconf-target-n4
+Suggests:mmfw-sysconf-target-rpi3
+Suggests:mmfw-sysconf-target-tm1
+Suggests:mmfw-sysconf-target-tw1
+Suggests:mmfw-sysconf-target-tw2
+Suggests:mmfw-sysconf-target-u3
+
 %description sub2-domain_API-Multimedia-Camera
-### TODO ###
-# packakge list
+The camera provides the ability to capture photos and support setting up notifications for state changes of capturing, previewing, focusing, information about resolution and binary format and functions for picture manipulations like sepia negative and many more. 
+OPTIONAL : You should choose packages depends on target and hardware.
+First, Check config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1).
+Second, check camera plugin depends on target.
+TM1:camera-interface-sprd-sc7730, gst-plugins-camera-sc7730s, gst-plugins-good.
+TM2(n4):gst-plugins-camera-n4, gst-plugins-good
 
 %files sub2-domain_API-Multimedia-Camera
 
@@ -814,14 +837,77 @@ Summary:    Radio
 
 %files sub2-domain_API-Multimedia-Radio
 
-### TODO - Recorder ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Recorder
 Summary:    Recorder
+Requires:capi-media-recorder
+Requires:mmsvc-recorder
+Requires:mused
+Requires:gst-plugins-good
+Requires:gst-libav
+Requires:gst-plugins-tizen
+Requires:pulseaudio-modules-tizen
+Requires:pulseaudio-module-bluetooth
+Requires:%{name}-sub2-domain_API-UI-TBM_Surface
+Requires:%{name}-sub2-domain_API-System-Storage
+
+# audo HAL
+#TM1
+Suggests:audio-hal-sc7727
+Suggests:audio-config-sc-TM1-sc7730
+#TM2
+Suggests:audio-hal-wm5110
+Suggests:alsa-ucm-data-wm5110
+#TW1
+Suggests:audio-hal-wm1831
+Suggests:audio-config-wm1831-orbis
+#TW2
+Suggests:audio-hal-wm1831-tw2
+Suggests:audio-config-wm1831-tw2
+#XU3
+Suggests:audio-hal-max98090
+Suggests:alsa-ucm-data-max98090
+#RPI3
+Suggests:audio-hal-bcm2837
+#AT5/10
+Suggests:udio-hal-ak4953
+Suggests:alsa-ucm-data-ak4953
+#AT710
+Suggests:audio-hal-alc5658
+Suggests:alsa-ucm-data-alc5658
+
+#multimedia config
+Suggests:mmfw-sysconf-target-artik10
+Suggests:mmfw-sysconf-target-hawkp
+Suggests:mmfw-sysconf-target-n4
+Suggests:mmfw-sysconf-target-rpi3
+Suggests:mmfw-sysconf-target-tm1
+Suggests:mmfw-sysconf-target-tw1
+Suggests:mmfw-sysconf-target-tw2
+Suggests:mmfw-sysconf-target-u3
+
+#codec
+Suggests:libomxil-e3250-v4l2
+Suggests:libomxil-e7270-v4l2
+Suggests:libomxil-e54xx
+
 %description sub2-domain_API-Multimedia-Recorder
-### TODO ###
-# packakge list
+The recorder provides the ability to create audio/video recorder, to start, stop and save the recorded content. It also provides methods to get/set various attributes of recorder.
+OPTIONAL : You should choose packages depends on target and hardware.
+First, Check config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1).
+Second, Check audio HAL depends on target.
+TM1:audio-hal-sc7727, audio-config-sc-TM1-sc7730
+TM2:audio-hal-wm5110, alsa-ucm-data-wm5110
+TW1:audio-hal-wm1831, audio-config-wm1831-orbis
+TW2:audio-hal-wm1831-tw2, audio-config-wm1831-tw2
+XU3:audio-hal-max98090, alsa-ucm-data-max98090
+RPI3:audio-hal-bcm2837
+AT5/10:udio-hal-ak4953, alsa-ucm-data-ak4953
+AT710:audio-hal-alc5658, alsa-ucm-data-alc5658
+Third, Check codec depends on target.
+gst-plugins-sprdcodec-sc7730
+libomxil-e3250-v4l2
+libomxil-e7270-v4l2
+libomxil-e54xx
 
 %files sub2-domain_API-Multimedia-Recorder
 
@@ -867,7 +953,7 @@ Suggests:mmfw-sysconf-target-rpi3
 Suggests:mmfw-sysconf-target-tm1
 
 %description sub2-domain_API-Multimedia-Screen_Mirroring
-Screen Mirroiring provides the ability to connect to and disconnect from a screen mirroring source, start, pause, and resume the screen mirroring as a 'SINK' (source: Stream sender, sink:Stream receiver). It follows 'Miracast standard'. OPTIONAL : You should choose packages depends on target and hardware. First, Check config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}(e.g mmfw-sysconf-target-tm1). Second, check audio HAL depends on target. TM1:audio-hal-sc7727,audio-config-sc-TM1-sc7730. TM2(n4):audio-hal-wm5110,alsa-ucm-data-wm5110. RPI3:audio-hal-bcm2837, ARTIK710:audio-hal-alc5658,alsa-ucm-data-alc5658.
+Screen Mirroiring provides the ability to connect to and disconnect from a screen mirroring source, start, pause, and resume the screen mirroring as a 'SINK' (source: Stream sender, sink:Stream receiver). It follows 'Miracast standard'. OPTIONAL : You should choose packages depends on target and hardware. First, Check config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1). Second, check audio HAL depends on target. TM1:audio-hal-sc7727,audio-config-sc-TM1-sc7730. TM2(n4):audio-hal-wm5110,alsa-ucm-data-wm5110. RPI3:audio-hal-bcm2837, ARTIK710:audio-hal-alc5658,alsa-ucm-data-alc5658.
 
 %files sub2-domain_API-Multimedia-Screen_Mirroring
 
@@ -924,14 +1010,12 @@ Summary:    WAV_Player
 
 %files sub2-domain_API-Multimedia-WAV_Player
 
-### TODO - libEXIF ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-libEXIF
 Summary:    libEXIF
+Requires:libexif
+
 %description sub2-domain_API-Multimedia-libEXIF
-### TODO ###
-# packakge list
+The libEXIF provides the ability to reads and writes EXIF metainformation from and to image files.
 
 %files sub2-domain_API-Multimedia-libEXIF
 
