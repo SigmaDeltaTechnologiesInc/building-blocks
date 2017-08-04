@@ -679,26 +679,26 @@ Requires: mediacontroller
 Enabling Media Controller and it is possible to use Media Controller API
 %files sub2-domain_API-Multimedia-Media_Controller
 
-### TODO - Media_Demuxer ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Media_Demuxer
 Summary:    Media_Demuxer
+Requires: capi-mediademuxer
+Requires: gst-plugins-bad
+Requires: gst-plugins-good
 %description sub2-domain_API-Multimedia-Media_Demuxer
-### TODO ###
-# packakge list
-
+Enabling Media Demuxer and it is possible to use Media Demuxer API <br>
+Media Demuxer API provides functions for demuxing media data <br>
 %files sub2-domain_API-Multimedia-Media_Demuxer
 
-### TODO - Media_Muxer ##
-# Summary, description
 
 %package sub2-domain_API-Multimedia-Media_Muxer
 Summary:    Media_Muxer
+Requires: capi-mediamuxer
+Requires: gst-plugins-bad
+Requires: gst-plugins-good
+Requires: gst-plugins-tizen
 %description sub2-domain_API-Multimedia-Media_Muxer
-### TODO ###
-# packakge list
-
+Enabling Media Muxer and it is possible to use Media Muxer API <br>
+Media Muxer API provides functions for muxing media data <br>
 %files sub2-domain_API-Multimedia-Media_Muxer
 
 ### TODO - Media_Streamer ##
@@ -803,14 +803,32 @@ Summary:    Player
 
 %files sub2-domain_API-Multimedia-Player
 
-### TODO - Radio ##
-# Summary, description
 
 %package sub2-domain_API-Multimedia-Radio
 Summary:    Radio
+Requires: capi-media-radio
+Requires: pulseaudio
+Requires: pulseaudio-module-bluetooth
+Requires: pulseaudio-modules-tizen
+
+# TM1
+Suggests: audio-hal-sc7727
+Suggests: audio-config-sc-TM1-sc7730
+
+# multimedia-config
+Suggests: mmfw-sysconf-target-tm1
+
+# mobile bluetooth
+Suggests: bluez
+Suggests: rfkill
+Suggests: bluetooth-firmware-sprd-TM1
+
 %description sub2-domain_API-Multimedia-Radio
-### TODO ###
-# packakge list
+Enabling Radio and it is possible to use Radio API <br>
+Radio API provides functions for accessing the radio <br>
+About OPTIONAL selection:<br>
+You should choose packages depends on target and hardware.<br>
+TM1: bulez, rfkill, bluetoothe-firmware-sprd-TM1 <br>
 
 %files sub2-domain_API-Multimedia-Radio
 
@@ -902,14 +920,17 @@ Summary:    Tone_Player
 
 %files sub2-domain_API-Multimedia-Tone_Player
 
-### TODO - Video_Util ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Video_Util
 Summary:    Video_Util
+Requires: capi-media-video-util
+Requires: gst-plugins-bad
+Requires: gst-plugins-good
+Requires: gst-plugins-ugly
+Requires: gst-plugins-tizen
+Requires: gst-libav
 %description sub2-domain_API-Multimedia-Video_Util
-### TODO ###
-# packakge list
+Enabling Video Util and it is possible to use Video Util API <br>
+Video Util API provides fuctions that transcode a media file <br>
 
 %files sub2-domain_API-Multimedia-Video_Util
 
