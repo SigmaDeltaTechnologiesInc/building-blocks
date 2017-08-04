@@ -616,15 +616,65 @@ Suggests: %{name}-sub2-domain_API-Multimedia-libEXIF
 Tizen block (set of packages) for Group of domain API-Multimedia
 %files sub1-domain_API-Multimedia
 
-### TODO - Audio_IO ###
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Audio_IO
 Summary:    Audio_IO
-%description sub2-domain_API-Multimedia-Audio_IO
 
-### TODO ###
 # packakge list
+Requires:capi-media-audio-io
+Requires:pulseaudio
+Requires:pulseaudio-module-bluetooth
+Requires:pulseaudio-modules-tizen
+
+# Utilties
+Suggests:alsa-utils
+Suggests:pulseaudio-utils
+
+#TM1
+Suggests:audio-hal-sc7727
+Suggests:audio-config-sc-TM1-sc7730
+Suggests:mmfw-sysconf-target-tm1
+
+#TM2
+Suggests:audio-hal-wm5110
+Suggests:alsa-ucm-data-wm5110
+Suggests:mmfw-sysconf-target-n4
+
+#TW1
+Suggests:audio-hal-wm1831
+Suggests:audio-config-wm1831-orbis
+Suggests:mmfw-sysconf-target-tw1
+
+
+#TW2
+Suggests:audio-hal-wm1831-tw2
+Suggests:audio-config-wm1831-tw2
+Suggests:mmfw-sysconf-target-tw2
+
+#ARTIK 5/10
+Suggests:audio-hal-ak4953
+Suggests:alsa-ucm-data-ak4953
+#ARTIK 710
+Suggests:audio-hal-alc5658
+Suggests:alsa-ucm-data-alc5658
+#ARTIK COMMON
+Suggests:mmfw-sysconf-target-artik10
+
+#RPI3
+Suggests:audio-hal-bcm2837
+Suggests:mmfw-sysconf-target-rpi3
+
+%description sub2-domain_API-Multimedia-Audio_IO
+AudioIO provides functions to play/record raw PCM audio data.
+
+H/W optional packages
+TM1 : audio-hal-sc7727, audio-config-sc-TM1-sc7730, mmfw-sysconf-target-tm1
+TM2 : audio-hal-wm5110, alsa-ucm-data-wm5110, mmfw-sysconf-target-n4
+TW1 : audio-hal-wm1831, audio-config-wm1831-orbis, mmfw-sysconf-target-tw1
+TW2 : audio-hal-wm1831-tw2, audio-config-wm1831-tw2, mmfw-sysconf-target-tw2
+U3/XU3 : audio-hal-max98090, alsa-ucm-data-max98090, mmfw-sysconf-target-u3
+ARTIK 5/10 : audio-hal-ak4953, alsa-ucm-data-ak4953, mmfw-sysconf-target-artik10
+ARTIK 710 : audio-hal-alc5658, alsa-ucm-data-alc5658, mmfw-sysconf-target-artik10
+RPI3 : audio-hal-bcm2837, mmfw-sysconf-target-rpi3
 
 %files sub2-domain_API-Multimedia-Audio_IO
 
@@ -850,14 +900,66 @@ Requires: capi-media-metadata-extractor
 Enabling Metadata Extractor and it is possible to use Metadata Extractor API
 %files sub2-domain_API-Multimedia-Metadata_Extractor
 
-### TODO - OpenAL ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-OpenAL
 Summary:    OpenAL
-%description sub2-domain_API-Multimedia-OpenAL
-### TODO ###
+
 # packakge list
+Requires:openal-soft
+Requires:pulseaudio
+Requires:pulseaudio-module-bluetooth
+Requires:pulseaudio-modules-tizen
+
+# Utilties
+Suggests:alsa-utils
+Suggests:pulseaudio-utils
+Suggests:freealut
+
+#TM1
+Suggests:audio-hal-sc7727
+Suggests:audio-config-sc-TM1-sc7730
+Suggests:mmfw-sysconf-target-tm1
+
+#TM2
+Suggests:audio-hal-wm5110
+Suggests:alsa-ucm-data-wm5110
+Suggests:mmfw-sysconf-target-n4
+
+#TW1
+Suggests:audio-hal-wm1831
+Suggests:audio-config-wm1831-orbis
+Suggests:mmfw-sysconf-target-tw1
+
+
+#TW2
+Suggests:audio-hal-wm1831-tw2
+Suggests:audio-config-wm1831-tw2
+Suggests:mmfw-sysconf-target-tw2
+
+#ARTIK 5/10
+Suggests:audio-hal-ak4953
+Suggests:alsa-ucm-data-ak4953
+#ARTIK 710
+Suggests:audio-hal-alc5658
+Suggests:alsa-ucm-data-alc5658
+#ARTIK COMMON
+Suggests:mmfw-sysconf-target-artik10
+
+#RPI3
+Suggests:audio-hal-bcm2837
+Suggests:mmfw-sysconf-target-rpi3
+
+%description sub2-domain_API-Multimedia-OpenAL
+OpenAL is designed for efficient rendering of 3-D positional audio.
+
+H/W optional packages
+TM1 : audio-hal-sc7727, audio-config-sc-TM1-sc7730, mmfw-sysconf-target-tm1
+TM2 : audio-hal-wm5110, alsa-ucm-data-wm5110, mmfw-sysconf-target-n4
+TW1 : audio-hal-wm1831, audio-config-wm1831-orbis, mmfw-sysconf-target-tw1
+TW2 : audio-hal-wm1831-tw2, audio-config-wm1831-tw2, mmfw-sysconf-target-tw2
+U3/XU3 : audio-hal-max98090, alsa-ucm-data-max98090, mmfw-sysconf-target-u3
+ARTIK 5/10 : audio-hal-ak4953, alsa-ucm-data-ak4953, mmfw-sysconf-target-artik10
+ARTIK 710 : audio-hal-alc5658, alsa-ucm-data-alc5658, mmfw-sysconf-target-artik10
+RPI3 : audio-hal-bcm2837, mmfw-sysconf-target-rpi3
 
 %files sub2-domain_API-Multimedia-OpenAL
 
@@ -1096,14 +1198,64 @@ Screen Mirroiring provides the ability to connect to and disconnect from a scree
 
 %files sub2-domain_API-Multimedia-Screen_Mirroring
 
-### TODO - Sound_Manager ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Sound_Manager
 Summary:    Sound_Manager
-%description sub2-domain_API-Multimedia-Sound_Manager
-### TODO ###
+
 # packakge list
+Requires:capi-media-sound-manager
+Requires:pulseaudio
+Requires:pulseaudio-module-bluetooth
+Requires:pulseaudio-modules-tizen
+
+# Utilties
+Suggests:alsa-utils
+Suggests:pulseaudio-utils
+
+#TM1
+Suggests:audio-hal-sc7727
+Suggests:audio-config-sc-TM1-sc7730
+Suggests:mmfw-sysconf-target-tm1
+
+#TM2
+Suggests:audio-hal-wm5110
+Suggests:alsa-ucm-data-wm5110
+Suggests:mmfw-sysconf-target-n4
+
+#TW1
+Suggests:audio-hal-wm1831
+Suggests:audio-config-wm1831-orbis
+Suggests:mmfw-sysconf-target-tw1
+
+#TW2
+Suggests:audio-hal-wm1831-tw2
+Suggests:audio-config-wm1831-tw2
+Suggests:mmfw-sysconf-target-tw2
+
+#ARTIK 5/10
+Suggests:audio-hal-ak4953
+Suggests:alsa-ucm-data-ak4953
+#ARTIK 710
+Suggests:audio-hal-alc5658
+Suggests:alsa-ucm-data-alc5658
+#ARTIK COMMON
+Suggests:mmfw-sysconf-target-artik10
+
+#RPI3
+Suggests:audio-hal-bcm2837
+Suggests:mmfw-sysconf-target-rpi3
+
+%description sub2-domain_API-Multimedia-Sound_Manager
+Sound_Manager provides functions to get and set of sound parameters such as volume,device and focus operations.
+
+H/W optional packages
+TM1 : audio-hal-sc7727, audio-config-sc-TM1-sc7730, mmfw-sysconf-target-tm1
+TM2 : audio-hal-wm5110, alsa-ucm-data-wm5110, mmfw-sysconf-target-n4
+TW1 : audio-hal-wm1831, audio-config-wm1831-orbis, mmfw-sysconf-target-tw1
+TW2 : audio-hal-wm1831-tw2, audio-config-wm1831-tw2, mmfw-sysconf-target-tw2
+U3/XU3 : audio-hal-max98090, alsa-ucm-data-max98090, mmfw-sysconf-target-u3
+ARTIK 5/10 : audio-hal-ak4953, alsa-ucm-data-ak4953, mmfw-sysconf-target-artik10
+ARTIK 710 : audio-hal-alc5658, alsa-ucm-data-alc5658, mmfw-sysconf-target-artik10
+RPI3 : audio-hal-bcm2837, mmfw-sysconf-target-rpi3
 
 %files sub2-domain_API-Multimedia-Sound_Manager
 
@@ -1116,14 +1268,64 @@ Requires: media-thumbnail-server
 Enabling Thumbnail Util and it is possible to use Thumbnail Util API
 %files sub2-domain_API-Multimedia-Thumbnail_Util
 
-### TODO - Tone_Player ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Tone_Player
 Summary:    Tone_Player
-%description sub2-domain_API-Multimedia-Tone_Player
-### TODO ###
+
 # packakge list
+Requires:capi-media-tone-player
+Requires:pulseaudio
+Requires:pulseaudio-module-bluetooth
+Requires:pulseaudio-modules-tizen
+
+# Utilties
+Suggests:alsa-utils
+Suggests:pulseaudio-utils
+
+#TM1
+Suggests:audio-hal-sc7727
+Suggests:audio-config-sc-TM1-sc7730
+Suggests:mmfw-sysconf-target-tm1
+
+#TM2
+Suggests:audio-hal-wm5110
+Suggests:alsa-ucm-data-wm5110
+Suggests:mmfw-sysconf-target-n4
+
+#TW1
+Suggests:audio-hal-wm1831
+Suggests:audio-config-wm1831-orbis
+Suggests:mmfw-sysconf-target-tw1
+
+#TW2
+Suggests:audio-hal-wm1831-tw2
+Suggests:audio-config-wm1831-tw2
+Suggests:mmfw-sysconf-target-tw2
+
+#ARTIK 5/10
+Suggests:audio-hal-ak4953
+Suggests:alsa-ucm-data-ak4953
+#ARTIK 710
+Suggests:audio-hal-alc5658
+Suggests:alsa-ucm-data-alc5658
+#ARTIK COMMON
+Suggests:mmfw-sysconf-target-artik10
+
+#RPI3
+Suggests:audio-hal-bcm2837
+Suggests:mmfw-sysconf-target-rpi3
+
+%description sub2-domain_API-Multimedia-Tone_Player
+Tone_Player provides functions for playing the DTMF or predefined tone.
+
+H/W optional packages
+TM1 : audio-hal-sc7727, audio-config-sc-TM1-sc7730, mmfw-sysconf-target-tm1
+TM2 : audio-hal-wm5110, alsa-ucm-data-wm5110, mmfw-sysconf-target-n4
+TW1 : audio-hal-wm1831, audio-config-wm1831-orbis, mmfw-sysconf-target-tw1
+TW2 : audio-hal-wm1831-tw2, audio-config-wm1831-tw2, mmfw-sysconf-target-tw2
+U3/XU3 : audio-hal-max98090, alsa-ucm-data-max98090, mmfw-sysconf-target-u3
+ARTIK 5/10 : audio-hal-ak4953, alsa-ucm-data-ak4953, mmfw-sysconf-target-artik10
+ARTIK 710 : audio-hal-alc5658, alsa-ucm-data-alc5658, mmfw-sysconf-target-artik10
+RPI3 : audio-hal-bcm2837, mmfw-sysconf-target-rpi3
 
 %files sub2-domain_API-Multimedia-Tone_Player
 
@@ -1141,14 +1343,64 @@ Video Util API provides fuctions that transcode a media file <br>
 
 %files sub2-domain_API-Multimedia-Video_Util
 
-### TODO - WAV_Player ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-WAV_Player
 Summary:    WAV_Player
-%description sub2-domain_API-Multimedia-WAV_Player
-### TODO ###
+
 # packakge list
+Requires:capi-media-wav-player
+Requires:pulseaudio
+Requires:pulseaudio-module-bluetooth
+Requires:pulseaudio-modules-tizen
+
+# Utilties
+Suggests:alsa-utils
+Suggests:pulseaudio-utils
+
+#TM1
+Suggests:audio-hal-sc7727
+Suggests:audio-config-sc-TM1-sc7730
+Suggests:mmfw-sysconf-target-tm1
+
+#TM2
+Suggests:audio-hal-wm5110
+Suggests:alsa-ucm-data-wm5110
+Suggests:mmfw-sysconf-target-n4
+
+#TW1
+Suggests:audio-hal-wm1831
+Suggests:audio-config-wm1831-orbis
+Suggests:mmfw-sysconf-target-tw1
+
+#TW2
+Suggests:audio-hal-wm1831-tw2
+Suggests:audio-config-wm1831-tw2
+Suggests:mmfw-sysconf-target-tw2
+
+#ARTIK 5/10
+Suggests:audio-hal-ak4953
+Suggests:alsa-ucm-data-ak4953
+#ARTIK 710
+Suggests:audio-hal-alc5658
+Suggests:alsa-ucm-data-alc5658
+#ARTIK COMMON
+Suggests:mmfw-sysconf-target-artik10
+
+#RPI3
+Suggests:audio-hal-bcm2837
+Suggests:mmfw-sysconf-target-rpi3
+
+%description sub2-domain_API-Multimedia-WAV_Player
+Wav_Player provides functions for playing the waveform audio file format(*.wav,*.ogg).
+
+H/W optional packages
+TM1 : audio-hal-sc7727, audio-config-sc-TM1-sc7730, mmfw-sysconf-target-tm1
+TM2 : audio-hal-wm5110, alsa-ucm-data-wm5110, mmfw-sysconf-target-n4
+TW1 : audio-hal-wm1831, audio-config-wm1831-orbis, mmfw-sysconf-target-tw1
+TW2 : audio-hal-wm1831-tw2, audio-config-wm1831-tw2, mmfw-sysconf-target-tw2
+U3/XU3 : audio-hal-max98090, alsa-ucm-data-max98090, mmfw-sysconf-target-u3
+ARTIK 5/10 : audio-hal-ak4953, alsa-ucm-data-ak4953, mmfw-sysconf-target-artik10
+ARTIK 710 : audio-hal-alc5658, alsa-ucm-data-alc5658, mmfw-sysconf-target-artik10
+RPI3 : audio-hal-bcm2837, mmfw-sysconf-target-rpi3
 
 %files sub2-domain_API-Multimedia-WAV_Player
 
