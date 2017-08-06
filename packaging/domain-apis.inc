@@ -689,14 +689,81 @@ Summary:    Media_Muxer
 
 %files sub2-domain_API-Multimedia-Media_Muxer
 
-### TODO - Media_Streamer ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Media_Streamer
-Summary:    Media_Streamer
+Summary:  Media_Streamer
+Requires: capi-media-streamer
+Requires: gst-plugins-good
+Requires: gst-plugins-bad
+Requires: gst-plugins-ugly
+Requires: gst-plugins-tizen
+Requires: gst-libav
+Requires: libmm-utility
+
+# required for audio
+Requires: pulseaudio
+Requires: pulseaudio-module-bluetooth
+Requires: pulseaudio-modules-tizen
+
+# required building block for video rendering
+Requires: %{name}-sub2-domain_API-System-Storage
+Requires: %{name}-sub2-domain_API-UI-TBM_Surface
+Requires: %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
+Requires: %{name}-sub2-domain_API-Network-WiFi
+
+# target specific package list
+# TM1
+Suggests: audio-hal-sc7727
+Suggests: audio-config-sc-TM1-sc7730
+Suggests: mmfw-sysconf-target-tm1
+
+# TM2
+Suggests: audio-hal-wm5110
+Suggests: alsa-ucm-data-wm5110
+Suggests: mmfw-sysconf-target-n4
+
+# TW1
+Suggests: audio-hal-wm1831
+Suggests: audio-config-wm1831-orbis
+Suggests: mmfw-sysconf-target-tw1
+
+# TW2
+Suggests: audio-hal-wm1831-tw2
+Suggests: audio-config-wm1831-tw2
+Suggests: mmfw-sysconf-target-tw2
+
+# XU3
+Suggests: audio-hal-max98090
+Suggests: alsa-ucm-data-max98090
+Suggests: mmfw-sysconf-target-u3
+
+# RPI3
+Suggests: audio-hal-bcm2837
+Suggests: mmfw-sysconf-target-rpi3
+
+# AT5/10
+Suggests: audio-hal-ak4953
+Suggests: alsa-ucm-data-ak4953
+Suggests: mmfw-sysconf-target-artik10
+
+# AT710
+Suggests: audio-hal-alc5658
+Suggests: alsa-ucm-data-alc5658
+Suggests: mmfw-sysconf-target-artik10
+
 %description sub2-domain_API-Multimedia-Media_Streamer
-### TODO ###
-# packakge list
+This block supports constructing the custom player and it gives the ability to controlling playback attributes.<br>
+About OPTIONAL selection:<br>
+You should choose packages depends on target and hardware.<br>
+First, Select the config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1).<br>
+Second, Select the audio HAL depends on target. <br>
+TM1 : audio-hal-sc7727,audio-config-sc-TM1-sc7730 <br>
+TM2(n4) : audio-hal-wm5110,alsa-ucm-data-wm5110 <br>
+TW1 : audio-hal-wm1831, audio-config-wm1831-orbis <br>
+TW2 : audio-hal-wm1831-tw2, audio-config-wm1831-tw2 <br>
+XU3 : audio-hal-max98090, alsa-ucm-data-max98090 <br>
+RPI3 : audio-hal-bcm2837 <br>
+AT5/10 : audio-hal-ak4953, alsa-ucm-data-ak4953 <br>
+ARTIK710 : audio-hal-alc5658,alsa-ucm-data-alc5658 <br>
 
 %files sub2-domain_API-Multimedia-Media_Streamer
 
@@ -780,15 +847,90 @@ Summary:    OpenAL
 
 %files sub2-domain_API-Multimedia-OpenAL
 
-### TODO - Player ##
-# Summary, description
 
 %package sub2-domain_API-Multimedia-Player
-Summary:    Player
-%description sub2-domain_API-Multimedia-Player
-### TODO ###
-# packakge list
+Summary:  Player
+Requires: capi-media-player
+Requires: mmsvc-player
+Requires: gst-plugins-good
+Requires: gst-plugins-bad
+Requires: gst-plugins-ugly
+Requires: gst-plugins-tizen
+Requires: gst-libav
 
+# required for audio
+Requires: pulseaudio
+Requires: pulseaudio-module-bluetooth
+Requires: pulseaudio-modules-tizen
+
+# required building block for video rendering
+Requires: %{name}-sub2-domain_API-System-Storage
+Requires: %{name}-sub2-domain_API-UI-TBM_Surface
+Requires: %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
+Requires: %{name}-sub2-domain_API-Network-WiFi
+
+# target specific package list
+Suggests: gst-omx
+Suggests: libomxil-e54xx
+Suggests: libomxil-e3250-v4l2
+Suggests: libomxil-e7270-v4l2
+Suggests: libomxil-vc4
+
+# TM1
+Suggests: audio-hal-sc7727
+Suggests: audio-config-sc-TM1-sc7730
+Suggests: mmfw-sysconf-target-tm1
+
+# TM2
+Suggests: audio-hal-wm5110
+Suggests: alsa-ucm-data-wm5110
+Suggests: mmfw-sysconf-target-n4
+
+# TW1
+Suggests: audio-hal-wm1831
+Suggests: audio-config-wm1831-orbis
+Suggests: mmfw-sysconf-target-tw1
+
+# TW2
+Suggests: audio-hal-wm1831-tw2
+Suggests: audio-config-wm1831-tw2
+Suggests: mmfw-sysconf-target-tw2
+
+# XU3
+Suggests: audio-hal-max98090
+Suggests: alsa-ucm-data-max98090
+Suggests: mmfw-sysconf-target-u3
+
+# RPI3
+Suggests: audio-hal-bcm2837
+Suggests: mmfw-sysconf-target-rpi3
+
+# AT5/10
+Suggests: audio-hal-ak4953
+Suggests: alsa-ucm-data-ak4953
+Suggests: mmfw-sysconf-target-artik10
+
+# AT710
+Suggests: audio-hal-alc5658
+Suggests: alsa-ucm-data-alc5658
+Suggests: mmfw-sysconf-target-artik10
+
+%description sub2-domain_API-Multimedia-Player
+This block supports playing multimedia content. Content can be played from a file, from the network, or from memory. <br>
+It gives the ability to controlling media playback attributes, perform various status queries, and control the display. <br>
+About OPTIONAL selection: <br>
+You should choose packages depends on target and hardware. <br>
+First, You have to select the gst-omx package except TM1 target to use hardware video decoder. <br>
+Second, Select the config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1). <br>
+Third, Select the audio HAL and libomx package depends on target. <br>
+TM1 : audio-hal-sc7727, audio-config-sc-TM1-sc7730 <br>
+TM2(n4) : audio-hal-wm5110, alsa-ucm-data-wm5110,libomxil-e54xx <br>
+TW1 : audio-hal-wm1831, audio-config-wm1831-orbis, libomxil-e3250-v4l2 <br>
+TW2 : audio-hal-wm1831-tw2, audio-config-wm1831-tw2, libomxil-e7270-v4l2 <br>
+XU3 : audio-hal-max98090, alsa-ucm-data-max98090, libomxil-e54xx <br>
+RPI3 : audio-hal-bcm2837, libomxil-vc4 <br>
+AT5/10 : audio-hal-ak4953, alsa-ucm-data-ak4953, libomxil-e54xx <br>
+ARTIK710 : audio-hal-alc5658, alsa-ucm-data-alc5658, libomxil-e54xx <br>
 %files sub2-domain_API-Multimedia-Player
 
 ### TODO - Radio ##
@@ -855,7 +997,7 @@ Suggests:mmfw-sysconf-target-rpi3
 Suggests:mmfw-sysconf-target-tm1
 
 %description sub2-domain_API-Multimedia-Screen_Mirroring
-Screen Mirroiring provides the ability to connect to and disconnect from a screen mirroring source, start, pause, and resume the screen mirroring as a 'SINK' (source: Stream sender, sink:Stream receiver). It follows 'Miracast standard'. OPTIONAL : You should choose packages depends on target and hardware. First, Check config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}(e.g mmfw-sysconf-target-tm1). Second, check audio HAL depends on target. TM1:audio-hal-sc7727,audio-config-sc-TM1-sc7730. TM2(n4):audio-hal-wm5110,alsa-ucm-data-wm5110. RPI3:audio-hal-bcm2837, ARTIK710:audio-hal-alc5658,alsa-ucm-data-alc5658.
+Screen Mirroiring provides the ability to connect to and disconnect from a screen mirroring source, start, pause, and resume the screen mirroring as a 'SINK' (source: Stream sender, sink:Stream receiver). It follows 'Miracast standard'. OPTIONAL : You should choose packages depends on target and hardware. First, Check config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1). Second, check audio HAL depends on target. TM1:audio-hal-sc7727,audio-config-sc-TM1-sc7730. TM2(n4):audio-hal-wm5110,alsa-ucm-data-wm5110. RPI3:audio-hal-bcm2837, ARTIK710:audio-hal-alc5658,alsa-ucm-data-alc5658.
 
 %files sub2-domain_API-Multimedia-Screen_Mirroring
 
