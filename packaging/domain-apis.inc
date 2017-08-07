@@ -2270,15 +2270,11 @@ Requires:   capi-system-info
 capi-system-info provides a (fixed) device capability.
 %files sub2-domain_API-System-System_Information
 
-### TODO - System_Settings ##
-# Summary, description
-
 %package sub2-domain_API-System-System_Settings
 Summary:    System_Settings
+Requires:   capi-system-system-settings
 %description sub2-domain_API-System-System_Settings
-### TODO ###
-# packakge list
-
+System setting api for get,set configuration
 %files sub2-domain_API-System-System_Settings
 
 %package sub2-domain_API-System-T_Trace
