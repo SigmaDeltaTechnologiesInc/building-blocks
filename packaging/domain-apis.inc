@@ -2304,7 +2304,7 @@ Tizen block (set of packages) for Group of domain API-UIX
 
 %package sub2-domain_API-UIX-Input_Method
 Summary:    Input_Method
-Requires: %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
+Requires: %{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
 Requires: isf
 Requires: ise-default
 Requires: capi-ui-inputmethod
