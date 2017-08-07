@@ -1507,7 +1507,7 @@ The CSR (Content Screening & Reputation) is an anti malware module. It provides 
 
 %package sub2-domain_API-Security-Device_Policy
 Summary:    Device_Policy
-Requires:   deivce-policy-manager
+Requires:   device-policy-manager
 Requires:   libdpm
 Requires:   libkrate
 Requires:   krate
