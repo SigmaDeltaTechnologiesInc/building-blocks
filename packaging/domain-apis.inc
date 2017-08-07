@@ -394,12 +394,10 @@ To use this feature, either Data Network or Wi-Fi connection is required.
 # Summary, description
 
 %package sub2-domain_API-Content-MIME_Type
-Summary:    MIME-Type
+Summary:    MIME-Type API
+Requires: capi-content-mime-type
 %description sub2-domain_API-Content-MIME_Type
-
-### TODO ###
-# packakge list
-
+This block supports simple mime-type extraction API
 %files sub2-domain_API-Content-MIME_Type
 
 %package sub2-domain_API-Content-Media_Content
@@ -2263,10 +2261,10 @@ HarfBuzz is an OpenType text shaping engine.
 
 %package sub2-domain_API-UI-Minicontrol
 Summary:    Minicontrol
+Requires: %{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
+Requires: minicontrol
 %description sub2-domain_API-UI-Minicontrol
-### TODO ###
-# packakge list
-
+This block supports minicontol API which enables simple control UX in the notification panel
 %files sub2-domain_API-UI-Minicontrol
 
 
