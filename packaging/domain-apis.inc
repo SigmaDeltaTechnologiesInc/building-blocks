@@ -1497,70 +1497,56 @@ Suggests: %{name}-sub2-domain_API-Security-YACA
 Tizen block (set of packages) for Group of domain API-Security
 %files sub1-domain_API-Security
 
-### TODO - CSR ##
-# Summary, description
-
 %package sub2-domain_API-Security-CSR
 Summary:    CSR
+Requires:   libcsr-framework-client
 %description sub2-domain_API-Security-CSR
-### TODO ###
-# packakge list
-
+The CSR (Content Screening & Reputation) is an anti malware module. It provides Content Screening Service and Web Protection Service to protect a device and an user.
 %files sub2-domain_API-Security-CSR
 
-### TODO - Device_Policy ##
-# Summary, description
 
 %package sub2-domain_API-Security-Device_Policy
 Summary:    Device_Policy
+Requires:   deivce-policy-manager
+Requires:   libdpm
+Requires:   libkrate
+Requires:   krate
 %description sub2-domain_API-Security-Device_Policy
-### TODO ###
-# packakge list
-
+The Device Policy Management framework provides APIs to create security-aware applications that are useful in enterprise setting.
+The primary purpose of the DPM(Device Policy Management) framework is to support enterprise applications, which require integration with policies enforced on the device to restrict their operations on some circumstance, such as Exchange ActiveSync or corporate apps. The device policy API supports the policies listed in the below table, and any application can subscribe those policies by registring policy changed callback to the device policy manager.
 %files sub2-domain_API-Security-Device_Policy
 
-### TODO - Key_Manager ##
-# Summary, description
 
 %package sub2-domain_API-Security-Key_Manager
 Summary:    Key_Manager
+Requires:   libkey-manager-client
 %description sub2-domain_API-Security-Key_Manager
-### TODO ###
-# packakge list
-
+The key manager provides a secure repository protected by Tizen platform for keys, certificates, and sensitive data of users and/or their APPs. Additionally, the key manager provides secure cryptographic operations for non-exportable keys without revealing key values to clients.
 %files sub2-domain_API-Security-Key_Manager
 
-### TODO - OpenSSL ##
-# Summary, description
 
 %package sub2-domain_API-Security-OpenSSL
 Summary:    OpenSSL
+Requires:   libopenssl
 %description sub2-domain_API-Security-OpenSSL
-### TODO ###
-# packakge list
-
+Tizen block (set of packages) for API sets of domain API-Security_OpenSSL.
+Library implementation of secure sockets layer (ssl) and transport layer security (tls) to enable secure internet communications.
 %files sub2-domain_API-Security-OpenSSL
 
-### TODO - Privilege_Info ##
-# Summary, description
 
 %package sub2-domain_API-Security-Privilege_Info
 Summary:    Privilege_Info
+Requires:   privilege-info
 %description sub2-domain_API-Security-Privilege_Info
-### TODO ###
-# packakge list
-
+The Privilege Info provides the display name or description of privileges.
 %files sub2-domain_API-Security-Privilege_Info
 
-### TODO - YACA ##
-# Summary, description
 
 %package sub2-domain_API-Security-YACA
 Summary:    YACA
+Requires:   yaca
 %description sub2-domain_API-Security-YACA
-### TODO ###
-# packakge list
-
+The YACA (Yet Another Crypto Api) provides a crypto functions such as key management, data integrity, data en/decryption and low-level RSA operations.
 %files sub2-domain_API-Security-YACA
 
 ############
