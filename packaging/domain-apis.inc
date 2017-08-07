@@ -2477,14 +2477,14 @@ EFL extension library
 %files sub2-domain_API-UI-EFL_Extension
 
 
-### TODO - External_Output_Manager ##
-# Summary, description
-
 %package sub2-domain_API-UI-External_Output_Manager
 Summary:    External_Output_Manager
+Requires: libeom
+Requires: %{name}-sub2-domain_API-UI-Display_Server
+
 %description sub2-domain_API-UI-External_Output_Manager
-### TODO ###
-# packakge list
+The External Output Manager (EOM) is for managing external outputs.<br>
+User can get the information of external outputs and control them via eom API.
 
 %files sub2-domain_API-UI-External_Output_Manager
 
@@ -2565,26 +2565,23 @@ The Tizen platform supports the Vulkan API in order to provide the most cutting-
 %files sub2-domain_API-UI-SDL_Vulkan
 
 
-### TODO - TBM_Surface ##
-# Summary, description
-
 %package sub2-domain_API-UI-TBM_Surface
 Summary:    TBM_Surface
+Requires: libtbm
+Requires: %{name}-sub2-domain_API-UI-Display_Server
 %description sub2-domain_API-UI-TBM_Surface
-### TODO ###
-# packakge list
+TBM Surface API provides user interface for The TBM Surface.<br>
+The user can get pointer of plane in the surface.<br>
+The user can store data to low level graphic buffer by using pointer of each plane.
 
 %files sub2-domain_API-UI-TBM_Surface
 
-
-### TODO - Tizen_WS_Shell ##
-# Summary, description
-
 %package sub2-domain_API-UI-Tizen_WS_Shell
 Summary:    Tizen_WS_Shell
+Requires: tzsh
+Requires: %{name}-sub2-domain_API-UI-Display_Server
 %description sub2-domain_API-UI-Tizen_WS_Shell
-### TODO ###
-# packakge list
+The Tizen WS Shell (tzsh) provides APIs to communicate with the window manager.
 
 %files sub2-domain_API-UI-Tizen_WS_Shell
 
@@ -2600,20 +2597,18 @@ View manager library
 %files sub2-domain_API-UI-UI_View_Manager
 
 
-### TODO - Vulkan ##
-# Summary, description
-
 %package sub2-domain_API-UI-Vulkan
 Summary:    Vulkan
+Requires: Vulkan-LoaderAndValidationLayers
+#Requires: vulkan-wsi-tizen
+Requires: %{name}-sub2-domain_API-UI-Display_Server
+
 %description sub2-domain_API-UI-Vulkan
-### TODO ###
-# packakge list
+Vulkan is a new generation graphics and compute API that provides high-efficiency, Cross-platform access to modern GPUs used in a wide variety of devices from PCs and consoles to mobile phones and embedded platforms.<br>
+Some devices may not support Vulkan.
 
 %files sub2-domain_API-UI-Vulkan
 
-
-### TODO - Display_Server ##
-# Summary, description
 
 %package sub2-domain_API-UI-Display_Server
 Summary:    Display_Server
