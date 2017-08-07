@@ -778,47 +778,40 @@ Summary:    Media_Tool
 
 %files sub2-domain_API-Multimedia-Media_Tool
 
-### TODO - Media_Vision_Barcode ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Media_Vision_Barcode
 Summary:    Media_Vision_Barcode
+Requires: capi-media-vision-barcode
+
 %description sub2-domain_API-Multimedia-Media_Vision_Barcode
-### TODO ###
-# packakge list
+MediaVision Barcode API to generate or detect Barcode/QRcode
 
 %files sub2-domain_API-Multimedia-Media_Vision_Barcode
 
-### TODO - Media_Vision_Face ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Media_Vision_Face
 Summary:    Media_Vision_Face
+Requires: capi-media-vision-face
+
 %description sub2-domain_API-Multimedia-Media_Vision_Face
-### TODO ###
-# packakge list
+MediaVision Face API to detect, recognize, or track faces on images
 
 %files sub2-domain_API-Multimedia-Media_Vision_Face
 
-### TODO - Media_Vision_Image ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Media_Vision_Image
 Summary:    Media_Vision_Image
+Requires: capi-media-vision-image
+
 %description sub2-domain_API-Multimedia-Media_Vision_Image
-### TODO ###
-# packakge list
+MediaVision Image API to recognize and track planar objects on an image
 
 %files sub2-domain_API-Multimedia-Media_Vision_Image
 
-### TODO - Media_Vision_Surveillance ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-Media_Vision_Surveillance
 Summary:    Media_Vision_Surveillance
+Requires: capi-media-vision-surveillance
+
 %description sub2-domain_API-Multimedia-Media_Vision_Surveillance
-### TODO ###
-# packakge list
+MediaVision Surveillance API to enable video surveillance by subscribing events,
+person (dis)appearance, recognized face, movement changes on videos.
 
 %files sub2-domain_API-Multimedia-Media_Vision_Surveillance
 
