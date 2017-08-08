@@ -604,6 +604,7 @@ Suggests: %{name}-sub2-domain_API-Multimedia-Video_Util
 Suggests: %{name}-sub2-domain_API-Multimedia-WAV_Player
 Suggests: %{name}-sub2-domain_API-Multimedia-libEXIF
 Suggests: %{name}-sub2-domain_API-Multimedia-AudioCore
+Suggests: %{name}-sub2-domain_API-Multimedia-Configuration
 %description sub1-domain_API-Multimedia
 Tizen block (set of packages) for Group of domain API-Multimedia
 %files sub1-domain_API-Multimedia
@@ -614,13 +615,6 @@ Summary:    Audio_IO
 # packakge list
 Requires:capi-media-audio-io
 Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
-
-Suggests:mmfw-sysconf-target-tm1
-Suggests:mmfw-sysconf-target-n4
-Suggests:mmfw-sysconf-target-tw1
-Suggests:mmfw-sysconf-target-tw2
-Suggests:mmfw-sysconf-target-artik10
-Suggests:mmfw-sysconf-target-rpi3
 
 %description sub2-domain_API-Multimedia-Audio_IO
 AudioIO provides functions to play/record raw PCM audio data.
@@ -633,21 +627,12 @@ Requires:capi-media-camera
 Requires:mmsvc-camera
 Requires:mused
 Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
+Requires:%{name}-sub2-domain_API-Multimedia-Configuration
 Requires:%{name}-sub2-domain_API-UI-TBM_Surface
 
 #camera
 Suggests:gst-plugins-camera-n4
 Suggests:gst-plugins-good
-
-#multimedia config
-Suggests:mmfw-sysconf-target-artik10
-Suggests:mmfw-sysconf-target-hawkp
-Suggests:mmfw-sysconf-target-n4
-Suggests:mmfw-sysconf-target-rpi3
-Suggests:mmfw-sysconf-target-tm1
-Suggests:mmfw-sysconf-target-tw1
-Suggests:mmfw-sysconf-target-tw2
-Suggests:mmfw-sysconf-target-u3
 
 %description sub2-domain_API-Multimedia-Camera
 The camera provides the ability to capture photos and support setting up notifications for state changes of capturing, previewing, focusing, information about resolution and binary format and functions for picture manipulations like sepia negative and many more. 
@@ -672,32 +657,15 @@ Requires: capi-media-codec
 Requires: gst-libav
 Requires: gst-plugins-bad
 Requires: %{name}-sub2-domain_API-UI-TBM_Surface
+Requires: %{name}-sub2-domain_API-Multimedia-Configuration
 
 Suggests: gst-omx
 Suggests: libomxil-e54xx
 
-#TM1
-Suggests: mmfw-sysconf-target-tm1
-
-#TM2
-Suggests: mmfw-sysconf-target-n4
-
 #TW1
 Suggests: libomxil-e3250-v4l2
-Suggests: mmfw-sysconf-target-tw1
-
 #TW2
 Suggests: libomxil-e7270-v4l2
-Suggests: mmfw-sysconf-target-tw2
-
-#XU3
-Suggests: mmfw-sysconf-target-u3
-
-#RPI3
-Suggests: mmfw-sysconf-target-rpi3
-
-#AT5/10
-Suggests: mmfw-sysconf-target-artik10
 
 
 %description sub2-domain_API-Multimedia-Media_Codec
@@ -752,40 +720,14 @@ Requires: gst-plugins-ugly
 Requires: gst-plugins-tizen
 Requires: gst-libav
 Requires: libmm-utility
-
-# required for audio
 Requires: %{name}-sub2-domain_API-Multimedia-AudioCore
+Requires: %{name}-sub2-domain_API-Multimedia-Configuration
 
 # required building block for video rendering
 Requires: %{name}-sub2-domain_API-System-Storage
 Requires: %{name}-sub2-domain_API-UI-TBM_Surface
 Requires: %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
 Requires: %{name}-sub2-domain_API-Network-WiFi
-
-# target specific package list
-# TM1
-Suggests: mmfw-sysconf-target-tm1
-
-# TM2
-Suggests: mmfw-sysconf-target-n4
-
-# TW1
-Suggests: mmfw-sysconf-target-tw1
-
-# TW2
-Suggests: mmfw-sysconf-target-tw2
-
-# XU3
-Suggests: mmfw-sysconf-target-u3
-
-# RPI3
-Suggests: mmfw-sysconf-target-rpi3
-
-# AT5/10
-Suggests: mmfw-sysconf-target-artik10
-
-# AT710
-Suggests: mmfw-sysconf-target-artik10
 
 %description sub2-domain_API-Multimedia-Media_Streamer
 This block supports constructing the custom player and it gives the ability to controlling playback attributes.<br>
@@ -865,13 +807,6 @@ Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
 
 Suggests:freealut
 
-Suggests:mmfw-sysconf-target-tm1
-Suggests:mmfw-sysconf-target-n4
-Suggests:mmfw-sysconf-target-tw1
-Suggests:mmfw-sysconf-target-tw2
-Suggests:mmfw-sysconf-target-artik10
-Suggests:mmfw-sysconf-target-rpi3
-
 %description sub2-domain_API-Multimedia-OpenAL
 OpenAL is designed for efficient rendering of 3-D positional audio.
 
@@ -886,9 +821,8 @@ Requires: gst-plugins-bad
 Requires: gst-plugins-ugly
 Requires: gst-plugins-tizen
 Requires: gst-libav
-
-# required for audio
 Requires: %{name}-sub2-domain_API-Multimedia-AudioCore
+Requires: %{name}-sub2-domain_API-Multimedia-Configuration
 
 # required building block for video rendering
 Requires: %{name}-sub2-domain_API-System-Storage
@@ -903,29 +837,6 @@ Suggests: libomxil-e3250-v4l2
 Suggests: libomxil-e7270-v4l2
 Suggests: libomxil-vc4
 
-# TM1
-Suggests: mmfw-sysconf-target-tm1
-
-# TM2
-Suggests: mmfw-sysconf-target-n4
-
-# TW1
-Suggests: mmfw-sysconf-target-tw1
-
-# TW2
-Suggests: mmfw-sysconf-target-tw2
-
-# XU3
-Suggests: mmfw-sysconf-target-u3
-
-# RPI3
-Suggests: mmfw-sysconf-target-rpi3
-
-# AT5/10
-Suggests: mmfw-sysconf-target-artik10
-
-# AT710
-Suggests: mmfw-sysconf-target-artik10
 
 %description sub2-domain_API-Multimedia-Player
 This block supports playing multimedia content. Content can be played from a file, from the network, or from memory. <br>
@@ -949,10 +860,7 @@ ARTIK710 : libomxil-e54xx <br>
 Summary:    Radio
 Requires: capi-media-radio
 Requires: %{name}-sub2-domain_API-Multimedia-AudioCore
-
-
-# multimedia-config
-Suggests: mmfw-sysconf-target-tm1
+Requires: %{name}-sub2-domain_API-Multimedia-Configuration
 
 # mobile bluetooth
 Suggests: bluez
@@ -977,18 +885,9 @@ Requires:gst-plugins-good
 Requires:gst-libav
 Requires:gst-plugins-tizen
 Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
+Requires:%{name}-sub2-domain_API-Multimedia-Configuration
 Requires:%{name}-sub2-domain_API-UI-TBM_Surface
 Requires:%{name}-sub2-domain_API-System-Storage
-
-#multimedia config
-Suggests:mmfw-sysconf-target-artik10
-Suggests:mmfw-sysconf-target-hawkp
-Suggests:mmfw-sysconf-target-n4
-Suggests:mmfw-sysconf-target-rpi3
-Suggests:mmfw-sysconf-target-tm1
-Suggests:mmfw-sysconf-target-tw1
-Suggests:mmfw-sysconf-target-tw2
-Suggests:mmfw-sysconf-target-u3
 
 #codec
 Suggests:libomxil-e3250-v4l2
@@ -1021,16 +920,11 @@ Requires:gst-plugins-ugly
 Requires:gst-libav
 Requires:gstreamer
 Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
+Requires:%{name}-sub2-domain_API-Multimedia-Configuration
 Requires:%{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
 Requires:%{name}-sub2-domain_API-Network-WiFi_Direct
 Requires:%{name}-sub2-domain_API-Network-WiFi_Manager
 Requires:%{name}-sub2-domain_API-UI-TBM_Surface
-
-#multimedia-config
-Suggests:mmfw-sysconf-target-artik10
-Suggests:mmfw-sysconf-target-n4
-Suggests:mmfw-sysconf-target-rpi3
-Suggests:mmfw-sysconf-target-tm1
 
 %description sub2-domain_API-Multimedia-Screen_Mirroring
 Screen Mirroiring provides the ability to connect to and disconnect from a screen mirroring source, start, pause, and resume the screen mirroring as a 'SINK' (source: Stream sender, sink:Stream receiver). It follows 'Miracast standard'. OPTIONAL : You should choose packages depends on target and hardware. First, Check config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1). Second, check audio HAL depends on target.
@@ -1042,13 +936,6 @@ Summary:    Sound_Manager
 # packakge list
 Requires:capi-media-sound-manager
 Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
-
-Suggests:mmfw-sysconf-target-tm1
-Suggests:mmfw-sysconf-target-n4
-Suggests:mmfw-sysconf-target-tw1
-Suggests:mmfw-sysconf-target-tw2
-Suggests:mmfw-sysconf-target-artik10
-Suggests:mmfw-sysconf-target-rpi3
 
 %description sub2-domain_API-Multimedia-Sound_Manager
 Sound_Manager provides functions to get and set of sound parameters such as volume,device and focus operations.
@@ -1082,15 +969,6 @@ Summary:    Tone_Player
 Requires:capi-media-tone-player
 Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
 
-Suggests:freealut
-
-Suggests:mmfw-sysconf-target-tm1
-Suggests:mmfw-sysconf-target-n4
-Suggests:mmfw-sysconf-target-tw1
-Suggests:mmfw-sysconf-target-tw2
-Suggests:mmfw-sysconf-target-artik10
-Suggests:mmfw-sysconf-target-rpi3
-
 %description sub2-domain_API-Multimedia-Tone_Player
 Tone_Player provides functions for playing the DTMF or predefined tone.
 
@@ -1117,15 +995,6 @@ Summary:    WAV_Player
 Requires:capi-media-wav-player
 Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
 
-Suggests:freealut
-
-Suggests:mmfw-sysconf-target-tm1
-Suggests:mmfw-sysconf-target-n4
-Suggests:mmfw-sysconf-target-tw1
-Suggests:mmfw-sysconf-target-tw2
-Suggests:mmfw-sysconf-target-artik10
-Suggests:mmfw-sysconf-target-rpi3
-
 %description sub2-domain_API-Multimedia-WAV_Player
 Wav_Player provides functions for playing the waveform audio file format(*.wav,*.ogg).
 
@@ -1141,12 +1010,13 @@ The libEXIF provides the ability to reads and writes EXIF metainformation from a
 %files sub2-domain_API-Multimedia-libEXIF
 
 %package sub2-domain_API-Multimedia-AudioCore
-Summary: PulseAudio
+Summary: AudioCore
 Requires:pulseaudio-modules-tizen
+Requires: %{name}-sub2-domain_API-Multimedia-Configuration
 
 Suggests:pulseaudio-module-bluetooth
 
-# Utilties
+#Utilities
 Suggests:alsa-utils
 Suggests:pulseaudio-utils
 
@@ -1173,13 +1043,12 @@ Suggests:alsa-ucm-data-ak4953
 Suggests:audio-hal-alc5658
 Suggests:alsa-ucm-data-alc5658
 
-
 #RPI3
 Suggests:audio-hal-bcm2837
 
 %description sub2-domain_API-Multimedia-AudioCore
-blabla<br>
-H/W optional packages<br>
+AudioCore block includes core audio modules including pulseaudio and essential pulseaudio-modules.<br>
+Following optional H/W packages must be selected based on actual target.<br>
 TM1 : audio-hal-sc7727, audio-config-sc-TM1-sc7730<br>
 TM2 : audio-hal-wm5110, alsa-ucm-data-wm5110<br>
 TW1 : audio-hal-wm1831, audio-config-wm1831-orbis<br>
@@ -1190,6 +1059,22 @@ ARTIK 710 : audio-hal-alc5658, alsa-ucm-data-alc5658<br>
 RPI3 : audio-hal-bcm2837, mmfw-sysconf-target-rpi3<br>
 
 %files sub2-domain_API-Multimedia-AudioCore
+
+%package sub2-domain_API-Multimedia-Configuration
+Summary: Configuration
+
+Suggests:mmfw-sysconf-target-tm1
+Suggests:mmfw-sysconf-target-n4
+Suggests:mmfw-sysconf-target-tw1
+Suggests:mmfw-sysconf-target-tw2
+Suggests:mmfw-sysconf-target-artik10
+Suggests:mmfw-sysconf-target-rpi3
+Suggests:mmfw-sysconf-target-u3
+
+%description sub2-domain_API-Multimedia-Configuration
+Multimedia Framework system configuration package including ini, conf and etc files.
+
+%files sub2-domain_API-Multimedia-Configuration
 
 #############
 ## Netowrk ##
