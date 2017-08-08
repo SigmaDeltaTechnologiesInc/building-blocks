@@ -1890,6 +1890,8 @@ Tizen block (set of packages) for Group of domain API-Security
 
 %package sub2-domain_API-Security-CSR
 Summary:    CSR
+Requires:   csr-framework
+Requires:   libcsr-framework-common
 Requires:   libcsr-framework-client
 %description sub2-domain_API-Security-CSR
 The CSR (Content Screening & Reputation) is an anti malware module. It provides Content Screening Service and Web Protection Service to protect a device and an user.
