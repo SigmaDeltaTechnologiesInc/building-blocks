@@ -85,9 +85,8 @@ and to most domains.
 %package	category-Preset
 Summary:	Tizen Presets
 Suggests:	%{name}-root-Preset_iot_core
-Suggests:	%{name}-root-Preset_1iot_examples
 Suggests:	%{name}-root-Preset_boards
-Suggests:	%{name}-root-Preset_iot
+Suggests:	%{name}-root-Preset_iot_headed
 %description	category-Preset
 This meta pacakge lists all Tizen blocks (meta packages) designating
 Tizen platform presets, HAL/device-support presets, and
