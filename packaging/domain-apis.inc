@@ -595,6 +595,7 @@ Suggests: %{name}-sub2-domain_API-Multimedia-Radio
 Suggests: %{name}-sub2-domain_API-Multimedia-Recorder
 Suggests: %{name}-sub2-domain_API-Multimedia-Screen_Mirroring
 Suggests: %{name}-sub2-domain_API-Multimedia-Sound_Manager
+Suggests: %{name}-sub2-domain_API-Multimedia-StreamerRecorder
 Suggests: %{name}-sub2-domain_API-Multimedia-Thumbnail_Util
 Suggests: %{name}-sub2-domain_API-Multimedia-Tone_Player
 Suggests: %{name}-sub2-domain_API-Multimedia-Video_Util
@@ -1280,6 +1281,17 @@ ARTIK 710 : audio-hal-alc5658, alsa-ucm-data-alc5658, mmfw-sysconf-target-artik1
 RPI3 : audio-hal-bcm2837, mmfw-sysconf-target-rpi3
 
 %files sub2-domain_API-Multimedia-Sound_Manager
+
+### TODO - StreamerRecorder ##
+# Summary, description
+
+%package sub2-domain_API-Multimedia-StreamerRecorder
+Summary:    Streamer Recorder
+%description sub2-domain_API-Multimedia-StreamerRecorder
+### TODO ###
+# packakge list
+
+%files sub2-domain_API-Multimedia-StreamerRecorder
 
 %package sub2-domain_API-Multimedia-Thumbnail_Util
 Summary:    Thumbnail_Util
