@@ -1979,6 +1979,7 @@ This block supports managing Phonenumber utils
 Summary:	System API Group
 Suggests: %{name}-sub2-domain_API-System-Device_Battery
 Suggests: %{name}-sub2-domain_API-System-Device_Callback
+Suggests: %{name}-sub2-domain_API-System-Device_Display
 Suggests: %{name}-sub2-domain_API-System-Device_Haptic
 Suggests: %{name}-sub2-domain_API-System-Device_IR
 Suggests: %{name}-sub2-domain_API-System-Device_Led
@@ -2054,6 +2055,34 @@ Then choose proper combination.
 For example, deviced-profile_mobile and device-manager-plugin-sc7730 for mobile
              deviced-profile_common and device-manager-plugin-rpi3 for rpi3
 %files sub2-domain_API-System-Device_Callback
+
+%package sub2-domain_API-System-Device_Display
+Summary:  Device_Display
+Requires: deviced
+Requires: capi-system-device
+Suggests: deviced-profile_mobile
+Suggests: deviced-profile_common
+Suggests: deviced-profile_wearable
+Suggests: deviced-profile_tv
+Suggests: deviced-profile_ivi
+Suggests: device-manager-plugin-sc7730
+Suggests: device-manager-plugin-artik
+Suggests: device-manager-plugin-emul
+Suggests: device-manager-plugin-exynos3250
+Suggests: device-manager-plugin-exynos5433
+Suggests: device-manager-plugin-exynos7270
+Suggests: device-manager-plugin-odroid
+Suggests: device-manager-plugin-rpi3
+%description sub2-domain_API-System-Device_Display
+Tizen block (set of packages) for Group of sub domain Device_Display.
+If you do not want to use Device_Display APIs, you do not need to choose.
+However, if you want to use them, you have to choose at least one item in each deviced-profile_xxxx and device-manager-plugin-xxxx.
+Those have a dependancy on Profile and Hardware.
+So, before you select, you have to make sure that which Profile and hardware you have.
+Then choose proper combination.
+For example, deviced-profile_mobile and device-manager-plugin-sc7730 for mobile
+             deviced-profile_common and device-manager-plugin-rpi3 for rpi3
+%files sub2-domain_API-System-Device_Display
 
 %package sub2-domain_API-System-Device_Haptic
 Summary:    Device_Haptic
