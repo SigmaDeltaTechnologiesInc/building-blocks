@@ -603,6 +603,7 @@ Suggests: %{name}-sub2-domain_API-Multimedia-Tone_Player
 Suggests: %{name}-sub2-domain_API-Multimedia-Video_Util
 Suggests: %{name}-sub2-domain_API-Multimedia-WAV_Player
 Suggests: %{name}-sub2-domain_API-Multimedia-libEXIF
+Suggests: %{name}-sub2-domain_API-Multimedia-AudioCore
 %description sub1-domain_API-Multimedia
 Tizen block (set of packages) for Group of domain API-Multimedia
 %files sub1-domain_API-Multimedia
@@ -612,60 +613,17 @@ Summary:    Audio_IO
 
 # packakge list
 Requires:capi-media-audio-io
-Requires:pulseaudio
-Requires:pulseaudio-module-bluetooth
-Requires:pulseaudio-modules-tizen
+Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
 
-# Utilties
-Suggests:alsa-utils
-Suggests:pulseaudio-utils
-
-#TM1
-Suggests:audio-hal-sc7727
-Suggests:audio-config-sc-TM1-sc7730
 Suggests:mmfw-sysconf-target-tm1
-
-#TM2
-Suggests:audio-hal-wm5110
-Suggests:alsa-ucm-data-wm5110
 Suggests:mmfw-sysconf-target-n4
-
-#TW1
-Suggests:audio-hal-wm1831
-Suggests:audio-config-wm1831-orbis
 Suggests:mmfw-sysconf-target-tw1
-
-
-#TW2
-Suggests:audio-hal-wm1831-tw2
-Suggests:audio-config-wm1831-tw2
 Suggests:mmfw-sysconf-target-tw2
-
-#ARTIK 5/10
-Suggests:audio-hal-ak4953
-Suggests:alsa-ucm-data-ak4953
-#ARTIK 710
-Suggests:audio-hal-alc5658
-Suggests:alsa-ucm-data-alc5658
-#ARTIK COMMON
 Suggests:mmfw-sysconf-target-artik10
-
-#RPI3
-Suggests:audio-hal-bcm2837
 Suggests:mmfw-sysconf-target-rpi3
 
 %description sub2-domain_API-Multimedia-Audio_IO
 AudioIO provides functions to play/record raw PCM audio data.
-
-H/W optional packages
-TM1 : audio-hal-sc7727, audio-config-sc-TM1-sc7730, mmfw-sysconf-target-tm1
-TM2 : audio-hal-wm5110, alsa-ucm-data-wm5110, mmfw-sysconf-target-n4
-TW1 : audio-hal-wm1831, audio-config-wm1831-orbis, mmfw-sysconf-target-tw1
-TW2 : audio-hal-wm1831-tw2, audio-config-wm1831-tw2, mmfw-sysconf-target-tw2
-U3/XU3 : audio-hal-max98090, alsa-ucm-data-max98090, mmfw-sysconf-target-u3
-ARTIK 5/10 : audio-hal-ak4953, alsa-ucm-data-ak4953, mmfw-sysconf-target-artik10
-ARTIK 710 : audio-hal-alc5658, alsa-ucm-data-alc5658, mmfw-sysconf-target-artik10
-RPI3 : audio-hal-bcm2837, mmfw-sysconf-target-rpi3
 
 %files sub2-domain_API-Multimedia-Audio_IO
 
@@ -674,9 +632,7 @@ Summary:    Camera
 Requires:capi-media-camera
 Requires:mmsvc-camera
 Requires:mused
-Requires:pulseaudio
-Requires:pulseaudio-modules-tizen
-Requires:pulseaudio-module-bluetooth
+Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
 Requires:%{name}-sub2-domain_API-UI-TBM_Surface
 
 #camera
@@ -798,9 +754,7 @@ Requires: gst-libav
 Requires: libmm-utility
 
 # required for audio
-Requires: pulseaudio
-Requires: pulseaudio-module-bluetooth
-Requires: pulseaudio-modules-tizen
+Requires: %{name}-sub2-domain_API-Multimedia-AudioCore
 
 # required building block for video rendering
 Requires: %{name}-sub2-domain_API-System-Storage
@@ -810,42 +764,27 @@ Requires: %{name}-sub2-domain_API-Network-WiFi
 
 # target specific package list
 # TM1
-Suggests: audio-hal-sc7727
-Suggests: audio-config-sc-TM1-sc7730
 Suggests: mmfw-sysconf-target-tm1
 
 # TM2
-Suggests: audio-hal-wm5110
-Suggests: alsa-ucm-data-wm5110
 Suggests: mmfw-sysconf-target-n4
 
 # TW1
-Suggests: audio-hal-wm1831
-Suggests: audio-config-wm1831-orbis
 Suggests: mmfw-sysconf-target-tw1
 
 # TW2
-Suggests: audio-hal-wm1831-tw2
-Suggests: audio-config-wm1831-tw2
 Suggests: mmfw-sysconf-target-tw2
 
 # XU3
-Suggests: audio-hal-max98090
-Suggests: alsa-ucm-data-max98090
 Suggests: mmfw-sysconf-target-u3
 
 # RPI3
-Suggests: audio-hal-bcm2837
 Suggests: mmfw-sysconf-target-rpi3
 
 # AT5/10
-Suggests: audio-hal-ak4953
-Suggests: alsa-ucm-data-ak4953
 Suggests: mmfw-sysconf-target-artik10
 
 # AT710
-Suggests: audio-hal-alc5658
-Suggests: alsa-ucm-data-alc5658
 Suggests: mmfw-sysconf-target-artik10
 
 %description sub2-domain_API-Multimedia-Media_Streamer
@@ -854,14 +793,6 @@ About OPTIONAL selection:<br>
 You should choose packages depends on target and hardware.<br>
 First, Select the config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1).<br>
 Second, Select the audio HAL depends on target. <br>
-TM1 : audio-hal-sc7727,audio-config-sc-TM1-sc7730 <br>
-TM2(n4) : audio-hal-wm5110,alsa-ucm-data-wm5110 <br>
-TW1 : audio-hal-wm1831, audio-config-wm1831-orbis <br>
-TW2 : audio-hal-wm1831-tw2, audio-config-wm1831-tw2 <br>
-XU3 : audio-hal-max98090, alsa-ucm-data-max98090 <br>
-RPI3 : audio-hal-bcm2837 <br>
-AT5/10 : audio-hal-ak4953, alsa-ucm-data-ak4953 <br>
-ARTIK710 : audio-hal-alc5658,alsa-ucm-data-alc5658 <br>
 
 %files sub2-domain_API-Multimedia-Media_Streamer
 
@@ -930,64 +861,21 @@ Summary:    OpenAL
 
 # packakge list
 Requires:openal-soft
-Requires:pulseaudio
-Requires:pulseaudio-module-bluetooth
-Requires:pulseaudio-modules-tizen
+Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
 
-# Utilties
-Suggests:alsa-utils
-Suggests:pulseaudio-utils
 Suggests:freealut
 
-#TM1
-Suggests:audio-hal-sc7727
-Suggests:audio-config-sc-TM1-sc7730
 Suggests:mmfw-sysconf-target-tm1
-
-#TM2
-Suggests:audio-hal-wm5110
-Suggests:alsa-ucm-data-wm5110
 Suggests:mmfw-sysconf-target-n4
-
-#TW1
-Suggests:audio-hal-wm1831
-Suggests:audio-config-wm1831-orbis
 Suggests:mmfw-sysconf-target-tw1
-
-
-#TW2
-Suggests:audio-hal-wm1831-tw2
-Suggests:audio-config-wm1831-tw2
 Suggests:mmfw-sysconf-target-tw2
-
-#ARTIK 5/10
-Suggests:audio-hal-ak4953
-Suggests:alsa-ucm-data-ak4953
-#ARTIK 710
-Suggests:audio-hal-alc5658
-Suggests:alsa-ucm-data-alc5658
-#ARTIK COMMON
 Suggests:mmfw-sysconf-target-artik10
-
-#RPI3
-Suggests:audio-hal-bcm2837
 Suggests:mmfw-sysconf-target-rpi3
 
 %description sub2-domain_API-Multimedia-OpenAL
 OpenAL is designed for efficient rendering of 3-D positional audio.
 
-H/W optional packages
-TM1 : audio-hal-sc7727, audio-config-sc-TM1-sc7730, mmfw-sysconf-target-tm1
-TM2 : audio-hal-wm5110, alsa-ucm-data-wm5110, mmfw-sysconf-target-n4
-TW1 : audio-hal-wm1831, audio-config-wm1831-orbis, mmfw-sysconf-target-tw1
-TW2 : audio-hal-wm1831-tw2, audio-config-wm1831-tw2, mmfw-sysconf-target-tw2
-U3/XU3 : audio-hal-max98090, alsa-ucm-data-max98090, mmfw-sysconf-target-u3
-ARTIK 5/10 : audio-hal-ak4953, alsa-ucm-data-ak4953, mmfw-sysconf-target-artik10
-ARTIK 710 : audio-hal-alc5658, alsa-ucm-data-alc5658, mmfw-sysconf-target-artik10
-RPI3 : audio-hal-bcm2837, mmfw-sysconf-target-rpi3
-
 %files sub2-domain_API-Multimedia-OpenAL
-
 
 %package sub2-domain_API-Multimedia-Player
 Summary:  Player
@@ -1000,9 +888,7 @@ Requires: gst-plugins-tizen
 Requires: gst-libav
 
 # required for audio
-Requires: pulseaudio
-Requires: pulseaudio-module-bluetooth
-Requires: pulseaudio-modules-tizen
+Requires: %{name}-sub2-domain_API-Multimedia-AudioCore
 
 # required building block for video rendering
 Requires: %{name}-sub2-domain_API-System-Storage
@@ -1018,42 +904,27 @@ Suggests: libomxil-e7270-v4l2
 Suggests: libomxil-vc4
 
 # TM1
-Suggests: audio-hal-sc7727
-Suggests: audio-config-sc-TM1-sc7730
 Suggests: mmfw-sysconf-target-tm1
 
 # TM2
-Suggests: audio-hal-wm5110
-Suggests: alsa-ucm-data-wm5110
 Suggests: mmfw-sysconf-target-n4
 
 # TW1
-Suggests: audio-hal-wm1831
-Suggests: audio-config-wm1831-orbis
 Suggests: mmfw-sysconf-target-tw1
 
 # TW2
-Suggests: audio-hal-wm1831-tw2
-Suggests: audio-config-wm1831-tw2
 Suggests: mmfw-sysconf-target-tw2
 
 # XU3
-Suggests: audio-hal-max98090
-Suggests: alsa-ucm-data-max98090
 Suggests: mmfw-sysconf-target-u3
 
 # RPI3
-Suggests: audio-hal-bcm2837
 Suggests: mmfw-sysconf-target-rpi3
 
 # AT5/10
-Suggests: audio-hal-ak4953
-Suggests: alsa-ucm-data-ak4953
 Suggests: mmfw-sysconf-target-artik10
 
 # AT710
-Suggests: audio-hal-alc5658
-Suggests: alsa-ucm-data-alc5658
 Suggests: mmfw-sysconf-target-artik10
 
 %description sub2-domain_API-Multimedia-Player
@@ -1064,27 +935,21 @@ You should choose packages depends on target and hardware. <br>
 First, You have to select the gst-omx package except TM1 target to use hardware video decoder. <br>
 Second, Select the config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1). <br>
 Third, Select the audio HAL and libomx package depends on target. <br>
-TM1 : audio-hal-sc7727, audio-config-sc-TM1-sc7730 <br>
-TM2(n4) : audio-hal-wm5110, alsa-ucm-data-wm5110,libomxil-e54xx <br>
-TW1 : audio-hal-wm1831, audio-config-wm1831-orbis, libomxil-e3250-v4l2 <br>
-TW2 : audio-hal-wm1831-tw2, audio-config-wm1831-tw2, libomxil-e7270-v4l2 <br>
-XU3 : audio-hal-max98090, alsa-ucm-data-max98090, libomxil-e54xx <br>
-RPI3 : audio-hal-bcm2837, libomxil-vc4 <br>
-AT5/10 : audio-hal-ak4953, alsa-ucm-data-ak4953, libomxil-e54xx <br>
-ARTIK710 : audio-hal-alc5658, alsa-ucm-data-alc5658, libomxil-e54xx <br>
+TM2(n4) : libomxil-e54xx <br>
+TW1 : libomxil-e3250-v4l2 <br>
+TW2 : libomxil-e7270-v4l2 <br>
+XU3 : libomxil-e54xx <br>
+RPI3 : libomxil-vc4 <br>
+AT5/10 : libomxil-e54xx <br>
+ARTIK710 : libomxil-e54xx <br>
 %files sub2-domain_API-Multimedia-Player
 
 
 %package sub2-domain_API-Multimedia-Radio
 Summary:    Radio
 Requires: capi-media-radio
-Requires: pulseaudio
-Requires: pulseaudio-module-bluetooth
-Requires: pulseaudio-modules-tizen
+Requires: %{name}-sub2-domain_API-Multimedia-AudioCore
 
-# TM1
-Suggests: audio-hal-sc7727
-Suggests: audio-config-sc-TM1-sc7730
 
 # multimedia-config
 Suggests: mmfw-sysconf-target-tm1
@@ -1099,7 +964,7 @@ Enabling Radio and it is possible to use Radio API <br>
 Radio API provides functions for accessing the radio <br>
 About OPTIONAL selection:<br>
 You should choose packages depends on target and hardware.<br>
-TM1: bulez, rfkill, bluetoothe-firmware-sprd-TM1 <br>
+TM1: bluez, rfkill, bluetoothe-firmware-sprd-TM1 <br>
 
 %files sub2-domain_API-Multimedia-Radio
 
@@ -1111,35 +976,9 @@ Requires:mused
 Requires:gst-plugins-good
 Requires:gst-libav
 Requires:gst-plugins-tizen
-Requires:pulseaudio-modules-tizen
-Requires:pulseaudio-module-bluetooth
+Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
 Requires:%{name}-sub2-domain_API-UI-TBM_Surface
 Requires:%{name}-sub2-domain_API-System-Storage
-
-# audo HAL
-#TM1
-Suggests:audio-hal-sc7727
-Suggests:audio-config-sc-TM1-sc7730
-#TM2
-Suggests:audio-hal-wm5110
-Suggests:alsa-ucm-data-wm5110
-#TW1
-Suggests:audio-hal-wm1831
-Suggests:audio-config-wm1831-orbis
-#TW2
-Suggests:audio-hal-wm1831-tw2
-Suggests:audio-config-wm1831-tw2
-#XU3
-Suggests:audio-hal-max98090
-Suggests:alsa-ucm-data-max98090
-#RPI3
-Suggests:audio-hal-bcm2837
-#AT5/10
-Suggests:udio-hal-ak4953
-Suggests:alsa-ucm-data-ak4953
-#AT710
-Suggests:audio-hal-alc5658
-Suggests:alsa-ucm-data-alc5658
 
 #multimedia config
 Suggests:mmfw-sysconf-target-artik10
@@ -1161,14 +1000,6 @@ The recorder provides the ability to create audio/video recorder, to start, stop
 OPTIONAL : You should choose packages depends on target and hardware.
 First, Check config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1).
 Second, Check audio HAL depends on target.
-TM1:audio-hal-sc7727, audio-config-sc-TM1-sc7730
-TM2:audio-hal-wm5110, alsa-ucm-data-wm5110
-TW1:audio-hal-wm1831, audio-config-wm1831-orbis
-TW2:audio-hal-wm1831-tw2, audio-config-wm1831-tw2
-XU3:audio-hal-max98090, alsa-ucm-data-max98090
-RPI3:audio-hal-bcm2837
-AT5/10:udio-hal-ak4953, alsa-ucm-data-ak4953
-AT710:audio-hal-alc5658, alsa-ucm-data-alc5658
 Third, Check codec depends on target.
 gst-plugins-sprdcodec-sc7730
 libomxil-e3250-v4l2
@@ -1189,28 +1020,11 @@ Requires:gst-plugins-good
 Requires:gst-plugins-ugly
 Requires:gst-libav
 Requires:gstreamer
-Requires:pulseaudio
-Requires:pulseaudio-module-bluetooth
-Requires:pulseaudio-modules-tizen
+Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
 Requires:%{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
 Requires:%{name}-sub2-domain_API-Network-WiFi_Direct
 Requires:%{name}-sub2-domain_API-Network-WiFi_Manager
 Requires:%{name}-sub2-domain_API-UI-TBM_Surface
-
-#TM1
-Suggests:audio-hal-sc7727
-Suggests:audio-config-sc-TM1-sc7730
-
-#TM2
-Suggests:audio-hal-wm5110
-Suggests:alsa-ucm-data-wm5110
-
-#RPI3
-Suggests:audio-hal-bcm2837
-
-#ARTIK710
-Suggests:audio-hal-alc5658
-Suggests:alsa-ucm-data-alc5658
 
 #multimedia-config
 Suggests:mmfw-sysconf-target-artik10
@@ -1219,8 +1033,7 @@ Suggests:mmfw-sysconf-target-rpi3
 Suggests:mmfw-sysconf-target-tm1
 
 %description sub2-domain_API-Multimedia-Screen_Mirroring
-Screen Mirroiring provides the ability to connect to and disconnect from a screen mirroring source, start, pause, and resume the screen mirroring as a 'SINK' (source: Stream sender, sink:Stream receiver). It follows 'Miracast standard'. OPTIONAL : You should choose packages depends on target and hardware. First, Check config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1). Second, check audio HAL depends on target. TM1:audio-hal-sc7727,audio-config-sc-TM1-sc7730. TM2(n4):audio-hal-wm5110,alsa-ucm-data-wm5110. RPI3:audio-hal-bcm2837, ARTIK710:audio-hal-alc5658,alsa-ucm-data-alc5658.
-
+Screen Mirroiring provides the ability to connect to and disconnect from a screen mirroring source, start, pause, and resume the screen mirroring as a 'SINK' (source: Stream sender, sink:Stream receiver). It follows 'Miracast standard'. OPTIONAL : You should choose packages depends on target and hardware. First, Check config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1). Second, check audio HAL depends on target.
 %files sub2-domain_API-Multimedia-Screen_Mirroring
 
 %package sub2-domain_API-Multimedia-Sound_Manager
@@ -1228,59 +1041,17 @@ Summary:    Sound_Manager
 
 # packakge list
 Requires:capi-media-sound-manager
-Requires:pulseaudio
-Requires:pulseaudio-module-bluetooth
-Requires:pulseaudio-modules-tizen
+Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
 
-# Utilties
-Suggests:alsa-utils
-Suggests:pulseaudio-utils
-
-#TM1
-Suggests:audio-hal-sc7727
-Suggests:audio-config-sc-TM1-sc7730
 Suggests:mmfw-sysconf-target-tm1
-
-#TM2
-Suggests:audio-hal-wm5110
-Suggests:alsa-ucm-data-wm5110
 Suggests:mmfw-sysconf-target-n4
-
-#TW1
-Suggests:audio-hal-wm1831
-Suggests:audio-config-wm1831-orbis
 Suggests:mmfw-sysconf-target-tw1
-
-#TW2
-Suggests:audio-hal-wm1831-tw2
-Suggests:audio-config-wm1831-tw2
 Suggests:mmfw-sysconf-target-tw2
-
-#ARTIK 5/10
-Suggests:audio-hal-ak4953
-Suggests:alsa-ucm-data-ak4953
-#ARTIK 710
-Suggests:audio-hal-alc5658
-Suggests:alsa-ucm-data-alc5658
-#ARTIK COMMON
 Suggests:mmfw-sysconf-target-artik10
-
-#RPI3
-Suggests:audio-hal-bcm2837
 Suggests:mmfw-sysconf-target-rpi3
 
 %description sub2-domain_API-Multimedia-Sound_Manager
 Sound_Manager provides functions to get and set of sound parameters such as volume,device and focus operations.
-
-H/W optional packages
-TM1 : audio-hal-sc7727, audio-config-sc-TM1-sc7730, mmfw-sysconf-target-tm1
-TM2 : audio-hal-wm5110, alsa-ucm-data-wm5110, mmfw-sysconf-target-n4
-TW1 : audio-hal-wm1831, audio-config-wm1831-orbis, mmfw-sysconf-target-tw1
-TW2 : audio-hal-wm1831-tw2, audio-config-wm1831-tw2, mmfw-sysconf-target-tw2
-U3/XU3 : audio-hal-max98090, alsa-ucm-data-max98090, mmfw-sysconf-target-u3
-ARTIK 5/10 : audio-hal-ak4953, alsa-ucm-data-ak4953, mmfw-sysconf-target-artik10
-ARTIK 710 : audio-hal-alc5658, alsa-ucm-data-alc5658, mmfw-sysconf-target-artik10
-RPI3 : audio-hal-bcm2837, mmfw-sysconf-target-rpi3
 
 %files sub2-domain_API-Multimedia-Sound_Manager
 
@@ -1309,59 +1080,19 @@ Summary:    Tone_Player
 
 # packakge list
 Requires:capi-media-tone-player
-Requires:pulseaudio
-Requires:pulseaudio-module-bluetooth
-Requires:pulseaudio-modules-tizen
+Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
 
-# Utilties
-Suggests:alsa-utils
-Suggests:pulseaudio-utils
+Suggests:freealut
 
-#TM1
-Suggests:audio-hal-sc7727
-Suggests:audio-config-sc-TM1-sc7730
 Suggests:mmfw-sysconf-target-tm1
-
-#TM2
-Suggests:audio-hal-wm5110
-Suggests:alsa-ucm-data-wm5110
 Suggests:mmfw-sysconf-target-n4
-
-#TW1
-Suggests:audio-hal-wm1831
-Suggests:audio-config-wm1831-orbis
 Suggests:mmfw-sysconf-target-tw1
-
-#TW2
-Suggests:audio-hal-wm1831-tw2
-Suggests:audio-config-wm1831-tw2
 Suggests:mmfw-sysconf-target-tw2
-
-#ARTIK 5/10
-Suggests:audio-hal-ak4953
-Suggests:alsa-ucm-data-ak4953
-#ARTIK 710
-Suggests:audio-hal-alc5658
-Suggests:alsa-ucm-data-alc5658
-#ARTIK COMMON
 Suggests:mmfw-sysconf-target-artik10
-
-#RPI3
-Suggests:audio-hal-bcm2837
 Suggests:mmfw-sysconf-target-rpi3
 
 %description sub2-domain_API-Multimedia-Tone_Player
 Tone_Player provides functions for playing the DTMF or predefined tone.
-
-H/W optional packages
-TM1 : audio-hal-sc7727, audio-config-sc-TM1-sc7730, mmfw-sysconf-target-tm1
-TM2 : audio-hal-wm5110, alsa-ucm-data-wm5110, mmfw-sysconf-target-n4
-TW1 : audio-hal-wm1831, audio-config-wm1831-orbis, mmfw-sysconf-target-tw1
-TW2 : audio-hal-wm1831-tw2, audio-config-wm1831-tw2, mmfw-sysconf-target-tw2
-U3/XU3 : audio-hal-max98090, alsa-ucm-data-max98090, mmfw-sysconf-target-u3
-ARTIK 5/10 : audio-hal-ak4953, alsa-ucm-data-ak4953, mmfw-sysconf-target-artik10
-ARTIK 710 : audio-hal-alc5658, alsa-ucm-data-alc5658, mmfw-sysconf-target-artik10
-RPI3 : audio-hal-bcm2837, mmfw-sysconf-target-rpi3
 
 %files sub2-domain_API-Multimedia-Tone_Player
 
@@ -1384,59 +1115,19 @@ Summary:    WAV_Player
 
 # packakge list
 Requires:capi-media-wav-player
-Requires:pulseaudio
-Requires:pulseaudio-module-bluetooth
-Requires:pulseaudio-modules-tizen
+Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
 
-# Utilties
-Suggests:alsa-utils
-Suggests:pulseaudio-utils
+Suggests:freealut
 
-#TM1
-Suggests:audio-hal-sc7727
-Suggests:audio-config-sc-TM1-sc7730
 Suggests:mmfw-sysconf-target-tm1
-
-#TM2
-Suggests:audio-hal-wm5110
-Suggests:alsa-ucm-data-wm5110
 Suggests:mmfw-sysconf-target-n4
-
-#TW1
-Suggests:audio-hal-wm1831
-Suggests:audio-config-wm1831-orbis
 Suggests:mmfw-sysconf-target-tw1
-
-#TW2
-Suggests:audio-hal-wm1831-tw2
-Suggests:audio-config-wm1831-tw2
 Suggests:mmfw-sysconf-target-tw2
-
-#ARTIK 5/10
-Suggests:audio-hal-ak4953
-Suggests:alsa-ucm-data-ak4953
-#ARTIK 710
-Suggests:audio-hal-alc5658
-Suggests:alsa-ucm-data-alc5658
-#ARTIK COMMON
 Suggests:mmfw-sysconf-target-artik10
-
-#RPI3
-Suggests:audio-hal-bcm2837
 Suggests:mmfw-sysconf-target-rpi3
 
 %description sub2-domain_API-Multimedia-WAV_Player
 Wav_Player provides functions for playing the waveform audio file format(*.wav,*.ogg).
-
-H/W optional packages
-TM1 : audio-hal-sc7727, audio-config-sc-TM1-sc7730, mmfw-sysconf-target-tm1
-TM2 : audio-hal-wm5110, alsa-ucm-data-wm5110, mmfw-sysconf-target-n4
-TW1 : audio-hal-wm1831, audio-config-wm1831-orbis, mmfw-sysconf-target-tw1
-TW2 : audio-hal-wm1831-tw2, audio-config-wm1831-tw2, mmfw-sysconf-target-tw2
-U3/XU3 : audio-hal-max98090, alsa-ucm-data-max98090, mmfw-sysconf-target-u3
-ARTIK 5/10 : audio-hal-ak4953, alsa-ucm-data-ak4953, mmfw-sysconf-target-artik10
-ARTIK 710 : audio-hal-alc5658, alsa-ucm-data-alc5658, mmfw-sysconf-target-artik10
-RPI3 : audio-hal-bcm2837, mmfw-sysconf-target-rpi3
 
 %files sub2-domain_API-Multimedia-WAV_Player
 
@@ -1448,6 +1139,57 @@ Requires:libexif
 The libEXIF provides the ability to reads and writes EXIF metainformation from and to image files.
 
 %files sub2-domain_API-Multimedia-libEXIF
+
+%package sub2-domain_API-Multimedia-AudioCore
+Summary: PulseAudio
+Requires:pulseaudio-modules-tizen
+
+Suggests:pulseaudio-module-bluetooth
+
+# Utilties
+Suggests:alsa-utils
+Suggests:pulseaudio-utils
+
+#TM1
+Suggests:audio-hal-sc7727
+Suggests:audio-config-sc-TM1-sc7730
+
+#TM2
+Suggests:audio-hal-wm5110
+Suggests:alsa-ucm-data-wm5110
+
+#TW1
+Suggests:audio-hal-wm1831
+Suggests:audio-config-wm1831-orbis
+
+#TW2
+Suggests:audio-hal-wm1831-tw2
+Suggests:audio-config-wm1831-tw2
+
+#ARTIK 5/10
+Suggests:audio-hal-ak4953
+Suggests:alsa-ucm-data-ak4953
+#ARTIK 710
+Suggests:audio-hal-alc5658
+Suggests:alsa-ucm-data-alc5658
+
+
+#RPI3
+Suggests:audio-hal-bcm2837
+
+%description sub2-domain_API-Multimedia-AudioCore
+blabla<br>
+H/W optional packages<br>
+TM1 : audio-hal-sc7727, audio-config-sc-TM1-sc7730<br>
+TM2 : audio-hal-wm5110, alsa-ucm-data-wm5110<br>
+TW1 : audio-hal-wm1831, audio-config-wm1831-orbis<br>
+TW2 : audio-hal-wm1831-tw2, audio-config-wm1831-tw2<br>
+U3/XU3 : audio-hal-max98090, alsa-ucm-data-max98090<br>
+ARTIK 5/10 : audio-hal-ak4953, alsa-ucm-data-ak4953<br>
+ARTIK 710 : audio-hal-alc5658, alsa-ucm-data-alc5658<br>
+RPI3 : audio-hal-bcm2837, mmfw-sysconf-target-rpi3<br>
+
+%files sub2-domain_API-Multimedia-AudioCore
 
 #############
 ## Netowrk ##
