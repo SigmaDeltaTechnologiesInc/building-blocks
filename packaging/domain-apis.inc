@@ -268,9 +268,6 @@ Requires: libcom_err
 %description sub2-domain_API-Base-Common_Error
 Tizen block (set of packages) for Group of sub domain Common-Error
 
-### TODO ###
-# packakge list
-
 %files sub2-domain_API-Base-Common_Error
 
 # Summary, description
@@ -340,9 +337,6 @@ Requires: sqlite
 %description sub2-domain_API-Base-Sqlite
 This block is possible to use sqlite3 and libsqlite.
 
-### TODO ###
-# packakge list
-
 %files sub2-domain_API-Base-Sqlite
 
 
@@ -389,9 +383,6 @@ Suggests:	%{name}-sub1-domain_API-Telephony
 Tizen block (set of packages) for API sets of domain API-Content-Download <br>
 To use this feature, either Data Network or Wi-Fi connection is required.
 %files sub2-domain_API-Content-Download
-
-### TODO - MIME-Type ###
-# Summary, description
 
 %package sub2-domain_API-Content-MIME_Type
 Summary:    MIME-Type API
@@ -524,9 +515,6 @@ Requires:	maps-plugin-mapzen
 
 %description sub2-domain_API-Maps-Mapzen_Plugin
 This block supports MAPZEN plugin.
-
-### TODO ###
-# packakge list
 
 %files sub2-domain_API-Maps-Mapzen_Plugin
 
@@ -2523,9 +2511,6 @@ HarfBuzz is an OpenType text shaping engine.
 
 %files sub2-domain_API-UI-HarfBuzz
 
-
-### TODO - Minicontrol ##
-# Summary, description
 
 %package sub2-domain_API-UI-Minicontrol
 Summary:    Minicontrol
