@@ -141,6 +141,8 @@ Requires: amd-mod-ui-core
 Requires: amd-mod-wayland-core
 Requires: %{name}-sub2-domain_API-UI-Display_Server
 Requires: %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
+Requires: %{name}-sub2-domain_API-UI-EFL_Extension
+Requires: %{name}-sub2-domain_API-UI-FontConfig
 %description sub2-domain_API-AppFramework-Native_EFL_UI_app_model
 This block supports native EFL UI application model
 %files sub2-domain_API-AppFramework-Native_EFL_UI_app_model
