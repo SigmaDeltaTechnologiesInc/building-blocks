@@ -198,7 +198,12 @@ Packages of Telephony HAL and Feature for RPI3.
 
 ### RPI3-Feedback ###
 %package sub2-Preset_boards-RPI3-Feedback
-Summary:	Feedback (Not Implemented)
+Summary:	Feedback
+Requires:	%{name}-sub2-domain_API-System-Feedback
+Requires:	%{name}-sub2-Preset_boards-RPI3-Audio
+Requires:	feedbackd-profile_mobile
+Requires:	svi-data-profile_mobile
+
 
 %description sub2-Preset_boards-RPI3-Feedback
 Packages of Feedback HAL and Feature for RPI3.
@@ -225,7 +230,7 @@ Packages of DALi HAL and Feature for RPI3.
 Summary:	EFL
 Requires:	%{name}-sub2-Preset_boards-RPI3-GPU
 Requires:	%{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
-Requires:	efl-config-profile-common
+Requires:	efl-config-profile_common
 Requires:	efl-misc-profile_common
 Requires:	efl-modules-profile_common
 Requires:	efl-theme-tizen-common
@@ -242,7 +247,7 @@ Packages of EFL HAL and Feature for RPI3.
 Summary:	IM
 Requires:	%{name}-sub2-domain_API-UIX-Input_Method
 Requires:	isf-config-common
-Requires:	isf-default-profile_common
+Requires:	ise-default-profile_common
 Requires:	org.tizen.inputmethod-setting-profile_common
 Requires:	%{name}-sub2-Preset_boards-RPI3-EFL
 
@@ -465,7 +470,7 @@ Packages of DALi HAL and Feature for TM1.
 Summary:	EFL
 Requires:	%{name}-sub2-Preset_boards-TM1-GPU
 Requires:	%{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
-Requires:	efl-config-profile-mobile
+Requires:	efl-config-profile_mobile
 Requires:	efl-misc-profile_mobile
 Requires:	efl-modules-profile_mobile
 Requires:	efl-theme-tizen-mobile
@@ -482,7 +487,7 @@ Packages of EFL HAL and Feature for TM1.
 Summary:	IM
 Requires:	%{name}-sub2-domain_API-UIX-Input_Method
 Requires:	isf-config-mobile
-Requires:	isf-default-profile_mobile
+Requires:	ise-default-profile_mobile
 Requires:	org.tizen.inputmethod-setting-profile_mobile
 Requires:	%{name}-sub2-Preset_boards-TM1-EFL
 
