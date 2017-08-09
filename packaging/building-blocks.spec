@@ -127,6 +127,40 @@ presets describing specific products.
 	end \
 end}}
 
+# Create a target device preset from .ks file used to create device iamge.
+# This script writes build-spec when building the build-spec itself. :)
+# Importing .ks file with list_with_require() based on image-configuration will work
+# after Tizen:Unified starts to generate its own platform images.
+# Removing the target-dependent files.
+%define list_with_require_nodep_device() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1200}"), "f") then \
+	local start = 0 \
+	if posix.access(rpm.expand("%{1}")) then \
+		for line in io.lines(rpm.expand("%{1}")) do \
+			if (string.match(line, '%%end')) then break end \
+			if (string.match(line, '%%packages')) then \
+				start = 1 \
+			else \
+				if (start == 1) then \
+					if (string.match(line, '#')) then \
+					elseif (string.sub(line, 1, 1) == '-') then \
+					elseif (string.len(line) == 0) then\
+					elseif (string.match(line,"model%-config")) then\
+					elseif (string.match(line,"pepper")) then\
+					elseif (string.match(line,"system%-plugin")) then\
+					elseif (string.match(line,"vconf%-internal%-keys%-config%-profile")) then\
+					else \
+						print("Requires: "..line) \
+						print("\\n") \
+					end \
+				end \
+			end \
+		end \
+	else \
+		print("Requires: CANNOT_FIND_REQUIRED_FILES\\n") \
+	end \
+end}}
+
+
 # Create Suggests List of blocks with yaml file list
 # DIRECTORY, Prefix-To-Be-Removed, Prefix-for-block-name
 %define list_suggest() %{expand:%{lua:if posix.access(rpm.expand("%{SOURCE1200}"), "f") then \
