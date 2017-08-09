@@ -1055,14 +1055,33 @@ Sound_Manager provides functions to get and set of sound parameters such as volu
 
 %files sub2-domain_API-Multimedia-Sound_Manager
 
-### TODO - StreamerRecorder ##
-# Summary, description
-
 %package sub2-domain_API-Multimedia-StreamerRecorder
 Summary:    Streamer Recorder
+Requires:capi-media-streamrecorder
+Requires:libmm-streamrecorder
+Requires:gst-plugins-tizen
+Requires:gst-plugins-base
+Requires:gst-plugins-bad
+Requires:gst-plugins-good
+Requires:gst-plugins-ugly
+Requires:gst-libav
+Requires:gstreamer
+Requires:%{name}-sub2-domain_API-UI-TBM_Surface
+Requires:%{name}-sub2-domain_API-System-Storage
+
+#target specific package list
+#multimedia config
+Suggests:mmfw-sysconf-target-artik10
+Suggests:mmfw-sysconf-target-hawkp
+Suggests:mmfw-sysconf-target-n4
+Suggests:mmfw-sysconf-target-rpi3
+Suggests:mmfw-sysconf-target-tm1
+Suggests:mmfw-sysconf-target-tw1
+Suggests:mmfw-sysconf-target-tw2
+Suggests:mmfw-sysconf-target-u3
+
 %description sub2-domain_API-Multimedia-StreamerRecorder
-### TODO ###
-# packakge list
+StreamRecorder provides APIs for raw image and audio data recording.
 
 %files sub2-domain_API-Multimedia-StreamerRecorder
 
