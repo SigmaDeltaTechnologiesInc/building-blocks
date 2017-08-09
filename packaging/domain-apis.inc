@@ -2660,17 +2660,20 @@ Suggests:   libtdm-exynos-deconfb
 Suggests:   libtdm-drm
 Suggests:   libtdm-vc4
 
+#GL plugins
+Suggests:   mesa
+
 %description sub2-domain_API-UI-Display_Server
 Tizen block (set of packages) for Group of Display Server
 Display Server Block is core block for UI. It contains the wayland display server,
-modules for server and display HAL for target.
-There are three categories to choose.
-1. Server config for each profile
-   There are 5 profiles(common, mobile, wearable, tv, ivi).
-2. Tizen Buffer Manager(TBM) Backend
-3. Tizen Display Manager(TDM) Backend
-   You should choose a tbm and tdm backend for your target.
-   For example, if you want make binary for TM1, you can choose the libtbm-sprd and the libtdm-sprd
+modules for server and display HAL for target.<br>
+There are three categories to choose.<br>
+1. Server config for each profile<br>
+   There are 5 profiles(common, mobile, wearable, tv, ivi).<br>
+2. Tizen Buffer Manager(TBM) Backend<br>
+3. Tizen Display Manager(TDM) Backend<br>
+   You should choose a tbm and tdm backend for your target.<br>
+   For example, if you want make binary for TM1, you can choose the libtbm-sprd and the libtdm-sprd<br>
 
 %files sub2-domain_API-UI-Display_Server
 
