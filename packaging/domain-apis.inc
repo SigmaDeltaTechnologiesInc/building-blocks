@@ -2696,6 +2696,13 @@ Requires: capi-ui-inputmethod
 Requires: capi-ui-inputmethod-manager
 Requires: org.tizen.inputmethod-setting
 
+Suggests: ise-default-profile_common
+Suggests: ise-default-profile_ivi
+Suggests: ise-default-profile_mobile
+Suggests: ise-default-profile_tv
+Suggests: ise-default-profile_wearable
+Suggests: ise-default-profile_wearable-extension-circle
+
 Suggests: isf-config-common
 Suggests: isf-config-ivi
 Suggests: isf-config-mobile
@@ -2712,12 +2719,12 @@ This block supports Input Method API for starting IME application lifecycle, met
 And a user can manage the installed IMEs in the system.<br>
 You should add additional packages by referring to the below information.<br>
 
-common profile: isf-config-common, org.tizen.inputmethod-setting-profile_common<br>
-ivi profile: isf-config-ivi<br>
-mobile profile: isf-config-mobile, org.tizen.inputmethod-setting-profile_mobile<br>
-tv profile: isf-config-tv<br>
-wearable profile: isf-config-wearable, org.tizen.inputmethod-setting-profile_wearable<br>
-wearable_circle: isf-config-wearable, org.tizen.inputmethod-setting-profile_wearable-extension-circle<br>
+common profile: ise-default-profile_common, isf-config-common, org.tizen.inputmethod-setting-profile_common<br>
+ivi profile: ise-default-profile_ivi, isf-config-ivi<br>
+mobile profile: ise-default-profile_mobile, isf-config-mobile, org.tizen.inputmethod-setting-profile_mobile<br>
+tv profile: ise-default-profile_tv, isf-config-tv<br>
+wearable profile: ise-default-profile_wearable, isf-config-wearable, org.tizen.inputmethod-setting-profile_wearable<br>
+wearable_circle: ise-default-profile_wearable-extension-circle, isf-config-wearable, org.tizen.inputmethod-setting-profile_wearable-extension-circle<br>
 %files sub2-domain_API-UIX-Input_Method
 
 
