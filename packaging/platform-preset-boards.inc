@@ -125,6 +125,7 @@ Requires:	e-tizen-data-profile_common
 Requires:	libtbm-vc4
 Requires:	libtdm-vc4
 Requires:	mesa
+Requires:	coregl
 
 %description sub2-Preset_boards-RPI3-GPU
 Packages of GPU HAL and Feature for RPI3.
@@ -343,6 +344,7 @@ Requires:	%{name}-sub2-domain_API-UI-Display_Server
 Requires:	e-tizen-data-profile_mobile
 Requires:	libtbm-sprd
 Requires:	libtdm-sprd
+Requires:	coregl
 
 %description sub2-Preset_boards-TM1-GPU
 Packages of GPU HAL and Feature for TM1.

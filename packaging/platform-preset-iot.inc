@@ -4,6 +4,7 @@
 %package root-Preset_iot_core
 Summary:    IOT Core Presets
 %list_with_require_nodep_device %{_datadir}/image-configurations/common-iot_core-2parts-armv7l-rpi3.ks
+Conflicts:	%{name}-root-Preset_iot_headed
 %description root-Preset_iot_core
 __EXPAND__: preset
 The packages of Tizen IoT Core.
@@ -12,6 +13,7 @@ The packages of Tizen IoT Core.
 %package root-Preset_iot_headed
 Summary:    IOT Headed Common Presets
 %list_with_require %{_datadir}/image-configurations/iot-headed-3parts-armv7l-artik710.ks
+Conflicts:	%{name}-root-Preset_iot_core
 %description root-Preset_iot_headed
 __EXPAND__: preset
 The packages of Tizen IoT Headed Common.
