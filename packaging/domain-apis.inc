@@ -135,6 +135,7 @@ Requires: amd-mod-cynara-core
 Requires: amd-mod-extractor
 Requires: amd-mod-input
 Requires: amd-mod-launchpad
+Requires: amd-mod-rua
 Requires: amd-mod-share
 Requires: amd-mod-splash-screen
 Requires: amd-mod-ui-core
