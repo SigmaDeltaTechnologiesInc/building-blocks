@@ -3,7 +3,7 @@
 
 %package root-Preset_iot_core
 Summary:    IOT Core Presets
-%list_with_require %{_datadir}/image-configurations/common-iot_core-2parts-armv7l-rpi3.ks
+%list_with_require_nodep_device %{_datadir}/image-configurations/common-iot_core-2parts-armv7l-rpi3.ks
 %description root-Preset_iot_core
 __EXPAND__: preset
 The packages of Tizen IoT Core.
