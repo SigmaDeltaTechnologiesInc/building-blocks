@@ -489,7 +489,8 @@ Tizen block (set of packages) for Group of domain API-Maps
 %package sub2-domain_API-Maps-Maps_Service
 Summary:	Maps_Service
 Requires:	capi-maps-service
-Requires:	%{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
+Requires:	%{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
+Requires:	%{name}-sub2-domain_API-Network-Connection
 Suggests:	%{name}-sub2-domain_API-Maps-Here_Plugin
 Suggests:	%{name}-sub2-domain_API-Maps-Mapzen_Plugin
 
