@@ -2127,14 +2127,17 @@ Suggests: %{name}-sub2-domain_API-UI-Display_Server
 Tizen block (set of packages) for Group of domain API-UI
 %files sub1-domain_API-UI
 
-### TODO - Cairo ##
-# Summary, description
-
 %package sub2-domain_API-UI-Cairo
 Summary:    Cairo
+Requires:  libcairo
+Suggests:  libcairo-gobject
+Suggests:  libcairo-script-interpreter
 %description sub2-domain_API-UI-Cairo
-### TODO ###
-# packakge list
+Cairo is a 2D graphics library with cross-device output support
+while taking advantage of display hardware acceleration when available.<br>
+libcairo (mandatory) contains 2D graphics functions for rendering to various output.<br>
+libcairo-gobject contains functions integrate cairo with Glib's GObject type.<br>
+libcairo-script-interpreter contains functions for executing and manipulating cairo execution traces.<br>
 
 %files sub2-domain_API-UI-Cairo
 
