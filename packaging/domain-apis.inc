@@ -2056,14 +2056,37 @@ Tizen Clipboard History Manager Service
 %files sub2-domain_API-UI-Clipboard_History_Manager
 
 
-### TODO - DALi ##
-# Summary, description
-
 %package sub2-domain_API-UI-DALi
 Summary:    DALi
+Requires: dali-toolkit
+Requires: dali-adaptor
+Requires: %{name}-sub2-domain_API-UI-Display_Server
+Requires: %{name}-sub2-domain_API-UI-FontConfig
+# Profile
+Suggests: dali-adaptor-profile_common
+Suggests: dali-adaptor-profile_mobile
+Suggests: dali-adaptor-profile_tv
+Suggests: dali-adaptor-profile_wearable
+Suggests: dali-adaptor-profile_ivi
+# Resource
+Suggests: dali-toolkit-resources_480x800
+Suggests: dali-toolkit-resources_720x1280
+Suggests: dali-toolkit-resources_1920x1080
+# Extension
+Suggests: dali-extension
+Suggests: dali-extension-key-extension
+# Video view support
+Suggests: dali-adaptor-dali-video-player-plugin
+Suggests: %{name}-sub2-domain_API-Multimedia-Player
+
 %description sub2-domain_API-UI-DALi
-### TODO ###
-# packakge list
+Cross-platform 3D UI Toolkit for embedded systems.
+DALi's 3D user interface engine enables you to create rich and high-performance UI applications.
+You should consider options
+1. dali-toolkit-resources_*x* for screen resolution.
+2. dali-adaptor-dali-video-player-plugin and Player if you use dali-toolkit::VideoView.
+3. dali-extension and dali-extension-key-extension if you want to add custom key map.
+
 
 %files sub2-domain_API-UI-DALi
 
