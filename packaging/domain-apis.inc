@@ -600,7 +600,7 @@ Suggests: %{name}-sub2-domain_API-Multimedia-Radio
 Suggests: %{name}-sub2-domain_API-Multimedia-Recorder
 Suggests: %{name}-sub2-domain_API-Multimedia-Screen_Mirroring
 Suggests: %{name}-sub2-domain_API-Multimedia-Sound_Manager
-Suggests: %{name}-sub2-domain_API-Multimedia-StreamerRecorder
+Suggests: %{name}-sub2-domain_API-Multimedia-Stream_Recorder
 Suggests: %{name}-sub2-domain_API-Multimedia-Thumbnail_Util
 Suggests: %{name}-sub2-domain_API-Multimedia-Tone_Player
 Suggests: %{name}-sub2-domain_API-Multimedia-Video_Util
@@ -945,8 +945,8 @@ Sound_Manager provides functions to get and set of sound parameters such as volu
 
 %files sub2-domain_API-Multimedia-Sound_Manager
 
-%package sub2-domain_API-Multimedia-StreamerRecorder
-Summary:    Streamer Recorder
+%package sub2-domain_API-Multimedia-Stream_Recorder
+Summary:    Stream Recorder
 Requires:capi-media-streamrecorder
 Requires:libmm-streamrecorder
 Requires:gst-plugins-tizen
@@ -958,22 +958,12 @@ Requires:gst-libav
 Requires:gstreamer
 Requires:%{name}-sub2-domain_API-UI-TBM_Surface
 Requires:%{name}-sub2-domain_API-System-Storage
+Requires:%{name}-sub2-domain_API-Multimedia-Configuration
 
-#target specific package list
-#multimedia config
-Suggests:mmfw-sysconf-target-artik10
-Suggests:mmfw-sysconf-target-hawkp
-Suggests:mmfw-sysconf-target-n4
-Suggests:mmfw-sysconf-target-rpi3
-Suggests:mmfw-sysconf-target-tm1
-Suggests:mmfw-sysconf-target-tw1
-Suggests:mmfw-sysconf-target-tw2
-Suggests:mmfw-sysconf-target-u3
-
-%description sub2-domain_API-Multimedia-StreamerRecorder
+%description sub2-domain_API-Multimedia-Stream_Recorder
 StreamRecorder provides APIs for raw image and audio data recording.
 
-%files sub2-domain_API-Multimedia-StreamerRecorder
+%files sub2-domain_API-Multimedia-Stream_Recorder
 
 %package sub2-domain_API-Multimedia-Thumbnail_Util
 Summary:    Thumbnail_Util
