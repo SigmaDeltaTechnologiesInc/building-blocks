@@ -85,6 +85,7 @@ and to most domains.
 %package	category-Preset
 Summary:	Tizen Presets
 Suggests:	%{name}-root-Preset_iot_core
+Suggests:	%{name}-root-Preset_iot_core_rpi3
 Suggests:	%{name}-root-Preset_boards
 Suggests:	%{name}-root-Preset_iot_headed
 %description	category-Preset
