@@ -134,7 +134,8 @@ Packages of GPU HAL and Feature for RPI3.
 ### RPI3-Wifi ###
 %package sub2-Preset_boards-RPI3-Wifi
 Summary:	Wifi
-Requires: %{name}-sub2-domain_API-Network-WiFi_Manager
+Requires:	%{name}-sub2-domain_API-Network-WiFi
+Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Requires:	wpa_supplicant-profile_common
 Suggests:	net-config-plugin-headed
 
@@ -353,6 +354,7 @@ Packages of GPU HAL and Feature for TM1.
 ### TM1-Wifi ###
 %package sub2-Preset_boards-TM1-Wifi
 Summary:	Wifi
+Requires: 	%{name}-sub2-domain_API-Network-WiFi
 Requires: 	%{name}-sub2-domain_API-Network-WiFi_Manager
 Requires:	wpa_supplicant-extension-TM1
 Suggests:	net-config-plugin-headed
