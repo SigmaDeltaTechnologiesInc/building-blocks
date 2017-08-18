@@ -67,6 +67,17 @@ Conflicts:	%{name}-sub1-Preset_boards-ARTIK_fullBSP
 %description sub1-Preset_boards-RPI3
 Firstly select HALs and Feature to add to your image.
 %files sub1-Preset_boards-RPI3
+%posttrans sub1-Preset_boards-RPI3
+sed -i 's#\(\"tizen.org/system/platform.processor\".\+>\).\+\(</key>\)#\1BCM2837\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/system/platform.communication_processor\".\+>\).\+\(</key>\)#\1none\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/platform.core.cpu.arch\".\+>\).\+\(</key>\)#\1armv8\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/platform.core.cpu.arch.armv7\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/platform.core.cpu.arch.armv8\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/platform.core.cpu.frequency\".\+>\).\+\(</key>\)#\11200\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch\".\+>\).\+\(</key>\)#\1vfpv4\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch.vfpv3\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch.vfpv4\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/profile\".\+>\).\+\(</key>\)#\1common\2#' %{_sysconfdir}/config/model-config.xml
 
 
 ### RPI3-System ###
@@ -74,7 +85,7 @@ Firstly select HALs and Feature to add to your image.
 Summary:	System
 Requires:	system-plugin-headless
 Requires:	system-plugin-iot
-Requires:	model-config-rpi3-profile_common_iot_core
+Requires:	model-config-default
 
 %description sub2-Preset_boards-RPI3-System
 Packages for System HAL and Feature. They are mandatory.
@@ -288,7 +299,17 @@ Conflicts:	%{name}-sub1-Preset_boards-ARTIK_fullBSP
 %description sub1-Preset_boards-TM1
 Firstly select HALs and Feature to add to your image.
 %files sub1-Preset_boards-TM1
-
+%posttrans sub1-Preset_boards-TM1
+sed -i 's#\(\"tizen.org/system/platform.processor\".\+>\).\+\(</key>\)#\1SC7727S\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/system/platform.communication_processor\".\+>\).\+\(</key>\)#\1SC7727S\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/platform.core.cpu.arch\".\+>\).\+\(</key>\)#\1armv7\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/platform.core.cpu.arch.armv7\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/platform.core.cpu.arch.armv8\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/platform.core.cpu.frequency\".\+>\).\+\(</key>\)#\11300\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch\".\+>\).\+\(</key>\)#\1vfpv3\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch.vfpv3\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch.vfpv4\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/profile\".\+>\).\+\(</key>\)#\1mobile\2#' %{_sysconfdir}/config/model-config.xml
 
 ### TM1-System ###
 %package sub2-Preset_boards-TM1-System

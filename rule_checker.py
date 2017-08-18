@@ -399,7 +399,7 @@ def ruleCheckInc(file):
                 continue
 
         # Check for not allowed sections
-        if re.search(r'^\s*(%post)|(%pre)|(%build)|(%clean)|(%install)', line):
+        if re.search(r'^\s*(%post(?!trans))|(%pre)|(%build)|(%clean)|(%install)', line):
             error += 1
             print(
                 "ERROR: It is not allowed to add such sections in each domain.")

@@ -3,7 +3,7 @@
 %define debug_package %{nil}
 
 Name:		building-blocks
-Version:	0.0.1
+Version:	0.0.2
 Release:	0
 License:	Apache-2.0
 Summary:	The Root of All Tizen Meta Packages (building blocks)
