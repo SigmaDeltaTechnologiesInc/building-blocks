@@ -79,7 +79,7 @@ sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch.vfpv3\".\+>\).\+\(</key>\
 sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch.vfpv4\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 sed -i 's#\(\"tizen.org/feature/profile\".\+>\).\+\(</key>\)#\1common\2#' %{_sysconfdir}/config/model-config.xml
 sed -i 's#\(\"tizen.org/feature/location.batch\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.tethering.usb\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.ethernet\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 sed -i 's#\(\"tizen.org/feature/network.wifi.tdls\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
 sed -i 's#\(\"tizen.org/feature/screen.auto_rotation\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
 sed -i 's#\(\"tizen.org/feature/screen.height\".\+>\).\+\(</key>\)#\11920\2#' %{_sysconfdir}/config/model-config.xml
@@ -345,7 +345,7 @@ sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch.vfpv3\".\+>\).\+\(</key>\
 sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch.vfpv4\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
 sed -i 's#\(\"tizen.org/feature/profile\".\+>\).\+\(</key>\)#\1mobile\2#' %{_sysconfdir}/config/model-config.xml
 sed -i 's#\(\"tizen.org/feature/location.batch\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.tethering.usb\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.ethernet\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
 sed -i 's#\(\"tizen.org/feature/network.wifi.tdls\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
 sed -i 's#\(\"tizen.org/feature/screen.auto_rotation\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 sed -i 's#\(\"tizen.org/feature/screen.height\".\+>\).\+\(</key>\)#\11280\2#' %{_sysconfdir}/config/model-config.xml
