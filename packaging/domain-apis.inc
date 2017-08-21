@@ -758,6 +758,9 @@ Requires: capi-media-vision-barcode
 MediaVision Barcode API to generate or detect Barcode/QRcode
 
 %files sub2-domain_API-Multimedia-Media_Vision_Barcode
+%posttrans sub2-domain_API-Multimedia-Media_Vision_Barcode
+sed -i 's#\(\"tizen.org/feature/vision.barcode_detection\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/vision.barcode_generation\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Multimedia-Media_Vision_Face
 Summary:    Media_Vision_Face
@@ -767,6 +770,8 @@ Requires: capi-media-vision-face
 MediaVision Face API to detect, recognize, or track faces on images
 
 %files sub2-domain_API-Multimedia-Media_Vision_Face
+%posttrans sub2-domain_API-Multimedia-Media_Vision_Face
+sed -i 's#\(\"tizen.org/feature/vision.face_recognition\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Multimedia-Media_Vision_Image
 Summary:    Media_Vision_Image
@@ -776,6 +781,9 @@ Requires: capi-media-vision-image
 MediaVision Image API to recognize and track planar objects on an image
 
 %files sub2-domain_API-Multimedia-Media_Vision_Image
+%posttrans sub2-domain_API-Multimedia-Media_Vision_Image
+sed -i 's#\(\"tizen.org/feature/vision.image_recognition\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+
 
 %package sub2-domain_API-Multimedia-Media_Vision_Surveillance
 Summary:    Media_Vision_Surveillance
@@ -786,6 +794,9 @@ MediaVision Surveillance API to enable video surveillance by subscribing events,
 person (dis)appearance, recognized face, movement changes on videos.
 
 %files sub2-domain_API-Multimedia-Media_Vision_Surveillance
+%posttrans sub2-domain_API-Multimedia-Media_Vision_Surveillance
+sed -i 's#\(\"tizen.org/feature/vision.face_recognition\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/vision.image_recognition\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Multimedia-Metadata_Editor
 Summary:    Metadata_Editor
