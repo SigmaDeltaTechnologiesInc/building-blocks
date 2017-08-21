@@ -2101,6 +2101,10 @@ Suggests: tel-plugin-syspopup
 %description sub1-domain_API-Telephony
 Tizen block (set of packages) for Group of domain API-Telephony
 %files sub1-domain_API-Telephony
+%posttrans sub1-domain_API-Telephony
+sed -i 's#\(\"tizen.org/feature/network.telephony\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/systemsetting.incoming_call\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+
 
 ########
 ## UI ##
