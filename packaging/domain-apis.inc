@@ -576,6 +576,8 @@ Wifi would be available when Wifi is selected.
 
 
 %files sub2-domain_API-Messaging-Email
+%posttrans sub2-domain_API-Messaging-Email
+sed -i 's#\(\"tizen.org/feature/email\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Messaging-Messages
 Summary:Messages
@@ -590,6 +592,10 @@ Requires:%{name}-sub1-domain_API-Telephony
 This block supports managing Message service.
 
 %files sub2-domain_API-Messaging-Messages
+%posttrans sub2-domain_API-Messaging-Messages
+sed -i 's#\(\"tizen.org/feature/network.telephony.sms\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.telephony.sms.cbs\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.telephony.mms\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Messaging-Push
 Summary:	Push Client
@@ -1698,6 +1704,8 @@ This logic is not available in TV profile.
 
 
 %files sub2-domain_API-Social-Calendar
+%posttrans sub2-domain_API-Social-Calendar
+sed -i 's#\(\"tizen.org/feature/calendar\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Social-Contacts
 Summary: Contacts
@@ -1709,6 +1717,8 @@ Requires:session-utils
 This block supports managing Contacts service
 
 %files sub2-domain_API-Social-Contacts
+%posttrans sub2-domain_API-Social-Contacts
+sed -i 's#\(\"tizen.org/feature/contact\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Social-Phonenumber_utils
 Summary: Phonenumber_utils
