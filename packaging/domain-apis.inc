@@ -481,6 +481,10 @@ Suggests:	lbs-plugin-gps-rpi3
 This block supports managing Location Service.<br>
 To use Location Service, the appropriate plugin should be selected for the device.
 %files sub2-domain_API-Location-Location_Manager
+%posttrans sub2-domain_API-Location-Location_Manager
+sed -i 's#\(\"tizen.org/feature/location\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/location.gps\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/location.gps.satellite\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Location-Geofence_Manager
 Summary:    Geofence-Manager
@@ -491,6 +495,8 @@ Requires:	%{name}-sub2-domain_API-Location-Location_Manager
 %description sub2-domain_API-Location-Geofence_Manager
 This block supports managing Geofence Service.
 %files sub2-domain_API-Location-Geofence_Manager
+%posttrans sub2-domain_API-Location-Geofence_Manager
+sed -i 's#\(\"tizen.org/feature/location.geofence\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 ##########
 ## Maps ##
@@ -518,6 +524,9 @@ At least one of HERE or MAPZEN plugin must be selected.
 
 
 %files sub2-domain_API-Maps-Maps_Service
+%posttrans sub2-domain_API-Maps-Maps_Service
+sed -i 's#\(\"tizen.org/feature/maps\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+
 
 %package sub2-domain_API-Maps-Here_Plugin
 Summary:    Here_Plugin
