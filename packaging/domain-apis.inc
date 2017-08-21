@@ -1997,6 +1997,12 @@ Requires:   capi-system-system-settings
 System setting api for get,set configuration
 %files sub2-domain_API-System-System_Settings
 
+%posttrans sub2-domain_API-System-System_Settings
+
+sed -i 's#\(\"tizen.org/feature/systemsetting\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/systemsetting.notification_email\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+
+
 %package sub2-domain_API-System-T_Trace
 Summary:    T_Trace
 Requires: ttrace
