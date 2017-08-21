@@ -650,7 +650,7 @@ Suggests:gst-plugins-camera-n4
 Suggests:gst-plugins-good
 
 %description sub2-domain_API-Multimedia-Camera
-The camera provides the ability to capture photos and support setting up notifications for state changes of capturing, previewing, focusing, information about resolution and binary format and functions for picture manipulations like sepia negative and many more. 
+The camera provides the ability to capture photos and support setting up notifications for state changes of capturing, previewing, focusing, information about resolution and binary format and functions for picture manipulations like sepia negative and many more.
 OPTIONAL : You should choose packages depends on target and hardware.
 First, Check config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1).
 Second, check camera plugin depends on target.
@@ -1399,6 +1399,8 @@ Requires: libmtp
 %description sub2-domain_API-Network-MTP
 Enabling MTP(Media Transfer Protocol) Initiator and it is possible to user MTP API
 %files sub2-domain_API-Network-MTP
+%posttrans sub2-domain_API-Network-MTP
+sed -i 's#\(\"tizen.org/feature/network.mtp\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Network-NFC
 Summary:    NFC
@@ -1408,6 +1410,8 @@ Requires: nfc-manager
 %description sub2-domain_API-Network-NFC
 Enabling NFC Manager and it is possible to user NFC API
 %files sub2-domain_API-Network-NFC
+%posttrans sub2-domain_API-Network-NFC
+sed -i 's#\(\"tizen.org/feature/network.nfc\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Network-SSDP
 Summary:    SSDP
@@ -1444,6 +1448,10 @@ Enabling Smartcard(Secure Element) Manager and it is possible to user Smartcard 
 In case of USIM device, 'smartcard-plugin-uicc' and 'sub1-domain_API-Telephony' have to be chosen. <br>
 In case of embedded SE, 'smartcard-plugin-nfc' and 'sub2-domain_API-Network-NFC' have to be chosen.
 %files sub2-domain_API-Network-Smartcard
+%posttrans sub2-domain_API-Network-Smartcard
+sed -i 's#\(\"tizen.org/feature/network.secure_element\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.secure_element.ese\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.secure_element.uicc\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Network-VPN_Service
 Summary:    VPN_Service
