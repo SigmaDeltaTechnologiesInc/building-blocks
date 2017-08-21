@@ -1181,7 +1181,11 @@ Enabling Bluetooth BREDR and it is possible to Bluetooth BREDR API<br>
 - wearable : bluetooth-frwk-plugin-headed, org.tizen.bt-syspopup, org.tizen.bt-syspopup-profile_wearable<br>
 - not wearable : bluetooth-frwk-plugin-headed, org.tizen.bt-syspopup, org.tizen.bt-syspopup-profile_common
 %files sub2-domain_API-Network-Bluetooth_BREDR
-
+%posttrans sub2-domain_API-Network-Bluetooth_BREDR
+sed -i 's#\(\"tizen.org/feature/network.bluetooth\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.bluetooth.health\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.bluetooth.hid\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.bluetooth.hid_device\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Network-Bluetooth_Call_Audio
 Summary:    Bluetooth_Call_Audio
@@ -1202,6 +1206,8 @@ Enabling Bluetooth Call Audio functionality<br>
 - ivi : bluetooth-agent-profile_ivi<br>
 - wearable : bluetooth-agent-profile_wearable
 %files sub2-domain_API-Network-Bluetooth_Call_Audio
+%posttrans sub2-domain_API-Network-Bluetooth_Call_Audio
+sed -i 's#\(\"tizen.org/feature/network.bluetooth.audio.call\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Network-Bluetooth_Media_Audio
 Summary:    Bluetooth_Media_Audio
@@ -1214,6 +1220,9 @@ Requires: pulseaudio-module-bluetooth
 Enabling Bluetooth Media Audio functionality
 
 %files sub2-domain_API-Network-Bluetooth_Media_Audio
+%posttrans sub2-domain_API-Network-Bluetooth_Media_Audio
+sed -i 's#\(\"tizen.org/feature/network.bluetooth.audio.media\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.bluetooth.audio.controller\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Network-Bluetooth_Transfer
 Summary:    Bluetooth_Transfer
@@ -1225,6 +1234,9 @@ Requires: obexd
 Enabling Bluetooth Transfer functionality(OPP, PBAP)
 
 %files sub2-domain_API-Network-Bluetooth_Transfer
+%posttrans sub2-domain_API-Network-Bluetooth_Transfer
+sed -i 's#\(\"tizen.org/feature/network.bluetooth.opp\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.bluetooth.phonebook.client\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Network-Bluetooth_LE
 Summary:    Bluetooth_LE
@@ -1285,6 +1297,9 @@ Enabling Bluetooth LE Only functionality<br>
 - wearable : bluetooth-frwk-plugin-headed, org.tizen.bt-syspopup, org.tizen.bt-syspopup-profile_wearable<br>
 - not wearable : bluetooth-frwk-plugin-headed, org.tizen.bt-syspopup, org.tizen.bt-syspopup-profile_common
 %files sub2-domain_API-Network-Bluetooth_LE
+%posttrans sub2-domain_API-Network-Bluetooth_LE
+sed -i 's#\(\"tizen.org/feature/network.bluetooth.le\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.bluetooth.ipsp\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Network-ASP
 Summary:    ASP
