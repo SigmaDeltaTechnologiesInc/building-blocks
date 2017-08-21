@@ -1,6 +1,7 @@
 # There are meta packages only.
 %define __debug_install_post %{nil}
 %define debug_package %{nil}
+%define tizen_feature() sed -i 's#\\\(\\\"%{1}\\\".\\\+>\\\).\\\+\\\(</key>\\\)#\\\1%{2}\\\2#' %{_sysconfdir}/config/model-config.xml;
 
 Name:		building-blocks
 Version:	0.0.2

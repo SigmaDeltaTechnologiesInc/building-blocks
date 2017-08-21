@@ -184,6 +184,8 @@ Requires: libwidget_viewer_evas
 %description sub2-domain_API-AppFramework-Native_EFL_Widget_App_Model
 This block supports native EFL widget app model
 %files sub2-domain_API-AppFramework-Native_EFL_Widget_App_Model
+%posttrans sub2-domain_API-AppFramework-Native_EFL_Widget_App_Model
+%tizen_feature tizen.org/feature/shell.appwidget true
 
 %package sub2-domain_API-AppFramework-Notification_API
 Summary: Notification API
@@ -192,6 +194,8 @@ Requires: data-provider-master
 %description sub2-domain_API-AppFramework-Notification_API
 This block supports notification API
 %files sub2-domain_API-AppFramework-Notification_API
+%posttrans sub2-domain_API-AppFramework-Notification_API
+%tizen_feature tizen.org/feature/notification true
 
 %package sub2-domain_API-AppFramework-Shortcut_API
 Summary: Shortcut API
@@ -208,6 +212,8 @@ Requires: data-provider-master
 %description sub2-domain_API-AppFramework-Badge_API
 This block supports badge API
 %files sub2-domain_API-AppFramework-Badge_API
+%posttrans sub2-domain_API-AppFramework-Badge_API
+%tizen_feature tizen.org/feature/badge true
 
 %package sub2-domain_API-AppFramework-Media_Key_API
 Summary: Media Key API
