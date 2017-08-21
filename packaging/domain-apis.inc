@@ -2417,7 +2417,6 @@ Summary:    STT
 
 Requires: stt
 Requires: org.tizen.stt-engine-default
-Requires: gawk
 Requires: %{name}-sub2-domain_API-Multimedia-Audio_IO
 Requires: %{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
 
@@ -2425,6 +2424,8 @@ Requires: %{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
 STT(Speech-To-Text) provides functions to recognize the speech.
 
 %files sub2-domain_API-UIX-STT
+%posttrans sub2-domain_API-UIX-STT
+sed -i 's#\(\"tizen.org/feature/speech.recognition\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 
 %package sub2-domain_API-UIX-TTS
@@ -2433,7 +2434,6 @@ Summary:    TTS
 Requires: tts
 Requires: org.tizen.tts-engine-default
 Requires: tts-engine-rsc
-Requires: gawk
 Requires: %{name}-sub2-domain_API-Multimedia-Audio_IO
 Requires: %{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
 
@@ -2441,6 +2441,8 @@ Requires: %{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
 TTS(Text-To-Speech) provides functions to synthesize voice from text and play synthesized sound data.
 
 %files sub2-domain_API-UIX-TTS
+%posttrans sub2-domain_API-UIX-TTS
+sed -i 's#\(\"tizen.org/feature/speech.synthesis\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 
 %package sub2-domain_API-UIX-Voice_control
@@ -2454,6 +2456,8 @@ Requires: %{name}-sub2-domain_API-UIX-STT
 Voice control provides functions to register commands and get notification when registered command is recognized.
 
 %files sub2-domain_API-UIX-Voice_control
+%posttrans sub2-domain_API-UIX-Voice_control
+sed -i 's#\(\"tizen.org/feature/speech.control\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 
 %package sub2-domain_API-UIX-Voice_control_elementary
@@ -2466,6 +2470,8 @@ Requires: %{name}-sub2-domain_API-UIX-Voice_control
 Voice control elementary provides functions to control widget by voice commands.
 
 %files sub2-domain_API-UIX-Voice_control_elementary
+%posttrans sub2-domain_API-UIX-Voice_control_elementary
+sed -i 's#\(\"tizen.org/feature/speech.control\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 
 #########
