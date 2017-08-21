@@ -47,7 +47,7 @@ Requires:	%{name}-sub2-Preset_boards-RPI3-System
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Audio
 Suggests:	%{name}-sub2-Preset_boards-RPI3-GPS
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Camera
-Suggests:	%{name}-sub2-Preset_boards-RPI3-GPU
+Suggests:	%{name}-sub2-Preset_boards-RPI3-Display
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Wifi
 Suggests:	%{name}-sub2-Preset_boards-RPI3-WifiDirect
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Bluetooth
@@ -78,6 +78,22 @@ sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch\".\+>\).\+\(</key>\)#\1vf
 sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch.vfpv3\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
 sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch.vfpv4\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 sed -i 's#\(\"tizen.org/feature/profile\".\+>\).\+\(</key>\)#\1common\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/location.batch\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.tethering.usb\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.wifi.tdls\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen.auto_rotation\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen.height\".\+>\).\+\(</key>\)#\11920\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen.output.hdmi\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen.output.rca\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen.shape.circle\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen.shape.rectangle\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen.size.normal.1080.1920\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen.width\".\+>\).\+\(</key>\)#\11080\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/sensor.accelerometer\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/sensor.gravity\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/sensor.linear_acceleration\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/sensor.proximity\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/sensor.temperature\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 
 ### RPI3-System ###
@@ -127,10 +143,17 @@ Requires:	mmfw-sysconf-target-rpi3
 Packages of Camera HAL and Feature for RPI3.
 Not Implemented.
 %files sub2-Preset_boards-RPI3-Camera
+%posttrans sub2-Preset_boards-RPI3-Camera
+sed -i 's#\(\"tizen.org/feature/camera\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/camera.back\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/camera.back.flash\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/camera.front\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/camera.front.flash\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
 
-### RPI3-GPU ###
-%package sub2-Preset_boards-RPI3-GPU
-Summary:	GPU
+
+### RPI3-Display ###
+%package sub2-Preset_boards-RPI3-Display
+Summary:	Display
 Requires:	%{name}-sub2-domain_API-UI-Display_Server
 Requires:	e-tizen-data-profile_common
 Requires:	libtbm-vc4
@@ -138,9 +161,20 @@ Requires:	libtdm-vc4
 Requires:	mesa
 Requires:	coregl
 
-%description sub2-Preset_boards-RPI3-GPU
-Packages of GPU HAL and Feature for RPI3.
-%files sub2-Preset_boards-RPI3-GPU
+%description sub2-Preset_boards-RPI3-Display
+Packages of Display HAL and Feature for RPI3.
+%files sub2-Preset_boards-RPI3-Display
+%posttrans sub2-Preset_boards-RPI3-Display
+sed -i 's#\(\"tizen.org/feature/graphics.acceleration\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/multi_point_touch.pinch_zoom\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/opengles\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/opengles.1_1\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/opengles.2_0\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/opengles.3_0\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/opengles.3_1\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/opengles.3_2\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/vulkan.version.1_0\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 ### RPI3-Wifi ###
 %package sub2-Preset_boards-RPI3-Wifi
@@ -241,7 +275,7 @@ Packages of DALi HAL and Feature for RPI3.
 ### RPI3-EFL ###
 %package sub2-Preset_boards-RPI3-EFL
 Summary:	EFL
-Requires:	%{name}-sub2-Preset_boards-RPI3-GPU
+Requires:	%{name}-sub2-Preset_boards-RPI3-Display
 Requires:	%{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
 Requires:	efl-config-profile_common
 Requires:	efl-misc-profile_common
@@ -279,7 +313,7 @@ Requires:	%{name}-sub2-Preset_boards-TM1-System
 Suggests:	%{name}-sub2-Preset_boards-TM1-Audio
 Suggests:	%{name}-sub2-Preset_boards-TM1-GPS
 Suggests:	%{name}-sub2-Preset_boards-TM1-Camera
-Suggests:	%{name}-sub2-Preset_boards-TM1-GPU
+Suggests:	%{name}-sub2-Preset_boards-TM1-Display
 Suggests:	%{name}-sub2-Preset_boards-TM1-Wifi
 Suggests:	%{name}-sub2-Preset_boards-TM1-WifiDirect
 Suggests:	%{name}-sub2-Preset_boards-TM1-Bluetooth
@@ -310,6 +344,24 @@ sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch\".\+>\).\+\(</key>\)#\1vf
 sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch.vfpv3\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch.vfpv4\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
 sed -i 's#\(\"tizen.org/feature/profile\".\+>\).\+\(</key>\)#\1mobile\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/location.batch\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.tethering.usb\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.wifi.tdls\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen.auto_rotation\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen.height\".\+>\).\+\(</key>\)#\11280\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen.output.hdmi\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen.output.rca\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen.shape.circle\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen.shape.rectangle\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen.size.normal.720.1280\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen.width\".\+>\).\+\(</key>\)#\1720\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/sensor.accelerometer\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/sensor.gravity\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/sensor.linear_acceleration\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/sensor.proximity\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/sensor.temperature\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+
+
 
 ### TM1-System ###
 %package sub2-Preset_boards-TM1-System
@@ -351,26 +403,43 @@ Packages of GPS HAL and Feature for TM1.
 %package sub2-Preset_boards-TM1-Camera
 Summary:	Camera
 Requires:	%{name}-sub2-domain_API-Multimedia-Camera
-Requires:	%{name}-sub2-Preset_boards-TM1-GPU
+Requires:	%{name}-sub2-Preset_boards-TM1-Display
 Requires:	mmfw-sysconf-target-tm1
 
 %description sub2-Preset_boards-TM1-Camera
 Packages of Camera HAL and Feature for TM1.
 Not Implemented.
 %files sub2-Preset_boards-TM1-Camera
+%posttrans sub2-Preset_boards-TM1-Camera
+sed -i 's#\(\"tizen.org/feature/camera\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/camera.back\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/camera.back.flash\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/camera.front\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/camera.front.flash\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
 
-### TM1-GPU ###
-%package sub2-Preset_boards-TM1-GPU
-Summary:	GPU
+### TM1-Display ###
+%package sub2-Preset_boards-TM1-Display
+Summary:	Display
 Requires:	%{name}-sub2-domain_API-UI-Display_Server
 Requires:	e-tizen-data-profile_mobile
 Requires:	libtbm-sprd
 Requires:	libtdm-sprd
 Requires:	coregl
 
-%description sub2-Preset_boards-TM1-GPU
-Packages of GPU HAL and Feature for TM1.
-%files sub2-Preset_boards-TM1-GPU
+%description sub2-Preset_boards-TM1-Display
+Packages of Display HAL and Feature for TM1.
+%files sub2-Preset_boards-TM1-Display
+%posttrans sub2-Preset_boards-TM1-Display
+sed -i 's#\(\"tizen.org/feature/graphics.acceleration\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/multi_point_touch.pinch_zoom\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/opengles\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/opengles.1_1\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/opengles.2_0\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/opengles.3_0\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/opengles.3_1\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/opengles.3_2\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/vulkan.version.1_0\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/screen\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 ### TM1-Wifi ###
 %package sub2-Preset_boards-TM1-Wifi
@@ -459,6 +528,16 @@ Requires:	%{name}-sub1-domain_API-Telephony
 %description sub2-Preset_boards-TM1-Telephony
 Packages of Telephony HAL and Feature for TM1.
 %files sub2-Preset_boards-TM1-Telephony
+%posttrans sub2-Preset_boards-TM1-Telephony
+sed -i 's#\(\"tizen.org/feature/network.telephony.service.cdma\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.telephony.service.edge\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.telephony.service.gprs\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.telephony.service.gsm\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.telephony.service.hsdpa\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.telephony.service.hspa\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.telephony.service.hsupa\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.telephony.service.lte\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.telephony.service.umts\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 ### TM1-Feedback ###
 %package sub2-Preset_boards-TM1-Feedback
@@ -493,7 +572,7 @@ Packages of DALi HAL and Feature for TM1.
 ### TM1-EFL ###
 %package sub2-Preset_boards-TM1-EFL
 Summary:	EFL
-Requires:	%{name}-sub2-Preset_boards-TM1-GPU
+Requires:	%{name}-sub2-Preset_boards-TM1-Display
 Requires:	%{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
 Requires:	efl-config-profile_mobile
 Requires:	efl-misc-profile_mobile
