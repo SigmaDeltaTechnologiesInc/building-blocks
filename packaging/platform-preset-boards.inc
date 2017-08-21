@@ -45,6 +45,7 @@ common-wayland-3parts-armv7l-artik710.ks
 Summary:	RPI3 Selection for HAL and Feature
 Requires:	%{name}-sub2-Preset_boards-RPI3-System
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Audio
+Suggests:	%{name}-sub2-Preset_boards-RPI3-Audio_Recording
 Suggests:	%{name}-sub2-Preset_boards-RPI3-GPS
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Camera
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Display
@@ -111,16 +112,36 @@ Packages for System HAL and Feature. They are mandatory.
 ### RPI3-Audio ###
 %package sub2-Preset_boards-RPI3-Audio
 Summary:	Audio
-Requires:	pulseaudio-modules-tizen
-Suggests:	pulseaudio-modules-bluetooth
 Requires:	audio-hal-bcm2837
 Requires:	mmfw-sysconf-target-rpi3
-Requires:	%{name}-sub2-domain_API-Multimedia-Audio_IO
+
+Suggests:	%{name}-sub2-domain_API-Multimedia-Audio_IO
+Suggests:	%{name}-sub2-domain_API-Multimedia-Player
+Suggests:	%{name}-sub2-domain_API-Multimedia-WAV_Player
+Suggests:	%{name}-sub2-domain_API-Multimedia-Tone_Player
+Suggests:	%{name}-sub2-domain_API-Multimedia-OpenAL
+Suggests:	%{name}-sub2-domain_API-Multimedia-Media_Streamer
 
 %description sub2-Preset_boards-RPI3-Audio
 Packages of Audio HAL and Feature for RPI3.
 If you select Bluetooth, you can select pulseaudio-modules-bluetooth.
 %files sub2-Preset_boards-RPI3-Audio
+
+### RPI3-Audio_Recording ###
+%package sub2-Preset_boards-RPI3-Audio_Recording
+Summary:	AudioRecording
+Requires:	%{name}-sub2-Preset_boards-RPI3-Audio
+
+Suggests:	%{name}-sub2-domain_API-Multimedia-Recorder
+Suggests:	%{name}-sub2-domain_API-Multimedia-Audio_IO
+Suggests:	%{name}-sub2-domain_API-Multimedia-Media_Streamer
+
+%description sub2-Preset_boards-RPI3-Audio_Recording
+Packages of Audio HAL and Feature for RPI3.
+
+%files sub2-Preset_boards-RPI3-Audio_Recording
+%posttrans sub2-Preset_boards-RPI3-Audio_Recording
+%tizen_feature tizen.org/feature/microphone true
 
 ### RPI3-GPS ###
 %package sub2-Preset_boards-RPI3-GPS
@@ -311,6 +332,7 @@ Packages of IM HAL and Feature for RPI3.
 Summary:	TM1 Selection for HAL and Feature(For Test)
 Requires:	%{name}-sub2-Preset_boards-TM1-System
 Suggests:	%{name}-sub2-Preset_boards-TM1-Audio
+Suggests:	%{name}-sub2-Preset_boards-TM1-Audio_Recording
 Suggests:	%{name}-sub2-Preset_boards-TM1-GPS
 Suggests:	%{name}-sub2-Preset_boards-TM1-Camera
 Suggests:	%{name}-sub2-Preset_boards-TM1-Display
@@ -378,17 +400,39 @@ Packages for System HAL and Feature. They are mandatory.
 ### TM1-Audio ###
 %package sub2-Preset_boards-TM1-Audio
 Summary:	Audio
-Requires:	pulseaudio-modules-tizen
-Suggests:	pulseaudio-modules-bluetooth
 Requires:	audio-hal-sc7727
 Requires:	audio-config-sc-TM1-sc7730
 Requires:	mmfw-sysconf-target-tm1
-Requires:	%{name}-sub2-domain_API-Multimedia-Audio_IO
+
+Suggests:	%{name}-sub2-domain_API-Multimedia-Audio_IO
+Suggests:	%{name}-sub2-domain_API-Multimedia-Player
+Suggests:	%{name}-sub2-domain_API-Multimedia-WAV_Player
+Suggests:	%{name}-sub2-domain_API-Multimedia-Tone_Player
+Suggests:	%{name}-sub2-domain_API-Multimedia-OpenAL
+Suggests:	%{name}-sub2-domain_API-Multimedia-Media_Streamer
+Suggests:	%{name}-sub2-domain_API-Multimedia-Radio
+Suggests:	%{name}-sub2-domain_API-Multimedia-Screen_Mirroring
 
 %description sub2-Preset_boards-TM1-Audio
 Packages of Audio HAL and Feature for TM1.
 If you select Bluetooth, you can select pulseaudio-modules-bluetooth.
 %files sub2-Preset_boards-TM1-Audio
+
+### TM1-Audio_Recording ###
+%package sub2-Preset_boards-TM1-Audio_Recording
+Summary:	AudioRecording
+Requires:	%{name}-sub2-Preset_boards-TM1-Audio
+
+Suggests:	%{name}-sub2-domain_API-Multimedia-Recorder
+Suggests:	%{name}-sub2-domain_API-Multimedia-Audio_IO
+Suggests:	%{name}-sub2-domain_API-Multimedia-Media_Streamer
+
+%description sub2-Preset_boards-TM1-Audio_Recording
+Packages of Audio HAL and Feature for TM1.
+
+%files sub2-Preset_boards-TM1-Audio_Recording
+%posttrans sub2-Preset_boards-TM1-Audio_Recording
+%tizen_feature tizen.org/feature/microphone true
 
 ### TM1-GPS ###
 %package sub2-Preset_boards-TM1-GPS
