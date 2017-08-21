@@ -50,7 +50,7 @@ Requires:	account-parser
 This block supports managing account related information. Once you check the Account Manager before Image Creation, it will be included the image.
 %files sub2-domain_API-Account-Account_Manager
 %posttrans sub2-domain_API-Account-Account_Manager
-sed -i 's#\(\"tizen.org/feature/account\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/account true
 
 %package sub2-domain_API-Account-FIDO_Client
 Summary:	FIDO Client
@@ -67,7 +67,7 @@ So we use dummyasm for verification of fido-client APIs instead of fido-asm and 
 
 %files sub2-domain_API-Account-FIDO_Client
 %posttrans sub2-domain_API-Account-FIDO_Client
-sed -i 's#\(\"tizen.org/feature/fido.uaf\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/fido.uaf true
 
 %package sub2-domain_API-Account-OAuth2
 Summary:	OAuth2
@@ -82,7 +82,7 @@ which is following oauth 2.0 specification.
 
 %files sub2-domain_API-Account-OAuth2
 %posttrans sub2-domain_API-Account-OAuth2
-sed -i 's#\(\"tizen.org/feature/oauth2\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/oauth2 true
 
 %package sub2-domain_API-Account-Sync_Manager
 Summary:	Sync Manager
@@ -95,7 +95,7 @@ Suggests:	%{name}-sub2-domain_API-Network-WiFi
 This block supports managing data synchronization. Also, to use this feature, either Data Network or Wi-Fi connection is required. Once you check the Sync Manager before Image Creation, it will be included the image.
 %files sub2-domain_API-Account-Sync_Manager
 %posttrans sub2-domain_API-Account-Sync_Manager
-sed -i 's#\(\"tizen.org/feature/account.sync\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/account.sync true
 
 %package sub2-domain_API-Account-libOAuth
 Summary:	libOAuth
@@ -402,7 +402,7 @@ Tizen block (set of packages) for API sets of domain API-Content-Download <br>
 To use this feature, either Data Network or Wi-Fi connection is required.
 %files sub2-domain_API-Content-Download
 %posttrans sub2-domain_API-Content-Download
-sed -i 's#\(\"tizen.org/feature/download\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/download true
 
 %package sub2-domain_API-Content-MIME_Type
 Summary:    MIME-Type API
@@ -482,9 +482,9 @@ This block supports managing Location Service.<br>
 To use Location Service, the appropriate plugin should be selected for the device.
 %files sub2-domain_API-Location-Location_Manager
 %posttrans sub2-domain_API-Location-Location_Manager
-sed -i 's#\(\"tizen.org/feature/location\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/location.gps\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/location.gps.satellite\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/location true
+%tizen_feature tizen.org/feature/location.gps true
+%tizen_feature tizen.org/feature/location.gps.satellite true
 
 %package sub2-domain_API-Location-Geofence_Manager
 Summary:    Geofence-Manager
@@ -496,7 +496,7 @@ Requires:	%{name}-sub2-domain_API-Location-Location_Manager
 This block supports managing Geofence Service.
 %files sub2-domain_API-Location-Geofence_Manager
 %posttrans sub2-domain_API-Location-Geofence_Manager
-sed -i 's#\(\"tizen.org/feature/location.geofence\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/location.geofence true
 
 ##########
 ## Maps ##
@@ -525,7 +525,7 @@ At least one of HERE or MAPZEN plugin must be selected.
 
 %files sub2-domain_API-Maps-Maps_Service
 %posttrans sub2-domain_API-Maps-Maps_Service
-sed -i 's#\(\"tizen.org/feature/maps\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/maps true
 
 
 %package sub2-domain_API-Maps-Here_Plugin
@@ -577,7 +577,7 @@ Wifi would be available when Wifi is selected.
 
 %files sub2-domain_API-Messaging-Email
 %posttrans sub2-domain_API-Messaging-Email
-sed -i 's#\(\"tizen.org/feature/email\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/email true
 
 %package sub2-domain_API-Messaging-Messages
 Summary:Messages
@@ -593,9 +593,9 @@ This block supports managing Message service.
 
 %files sub2-domain_API-Messaging-Messages
 %posttrans sub2-domain_API-Messaging-Messages
-sed -i 's#\(\"tizen.org/feature/network.telephony.sms\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.telephony.sms.cbs\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.telephony.mms\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.telephony.sms true
+%tizen_feature tizen.org/feature/network.telephony.sms.cbs true
+%tizen_feature tizen.org/feature/network.telephony.mms true
 
 %package sub2-domain_API-Messaging-Push
 Summary:	Push Client
@@ -606,7 +606,7 @@ Suggests:	%{name}-sub2-domain_API-Network-WiFi
 This block supports transferation push messages between devices and server. Also, to use this feature, either Data Network or Wi-Fi connection is required. Once you check the Push Client before Image Creation, it will be included the image. For this, either Data Network or Wi-Fi connection is required.
 %files sub2-domain_API-Messaging-Push
 %posttrans sub2-domain_API-Messaging-Push
-sed -i 's#\(\"tizen.org/feature/network.push\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.push true
 
 ################
 ## Multimedia ##
@@ -793,8 +793,8 @@ MediaVision Barcode API to generate or detect Barcode/QRcode
 
 %files sub2-domain_API-Multimedia-Media_Vision_Barcode
 %posttrans sub2-domain_API-Multimedia-Media_Vision_Barcode
-sed -i 's#\(\"tizen.org/feature/vision.barcode_detection\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/vision.barcode_generation\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/vision.barcode_detection true
+%tizen_feature tizen.org/feature/vision.barcode_generation true
 
 %package sub2-domain_API-Multimedia-Media_Vision_Face
 Summary:    Media_Vision_Face
@@ -805,7 +805,7 @@ MediaVision Face API to detect, recognize, or track faces on images
 
 %files sub2-domain_API-Multimedia-Media_Vision_Face
 %posttrans sub2-domain_API-Multimedia-Media_Vision_Face
-sed -i 's#\(\"tizen.org/feature/vision.face_recognition\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/vision.face_recognition true
 
 %package sub2-domain_API-Multimedia-Media_Vision_Image
 Summary:    Media_Vision_Image
@@ -816,7 +816,7 @@ MediaVision Image API to recognize and track planar objects on an image
 
 %files sub2-domain_API-Multimedia-Media_Vision_Image
 %posttrans sub2-domain_API-Multimedia-Media_Vision_Image
-sed -i 's#\(\"tizen.org/feature/vision.image_recognition\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/vision.image_recognition true
 
 
 %package sub2-domain_API-Multimedia-Media_Vision_Surveillance
@@ -829,8 +829,8 @@ person (dis)appearance, recognized face, movement changes on videos.
 
 %files sub2-domain_API-Multimedia-Media_Vision_Surveillance
 %posttrans sub2-domain_API-Multimedia-Media_Vision_Surveillance
-sed -i 's#\(\"tizen.org/feature/vision.face_recognition\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/vision.image_recognition\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/vision.face_recognition true
+%tizen_feature tizen.org/feature/vision.image_recognition true
 
 %package sub2-domain_API-Multimedia-Metadata_Editor
 Summary:    Metadata_Editor
@@ -924,7 +924,7 @@ TM1: bluez, rfkill, bluetoothe-firmware-sprd-TM1 <br>
 
 %files sub2-domain_API-Multimedia-Radio
 %posttrans sub2-domain_API-Multimedia-Radio
-sed -i 's#\(\"tizen.org/feature/fmradio\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/fmradio true
 
 %package sub2-domain_API-Multimedia-Recorder
 Summary:    Recorder
@@ -1047,7 +1047,7 @@ Video Util API provides fuctions that transcode a media file <br>
 
 %files sub2-domain_API-Multimedia-Video_Util
 %posttrans sub2-domain_API-Multimedia-Video_Util
-sed -i 's#\(\"tizen.org/feature/multimedia.transcoder\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/multimedia.transcoder true
 
 %package sub2-domain_API-Multimedia-WAV_Player
 Summary:    WAV_Player
@@ -1231,10 +1231,10 @@ Enabling Bluetooth BREDR and it is possible to Bluetooth BREDR API<br>
 - not wearable : bluetooth-frwk-plugin-headed, org.tizen.bt-syspopup, org.tizen.bt-syspopup-profile_common
 %files sub2-domain_API-Network-Bluetooth_BREDR
 %posttrans sub2-domain_API-Network-Bluetooth_BREDR
-sed -i 's#\(\"tizen.org/feature/network.bluetooth\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.bluetooth.health\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.bluetooth.hid\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.bluetooth.hid_device\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.bluetooth true
+%tizen_feature tizen.org/feature/network.bluetooth.health true
+%tizen_feature tizen.org/feature/network.bluetooth.hid true
+%tizen_feature tizen.org/feature/network.bluetooth.hid_device true
 
 %package sub2-domain_API-Network-Bluetooth_Call_Audio
 Summary:    Bluetooth_Call_Audio
@@ -1256,7 +1256,7 @@ Enabling Bluetooth Call Audio functionality<br>
 - wearable : bluetooth-agent-profile_wearable
 %files sub2-domain_API-Network-Bluetooth_Call_Audio
 %posttrans sub2-domain_API-Network-Bluetooth_Call_Audio
-sed -i 's#\(\"tizen.org/feature/network.bluetooth.audio.call\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.bluetooth.audio.call true
 
 %package sub2-domain_API-Network-Bluetooth_Media_Audio
 Summary:    Bluetooth_Media_Audio
@@ -1270,8 +1270,8 @@ Enabling Bluetooth Media Audio functionality
 
 %files sub2-domain_API-Network-Bluetooth_Media_Audio
 %posttrans sub2-domain_API-Network-Bluetooth_Media_Audio
-sed -i 's#\(\"tizen.org/feature/network.bluetooth.audio.media\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.bluetooth.audio.controller\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.bluetooth.audio.media true
+%tizen_feature tizen.org/feature/network.bluetooth.audio.controller true
 
 %package sub2-domain_API-Network-Bluetooth_Transfer
 Summary:    Bluetooth_Transfer
@@ -1284,8 +1284,8 @@ Enabling Bluetooth Transfer functionality(OPP, PBAP)
 
 %files sub2-domain_API-Network-Bluetooth_Transfer
 %posttrans sub2-domain_API-Network-Bluetooth_Transfer
-sed -i 's#\(\"tizen.org/feature/network.bluetooth.opp\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.bluetooth.phonebook.client\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.bluetooth.opp true
+%tizen_feature tizen.org/feature/network.bluetooth.phonebook.client true
 
 %package sub2-domain_API-Network-Bluetooth_LE
 Summary:    Bluetooth_LE
@@ -1347,8 +1347,8 @@ Enabling Bluetooth LE Only functionality<br>
 - not wearable : bluetooth-frwk-plugin-headed, org.tizen.bt-syspopup, org.tizen.bt-syspopup-profile_common
 %files sub2-domain_API-Network-Bluetooth_LE
 %posttrans sub2-domain_API-Network-Bluetooth_LE
-sed -i 's#\(\"tizen.org/feature/network.bluetooth.le\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.bluetooth.ipsp\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.bluetooth.le true
+%tizen_feature tizen.org/feature/network.bluetooth.ipsp true
 
 %package sub2-domain_API-Network-ASP
 Summary:    ASP
@@ -1362,7 +1362,7 @@ To use this feature, either Data Network or Wi-Fi connection is required <br>
 and you need the package either DNSSD or WiFi Direct. A default is DNSSD.
 %files sub2-domain_API-Network-ASP
 %posttrans sub2-domain_API-Network-ASP
-sed -i 's#\(\"tizen.org/feature/network.asp\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.asp true
 
 %package sub2-domain_API-Network-Connection
 Summary:    Connection
@@ -1398,7 +1398,7 @@ Tizen block (set of packages) for API sets of domain API-Network-DNSSD <br>
 To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-DNSSD
 %posttrans sub2-domain_API-Network-DNSSD
-sed -i 's#\(\"tizen.org/feature/network.service_discovery.dnssd\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.service_discovery.dnssd true
 
 %package sub2-domain_API-Network-HTTP
 Summary:    HTTP
@@ -1430,7 +1430,7 @@ Requires: libmtp
 Enabling MTP(Media Transfer Protocol) Initiator and it is possible to user MTP API
 %files sub2-domain_API-Network-MTP
 %posttrans sub2-domain_API-Network-MTP
-sed -i 's#\(\"tizen.org/feature/network.mtp\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.mtp true
 
 %package sub2-domain_API-Network-NFC
 Summary:    NFC
@@ -1441,7 +1441,7 @@ Requires: nfc-manager
 Enabling NFC Manager and it is possible to user NFC API
 %files sub2-domain_API-Network-NFC
 %posttrans sub2-domain_API-Network-NFC
-sed -i 's#\(\"tizen.org/feature/network.nfc\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.nfc true
 
 %package sub2-domain_API-Network-SSDP
 Summary:    SSDP
@@ -1454,7 +1454,7 @@ Tizen block (set of packages) for API sets of domain API-Network-SSDP <br>
 To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-SSDP
 %posttrans sub2-domain_API-Network-SSDP
-sed -i 's#\(\"tizen.org/feature/network.service_discovery.ssdp\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.service_discovery.ssdp true
 
 %package sub2-domain_API-Network-STC
 Summary:    STC
@@ -1468,7 +1468,7 @@ Tizen block (set of packages) for API sets of domain API-Network-STC <br>
 To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-STC
 %posttrans sub2-domain_API-Network-STC
-sed -i 's#\(\"tizen.org/feature/network.traffic_control\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.traffic_control true
 
 %package sub2-domain_API-Network-Smartcard
 Summary:    Smartcard
@@ -1485,9 +1485,9 @@ In case of USIM device, 'smartcard-plugin-uicc' and 'sub1-domain_API-Telephony' 
 In case of embedded SE, 'smartcard-plugin-nfc' and 'sub2-domain_API-Network-NFC' have to be chosen.
 %files sub2-domain_API-Network-Smartcard
 %posttrans sub2-domain_API-Network-Smartcard
-sed -i 's#\(\"tizen.org/feature/network.secure_element\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.secure_element.ese\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.secure_element.uicc\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.secure_element true
+%tizen_feature tizen.org/feature/network.secure_element.ese true
+%tizen_feature tizen.org/feature/network.secure_element.uicc true
 
 %package sub2-domain_API-Network-VPN_Service
 Summary:    VPN_Service
@@ -1500,7 +1500,7 @@ Tizen block (set of packages) for API sets of domain API-Network-VPN_Service <br
 To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-VPN_Service
 %posttrans sub2-domain_API-Network-VPN_Service
-sed -i 's#\(\"tizen.org/feature/network.vpn\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.vpn true
 
 %package sub2-domain_API-Network-WiFi
 Summary:    WiFi
@@ -1536,7 +1536,7 @@ ivi profile : wpa_supplicant-profile_common, connman-extension-ivi <br>
 common profile : wpa_supplicant-profile_common <br>
 %files sub2-domain_API-Network-WiFi
 %posttrans sub2-domain_API-Network-WiFi
-sed -i 's#\(\"tizen.org/feature/network.wifi\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.wifi true
 
 %package sub2-domain_API-Network-WiFi_Manager
 Summary:    WiFi_Manager
@@ -1572,7 +1572,7 @@ ivi profile : wpa_supplicant-profile_common, connman-extension-ivi <br>
 common profile : wpa_supplicant-profile_common <br>
 %files sub2-domain_API-Network-WiFi_Manager
 %posttrans sub2-domain_API-Network-WiFi_Manager
-sed -i 's#\(\"tizen.org/feature/network.wifi\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.wifi true
 
 %package sub2-domain_API-Network-WiFi_Direct
 Summary:    WiFi_Direct
@@ -1606,9 +1606,9 @@ ivi profile : wifi-direct-manager-profile_common, wifi-direct-plugin-wpasupplica
 common profile : Not supported <br>
 %files sub2-domain_API-Network-WiFi_Direct
 %posttrans sub2-domain_API-Network-WiFi_Direct
-sed -i 's#\(\"tizen.org/feature/network.wifi.direct\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.wifi.direct.display\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.wifi.direct.service_discovery\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.wifi.direct true
+%tizen_feature tizen.org/feature/network.wifi.direct.display true
+%tizen_feature tizen.org/feature/network.wifi.direct.service_discovery false
 
 ##############
 ## Security ##
@@ -1705,7 +1705,7 @@ This logic is not available in TV profile.
 
 %files sub2-domain_API-Social-Calendar
 %posttrans sub2-domain_API-Social-Calendar
-sed -i 's#\(\"tizen.org/feature/calendar\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/calendar true
 
 %package sub2-domain_API-Social-Contacts
 Summary: Contacts
@@ -1718,7 +1718,7 @@ This block supports managing Contacts service
 
 %files sub2-domain_API-Social-Contacts
 %posttrans sub2-domain_API-Social-Contacts
-sed -i 's#\(\"tizen.org/feature/contact\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/contact true
 
 %package sub2-domain_API-Social-Phonenumber_utils
 Summary: Phonenumber_utils
@@ -1785,7 +1785,7 @@ For example, deviced-profile_mobile and device-manager-plugin-sc7730 for mobile
              deviced-profile_common and device-manager-plugin-rpi3 for rpi3
 %files sub2-domain_API-System-Device_Battery
 %posttrans sub2-domain_API-System-Device_Battery
-sed -i 's#\(\"tizen.org/feature/battery\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/battery true
 
 %package sub2-domain_API-System-Device_Callback
 Summary:    Device_Callback
@@ -1887,7 +1887,7 @@ For example, deviced-profile_mobile and device-manager-plugin-sc7730 for mobile
              deviced-profile_common and device-manager-plugin-rpi3 for rpi3
 %files sub2-domain_API-System-Device_IR
 %posttrans sub2-domain_API-System-Device_IR
-sed -i 's#\(\"tizen.org/feature/consumer_ir\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/consumer_ir true
 
 %package sub2-domain_API-System-Device_Led
 Summary:    Device_Led
@@ -1917,7 +1917,7 @@ For example, deviced-profile_mobile and device-manager-plugin-sc7730 for mobile
              deviced-profile_common and device-manager-plugin-rpi3 for rpi3
 %files sub2-domain_API-System-Device_Led
 %posttrans sub2-domain_API-System-Device_Led
-sed -i 's#\(\"tizen.org/feature/led\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/led true
 
 %package sub2-domain_API-System-Device_Power
 Summary:    Device_Power
@@ -2059,8 +2059,8 @@ System setting api for get,set configuration
 
 %posttrans sub2-domain_API-System-System_Settings
 
-sed -i 's#\(\"tizen.org/feature/systemsetting\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/systemsetting.notification_email\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/systemsetting true
+%tizen_feature tizen.org/feature/systemsetting.notification_email true
 
 
 %package sub2-domain_API-System-T_Trace
@@ -2079,7 +2079,7 @@ Requires: libusb
 Tizen block (set of packages) for Group of sub domain USB_Host
 %files sub2-domain_API-System-USB_Host
 %posttrans sub2-domain_API-System-USB_Host
-sed -i 's#\(\"tizen.org/feature/usb.host\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/usb.host true
 
 %package sub2-domain_API-System-dlog
 Summary:    dlog
@@ -2112,8 +2112,8 @@ Suggests: tel-plugin-syspopup
 Tizen block (set of packages) for Group of domain API-Telephony
 %files sub1-domain_API-Telephony
 %posttrans sub1-domain_API-Telephony
-sed -i 's#\(\"tizen.org/feature/network.telephony\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/systemsetting.incoming_call\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.telephony true
+%tizen_feature tizen.org/feature/systemsetting.incoming_call true
 
 
 ########
@@ -2533,7 +2533,7 @@ STT(Speech-To-Text) provides functions to recognize the speech.
 
 %files sub2-domain_API-UIX-STT
 %posttrans sub2-domain_API-UIX-STT
-sed -i 's#\(\"tizen.org/feature/speech.recognition\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/speech.recognition true
 
 
 %package sub2-domain_API-UIX-TTS
@@ -2550,7 +2550,7 @@ TTS(Text-To-Speech) provides functions to synthesize voice from text and play sy
 
 %files sub2-domain_API-UIX-TTS
 %posttrans sub2-domain_API-UIX-TTS
-sed -i 's#\(\"tizen.org/feature/speech.synthesis\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/speech.synthesis true
 
 
 %package sub2-domain_API-UIX-Voice_control
@@ -2565,7 +2565,7 @@ Voice control provides functions to register commands and get notification when 
 
 %files sub2-domain_API-UIX-Voice_control
 %posttrans sub2-domain_API-UIX-Voice_control
-sed -i 's#\(\"tizen.org/feature/speech.control\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/speech.control true
 
 
 %package sub2-domain_API-UIX-Voice_control_elementary
@@ -2579,7 +2579,7 @@ Voice control elementary provides functions to control widget by voice commands.
 
 %files sub2-domain_API-UIX-Voice_control_elementary
 %posttrans sub2-domain_API-UIX-Voice_control_elementary
-sed -i 's#\(\"tizen.org/feature/speech.control\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/speech.control true
 
 
 #########

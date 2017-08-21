@@ -68,32 +68,32 @@ Conflicts:	%{name}-sub1-Preset_boards-ARTIK_fullBSP
 Firstly select HALs and Feature to add to your image.
 %files sub1-Preset_boards-RPI3
 %posttrans sub1-Preset_boards-RPI3
-sed -i 's#\(\"tizen.org/system/platform.processor\".\+>\).\+\(</key>\)#\1BCM2837\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/system/platform.communication_processor\".\+>\).\+\(</key>\)#\1none\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/platform.core.cpu.arch\".\+>\).\+\(</key>\)#\1armv8\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/platform.core.cpu.arch.armv7\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/platform.core.cpu.arch.armv8\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/platform.core.cpu.frequency\".\+>\).\+\(</key>\)#\11200\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch\".\+>\).\+\(</key>\)#\1vfpv4\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch.vfpv3\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch.vfpv4\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/profile\".\+>\).\+\(</key>\)#\1common\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/location.batch\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.ethernet\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.wifi.tdls\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen.auto_rotation\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen.height\".\+>\).\+\(</key>\)#\11920\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen.output.hdmi\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen.output.rca\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen.shape.circle\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen.shape.rectangle\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen.size.normal.1080.1920\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen.width\".\+>\).\+\(</key>\)#\11080\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/sensor.accelerometer\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/sensor.gravity\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/sensor.linear_acceleration\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/sensor.proximity\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/sensor.temperature\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/system/platform.processor BCM2837
+%tizen_feature tizen.org/system/platform.communication_processor none
+%tizen_feature tizen.org/feature/platform.core.cpu.arch armv8
+%tizen_feature tizen.org/feature/platform.core.cpu.arch.armv7 false
+%tizen_feature tizen.org/feature/platform.core.cpu.arch.armv8 true
+%tizen_feature tizen.org/feature/platform.core.cpu.frequency 1200
+%tizen_feature tizen.org/feature/platform.core.fpu.arch vfpv4
+%tizen_feature tizen.org/feature/platform.core.fpu.arch.vfpv3 false
+%tizen_feature tizen.org/feature/platform.core.fpu.arch.vfpv4 true
+%tizen_feature tizen.org/feature/profile common
+%tizen_feature tizen.org/feature/location.batch false
+%tizen_feature tizen.org/feature/network.ethernet true
+%tizen_feature tizen.org/feature/network.wifi.tdls false
+%tizen_feature tizen.org/feature/screen.auto_rotation false
+%tizen_feature tizen.org/feature/screen.height 1920
+%tizen_feature tizen.org/feature/screen.output.hdmi true
+%tizen_feature tizen.org/feature/screen.output.rca false
+%tizen_feature tizen.org/feature/screen.shape.circle false
+%tizen_feature tizen.org/feature/screen.shape.rectangle true
+%tizen_feature tizen.org/feature/screen.size.normal.1080.1920 true
+%tizen_feature tizen.org/feature/screen.width 1080
+%tizen_feature tizen.org/feature/sensor.accelerometer true
+%tizen_feature tizen.org/feature/sensor.gravity true
+%tizen_feature tizen.org/feature/sensor.linear_acceleration true
+%tizen_feature tizen.org/feature/sensor.proximity true
+%tizen_feature tizen.org/feature/sensor.temperature true
 
 
 ### RPI3-System ###
@@ -144,11 +144,11 @@ Packages of Camera HAL and Feature for RPI3.
 Not Implemented.
 %files sub2-Preset_boards-RPI3-Camera
 %posttrans sub2-Preset_boards-RPI3-Camera
-sed -i 's#\(\"tizen.org/feature/camera\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/camera.back\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/camera.back.flash\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/camera.front\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/camera.front.flash\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/camera true
+%tizen_feature tizen.org/feature/camera.back true
+%tizen_feature tizen.org/feature/camera.back.flash false
+%tizen_feature tizen.org/feature/camera.front false
+%tizen_feature tizen.org/feature/camera.front.flash false
 
 
 ### RPI3-Display ###
@@ -165,16 +165,16 @@ Requires:	coregl
 Packages of Display HAL and Feature for RPI3.
 %files sub2-Preset_boards-RPI3-Display
 %posttrans sub2-Preset_boards-RPI3-Display
-sed -i 's#\(\"tizen.org/feature/graphics.acceleration\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/multi_point_touch.pinch_zoom\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/opengles\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/opengles.1_1\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/opengles.2_0\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/opengles.3_0\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/opengles.3_1\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/opengles.3_2\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/vulkan.version.1_0\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/graphics.acceleration true
+%tizen_feature tizen.org/feature/multi_point_touch.pinch_zoom true
+%tizen_feature tizen.org/feature/opengles true
+%tizen_feature tizen.org/feature/opengles.1_1 true
+%tizen_feature tizen.org/feature/opengles.2_0 true
+%tizen_feature tizen.org/feature/opengles.3_0 false
+%tizen_feature tizen.org/feature/opengles.3_1 false
+%tizen_feature tizen.org/feature/opengles.3_2 false
+%tizen_feature tizen.org/feature/vulkan.version.1_0 false
+%tizen_feature tizen.org/feature/screen true
 
 ### RPI3-Wifi ###
 %package sub2-Preset_boards-RPI3-Wifi
@@ -334,32 +334,32 @@ Conflicts:	%{name}-sub1-Preset_boards-ARTIK_fullBSP
 Firstly select HALs and Feature to add to your image.
 %files sub1-Preset_boards-TM1
 %posttrans sub1-Preset_boards-TM1
-sed -i 's#\(\"tizen.org/system/platform.processor\".\+>\).\+\(</key>\)#\1SC7727S\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/system/platform.communication_processor\".\+>\).\+\(</key>\)#\1SC7727S\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/platform.core.cpu.arch\".\+>\).\+\(</key>\)#\1armv7\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/platform.core.cpu.arch.armv7\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/platform.core.cpu.arch.armv8\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/platform.core.cpu.frequency\".\+>\).\+\(</key>\)#\11300\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch\".\+>\).\+\(</key>\)#\1vfpv3\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch.vfpv3\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/platform.core.fpu.arch.vfpv4\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/profile\".\+>\).\+\(</key>\)#\1mobile\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/location.batch\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.ethernet\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.wifi.tdls\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen.auto_rotation\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen.height\".\+>\).\+\(</key>\)#\11280\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen.output.hdmi\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen.output.rca\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen.shape.circle\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen.shape.rectangle\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen.size.normal.720.1280\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen.width\".\+>\).\+\(</key>\)#\1720\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/sensor.accelerometer\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/sensor.gravity\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/sensor.linear_acceleration\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/sensor.proximity\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/sensor.temperature\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/system/platform.processor SC7727S
+%tizen_feature tizen.org/system/platform.communication_processor SC7727S
+%tizen_feature tizen.org/feature/platform.core.cpu.arch armv7
+%tizen_feature tizen.org/feature/platform.core.cpu.arch.armv7 true
+%tizen_feature tizen.org/feature/platform.core.cpu.arch.armv8 false
+%tizen_feature tizen.org/feature/platform.core.cpu.frequency 1300
+%tizen_feature tizen.org/feature/platform.core.fpu.arch vfpv3
+%tizen_feature tizen.org/feature/platform.core.fpu.arch.vfpv3 true
+%tizen_feature tizen.org/feature/platform.core.fpu.arch.vfpv4 false
+%tizen_feature tizen.org/feature/profile mobile
+%tizen_feature tizen.org/feature/location.batch false
+%tizen_feature tizen.org/feature/network.ethernet false
+%tizen_feature tizen.org/feature/network.wifi.tdls false
+%tizen_feature tizen.org/feature/screen.auto_rotation true
+%tizen_feature tizen.org/feature/screen.height 1280
+%tizen_feature tizen.org/feature/screen.output.hdmi false
+%tizen_feature tizen.org/feature/screen.output.rca false
+%tizen_feature tizen.org/feature/screen.shape.circle false
+%tizen_feature tizen.org/feature/screen.shape.rectangle true
+%tizen_feature tizen.org/feature/screen.size.normal.720.1280 true
+%tizen_feature tizen.org/feature/screen.width 720
+%tizen_feature tizen.org/feature/sensor.accelerometer true
+%tizen_feature tizen.org/feature/sensor.gravity true
+%tizen_feature tizen.org/feature/sensor.linear_acceleration true
+%tizen_feature tizen.org/feature/sensor.proximity true
+%tizen_feature tizen.org/feature/sensor.temperature false
 
 
 
@@ -411,11 +411,11 @@ Packages of Camera HAL and Feature for TM1.
 Not Implemented.
 %files sub2-Preset_boards-TM1-Camera
 %posttrans sub2-Preset_boards-TM1-Camera
-sed -i 's#\(\"tizen.org/feature/camera\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/camera.back\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/camera.back.flash\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/camera.front\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/camera.front.flash\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/camera true
+%tizen_feature tizen.org/feature/camera.back true
+%tizen_feature tizen.org/feature/camera.back.flash true
+%tizen_feature tizen.org/feature/camera.front true
+%tizen_feature tizen.org/feature/camera.front.flash false
 
 ### TM1-Display ###
 %package sub2-Preset_boards-TM1-Display
@@ -430,16 +430,16 @@ Requires:	coregl
 Packages of Display HAL and Feature for TM1.
 %files sub2-Preset_boards-TM1-Display
 %posttrans sub2-Preset_boards-TM1-Display
-sed -i 's#\(\"tizen.org/feature/graphics.acceleration\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/multi_point_touch.pinch_zoom\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/opengles\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/opengles.1_1\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/opengles.2_0\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/opengles.3_0\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/opengles.3_1\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/opengles.3_2\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/vulkan.version.1_0\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/screen\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/graphics.acceleration true
+%tizen_feature tizen.org/feature/multi_point_touch.pinch_zoom true
+%tizen_feature tizen.org/feature/opengles true
+%tizen_feature tizen.org/feature/opengles.1_1 true
+%tizen_feature tizen.org/feature/opengles.2_0 true
+%tizen_feature tizen.org/feature/opengles.3_0 false
+%tizen_feature tizen.org/feature/opengles.3_1 false
+%tizen_feature tizen.org/feature/opengles.3_2 false
+%tizen_feature tizen.org/feature/vulkan.version.1_0 false
+%tizen_feature tizen.org/feature/screen true
 
 ### TM1-Wifi ###
 %package sub2-Preset_boards-TM1-Wifi
@@ -529,15 +529,15 @@ Requires:	%{name}-sub1-domain_API-Telephony
 Packages of Telephony HAL and Feature for TM1.
 %files sub2-Preset_boards-TM1-Telephony
 %posttrans sub2-Preset_boards-TM1-Telephony
-sed -i 's#\(\"tizen.org/feature/network.telephony.service.cdma\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.telephony.service.edge\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.telephony.service.gprs\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.telephony.service.gsm\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.telephony.service.hsdpa\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.telephony.service.hspa\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.telephony.service.hsupa\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.telephony.service.lte\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
-sed -i 's#\(\"tizen.org/feature/network.telephony.service.umts\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+%tizen_feature tizen.org/feature/network.telephony.service.cdma false
+%tizen_feature tizen.org/feature/network.telephony.service.edge true
+%tizen_feature tizen.org/feature/network.telephony.service.gprs true
+%tizen_feature tizen.org/feature/network.telephony.service.gsm true
+%tizen_feature tizen.org/feature/network.telephony.service.hsdpa true
+%tizen_feature tizen.org/feature/network.telephony.service.hspa true
+%tizen_feature tizen.org/feature/network.telephony.service.hsupa true
+%tizen_feature tizen.org/feature/network.telephony.service.lte true
+%tizen_feature tizen.org/feature/network.telephony.service.umts true
 
 ### TM1-Feedback ###
 %package sub2-Preset_boards-TM1-Feedback
