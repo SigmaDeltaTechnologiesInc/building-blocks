@@ -1420,6 +1420,8 @@ This block supports Tizen IoT Connectivity Service & Library(Client) based on Io
 It supports resource management, remote resource management, CRUDN request/response and resource representation. <br>
 To use this feature, Wi-Fi connection is required.
 %files sub2-domain_API-Network-IoTCon
+%posttrans sub2-domain_API-Network-IoTCon
+%tizen_feature tizen.org/feature/iot.ocf true
 
 %package sub2-domain_API-Network-MTP
 Summary:    MTP
