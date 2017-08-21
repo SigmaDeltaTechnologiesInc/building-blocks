@@ -66,6 +66,8 @@ But fido-asm and fido-authenticator are vendor specific modules and to be develo
 So we use dummyasm for verification of fido-client APIs instead of fido-asm and fido-authenticator.
 
 %files sub2-domain_API-Account-FIDO_Client
+%posttrans sub2-domain_API-Account-FIDO_Client
+sed -i 's#\(\"tizen.org/feature/fido.uaf\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Account-OAuth2
 Summary:	OAuth2
@@ -79,6 +81,8 @@ webView is mandatory becasue oauth2 manager api triggers to show web page for us
 which is following oauth 2.0 specification.
 
 %files sub2-domain_API-Account-OAuth2
+%posttrans sub2-domain_API-Account-OAuth2
+sed -i 's#\(\"tizen.org/feature/oauth2\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Account-Sync_Manager
 Summary:	Sync Manager
