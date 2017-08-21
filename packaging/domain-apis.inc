@@ -49,6 +49,8 @@ Requires:	account-parser
 %description sub2-domain_API-Account-Account_Manager
 This block supports managing account related information. Once you check the Account Manager before Image Creation, it will be included the image.
 %files sub2-domain_API-Account-Account_Manager
+%posttrans sub2-domain_API-Account-Account_Manager
+sed -i 's#\(\"tizen.org/feature/account\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Account-FIDO_Client
 Summary:	FIDO Client
@@ -88,6 +90,8 @@ Suggests:	%{name}-sub2-domain_API-Network-WiFi
 %description sub2-domain_API-Account-Sync_Manager
 This block supports managing data synchronization. Also, to use this feature, either Data Network or Wi-Fi connection is required. Once you check the Sync Manager before Image Creation, it will be included the image.
 %files sub2-domain_API-Account-Sync_Manager
+%posttrans sub2-domain_API-Account-Sync_Manager
+sed -i 's#\(\"tizen.org/feature/account.sync\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Account-libOAuth
 Summary:	libOAuth
@@ -573,6 +577,8 @@ Suggests:	%{name}-sub2-domain_API-Network-WiFi
 %description sub2-domain_API-Messaging-Push
 This block supports transferation push messages between devices and server. Also, to use this feature, either Data Network or Wi-Fi connection is required. Once you check the Push Client before Image Creation, it will be included the image. For this, either Data Network or Wi-Fi connection is required.
 %files sub2-domain_API-Messaging-Push
+%posttrans sub2-domain_API-Messaging-Push
+sed -i 's#\(\"tizen.org/feature/network.push\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 ################
 ## Multimedia ##
