@@ -1593,6 +1593,7 @@ common profile : Not supported <br>
 %posttrans sub2-domain_API-Network-WiFi_Direct
 sed -i 's#\(\"tizen.org/feature/network.wifi.direct\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 sed -i 's#\(\"tizen.org/feature/network.wifi.direct.display\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.wifi.direct.service_discovery\".\+>\).\+\(</key>\)#\1false\2#' %{_sysconfdir}/config/model-config.xml
 
 ##############
 ## Security ##
