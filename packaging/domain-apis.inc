@@ -1682,6 +1682,8 @@ Then choose proper combination.
 For example, deviced-profile_mobile and device-manager-plugin-sc7730 for mobile
              deviced-profile_common and device-manager-plugin-rpi3 for rpi3
 %files sub2-domain_API-System-Device_Battery
+%posttrans sub2-domain_API-System-Device_Battery
+sed -i 's#\(\"tizen.org/feature/battery\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-System-Device_Callback
 Summary:    Device_Callback
@@ -1782,6 +1784,8 @@ Then choose proper combination.
 For example, deviced-profile_mobile and device-manager-plugin-sc7730 for mobile
              deviced-profile_common and device-manager-plugin-rpi3 for rpi3
 %files sub2-domain_API-System-Device_IR
+%posttrans sub2-domain_API-System-Device_IR
+sed -i 's#\(\"tizen.org/feature/consumer_ir\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-System-Device_Led
 Summary:    Device_Led
@@ -1810,6 +1814,8 @@ Then choose proper combination.
 For example, deviced-profile_mobile and device-manager-plugin-sc7730 for mobile
              deviced-profile_common and device-manager-plugin-rpi3 for rpi3
 %files sub2-domain_API-System-Device_Led
+%posttrans sub2-domain_API-System-Device_Led
+sed -i 's#\(\"tizen.org/feature/led\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-System-Device_Power
 Summary:    Device_Power
@@ -1964,6 +1970,8 @@ Requires: libusb
 %description sub2-domain_API-System-USB_Host
 Tizen block (set of packages) for Group of sub domain USB_Host
 %files sub2-domain_API-System-USB_Host
+%posttrans sub2-domain_API-System-USB_Host
+sed -i 's#\(\"tizen.org/feature/usb.host\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-System-dlog
 Summary:    dlog
