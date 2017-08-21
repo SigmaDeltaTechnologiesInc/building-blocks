@@ -381,11 +381,14 @@ Summary:    Download
 Requires:	capi-web-url-download
 Requires:	download-provider
 Requires:	%{name}-sub2-domain_API-Network-WiFi
+Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Content-Download
 Tizen block (set of packages) for API sets of domain API-Content-Download <br>
 To use this feature, either Data Network or Wi-Fi connection is required.
 %files sub2-domain_API-Content-Download
+%posttrans sub2-domain_API-Content-Download
+sed -i 's#\(\"tizen.org/feature/download\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Content-MIME_Type
 Summary:    MIME-Type API
@@ -1297,10 +1300,13 @@ Tizen block (set of packages) for API sets of domain API-Network-ASP <br>
 To use this feature, either Data Network or Wi-Fi connection is required <br>
 and you need the package either DNSSD or WiFi Direct. A default is DNSSD.
 %files sub2-domain_API-Network-ASP
+%posttrans sub2-domain_API-Network-ASP
+sed -i 's#\(\"tizen.org/feature/network.asp\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Network-Connection
 Summary:    Connection
 Requires:	capi-network-connection
+Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-Connection
@@ -1311,6 +1317,7 @@ To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %package sub2-domain_API-Network-Curl
 Summary:    Curl
 Requires:	libcurl
+Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-Curl
@@ -1322,16 +1329,20 @@ To use this feature, either Data Network or Wi-Fi connection is required. <br>
 Summary:    DNS-SD
 Requires:	libnsd-dns-sd
 Requires:	mdnsresponder
+Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-DNSSD
 Tizen block (set of packages) for API sets of domain API-Network-DNSSD <br>
 To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-DNSSD
+%posttrans sub2-domain_API-Network-DNSSD
+sed -i 's#\(\"tizen.org/feature/network.service_discovery.dnssd\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Network-HTTP
 Summary:    HTTP
 Requires:	capi-network-http
+Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-HTTP
@@ -1370,23 +1381,29 @@ Enabling NFC Manager and it is possible to user NFC API
 %package sub2-domain_API-Network-SSDP
 Summary:    SSDP
 Requires:	libnsd-ssdp
+Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-SSDP
 Tizen block (set of packages) for API sets of domain API-Network-SSDP <br>
 To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-SSDP
+%posttrans sub2-domain_API-Network-SSDP
+sed -i 's#\(\"tizen.org/feature/network.service_discovery.ssdp\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Network-STC
 Summary:    STC
 Requires:	capi-network-stc
 Requires:	stc-manager
+Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-STC
 Tizen block (set of packages) for API sets of domain API-Network-STC <br>
 To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-STC
+%posttrans sub2-domain_API-Network-STC
+sed -i 's#\(\"tizen.org/feature/network.traffic_control\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Network-Smartcard
 Summary:    Smartcard
@@ -1407,11 +1424,14 @@ In case of embedded SE, 'smartcard-plugin-nfc' and 'sub2-domain_API-Network-NFC'
 Summary:    VPN_Service
 Requires:	capi-vpnsvc
 #Requires:	net-config
+Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 %description sub2-domain_API-Network-VPN_Service
 Tizen block (set of packages) for API sets of domain API-Network-VPN_Service <br>
 To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-VPN_Service
+%posttrans sub2-domain_API-Network-VPN_Service
+sed -i 's#\(\"tizen.org/feature/network.vpn\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Network-WiFi
 Summary:    WiFi
@@ -1446,6 +1466,8 @@ tv profile : wpa_supplicant-profile_common, net-config-profile_tv, connman-exten
 ivi profile : wpa_supplicant-profile_common, connman-extension-ivi <br>
 common profile : wpa_supplicant-profile_common <br>
 %files sub2-domain_API-Network-WiFi
+%posttrans sub2-domain_API-Network-WiFi
+sed -i 's#\(\"tizen.org/feature/network.wifi\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Network-WiFi_Manager
 Summary:    WiFi_Manager
@@ -1480,11 +1502,14 @@ tv profile : wpa_supplicant-profile_common, net-config-profile_tv, connman-exten
 ivi profile : wpa_supplicant-profile_common, connman-extension-ivi <br>
 common profile : wpa_supplicant-profile_common <br>
 %files sub2-domain_API-Network-WiFi_Manager
+%posttrans sub2-domain_API-Network-WiFi_Manager
+sed -i 's#\(\"tizen.org/feature/network.wifi\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Network-WiFi_Direct
 Summary:    WiFi_Direct
 Requires:	capi-network-wifi-direct
 Requires:	wifi-direct-manager
+Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 
 #Profiles
@@ -1511,6 +1536,9 @@ tv profile : wifi-direct-manager-profile_tv, wifi-direct-plugin-wpasupplicant-pr
 ivi profile : wifi-direct-manager-profile_common, wifi-direct-plugin-wpasupplicant-profile_common <br>
 common profile : Not supported <br>
 %files sub2-domain_API-Network-WiFi_Direct
+%posttrans sub2-domain_API-Network-WiFi_Direct
+sed -i 's#\(\"tizen.org/feature/network.wifi.direct\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
+sed -i 's#\(\"tizen.org/feature/network.wifi.direct.display\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 ##############
 ## Security ##
