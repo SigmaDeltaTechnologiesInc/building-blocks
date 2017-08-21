@@ -878,6 +878,8 @@ You should choose packages depends on target and hardware.<br>
 TM1: bluez, rfkill, bluetoothe-firmware-sprd-TM1 <br>
 
 %files sub2-domain_API-Multimedia-Radio
+%posttrans sub2-domain_API-Multimedia-Radio
+sed -i 's#\(\"tizen.org/feature/fmradio\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Multimedia-Recorder
 Summary:    Recorder
@@ -999,6 +1001,8 @@ Enabling Video Util and it is possible to use Video Util API <br>
 Video Util API provides fuctions that transcode a media file <br>
 
 %files sub2-domain_API-Multimedia-Video_Util
+%posttrans sub2-domain_API-Multimedia-Video_Util
+sed -i 's#\(\"tizen.org/feature/multimedia.transcoder\".\+>\).\+\(</key>\)#\1true\2#' %{_sysconfdir}/config/model-config.xml
 
 %package sub2-domain_API-Multimedia-WAV_Player
 Summary:    WAV_Player
