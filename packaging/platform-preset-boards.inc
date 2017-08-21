@@ -335,6 +335,7 @@ Suggests:	%{name}-sub2-Preset_boards-TM1-Audio
 Suggests:	%{name}-sub2-Preset_boards-TM1-Audio_Recording
 Suggests:	%{name}-sub2-Preset_boards-TM1-GPS
 Suggests:	%{name}-sub2-Preset_boards-TM1-Camera
+Suggests:	%{name}-sub2-Preset_boards-TM1-Radio
 Suggests:	%{name}-sub2-Preset_boards-TM1-Display
 Suggests:	%{name}-sub2-Preset_boards-TM1-Wifi
 Suggests:	%{name}-sub2-Preset_boards-TM1-WifiDirect
@@ -460,6 +461,22 @@ Not Implemented.
 %tizen_feature tizen.org/feature/camera.back.flash true
 %tizen_feature tizen.org/feature/camera.front true
 %tizen_feature tizen.org/feature/camera.front.flash false
+
+### TM1-Radio ###
+%package sub2-Preset_boards-TM1-Radio
+Summary:	Radio
+Requires:	%{name}-sub2-domain_API-Multimedia-Radio
+Requires:	%{name}-sub2-Preset_boards-TM1-Audio
+Requires:	mmfw-sysconf-target-tm1
+Requires:	bluez
+Requires:	rfkill
+Requires:	bluetooth-firmware-sprd-TM1
+
+%description sub2-Preset_boards-TM1-Radio
+Packages of Radio Feature for TM1.
+%files sub2-Preset_boards-TM1-Radio
+%posttrans sub2-Preset_boards-TM1-Radio
+%tizen_feature tizen.org/feature/fmradio true
 
 ### TM1-Display ###
 %package sub2-Preset_boards-TM1-Display

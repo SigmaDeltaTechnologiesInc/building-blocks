@@ -910,21 +910,11 @@ Requires: capi-media-radio
 Requires: %{name}-sub2-domain_API-Multimedia-AudioCore
 Requires: %{name}-sub2-domain_API-Multimedia-Configuration
 
-# mobile bluetooth
-Suggests: bluez
-Suggests: rfkill
-Suggests: bluetooth-firmware-sprd-TM1
-
 %description sub2-domain_API-Multimedia-Radio
 Enabling Radio and it is possible to use Radio API <br>
 Radio API provides functions for accessing the radio <br>
-About OPTIONAL selection:<br>
-You should choose packages depends on target and hardware.<br>
-TM1: bluez, rfkill, bluetoothe-firmware-sprd-TM1 <br>
 
 %files sub2-domain_API-Multimedia-Radio
-%posttrans sub2-domain_API-Multimedia-Radio
-%tizen_feature tizen.org/feature/fmradio true
 
 %package sub2-domain_API-Multimedia-Recorder
 Summary:    Recorder
