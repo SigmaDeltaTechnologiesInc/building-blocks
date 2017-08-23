@@ -34,6 +34,9 @@ Source2020:	epicfeature-platform.inc
 
 Source3500:	platform-preset-iot.inc
 Source3800:	platform-preset-boards.inc
+Source3801:	platform-preset-boards-tm1.inc
+Source3802:	platform-preset-boards-rpi3.inc
+Source3803:	platform-preset-boards-artik530.inc
 
 # To get .ks files
 BuildRequires:	image-configurations
@@ -284,3 +287,6 @@ python ./rule_checker.py
 # Unlike Preset-Recipes of TIC, you cannot deselect packages from these presets.
 %{include_if_mainbuild %{SOURCE3500}}
 %{include_if_mainbuild %{SOURCE3800}}
+%{include_if_mainbuild %{SOURCE3801}}
+%{include_if_mainbuild %{SOURCE3802}}
+%{include_if_mainbuild %{SOURCE3803}}
