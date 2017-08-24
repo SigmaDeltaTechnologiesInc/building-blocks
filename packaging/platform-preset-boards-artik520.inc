@@ -295,7 +295,6 @@ Packages of DALi HAL and Feature for ARTIK520.
 Summary:	EFL
 Requires:	%{name}-sub2-Preset_boards-ARTIK520-Display
 Requires:	%{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
-Requires:	efl-config-profile_common
 Requires:	efl-misc-profile_common
 Requires:	efl-modules-profile_common
 Requires:	efl-theme-tizen-common

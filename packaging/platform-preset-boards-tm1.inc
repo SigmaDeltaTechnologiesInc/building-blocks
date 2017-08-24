@@ -312,7 +312,6 @@ Packages of DALi HAL and Feature for TM1.
 Summary:	EFL
 Requires:	%{name}-sub2-Preset_boards-TM1-Display
 Requires:	%{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
-Requires:	efl-config-profile_mobile
 Requires:	efl-misc-profile_mobile
 Requires:	efl-modules-profile_mobile
 Requires:	efl-theme-tizen-mobile

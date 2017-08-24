@@ -2215,11 +2215,7 @@ Requires:   ecore-drm
 Requires:   elementary
 Requires:   %{name}-sub2-domain_API-UI-Display_Server
 #config
-Suggests:   efl-config-profile_common
-Suggests:   efl-config-profile_mobile
-Suggests:   efl-config-profile_wearable
-Suggests:   efl-config-profile_tv
-Suggests:   efl-config-profile_ivi
+Requires:   efl-config
 #misc
 Suggests:   efl-misc-profile_common
 Suggests:   efl-misc-profile_mobile

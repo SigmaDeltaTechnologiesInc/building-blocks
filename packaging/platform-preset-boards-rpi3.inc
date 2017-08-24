@@ -262,7 +262,6 @@ Packages of DALi HAL and Feature for RPI3.
 Summary:	EFL
 Requires:	%{name}-sub2-Preset_boards-RPI3-Display
 Requires:	%{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
-Requires:	efl-config-profile_common
 Requires:	efl-misc-profile_common
 Requires:	efl-modules-profile_common
 Requires:	efl-theme-tizen-common
