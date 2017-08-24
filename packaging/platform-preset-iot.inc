@@ -107,6 +107,8 @@ Requires: corefx-managed
 Requires: coreclr-extra
 Requires: csapi-tizenfx-common
 Requires: csapi-tizenfx-dummy
+Requires: dotnet-launcher
+Requires: elm-sharp-theme-mobile
 
 ### APP & ETC ###
 Requires: boot-animation
