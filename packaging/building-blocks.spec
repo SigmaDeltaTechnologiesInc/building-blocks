@@ -4,7 +4,7 @@
 %define tizen_feature() sed -i 's#\\\(\\\"%{1}\\\".\\\+>\\\).\\\+\\\(</key>\\\)#\\\1%{2}\\\2#' %{_sysconfdir}/config/model-config.xml;
 
 Name:		building-blocks
-Version:	0.0.2
+Version:	0.0.3
 Release:	0
 License:	Apache-2.0
 Summary:	The Root of All Tizen Meta Packages (building blocks)
@@ -33,6 +33,9 @@ Source2010:	epicfeature-development.inc
 Source2020:	epicfeature-platform.inc
 
 Source3500:	platform-preset-iot.inc
+Source3501:	platform-preset-iot-rpi3.inc
+Source3502:	platform-preset-iot-artik530.inc
+
 Source3800:	platform-preset-boards.inc
 Source3801:	platform-preset-boards-tm1.inc
 Source3802:	platform-preset-boards-rpi3.inc
@@ -89,10 +92,12 @@ and to most domains.
 
 %package	category-Preset
 Summary:	Tizen Presets
+Suggests:	%{name}-root-Preset_boards
 Suggests:	%{name}-root-Preset_iot_core
 Suggests:	%{name}-root-Preset_iot_core_rpi3
-Suggests:	%{name}-root-Preset_boards
+Suggests:	%{name}-root-Preset_iot_core_artik530
 Suggests:	%{name}-root-Preset_iot_headed
+Suggests:	%{name}-root-Preset_iot_headed_artik530
 %description	category-Preset
 This meta pacakge lists all Tizen blocks (meta packages) designating
 Tizen platform presets, HAL/device-support presets, and
@@ -287,6 +292,9 @@ python ./rule_checker.py
 # Tizen Platform Presets.
 # Unlike Preset-Recipes of TIC, you cannot deselect packages from these presets.
 %{include_if_mainbuild %{SOURCE3500}}
+%{include_if_mainbuild %{SOURCE3501}}
+%{include_if_mainbuild %{SOURCE3502}}
+
 %{include_if_mainbuild %{SOURCE3800}}
 %{include_if_mainbuild %{SOURCE3801}}
 %{include_if_mainbuild %{SOURCE3802}}
