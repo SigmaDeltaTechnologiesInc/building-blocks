@@ -1631,8 +1631,6 @@ The CSR (Content Screening & Reputation) is an anti malware module. It provides 
 Summary:    Device_Policy
 Requires:   device-policy-manager
 Requires:   libdpm
-Requires:   libkrate
-Requires:   krate
 %description sub2-domain_API-Security-Device_Policy
 The Device Policy Management framework provides APIs to create security-aware applications that are useful in enterprise setting.
 The primary purpose of the DPM(Device Policy Management) framework is to support enterprise applications, which require integration with policies enforced on the device to restrict their operations on some circumstance, such as Exchange ActiveSync or corporate apps. The device policy API supports the policies listed in the below table, and any application can subscribe those policies by registring policy changed callback to the device policy manager.
