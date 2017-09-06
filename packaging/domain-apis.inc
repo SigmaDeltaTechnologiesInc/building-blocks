@@ -1177,6 +1177,7 @@ Suggests: bluetooth-firmware-bcm-artik
 Suggests: bluetooth-firmware-bcm-exynos3250
 Suggests: bluetooth-firmware-bcm-exynos7270
 Suggests: bluetooth-firmware-sprd-TM1
+Suggests: bluetooth-firmware-bcm-rpi3
 
 #Profiles
 Suggests: bluetooth-frwk-profile_common
@@ -1208,6 +1209,7 @@ Enabling Bluetooth BREDR and it is possible to Bluetooth BREDR API<br>
 - TW1 : bluetooth-firmware-bcm-exynos3250<br>
 - TW2 : bluetooth-firmware-bcm-exynos7270<br>
 - Artik : bluetooth-firmware-bcm-artik<br>
+- RPI3 : bluetooth-firmware-bcm-rpi3<br>
 2. BREDR only<br>
 - bluez-extension-bredr<br>
 3. Profiles<br>
@@ -1294,6 +1296,7 @@ Suggests: bluetooth-firmware-bcm-artik
 Suggests: bluetooth-firmware-bcm-exynos3250
 Suggests: bluetooth-firmware-bcm-exynos7270
 Suggests: bluetooth-firmware-sprd-TM1
+Suggests: bluetooth-firmware-bcm-rpi3
 
 #Profiles
 Suggests: bluetooth-frwk-profile_common
@@ -1326,6 +1329,7 @@ Enabling Bluetooth LE Only functionality<br>
 - TW1 : bluetooth-firmware-bcm-exynos3250<br>
 - TW2 : bluetooth-firmware-bcm-exynos7270<br>
 - Artik : bluetooth-firmware-bcm-artik<br>
+- RPI3 : bluetooth-firmware-bcm-rpi3<br>
 2. Profiles<br>
 - mobile : bluetooth-frwk-profile_mobile, bluetooth-tools-profile_mobile, bluez-profile_common<br>
 - wearable : bluetooth-frwk-profile_wearable, bluetooth-tools-profile_wearable, bluez-profile_wearable<br>
