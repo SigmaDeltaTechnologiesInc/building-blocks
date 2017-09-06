@@ -181,7 +181,6 @@ Summary:	WifiDirect
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Direct
 Requires:	%{name}-sub2-Preset_boards-RPI3-Wifi
 Requires:	wifi-direct-manager-profile_common
-Requires:	wifi-direct-plugin-wpasupplicant-profile_common
 
 %description sub2-Preset_boards-RPI3-WifiDirect
 Packages of WifiDirect HAL and Feature for RPI3.
