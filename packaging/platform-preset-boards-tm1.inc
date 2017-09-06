@@ -199,7 +199,6 @@ Summary:	WifiDirect
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Direct
 Requires:	%{name}-sub2-Preset_boards-TM1-Wifi
 Requires:	wifi-direct-manager-extension-TM1
-Requires:	wifi-direct-plugin-wpasupplicant-extension-TM1
 
 %description sub2-Preset_boards-TM1-WifiDirect
 Packages of WifiDirect HAL and Feature for TM1.

@@ -1570,6 +1570,7 @@ common profile : wpa_supplicant-profile_common <br>
 Summary:    WiFi_Direct
 Requires:	capi-network-wifi-direct
 Requires:	wifi-direct-manager
+Requires:	wifi-direct-plugin-wpasupplicant
 Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 
@@ -1580,21 +1581,14 @@ Suggests:	wifi-direct-manager-profile_tv
 Suggests:	wifi-direct-manager-profile_wearable
 Suggests:	wifi-direct-manager-extension-TM1
 
-#Plugins
-Suggests:	wifi-direct-plugin-wpasupplicant-extension-TM1
-Suggests:	wifi-direct-plugin-wpasupplicant-profile_common
-Suggests:	wifi-direct-plugin-wpasupplicant-profile_mobile
-Suggests:	wifi-direct-plugin-wpasupplicant-profile_tv
-Suggests:	wifi-direct-plugin-wpasupplicant-profile_wearable
-
 %description sub2-domain_API-Network-WiFi_Direct
 Tizen block (set of packages) for API sets of domain API-Network-WiFiDirect <br>
-TM1 target : wifi-direct-manager-extension-TM1, wifi-direct-manager-profile_mobile, wifi-direct-plugin-wpasupplicant-extension-TM1, wifi-direct-plugin-wpasupplicant-profile_mobile <br>
-TM2 target : wifi-direct-manager-profile_mobile, wifi-direct-plugin-wpasupplicant-profile_mobile <br>
-TW1 target : wifi-direct-manager-profile_wearable, wifi-direct-plugin-wpasupplicant-profile_wearable <br>
-TW2 target : wifi-direct-manager-profile_wearable, wifi-direct-plugin-wpasupplicant-profile_wearable <br>
-tv profile : wifi-direct-manager-profile_tv, wifi-direct-plugin-wpasupplicant-profile_tv <br>
-ivi profile : wifi-direct-manager-profile_common, wifi-direct-plugin-wpasupplicant-profile_common <br>
+TM1 target : wifi-direct-manager-extension-TM1, wifi-direct-manager-profile_mobile <br>
+TM2 target : wifi-direct-manager-profile_mobile <br>
+TW1 target : wifi-direct-manager-profile_wearable <br>
+TW2 target : wifi-direct-manager-profile_wearable <br>
+tv profile : wifi-direct-manager-profile_tv <br>
+ivi profile : wifi-direct-manager-profile_common <br>
 common profile : Not supported <br>
 %files sub2-domain_API-Network-WiFi_Direct
 %posttrans sub2-domain_API-Network-WiFi_Direct
