@@ -198,7 +198,6 @@ Packages of WifiDirect HAL and Feature for ARTIK530.
 %package sub2-Preset_boards-ARTIK530-Bluetooth
 Summary:	Bluetooth
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_BREDR
-Requires:	bluetooth-firmware-bcm-artik
 Requires:	bluetooth-frwk-profile_common
 Requires:	bluetooth-tools-profile_common
 Requires:	bluez-profile_common
@@ -227,7 +226,6 @@ Packages of Bluetooth HAL and Feature for ARTIK530.
 %package sub2-Preset_boards-ARTIK530-BLE
 Summary:	BLE
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_LE
-Requires: bluetooth-firmware-bcm-artik
 Requires: bluetooth-frwk-profile_common
 Requires: bluetooth-tools-profile_common
 Requires: bluez-profile_common
