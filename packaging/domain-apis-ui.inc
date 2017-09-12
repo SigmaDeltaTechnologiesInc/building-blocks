@@ -326,8 +326,9 @@ Suggests:   libtbm-dumb
 Suggests:   libtdm-sprd
 Suggests:   libtdm-exynos
 Suggests:   libtdm-exynos-deconfb
-Suggests:   libtdm-drm
+Suggests:   libtdm-nexell
 Suggests:   libtdm-vc4
+Suggests:   libtdm-drm
 
 #GL plugins
 Suggests:   mesa

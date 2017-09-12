@@ -154,7 +154,7 @@ Summary:	Display
 Requires:	%{name}-sub2-domain_API-UI-Display_Server
 Requires:	e-tizen-data-profile_common
 Requires:	libtbm-nexell
-Requires:	libtdm-drm
+Requires:	libtdm-nexell
 Requires:	coregl
 
 %description sub2-Preset_boards-ARTIK530-Display
