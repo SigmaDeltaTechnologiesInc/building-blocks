@@ -13,21 +13,23 @@ Group:		Meta
 Source0:	%{name}-%{version}.tar.gz
 
 # Domains are rearranged by API sets according to developer.tizen.org
-#Source1001:	domain-kernel.inc
-#Source1002:	domain-systemfw.inc
-#Source1010:	domain-appfw.inc
-#Source1020:	domain-window-system.inc
-#Source1030:	domain-graphics.inc
-#Source1040:	domain-network.inc
-#Source1050:	domain-multimedia.inc
-#Source1060:	domain-hal.inc
-#Source1070:	domain-service-framework.inc
-#Source1080:	domain-UI.inc
-#Source1090:	domain-UIX.inc
-#Source1100:	domain-security.inc
-Source1200:	domain-apis.inc
-#Source1210:	domain-csapis.inc
-#Source1220:	domain-webapis.inc
+Source1200:	domain-apis-account.inc
+Source1201:	domain-apis-appfw.inc
+Source1202:	domain-apis-base.inc
+Source1203:	domain-apis-content.inc
+Source1204:	domain-apis-context.inc
+Source1205:	domain-apis-location.inc
+Source1206:	domain-apis-maps.inc
+Source1207:	domain-apis-messaging.inc
+Source1208:	domain-apis-multimedia.inc
+Source1209:	domain-apis-network.inc
+Source1210:	domain-apis-security.inc
+Source1211:	domain-apis-social.inc
+Source1212:	domain-apis-system.inc
+Source1213:	domain-apis-telephony.inc
+Source1214:	domain-apis-ui.inc
+Source1215:	domain-apis-uix.inc
+Source1216:	domain-apis-web.inc
 
 Source2010:	epicfeature-development.inc
 Source2020:	epicfeature-platform.inc
@@ -275,6 +277,22 @@ python ./rule_checker.py
 
 ############## DOMAINS ##################
 %{include_if_mainbuild %{SOURCE1200}}
+%{include_if_mainbuild %{SOURCE1201}}
+%{include_if_mainbuild %{SOURCE1202}}
+%{include_if_mainbuild %{SOURCE1203}}
+%{include_if_mainbuild %{SOURCE1204}}
+%{include_if_mainbuild %{SOURCE1205}}
+%{include_if_mainbuild %{SOURCE1206}}
+%{include_if_mainbuild %{SOURCE1207}}
+%{include_if_mainbuild %{SOURCE1208}}
+%{include_if_mainbuild %{SOURCE1209}}
+%{include_if_mainbuild %{SOURCE1210}}
+%{include_if_mainbuild %{SOURCE1211}}
+%{include_if_mainbuild %{SOURCE1212}}
+%{include_if_mainbuild %{SOURCE1213}}
+%{include_if_mainbuild %{SOURCE1214}}
+%{include_if_mainbuild %{SOURCE1215}}
+%{include_if_mainbuild %{SOURCE1216}}
 #%{include_if_mainbuild %{SOURCE1210}}
 #%{include_if_mainbuild %{SOURCE1220}}
 
