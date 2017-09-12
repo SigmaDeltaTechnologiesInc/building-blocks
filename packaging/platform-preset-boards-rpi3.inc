@@ -188,7 +188,16 @@ Packages of WifiDirect HAL and Feature for RPI3.
 
 ### RPI3-Bluetooth ###
 %package sub2-Preset_boards-RPI3-Bluetooth
-Summary:	Bluetooth (Not Implemented)
+Summary:	Bluetooth
+Requires:	%{name}-sub2-domain_API-Network-Bluetooth_BREDR
+Requires:	bluetooth-firmware-bcm-rpi3
+Requires:	bluetooth-frwk-profile_common
+Requires:	bluetooth-tools-profile_common
+Requires:	bluez-profile_common
+Suggests:	bluez-extension-bredr
+Suggests: bluetooth-frwk-plugin-headed
+Suggests: org.tizen.bt-syspopup
+Suggests: org.tizen.bt-syspopup-profile_common
 
 %description sub2-Preset_boards-RPI3-Bluetooth
 Packages of Bluetooth HAL and Feature for RPI3.
@@ -196,7 +205,10 @@ Packages of Bluetooth HAL and Feature for RPI3.
 
 ### RPI3-Bluetooth_CallAudio ###
 %package sub2-Preset_boards-RPI3-Bluetooth_CallAudio
-Summary:	Bluetooth Call Audio(Not Implemented)
+Summary:	Bluetooth Call Audio
+Requires:	%{name}-sub2-Preset_boards-RPI3-Bluetooth
+Requires:	%{name}-sub2-domain_API-Network-Bluetooth_Call_Audio
+Requires:	bluetooth-agent-profile_common
 
 %description sub2-Preset_boards-RPI3-Bluetooth_CallAudio
 Packages of Bluetooth HAL and Feature for RPI3.
@@ -205,7 +217,15 @@ Packages of Bluetooth HAL and Feature for RPI3.
 
 ### RPI3-BLE ###
 %package sub2-Preset_boards-RPI3-BLE
-Summary:	BLE (Not Implemented)
+Summary:	BLE
+Requires:	%{name}-sub2-domain_API-Network-Bluetooth_LE
+Requires: bluetooth-firmware-bcm-rpi3
+Requires: bluetooth-frwk-profile_common
+Requires: bluetooth-tools-profile_common
+Requires: bluez-profile_common
+Suggests: bluetooth-frwk-plugin-headed
+Suggests: org.tizen.bt-syspopup
+Suggests: org.tizen.bt-syspopup-profile_common
 
 %description sub2-Preset_boards-RPI3-BLE
 Packages of BLE HAL and Feature for RPI3.
