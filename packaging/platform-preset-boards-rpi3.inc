@@ -217,7 +217,7 @@ Packages of Bluetooth HAL and Feature for RPI3.
 
 ### RPI3-BLE ###
 %package sub2-Preset_boards-RPI3-BLE
-Summary:	BLE (Not Implemented)
+Summary:	BLE
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_LE
 Requires: bluetooth-firmware-bcm-rpi3
 Requires: bluetooth-frwk-profile_common

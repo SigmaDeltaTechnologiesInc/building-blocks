@@ -13,23 +13,24 @@ Group:		Meta
 Source0:	%{name}-%{version}.tar.gz
 
 # Domains are rearranged by API sets according to developer.tizen.org
-Source1200:	domain-apis-account.inc
-Source1201:	domain-apis-appfw.inc
-Source1202:	domain-apis-base.inc
-Source1203:	domain-apis-content.inc
-Source1204:	domain-apis-context.inc
-Source1205:	domain-apis-location.inc
-Source1206:	domain-apis-maps.inc
-Source1207:	domain-apis-messaging.inc
-Source1208:	domain-apis-multimedia.inc
-Source1209:	domain-apis-network.inc
-Source1210:	domain-apis-security.inc
-Source1211:	domain-apis-social.inc
-Source1212:	domain-apis-system.inc
-Source1213:	domain-apis-telephony.inc
-Source1214:	domain-apis-ui.inc
-Source1215:	domain-apis-uix.inc
-Source1216:	domain-apis-web.inc
+Source1200:	domain-apis.inc
+Source1201:	domain-apis-account.inc
+Source1202:	domain-apis-appfw.inc
+Source1203:	domain-apis-base.inc
+Source1204:	domain-apis-content.inc
+Source1205:	domain-apis-context.inc
+Source1206:	domain-apis-location.inc
+Source1207:	domain-apis-maps.inc
+Source1208:	domain-apis-messaging.inc
+Source1209:	domain-apis-multimedia.inc
+Source1210:	domain-apis-network.inc
+Source1211:	domain-apis-security.inc
+Source1212:	domain-apis-social.inc
+Source1213:	domain-apis-system.inc
+Source1214:	domain-apis-telephony.inc
+Source1215:	domain-apis-ui.inc
+Source1216:	domain-apis-uix.inc
+Source1217:	domain-apis-web.inc
 
 Source2010:	epicfeature-development.inc
 Source2020:	epicfeature-platform.inc
@@ -293,6 +294,7 @@ python ./rule_checker.py
 %{include_if_mainbuild %{SOURCE1214}}
 %{include_if_mainbuild %{SOURCE1215}}
 %{include_if_mainbuild %{SOURCE1216}}
+%{include_if_mainbuild %{SOURCE1217}}
 #%{include_if_mainbuild %{SOURCE1210}}
 #%{include_if_mainbuild %{SOURCE1220}}
 
