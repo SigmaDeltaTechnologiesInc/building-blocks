@@ -35,7 +35,8 @@ Requires: capi-appfw-application
 Requires: amd-mod-cynara-core
 Requires: amd-mod-extractor
 Requires: amd-mod-input
-Requires: amd-mod-launchpad
+Requires: launchpad
+Requires: launchpad-loader
 Requires: amd-mod-rua
 Requires: amd-mod-share
 Requires: amd-mod-splash-screen

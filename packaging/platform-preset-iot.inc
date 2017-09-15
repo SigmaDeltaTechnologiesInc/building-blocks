@@ -7,7 +7,7 @@
 %package root-Preset_iot_core
 Summary:    IOT Core Presets
 Requires: amd
-Requires: amd-mod-launchpad
+Requires: app-launchpad
 Requires: appcore-agent
 Requires: aul
 Requires: bash
