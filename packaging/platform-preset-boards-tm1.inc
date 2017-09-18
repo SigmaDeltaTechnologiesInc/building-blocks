@@ -65,7 +65,7 @@ Firstly select HALs and Feature to add to your image.
 
 ### TM1-System ###
 %package sub2-Preset_boards-TM1-System
-Summary:	System
+Summary:	TM1_System
 Requires:	system-plugin-headless
 Requires:	system-plugin-spreadtrum
 Requires:	model-config-tm1
@@ -77,7 +77,7 @@ Packages for System HAL and Feature. They are mandatory.
 
 ### TM1-Audio ###
 %package sub2-Preset_boards-TM1-Audio
-Summary:	Audio
+Summary:	TM1_Audio
 Requires:	audio-hal-sc7727
 Requires:	audio-config-sc-TM1-sc7730
 Requires:	mmfw-sysconf-target-tm1
@@ -98,7 +98,7 @@ If you select Bluetooth, you can select pulseaudio-modules-bluetooth.
 
 ### TM1-Audio_Recording ###
 %package sub2-Preset_boards-TM1-Audio_Recording
-Summary:	AudioRecording
+Summary:	TM1_AudioRecording
 Requires:	%{name}-sub2-Preset_boards-TM1-Audio
 
 Suggests:	%{name}-sub2-domain_API-Multimedia-Recorder
@@ -114,7 +114,7 @@ Packages of Audio HAL and Feature for TM1.
 
 ### TM1-GPS ###
 %package sub2-Preset_boards-TM1-GPS
-Summary:	GPS
+Summary:	TM1_GPS
 Requires:	%{name}-sub2-domain_API-Location-Location_Manager
 
 %description sub2-Preset_boards-TM1-GPS
@@ -123,7 +123,7 @@ Packages of GPS HAL and Feature for TM1.
 
 ### TM1-Camera ###
 %package sub2-Preset_boards-TM1-Camera
-Summary:	Camera
+Summary:	TM1_Camera
 Requires:	%{name}-sub2-domain_API-Multimedia-Camera
 Requires:	%{name}-sub2-Preset_boards-TM1-Display
 Requires:	mmfw-sysconf-target-tm1
@@ -141,7 +141,7 @@ Not Implemented.
 
 ### TM1-Radio ###
 %package sub2-Preset_boards-TM1-Radio
-Summary:	Radio
+Summary:	TM1_Radio
 Requires:	%{name}-sub2-domain_API-Multimedia-Radio
 Requires:	%{name}-sub2-Preset_boards-TM1-Audio
 Requires:	mmfw-sysconf-target-tm1
@@ -157,7 +157,7 @@ Packages of Radio Feature for TM1.
 
 ### TM1-Display ###
 %package sub2-Preset_boards-TM1-Display
-Summary:	Display
+Summary:	TM1_Display
 Requires:	%{name}-sub2-domain_API-UI-Display_Server
 Requires:	e-tizen-data-profile_mobile
 Requires:	libtbm-sprd
@@ -181,7 +181,7 @@ Packages of Display HAL and Feature for TM1.
 
 ### TM1-Wifi ###
 %package sub2-Preset_boards-TM1-Wifi
-Summary:	Wifi
+Summary:	TM1_Wifi
 Requires: 	%{name}-sub2-domain_API-Network-WiFi
 Requires: 	%{name}-sub2-domain_API-Network-WiFi_Manager
 Requires:	wpa_supplicant-extension-TM1
@@ -195,7 +195,7 @@ If you enable the UI, you can select net-config-plugin-headed.
 
 ### TM1-WifiDirect ###
 %package sub2-Preset_boards-TM1-WifiDirect
-Summary:	WifiDirect
+Summary:	TM1_WifiDirect
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Direct
 Requires:	%{name}-sub2-Preset_boards-TM1-Wifi
 Requires:	wifi-direct-manager-extension-TM1
@@ -206,7 +206,7 @@ Packages of WifiDirect HAL and Feature for TM1.
 
 ### TM1-Bluetooth ###
 %package sub2-Preset_boards-TM1-Bluetooth
-Summary:	Bluetooth
+Summary:	TM1_Bluetooth
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_BREDR
 Requires:	bluetooth-firmware-sprd-TM1
 Requires:	bluetooth-frwk-profile_mobile
@@ -223,7 +223,7 @@ Packages of Bluetooth HAL and Feature for TM1.
 
 ### TM1-Bluetooth_CallAudio ###
 %package sub2-Preset_boards-TM1-Bluetooth_CallAudio
-Summary:	Bluetooth CallAudio Function
+Summary:	TM1_Bluetooth CallAudio Function
 Requires:	%{name}-sub2-Preset_boards-TM1-Bluetooth
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_Call_Audio
 Requires:	bluetooth-agent-profile_common
@@ -234,7 +234,7 @@ Packages of Bluetooth Call Audio Function for TM1.
 
 ### TM1-BLE ###
 %package sub2-Preset_boards-TM1-BLE
-Summary:	BLE
+Summary:	TM1_BLE
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_LE
 Requires: bluetooth-firmware-sprd-TM1
 Requires: bluetooth-frwk-profile_mobile
@@ -250,7 +250,7 @@ Packages of BLE HAL and Feature for TM1.
 
 ### TM1-NFC ###
 %package sub2-Preset_boards-TM1-NFC
-Summary:	NFC
+Summary:	TM1_NFC
 Requires:	%{name}-sub2-domain_API-Network-NFC
 
 %description sub2-Preset_boards-TM1-NFC
@@ -259,7 +259,7 @@ Packages of NFC HAL and Feature for TM1.
 
 ### TM1-Telephony ###
 %package sub2-Preset_boards-TM1-Telephony
-Summary:	Telephony (Not Yet)
+Summary:	TM1_Telephony (Not Yet)
 Requires:	%{name}-sub1-domain_API-Telephony
 
 %description sub2-Preset_boards-TM1-Telephony
@@ -278,7 +278,7 @@ Packages of Telephony HAL and Feature for TM1.
 
 ### TM1-Feedback ###
 %package sub2-Preset_boards-TM1-Feedback
-Summary:	Feedback
+Summary:	TM1_Feedback
 Requires:	%{name}-sub2-domain_API-System-Feedback
 Requires:	%{name}-sub2-Preset_boards-TM1-Audio
 Requires:	feedbackd-profile_mobile
@@ -290,7 +290,7 @@ Packages of Feedback HAL and Feature for TM1.
 
 ### TM1-Sensor ###
 %package sub2-Preset_boards-TM1-Sensor
-Summary:	Sensor
+Summary:	TM1_Sensor
 Requires:	%{name}-sub2-domain_API-System-Sensor_Listener
 Requires:	sensor-hal-tm1
 
@@ -300,7 +300,7 @@ Packages of Sensor HAL and Feature for TM1.
 
 ### TM1-DALi ###
 %package sub2-Preset_boards-TM1-DALi
-Summary:	DALi (Not Implemented)
+Summary:	TM1_DALi (Not Implemented)
 
 %description sub2-Preset_boards-TM1-DALi
 Packages of DALi HAL and Feature for TM1.
@@ -308,7 +308,7 @@ Packages of DALi HAL and Feature for TM1.
 
 ### TM1-EFL ###
 %package sub2-Preset_boards-TM1-EFL
-Summary:	EFL
+Summary:	TM1_EFL
 Requires:	%{name}-sub2-Preset_boards-TM1-Display
 Requires:	%{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
 Requires:	efl-misc-profile_mobile
@@ -324,7 +324,7 @@ Packages of EFL HAL and Feature for TM1.
 
 ### TM1-IM ###
 %package sub2-Preset_boards-TM1-IM
-Summary:	IM
+Summary:	TM1_IM
 Requires:	%{name}-sub2-domain_API-UIX-Input_Method
 Requires:	isf-config-mobile
 Requires:	ise-default-profile_mobile

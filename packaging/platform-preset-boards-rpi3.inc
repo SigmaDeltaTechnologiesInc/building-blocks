@@ -63,7 +63,7 @@ Firstly select HALs and Feature to add to your image.
 
 ### RPI3-System ###
 %package sub2-Preset_boards-RPI3-System
-Summary:	System
+Summary:	RPI3_System
 Requires:	system-plugin-headless
 Requires:	system-plugin-iot
 Requires:	model-config-default
@@ -75,7 +75,7 @@ Packages for System HAL and Feature. They are mandatory.
 
 ### RPI3-Audio ###
 %package sub2-Preset_boards-RPI3-Audio
-Summary:	Audio
+Summary:	RPI3_Audio
 Requires:	audio-hal-bcm2837
 Requires:	mmfw-sysconf-target-rpi3
 
@@ -93,7 +93,7 @@ If you select Bluetooth, you can select pulseaudio-modules-bluetooth.
 
 ### RPI3-Audio_Recording ###
 %package sub2-Preset_boards-RPI3-Audio_Recording
-Summary:	AudioRecording
+Summary:	RPI3_AudioRecording
 Requires:	%{name}-sub2-Preset_boards-RPI3-Audio
 
 Suggests:	%{name}-sub2-domain_API-Multimedia-Recorder
@@ -109,7 +109,7 @@ Packages of Audio HAL and Feature for RPI3.
 
 ### RPI3-GPS ###
 %package sub2-Preset_boards-RPI3-GPS
-Summary:	GPS
+Summary:	RPI3_GPS
 Requires:	lbs-plugin-gps-rpi3
 Requires:	%{name}-sub2-domain_API-Location-Location_Manager
 
@@ -119,7 +119,7 @@ Packages of GPS HAL and Feature for RPI3.
 
 ### RPI3-Camera ###
 %package sub2-Preset_boards-RPI3-Camera
-Summary:	Camera
+Summary:	RPI3_Camera
 Requires:	%{name}-sub2-domain_API-Multimedia-Camera
 Requires:	gst-plugins-good
 Requires:	mmfw-sysconf-target-rpi3
@@ -138,7 +138,7 @@ Not Implemented.
 
 ### RPI3-Display ###
 %package sub2-Preset_boards-RPI3-Display
-Summary:	Display
+Summary:	RPI3_Display
 Requires:	%{name}-sub2-domain_API-UI-Display_Server
 Requires:	e-tizen-data-profile_common
 Requires:	libtbm-vc4
@@ -163,7 +163,7 @@ Packages of Display HAL and Feature for RPI3.
 
 ### RPI3-Wifi ###
 %package sub2-Preset_boards-RPI3-Wifi
-Summary:	Wifi
+Summary:	RPI3_Wifi
 Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Requires:	wpa_supplicant-profile_common
@@ -177,7 +177,7 @@ If you enable the UI, you can select net-config-plugin-headed.
 
 ### RPI3-WifiDirect ###
 %package sub2-Preset_boards-RPI3-WifiDirect
-Summary:	WifiDirect
+Summary:	RPI3_WifiDirect
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Direct
 Requires:	%{name}-sub2-Preset_boards-RPI3-Wifi
 Requires:	wifi-direct-manager-profile_common
@@ -188,7 +188,7 @@ Packages of WifiDirect HAL and Feature for RPI3.
 
 ### RPI3-Bluetooth ###
 %package sub2-Preset_boards-RPI3-Bluetooth
-Summary:	Bluetooth
+Summary:	RPI3_Bluetooth
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_BREDR
 Requires:	bluetooth-firmware-bcm-rpi3
 Requires:	bluetooth-frwk-profile_common
@@ -205,7 +205,7 @@ Packages of Bluetooth HAL and Feature for RPI3.
 
 ### RPI3-Bluetooth_CallAudio ###
 %package sub2-Preset_boards-RPI3-Bluetooth_CallAudio
-Summary:	Bluetooth Call Audio
+Summary:	RPI3_Bluetooth Call Audio
 Requires:	%{name}-sub2-Preset_boards-RPI3-Bluetooth
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_Call_Audio
 Requires:	bluetooth-agent-profile_common
@@ -217,7 +217,7 @@ Packages of Bluetooth HAL and Feature for RPI3.
 
 ### RPI3-BLE ###
 %package sub2-Preset_boards-RPI3-BLE
-Summary:	BLE
+Summary:	RPI3_BLE
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_LE
 Requires: bluetooth-firmware-bcm-rpi3
 Requires: bluetooth-frwk-profile_common
@@ -233,7 +233,7 @@ Packages of BLE HAL and Feature for RPI3.
 
 ### RPI3-NFC ###
 %package sub2-Preset_boards-RPI3-NFC
-Summary:	NFC (Not Implemented)
+Summary:	RPI3_NFC (Not Implemented)
 
 %description sub2-Preset_boards-RPI3-NFC
 Packages of NFC HAL and Feature for RPI3.
@@ -241,7 +241,7 @@ Packages of NFC HAL and Feature for RPI3.
 
 ### RPI3-Telephony ###
 %package sub2-Preset_boards-RPI3-Telephony
-Summary:	Telephony (Not Implemented)
+Summary:	RPI3_Telephony (Not Implemented)
 
 %description sub2-Preset_boards-RPI3-Telephony
 Packages of Telephony HAL and Feature for RPI3.
@@ -249,7 +249,7 @@ Packages of Telephony HAL and Feature for RPI3.
 
 ### RPI3-Feedback ###
 %package sub2-Preset_boards-RPI3-Feedback
-Summary:	Feedback
+Summary:	RPI3_Feedback
 Requires:	%{name}-sub2-domain_API-System-Feedback
 Requires:	%{name}-sub2-Preset_boards-RPI3-Audio
 Requires:	feedbackd-profile_mobile
@@ -262,7 +262,7 @@ Packages of Feedback HAL and Feature for RPI3.
 
 ### RPI3-Sensor ###
 %package sub2-Preset_boards-RPI3-Sensor
-Summary:	Sensor (Not Implemented)
+Summary:	RPI3_Sensor (Not Implemented)
 
 %description sub2-Preset_boards-RPI3-Sensor
 Packages of Sensor HAL and Feature for RPI3.
@@ -270,7 +270,7 @@ Packages of Sensor HAL and Feature for RPI3.
 
 ### RPI3-DALi ###
 %package sub2-Preset_boards-RPI3-DALi
-Summary:	DALi (Not Implemented)
+Summary:	RPI3_DALi (Not Implemented)
 
 %description sub2-Preset_boards-RPI3-DALi
 Packages of DALi HAL and Feature for RPI3.
@@ -278,7 +278,7 @@ Packages of DALi HAL and Feature for RPI3.
 
 ### RPI3-EFL ###
 %package sub2-Preset_boards-RPI3-EFL
-Summary:	EFL
+Summary:	RPI3_EFL
 Requires:	%{name}-sub2-Preset_boards-RPI3-Display
 Requires:	%{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
 Requires:	efl-misc-profile_common
@@ -294,7 +294,7 @@ Packages of EFL HAL and Feature for RPI3.
 
 ### RPI3-IM ###
 %package sub2-Preset_boards-RPI3-IM
-Summary:	IM
+Summary:	RPI3_IM
 Requires:	%{name}-sub2-domain_API-UIX-Input_Method
 Requires:	isf-config-common
 Requires:	ise-default-profile_common
