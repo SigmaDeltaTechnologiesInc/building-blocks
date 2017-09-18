@@ -64,7 +64,7 @@ Firstly select HALs and Feature to add to your image.
 
 ### ARTIK530-System ###
 %package sub2-Preset_boards-ARTIK530-System
-Summary:	System
+Summary:	ARTIK530_System
 Requires:	system-plugin-headless
 Requires:	system-plugin-exynos
 Requires:	system-plugin-u3
@@ -79,7 +79,7 @@ Should use the recipe file to consist of 3 partitions.
 
 ### ARTIK530-System_Device ###
 %package sub2-Preset_boards-ARTIK530-System_Device
-Summary:	Deviced Plugin
+Summary:	ARTIK530_Deviced Plugin
 Requires:	device-manager-plugin-artik
 
 %description sub2-Preset_boards-ARTIK530-System_Device
@@ -89,7 +89,7 @@ Packages for Deviced HAL and Feature.
 
 ### ARTIK530-Audio ###
 %package sub2-Preset_boards-ARTIK530-Audio
-Summary:	Audio
+Summary:	ARTIK530_Audio
 Requires:	audio-hal-alc5658
 Requires:	alsa-ucm-data-alc5658
 Requires:	mmfw-sysconf-target-artik10
@@ -108,7 +108,7 @@ If you select Bluetooth, you can select pulseaudio-modules-bluetooth.
 
 ### ARTIK530-Audio_Recording ###
 %package sub2-Preset_boards-ARTIK530-Audio_Recording
-Summary:	AudioRecording
+Summary:	ARTIK530_AudioRecording
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Audio
 
 Suggests:	%{name}-sub2-domain_API-Multimedia-Recorder
@@ -124,7 +124,7 @@ Packages of Audio HAL and Feature for ARTIK530.
 
 ### ARTIK530-GPS ###
 %package sub2-Preset_boards-ARTIK530-GPS
-Summary:	GPS (Not Supported)
+Summary:	ARTIK530_GPS (Not Supported)
 
 %description sub2-Preset_boards-ARTIK530-GPS
 Packages of GPS HAL and Feature for ARTIK530.
@@ -132,7 +132,7 @@ Packages of GPS HAL and Feature for ARTIK530.
 
 ### ARTIK530-Camera ###
 %package sub2-Preset_boards-ARTIK530-Camera
-Summary:	Camera
+Summary:	ARTIK530_Camera
 Requires:	%{name}-sub2-domain_API-Multimedia-Camera
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Display
 Requires:	mmfw-sysconf-target-artik10
@@ -150,7 +150,7 @@ Packages of Camera HAL and Feature for ARTIK530.
 
 ### ARTIK530-Display ###
 %package sub2-Preset_boards-ARTIK530-Display
-Summary:	Display
+Summary:	ARTIK530_Display
 Requires:	%{name}-sub2-domain_API-UI-Display_Server
 Requires:	e-tizen-data-profile_common
 Requires:	libtbm-nexell
@@ -174,7 +174,7 @@ Packages of Display HAL and Feature for ARTIK530.
 
 ### ARTIK530-Wifi ###
 %package sub2-Preset_boards-ARTIK530-Wifi
-Summary:	Wifi
+Summary:	ARTIK530_Wifi
 Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Requires:	wpa_supplicant-profile_common
@@ -188,7 +188,7 @@ If you enable the UI, you can select net-config-plugin-headed.
 
 ### ARTIK530-WifiDirect ###
 %package sub2-Preset_boards-ARTIK530-WifiDirect
-Summary:	WifiDirect ( Not Supported )
+Summary:	ARTIK530_WifiDirect ( Not Supported )
 
 %description sub2-Preset_boards-ARTIK530-WifiDirect
 Packages of WifiDirect HAL and Feature for ARTIK530.
@@ -196,7 +196,7 @@ Packages of WifiDirect HAL and Feature for ARTIK530.
 
 ### ARTIK530-Bluetooth ###
 %package sub2-Preset_boards-ARTIK530-Bluetooth
-Summary:	Bluetooth
+Summary:	ARTIK530_Bluetooth
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_BREDR
 Requires:	bluetooth-frwk-profile_common
 Requires:	bluetooth-tools-profile_common
@@ -212,7 +212,7 @@ Packages of Bluetooth HAL and Feature for ARTIK530.
 
 ### ARTIK530-Bluetooth_CallAudio ###
 %package sub2-Preset_boards-ARTIK530-Bluetooth_CallAudio
-Summary:	Bluetooth Call Audio
+Summary:	ARTIK530_Bluetooth Call Audio
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Bluetooth
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_Call_Audio
 Requires:	bluetooth-agent-profile_common
@@ -224,7 +224,7 @@ Packages of Bluetooth HAL and Feature for ARTIK530.
 
 ### ARTIK530-BLE ###
 %package sub2-Preset_boards-ARTIK530-BLE
-Summary:	BLE
+Summary:	ARTIK530_BLE
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_LE
 Requires: bluetooth-frwk-profile_common
 Requires: bluetooth-tools-profile_common
@@ -239,7 +239,7 @@ Packages of BLE HAL and Feature for ARTIK530.
 
 ### ARTIK530-NFC ###
 %package sub2-Preset_boards-ARTIK530-NFC
-Summary:	NFC (Not Supported)
+Summary:	ARTIK530_NFC (Not Supported)
 
 %description sub2-Preset_boards-ARTIK530-NFC
 Packages of NFC HAL and Feature for ARTIK530.
@@ -247,7 +247,7 @@ Packages of NFC HAL and Feature for ARTIK530.
 
 ### ARTIK530-Telephony ###
 %package sub2-Preset_boards-ARTIK530-Telephony
-Summary:	Telephony (Not Supported)
+Summary:	ARTIK530_Telephony (Not Supported)
 
 %description sub2-Preset_boards-ARTIK530-Telephony
 Packages of Telephony HAL and Feature for ARTIK530.
@@ -255,7 +255,7 @@ Packages of Telephony HAL and Feature for ARTIK530.
 
 ### ARTIK530-Feedback ###
 %package sub2-Preset_boards-ARTIK530-Feedback
-Summary:	Feedback
+Summary:	ARTIK530_Feedback
 Requires:	%{name}-sub2-domain_API-System-Feedback
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Audio
 Requires:	feedbackd-profile_mobile
@@ -268,7 +268,7 @@ Packages of Feedback HAL and Feature for ARTIK530.
 
 ### ARTIK530-Sensor ###
 %package sub2-Preset_boards-ARTIK530-Sensor
-Summary:	Sensor (Not Supported)
+Summary:	ARTIK530_Sensor (Not Supported)
 
 %description sub2-Preset_boards-ARTIK530-Sensor
 Packages of Sensor HAL and Feature for ARTIK530.
@@ -276,7 +276,7 @@ Packages of Sensor HAL and Feature for ARTIK530.
 
 ### ARTIK530-DALi ###
 %package sub2-Preset_boards-ARTIK530-DALi
-Summary:	DALi
+Summary:	ARTIK530_DALi
 Requires:	%{name}-sub2-domain_API-UI-DALi
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Display
 Requires:	dali-adaptor-dali-video-player-plugin
@@ -290,7 +290,7 @@ Packages of DALi HAL and Feature for ARTIK530.
 
 ### ARTIK530-EFL ###
 %package sub2-Preset_boards-ARTIK530-EFL
-Summary:	EFL
+Summary:	ARTIK530_EFL
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Display
 Requires:	%{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
 Requires:	efl-misc-profile_common
@@ -306,7 +306,7 @@ Packages of EFL HAL and Feature for ARTIK530.
 
 ### ARTIK530-IM ###
 %package sub2-Preset_boards-ARTIK530-IM
-Summary:	IM
+Summary:	ARTIK530_IM
 Requires:	%{name}-sub2-domain_API-UIX-Input_Method
 Requires:	isf-config-common
 Requires:	ise-default-profile_common

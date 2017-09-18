@@ -64,7 +64,7 @@ Firstly select HALs and Feature to add to your image.
 
 ### ARTIK520-System ###
 %package sub2-Preset_boards-ARTIK520-System
-Summary:	System
+Summary:	ARTIK520_System
 Requires:	system-plugin-headless
 Requires:	system-plugin-exynos
 Requires:	system-plugin-u3
@@ -79,7 +79,7 @@ Should use the recipe file to consist of 3 partitions.
 
 ### ARTIK520-System_Device ###
 %package sub2-Preset_boards-ARTIK520-System_Device
-Summary:	Deviced Plugin
+Summary:	ARTIK520_Deviced Plugin
 Requires:	device-manager-plugin-artik
 
 %description sub2-Preset_boards-ARTIK520-System_Device
@@ -89,7 +89,7 @@ Packages for Deviced HAL and Feature.
 
 ### ARTIK520-Audio ###
 %package sub2-Preset_boards-ARTIK520-Audio
-Summary:	Audio
+Summary:	ARTIK520_Audio
 Requires:	audio-hal-ak4953
 Requires:	alsa-ucm-data-ak4953
 Requires:	mmfw-sysconf-target-artik10
@@ -108,7 +108,7 @@ If you select Bluetooth, you can select pulseaudio-modules-bluetooth.
 
 ### ARTIK520-Audio_Recording ###
 %package sub2-Preset_boards-ARTIK520-Audio_Recording
-Summary:	AudioRecording
+Summary:	ARTIK520_AudioRecording
 Requires:	%{name}-sub2-Preset_boards-ARTIK520-Audio
 
 Suggests:	%{name}-sub2-domain_API-Multimedia-Recorder
@@ -124,7 +124,7 @@ Packages of Audio HAL and Feature for ARTIK520.
 
 ### ARTIK520-GPS ###
 %package sub2-Preset_boards-ARTIK520-GPS
-Summary:	GPS (Not Supported)
+Summary:	ARTIK520_GPS (Not Supported)
 
 %description sub2-Preset_boards-ARTIK520-GPS
 Packages of GPS HAL and Feature for ARTIK520.
@@ -132,7 +132,7 @@ Packages of GPS HAL and Feature for ARTIK520.
 
 ### ARTIK520-Camera ###
 %package sub2-Preset_boards-ARTIK520-Camera
-Summary:	Camera
+Summary:	ARTIK520_Camera
 Requires:	%{name}-sub2-domain_API-Multimedia-Camera
 Requires:	%{name}-sub2-Preset_boards-ARTIK520-Display
 Requires:	mmfw-sysconf-target-artik10
@@ -150,7 +150,7 @@ Packages of Camera HAL and Feature for ARTIK520.
 
 ### ARTIK520-Display ###
 %package sub2-Preset_boards-ARTIK520-Display
-Summary:	Display
+Summary:	ARTIK520_Display
 Requires:	%{name}-sub2-domain_API-UI-Display_Server
 Requires:	e-tizen-data-profile_common
 Requires:	libtbm-nexell
@@ -174,7 +174,7 @@ Packages of Display HAL and Feature for ARTIK520.
 
 ### ARTIK520-Wifi ###
 %package sub2-Preset_boards-ARTIK520-Wifi
-Summary:	Wifi
+Summary:	ARTIK520_Wifi
 Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Requires:	wpa_supplicant-profile_common
@@ -188,7 +188,7 @@ If you enable the UI, you can select net-config-plugin-headed.
 
 ### ARTIK520-WifiDirect ###
 %package sub2-Preset_boards-ARTIK520-WifiDirect
-Summary:	WifiDirect ( Not Supported )
+Summary:	ARTIK520_WifiDirect ( Not Supported )
 
 %description sub2-Preset_boards-ARTIK520-WifiDirect
 Packages of WifiDirect HAL and Feature for ARTIK520.
@@ -196,7 +196,7 @@ Packages of WifiDirect HAL and Feature for ARTIK520.
 
 ### ARTIK520-Bluetooth ###
 %package sub2-Preset_boards-ARTIK520-Bluetooth
-Summary:	Bluetooth
+Summary:	ARTIK520_Bluetooth
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_BREDR
 Requires:	bluetooth-firmware-bcm-artik
 Requires:	bluetooth-frwk-profile_common
@@ -213,7 +213,7 @@ Packages of Bluetooth HAL and Feature for ARTIK520.
 
 ### ARTIK520-Bluetooth_CallAudio ###
 %package sub2-Preset_boards-ARTIK520-Bluetooth_CallAudio
-Summary:	Bluetooth Call Audio
+Summary:	ARTIK520_Bluetooth Call Audio
 Requires:	%{name}-sub2-Preset_boards-ARTIK520-Bluetooth
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_Call_Audio
 Requires:	bluetooth-agent-profile_common
@@ -225,7 +225,7 @@ Packages of Bluetooth HAL and Feature for ARTIK520.
 
 ### ARTIK520-BLE ###
 %package sub2-Preset_boards-ARTIK520-BLE
-Summary:	BLE
+Summary:	ARTIK520_BLE
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_LE
 Requires: bluetooth-firmware-bcm-artik
 Requires: bluetooth-frwk-profile_common
@@ -241,7 +241,7 @@ Packages of BLE HAL and Feature for ARTIK520.
 
 ### ARTIK520-NFC ###
 %package sub2-Preset_boards-ARTIK520-NFC
-Summary:	NFC (Not Supported)
+Summary:	ARTIK520_NFC (Not Supported)
 
 %description sub2-Preset_boards-ARTIK520-NFC
 Packages of NFC HAL and Feature for ARTIK520.
@@ -249,7 +249,7 @@ Packages of NFC HAL and Feature for ARTIK520.
 
 ### ARTIK520-Telephony ###
 %package sub2-Preset_boards-ARTIK520-Telephony
-Summary:	Telephony (Not Supported)
+Summary:	ARTIK520_Telephony (Not Supported)
 
 %description sub2-Preset_boards-ARTIK520-Telephony
 Packages of Telephony HAL and Feature for ARTIK520.
@@ -257,7 +257,7 @@ Packages of Telephony HAL and Feature for ARTIK520.
 
 ### ARTIK520-Feedback ###
 %package sub2-Preset_boards-ARTIK520-Feedback
-Summary:	Feedback
+Summary:	ARTIK520_Feedback
 Requires:	%{name}-sub2-domain_API-System-Feedback
 Requires:	%{name}-sub2-Preset_boards-ARTIK520-Audio
 Requires:	feedbackd-profile_mobile
@@ -270,7 +270,7 @@ Packages of Feedback HAL and Feature for ARTIK520.
 
 ### ARTIK520-Sensor ###
 %package sub2-Preset_boards-ARTIK520-Sensor
-Summary:	Sensor (Not Supported)
+Summary:	ARTIK520_Sensor (Not Supported)
 
 %description sub2-Preset_boards-ARTIK520-Sensor
 Packages of Sensor HAL and Feature for ARTIK520.
@@ -278,7 +278,7 @@ Packages of Sensor HAL and Feature for ARTIK520.
 
 ### ARTIK520-DALi ###
 %package sub2-Preset_boards-ARTIK520-DALi
-Summary:	DALi
+Summary:	ARTIK520_DALi
 Requires:	%{name}-sub2-domain_API-UI-DALi
 Requires:	%{name}-sub2-Preset_boards-ARTIK520-Display
 Requires:	dali-adaptor-dali-video-player-plugin
@@ -292,7 +292,7 @@ Packages of DALi HAL and Feature for ARTIK520.
 
 ### ARTIK520-EFL ###
 %package sub2-Preset_boards-ARTIK520-EFL
-Summary:	EFL
+Summary:	ARTIK520_EFL
 Requires:	%{name}-sub2-Preset_boards-ARTIK520-Display
 Requires:	%{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
 Requires:	efl-misc-profile_common
@@ -308,7 +308,7 @@ Packages of EFL HAL and Feature for ARTIK520.
 
 ### ARTIK520-IM ###
 %package sub2-Preset_boards-ARTIK520-IM
-Summary:	IM
+Summary:	ARTIK520_IM
 Requires:	%{name}-sub2-domain_API-UIX-Input_Method
 Requires:	isf-config-common
 Requires:	ise-default-profile_common
