@@ -38,6 +38,7 @@ Source2020:	epicfeature-platform.inc
 Source3500:	platform-preset-iot.inc
 Source3501:	platform-preset-iot-rpi3.inc
 Source3502:	platform-preset-iot-artik530.inc
+Source3503:	platform-preset-iot-craftroom.inc
 
 Source3800:	platform-preset-boards.inc
 Source3801:	platform-preset-boards-tm1.inc
@@ -101,6 +102,7 @@ Suggests:	%{name}-root-Preset_iot_core_rpi3
 Suggests:	%{name}-root-Preset_iot_core_artik530
 Suggests:	%{name}-root-Preset_iot_headed
 Suggests:	%{name}-root-Preset_iot_headed_artik530
+Suggests:	%{name}-root-Preset_craftroom
 %description	category-Preset
 This meta pacakge lists all Tizen blocks (meta packages) designating
 Tizen platform presets, HAL/device-support presets, and
@@ -314,6 +316,7 @@ python ./rule_checker.py
 %{include_if_mainbuild %{SOURCE3500}}
 %{include_if_mainbuild %{SOURCE3501}}
 %{include_if_mainbuild %{SOURCE3502}}
+%{include_if_mainbuild %{SOURCE3503}}
 
 %{include_if_mainbuild %{SOURCE3800}}
 %{include_if_mainbuild %{SOURCE3801}}
