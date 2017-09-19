@@ -262,7 +262,10 @@ The Tizen platform supports the Vulkan API in order to provide the most cutting-
 %package sub2-domain_API-UI-TBM_Surface
 Summary:    TBM_Surface
 Requires: libtbm
-Requires: %{name}-sub2-domain_API-UI-Display_Server
+
+Suggests: %{name}-sub2-domain_API-UI-Display_Server
+Suggests: %{name}-sub2-domain_API-UI-Display_Server_Headless
+
 %description sub2-domain_API-UI-TBM_Surface
 TBM Surface API provides user interface for The TBM Surface.<br>
 The user can get pointer of plane in the surface.<br>
@@ -361,5 +364,5 @@ Tizen block (set of packages) for Group of Display Server for headless or simple
 Display Server Block is core block for UI. It contains the wayland display server, however the server
 support just simple protocol for user input and buffer management.
 
-%files sub2-domain_API-UI-Display_Server
+%files sub2-domain_API-UI-Display_Server_Headless
 

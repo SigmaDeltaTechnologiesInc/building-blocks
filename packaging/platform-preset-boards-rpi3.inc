@@ -12,6 +12,7 @@ Suggests:	%{name}-sub2-Preset_boards-RPI3-Audio_Recording
 Suggests:	%{name}-sub2-Preset_boards-RPI3-GPS
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Camera
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Display
+Suggests:	%{name}-sub2-Preset_boards-RPI3-Display_Headless
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Wifi
 Suggests:	%{name}-sub2-Preset_boards-RPI3-WifiDirect
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Bluetooth
@@ -146,7 +147,7 @@ Requires:	libtdm-vc4
 Requires:	mesa
 Requires:	coregl
 
-Conflicts:	%{name}-sub2-Preset_boards-RPI3-Display-Headless
+Conflicts:	%{name}-sub2-Preset_boards-RPI3-Display_Headless
 
 %description sub2-Preset_boards-RPI3-Display
 Packages of Display HAL and Feature for RPI3.
@@ -163,18 +164,18 @@ Packages of Display HAL and Feature for RPI3.
 %tizen_feature tizen.org/feature/vulkan.version.1_0 false
 %tizen_feature tizen.org/feature/screen true
 
-### RPI3-Display-Headless ###
-%package sub2-Preset_boards-RPI3-Display-Headless
+### RPI3-Display_Headless ###
+%package sub2-Preset_boards-RPI3-Display_Headless
 Summary:	RPI3_Display(Headless)
 Requires:	%{name}-sub2-domain_API-UI-Display_Server_Headless
 Requires:	libtbm-vc4
 
 Conflicts:	%{name}-sub2-Preset_boards-RPI3-Display
 
-%description sub2-Preset_boards-RPI3-Display-Headless
+%description sub2-Preset_boards-RPI3-Display_Headless
 Packages of Display HAL and Feature for RPI3(Headless).
-%files sub2-Preset_boards-RPI3-Display-Headless
-%posttrans sub2-Preset_boards-RPI3-Display-Headless
+%files sub2-Preset_boards-RPI3-Display_Headless
+%posttrans sub2-Preset_boards-RPI3-Display_Headless
 %tizen_feature tizen.org/feature/graphics.acceleration false
 %tizen_feature tizen.org/feature/multi_point_touch.pinch_zoom false
 %tizen_feature tizen.org/feature/opengles false
