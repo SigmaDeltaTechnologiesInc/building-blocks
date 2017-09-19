@@ -26,6 +26,7 @@ Suggests: %{name}-sub2-domain_API-UI-Tizen_WS_Shell
 Suggests: %{name}-sub2-domain_API-UI-UI_View_Manager
 Suggests: %{name}-sub2-domain_API-UI-Vulkan
 Suggests: %{name}-sub2-domain_API-UI-Display_Server
+Suggests: %{name}-sub2-domain_API-UI-Display_Server_Headless
 %description sub1-domain_API-UI
 Tizen block (set of packages) for Group of domain API-UI
 %files sub1-domain_API-UI
@@ -333,6 +334,8 @@ Suggests:   libtdm-drm
 #GL plugins
 Suggests:   mesa
 
+Conflicts:	%{name}-sub2-domain_API-UI-Display_Server_Headless
+
 %description sub2-domain_API-UI-Display_Server
 Tizen block (set of packages) for Group of Display Server
 Display Server Block is core block for UI. It contains the wayland display server,
@@ -344,6 +347,19 @@ There are three categories to choose.<br>
 3. Tizen Display Manager(TDM) Backend<br>
    You should choose a tbm and tdm backend for your target.<br>
    For example, if you want make binary for TM1, you can choose the libtbm-sprd and the libtdm-sprd<br>
+
+%files sub2-domain_API-UI-Display_Server
+
+%package sub2-domain_API-UI-Display_Server_Headless
+Summary:    Display_Server(Headless)
+Requires:   pepper-doctor
+
+Conflicts:	%{name}-sub2-domain_API-UI-Display_Server
+
+%description sub2-domain_API-UI-Display_Server_Headless
+Tizen block (set of packages) for Group of Display Server for headless or simple display target.
+Display Server Block is core block for UI. It contains the wayland display server, however the server
+support just simple protocol for user input and buffer management.
 
 %files sub2-domain_API-UI-Display_Server
 

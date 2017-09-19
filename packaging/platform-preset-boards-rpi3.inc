@@ -146,6 +146,8 @@ Requires:	libtdm-vc4
 Requires:	mesa
 Requires:	coregl
 
+Conflicts:	%{name}-sub2-Preset_boards-RPI3-Display-Headless
+
 %description sub2-Preset_boards-RPI3-Display
 Packages of Display HAL and Feature for RPI3.
 %files sub2-Preset_boards-RPI3-Display
@@ -160,6 +162,29 @@ Packages of Display HAL and Feature for RPI3.
 %tizen_feature tizen.org/feature/opengles.version.3_2 false
 %tizen_feature tizen.org/feature/vulkan.version.1_0 false
 %tizen_feature tizen.org/feature/screen true
+
+### RPI3-Display-Headless ###
+%package sub2-Preset_boards-RPI3-Display-Headless
+Summary:	RPI3_Display(Headless)
+Requires:	%{name}-sub2-domain_API-UI-Display_Server_Headless
+Requires:	libtbm-vc4
+
+Conflicts:	%{name}-sub2-Preset_boards-RPI3-Display
+
+%description sub2-Preset_boards-RPI3-Display-Headless
+Packages of Display HAL and Feature for RPI3(Headless).
+%files sub2-Preset_boards-RPI3-Display-Headless
+%posttrans sub2-Preset_boards-RPI3-Display-Headless
+%tizen_feature tizen.org/feature/graphics.acceleration false
+%tizen_feature tizen.org/feature/multi_point_touch.pinch_zoom false
+%tizen_feature tizen.org/feature/opengles false
+%tizen_feature tizen.org/feature/opengles.version.1_1 false
+%tizen_feature tizen.org/feature/opengles.version.2_0 false
+%tizen_feature tizen.org/feature/opengles.version.3_0 false
+%tizen_feature tizen.org/feature/opengles.version.3_1 false
+%tizen_feature tizen.org/feature/opengles.version.3_2 false
+%tizen_feature tizen.org/feature/vulkan.version.1_0 false
+%tizen_feature tizen.org/feature/screen false
 
 ### RPI3-Wifi ###
 %package sub2-Preset_boards-RPI3-Wifi

@@ -13,6 +13,7 @@ Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Audio_Recording
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-GPS
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Camera
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Display
+Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Display-Headless
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Wifi
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-WifiDirect
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Bluetooth
@@ -157,6 +158,8 @@ Requires:	libtbm-nexell
 Requires:	libtdm-nexell
 Requires:	coregl
 
+Conflicts:	%{name}-sub2-Preset_boards-ARTIK530-Display-Headless
+
 %description sub2-Preset_boards-ARTIK530-Display
 Packages of Display HAL and Feature for ARTIK530.
 %files sub2-Preset_boards-ARTIK530-Display
@@ -171,6 +174,29 @@ Packages of Display HAL and Feature for ARTIK530.
 %tizen_feature tizen.org/feature/opengles.version.3_2 false
 %tizen_feature tizen.org/feature/vulkan.version.1_0 false
 %tizen_feature tizen.org/feature/screen true
+
+### ARTIK530-Display-Headless ###
+%package sub2-Preset_boards-ARTIK530-Display-Headless
+Summary:	ARTIK530_Display(Headless)
+Requires:	%{name}-sub2-domain_API-UI-Display_Server_Headless
+Requires:	libtbm-nexell
+
+Conflicts:	%{name}-sub2-Preset_boards-ARTIK530-Display
+
+%description sub2-Preset_boards-ARTIK530-Display-Headless
+Packages of Display HAL and Feature for ARTIK530(Headless).
+%files sub2-Preset_boards-ARTIK530-Display-Headless
+%posttrans sub2-Preset_boards-ARTIK530-Display-Headless
+%tizen_feature tizen.org/feature/graphics.acceleration false
+%tizen_feature tizen.org/feature/multi_point_touch.pinch_zoom false
+%tizen_feature tizen.org/feature/opengles false
+%tizen_feature tizen.org/feature/opengles.version.1_1 false
+%tizen_feature tizen.org/feature/opengles.version.2_0 false
+%tizen_feature tizen.org/feature/opengles.version.3_0 false
+%tizen_feature tizen.org/feature/opengles.version.3_1 false
+%tizen_feature tizen.org/feature/opengles.version.3_2 false
+%tizen_feature tizen.org/feature/vulkan.version.1_0 false
+%tizen_feature tizen.org/feature/screen false
 
 ### ARTIK530-Wifi ###
 %package sub2-Preset_boards-ARTIK530-Wifi
