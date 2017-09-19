@@ -13,6 +13,7 @@ Suggests:	%{name}-sub2-Preset_boards-ARTIK520-Audio_Recording
 Suggests:	%{name}-sub2-Preset_boards-ARTIK520-GPS
 Suggests:	%{name}-sub2-Preset_boards-ARTIK520-Camera
 Suggests:	%{name}-sub2-Preset_boards-ARTIK520-Display
+Suggests:	%{name}-sub2-Preset_boards-ARTIK520-Display_Headless
 Suggests:	%{name}-sub2-Preset_boards-ARTIK520-Wifi
 Suggests:	%{name}-sub2-Preset_boards-ARTIK520-WifiDirect
 Suggests:	%{name}-sub2-Preset_boards-ARTIK520-Bluetooth
@@ -157,6 +158,8 @@ Requires:	libtbm-nexell
 Requires:	libtdm-nexell
 Requires:	coregl
 
+Conflicts:	%{name}-sub2-Preset_boards-ARTIK520-Display_Headless
+
 %description sub2-Preset_boards-ARTIK520-Display
 Packages of Display HAL and Feature for ARTIK520.
 %files sub2-Preset_boards-ARTIK520-Display
@@ -171,6 +174,29 @@ Packages of Display HAL and Feature for ARTIK520.
 %tizen_feature tizen.org/feature/opengles.version.3_2 false
 %tizen_feature tizen.org/feature/vulkan.version.1_0 false
 %tizen_feature tizen.org/feature/screen true
+
+### ARTIK520-Display_Headless ###
+%package sub2-Preset_boards-ARTIK520-Display_Headless
+Summary:	ARTIK520_Display(Headless)
+Requires:	%{name}-sub2-domain_API-UI-Display_Server_Headless
+Requires:	libtbm-nexell
+
+Conflicts:	%{name}-sub2-Preset_boards-ARTIK520-Display
+
+%description sub2-Preset_boards-ARTIK520-Display_Headless
+Packages of Display HAL and Feature for ARTIK520(Headless).
+%files sub2-Preset_boards-ARTIK520-Display_Headless
+%posttrans sub2-Preset_boards-ARTIK520-Display_Headless
+%tizen_feature tizen.org/feature/graphics.acceleration false
+%tizen_feature tizen.org/feature/multi_point_touch.pinch_zoom false
+%tizen_feature tizen.org/feature/opengles false
+%tizen_feature tizen.org/feature/opengles.version.1_1 false
+%tizen_feature tizen.org/feature/opengles.version.2_0 false
+%tizen_feature tizen.org/feature/opengles.version.3_0 false
+%tizen_feature tizen.org/feature/opengles.version.3_1 false
+%tizen_feature tizen.org/feature/opengles.version.3_2 false
+%tizen_feature tizen.org/feature/vulkan.version.1_0 false
+%tizen_feature tizen.org/feature/screen false
 
 ### ARTIK520-Wifi ###
 %package sub2-Preset_boards-ARTIK520-Wifi
