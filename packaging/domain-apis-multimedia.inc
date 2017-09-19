@@ -266,11 +266,15 @@ Requires: gst-libav
 Requires: %{name}-sub2-domain_API-Multimedia-AudioCore
 Requires: %{name}-sub2-domain_API-Multimedia-Configuration
 
-# required building block for video rendering
+# required building block
 Requires: %{name}-sub2-domain_API-System-Storage
 Requires: %{name}-sub2-domain_API-UI-TBM_Surface
-Requires: %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
-Requires: %{name}-sub2-domain_API-Network-WiFi
+
+# suggest building block for network streaming
+Suggests: %{name}-sub2-domain_API-Network-WiFi
+
+# suggest building block for video rendering
+Suggests: %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
 
 # target specific package list
 Suggests: gst-omx
@@ -283,8 +287,14 @@ Suggests: libomxil-vc4
 %description sub2-domain_API-Multimedia-Player
 This block supports playing multimedia content. Content can be played from a file, from the network, or from memory. <br>
 It gives the ability to controlling media playback attributes, perform various status queries, and control the display. <br>
-About OPTIONAL selection: <br>
-You should choose packages depends on target and hardware. <br>
+<br>
+About OPTIONAL selection: <br><br>
+You have to choose wifi building block for network streaming. <br>
+- Wifi in Network API Group <br>
+You have to choose efl building block for video rendering. <br>
+- EFL_NativeUIToolkit in UI API Group <br>
+<br>
+You have to choose packages depends on target and hardware. <br>
 First, You have to select the gst-omx package except TM1 target to use hardware video decoder. <br>
 Second, Select the config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1). <br>
 Third, Select the audio HAL and libomx package depends on target. <br>
@@ -296,7 +306,6 @@ RPI3 : libomxil-vc4 <br>
 AT5/10 : libomxil-e54xx <br>
 ARTIK710 : libomxil-e54xx <br>
 %files sub2-domain_API-Multimedia-Player
-
 
 %package sub2-domain_API-Multimedia-Radio
 Summary:    Radio
