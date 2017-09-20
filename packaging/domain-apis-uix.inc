@@ -63,7 +63,7 @@ Summary:    STT
 Requires: stt
 Requires: org.tizen.stt-engine-default
 Requires: %{name}-sub2-domain_API-Multimedia-Audio_IO
-Requires: %{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
+Requires: %{name}-sub2-domain_API-AppFramework-TPK_Installation
 
 %description sub2-domain_API-UIX-STT
 STT(Speech-To-Text) provides functions to recognize the speech.
@@ -80,7 +80,7 @@ Requires: tts
 Requires: org.tizen.tts-engine-default
 Requires: tts-engine-rsc
 Requires: %{name}-sub2-domain_API-Multimedia-Audio_IO
-Requires: %{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
+Requires: %{name}-sub2-domain_API-AppFramework-TPK_Installation
 
 %description sub2-domain_API-UIX-TTS
 TTS(Text-To-Speech) provides functions to synthesize voice from text and play synthesized sound data.
