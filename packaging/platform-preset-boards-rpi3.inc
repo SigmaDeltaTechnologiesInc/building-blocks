@@ -78,6 +78,7 @@ Packages for System HAL and Feature. They are mandatory.
 %package sub2-Preset_boards-RPI3-Audio
 Summary:	RPI3_Audio
 Requires:	audio-hal-bcm2837
+Requires:	alsa-ucm-data-rpi3
 Requires:	mmfw-sysconf-target-rpi3
 
 Suggests:	%{name}-sub2-domain_API-Multimedia-Audio_IO

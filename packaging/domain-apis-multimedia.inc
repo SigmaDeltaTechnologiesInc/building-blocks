@@ -499,6 +499,7 @@ Suggests:alsa-ucm-data-alc5658
 
 #RPI3
 Suggests:audio-hal-bcm2837
+Suggests:alsa-ucm-data-rpi3
 
 %description sub2-domain_API-Multimedia-AudioCore
 AudioCore block includes core audio modules including pulseaudio and essential pulseaudio-modules.<br>
@@ -510,7 +511,7 @@ TW2 : audio-hal-wm1831-tw2, audio-config-wm1831-tw2<br>
 U3/XU3 : audio-hal-max98090, alsa-ucm-data-max98090<br>
 ARTIK 5/10 : audio-hal-ak4953, alsa-ucm-data-ak4953<br>
 ARTIK 710 : audio-hal-alc5658, alsa-ucm-data-alc5658<br>
-RPI3 : audio-hal-bcm2837, mmfw-sysconf-target-rpi3<br>
+RPI3 : audio-hal-bcm2837, alsa-ucm-data-rpi3<br>
 
 %files sub2-domain_API-Multimedia-AudioCore
 
