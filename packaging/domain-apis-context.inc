@@ -28,6 +28,8 @@ Requires: context-app-history
 %description sub2-domain_API-Context-Contextual_History
 Contextual History provides functions to retrieve user's device usage statistics and patterns.
 %files sub2-domain_API-Context-Contextual_History
+%posttrans sub2-domain_API-Context-Contextual_History
+%tizen_feature tizen.org/feature/app_history true
 
 %package sub2-domain_API-Context-Contextual_Trigger
 Summary:    Contextual Trigger
@@ -36,4 +38,5 @@ Requires: context-job-scheduler
 %description sub2-domain_API-Context-Contextual_Trigger
 Contextual Trigger provides functions to define task triggering rules based on device status and user activities.
 %files sub2-domain_API-Context-Contextual_Trigger
-
+%posttrans sub2-domain_API-Context-Contextual_Trigger
+%tizen_feature tizen.org/feature/contextual_trigger true
