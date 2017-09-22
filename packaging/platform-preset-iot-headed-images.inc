@@ -9,6 +9,7 @@ Summary:    IOT Headed Images
 Suggests:   %{name}-sub1-Preset_img_headed-artik530
 
 %description root-Preset_img_headed
+__EXPAND__: preset
 The IoT Headed Images.
 %files root-Preset_img_headed
 
@@ -36,6 +37,11 @@ Requires:   %{name}-sub2-Preset_boards-ARTIK530-System_Device
 Requires:   %{name}-sub2-Preset_boards-ARTIK530-Wifi
 Requires:   gst-omx
 Requires:   libomxil-e54xx
+
+Requires: %{name}-sub1-Preset_partition-3parts_ramdisk
+
+Conflicts:  %{name}-sub1-Preset_img_headless-artik530
+Conflicts:  %{name}-sub1-Preset_img_headless-rpi3
 
 %description sub1-Preset_img_headed-artik530
 The packages of Tizen IoT Headed for ARTIK530.

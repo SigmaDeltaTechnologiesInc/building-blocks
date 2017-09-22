@@ -55,7 +55,6 @@ Requires: vconf-internal-keys
 Requires: wpa_supplicant
 
 %description root-Preset_iot_core
-__EXPAND__: preset
 The packages of Tizen IoT Core.
 %files root-Preset_iot_core
 
@@ -127,6 +126,5 @@ Requires: ug-bluetooth-efl
 Requires: wifi-efl-ug
 
 %description root-Preset_iot_headed
-__EXPAND__: preset
 The packages of Tizen IoT Headed Common.
 %files root-Preset_iot_headed
