@@ -10,6 +10,6 @@ Suggests:	%{name}-sub1-Preset_boards-RPI3
 Suggests:	%{name}-sub1-Preset_boards-TM1
 %endif
 %description root-Preset_boards
-Note that kernel binaries may be required to be installed in a separated partition
-and you might be not allowed to include kernel binaries in the platform image.
+__EXPAND__: preset
+Select BSP which you want.
 %files root-Preset_boards
