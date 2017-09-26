@@ -53,6 +53,7 @@ part "\" , "\opt", "\mnt\initrd"
 ############################
 %package sub1-Preset_partition-3parts_ramdisk
 Summary:    Partition 3 with ramdisk
+Requires:	system-plugin-u3
 
 Conflicts: %{name}-sub1-Preset_partition-2parts_ramdisk_recovery
 Conflicts: %{name}-sub1-Preset_partition-2parts_ramdisk
@@ -68,13 +69,15 @@ part "\" , "\opt", "\opt\usr", "\mnt\initrd"
 ###############
 %package sub1-Preset_partition-3parts
 Summary:    Partition 3
+Requires:	system-plugin-u3
+Requires:	system-plugin-init_wrapper
 
 Conflicts: %{name}-sub1-Preset_partition-2parts_ramdisk_recovery
 Conflicts: %{name}-sub1-Preset_partition-2parts_ramdisk
 Conflicts: %{name}-sub1-Preset_partition-3parts_ramdisk
 
 %description sub1-Preset_partition-3parts
-__PARTITION__: common-mbr-3parts 
+__PARTITION__: common-mbr-3parts
 part "\" , "\opt", "\opt\usr"
 %files sub1-Preset_partition-3parts
 
