@@ -68,14 +68,14 @@ Firstly select HALs and Feature to add to your image.
 Summary:	ARTIK520_System
 Requires:	system-plugin-headless
 Requires:	system-plugin-exynos
-Requires:	system-plugin-u3
+Suggests:	system-plugin-u3
 Requires:	model-config-default
-Requires:	system-plugin-init_wrapper
+Suggests:	system-plugin-init_wrapper
 
 %description sub2-Preset_boards-ARTIK520-System
 Packages for System HAL and Feature. They are mandatory.
-ARTIK520 uses 3 partitions.
-Should use the recipe file to consist of 3 partitions.
+If you select 3 partitions, please select system-plugin-u3.
+If you don't use initrd partition, please select system-plugin-init_wrapper.
 %files sub2-Preset_boards-ARTIK520-System
 
 ### ARTIK520-System_Device ###
