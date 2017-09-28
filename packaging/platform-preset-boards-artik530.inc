@@ -29,7 +29,6 @@ Suggests:	%{name}-sub2-Preset_boards-ARTIK530-IM
 
 Conflicts:	%{name}-sub1-Preset_boards-TM1
 Conflicts:	%{name}-sub1-Preset_boards-RPI3
-Conflicts:	%{name}-sub1-Preset_boards-ARTIK520
 
 %description sub1-Preset_boards-ARTIK530
 Firstly select HALs and Feature to add to your image.
@@ -227,7 +226,7 @@ Requires:	%{name}-sub2-domain_API-Network-Bluetooth_BREDR
 Requires:	bluetooth-frwk-profile_common
 Requires:	bluetooth-tools-profile_common
 Requires:	bluez-profile_common
-Suggests:	bluez-extension-bredr 
+Suggests:	bluez-extension-bredr
 Suggests:	bluetooth-frwk-plugin-headed
 Suggests:	org.tizen.bt-syspopup
 Suggests:	org.tizen.bt-syspopup-profile_common
