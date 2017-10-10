@@ -490,10 +490,7 @@ Suggests:audio-config-wm1831-orbis
 Suggests:audio-hal-wm1831-tw2
 Suggests:audio-config-wm1831-tw2
 
-#ARTIK 5/10
-Suggests:audio-hal-ak4953
-Suggests:alsa-ucm-data-ak4953
-#ARTIK 710
+#ARTIK 530/710
 Suggests:audio-hal-alc5658
 Suggests:alsa-ucm-data-alc5658
 
@@ -509,8 +506,7 @@ TM2 : audio-hal-wm5110, alsa-ucm-data-wm5110<br>
 TW1 : audio-hal-wm1831, audio-config-wm1831-orbis<br>
 TW2 : audio-hal-wm1831-tw2, audio-config-wm1831-tw2<br>
 U3/XU3 : audio-hal-max98090, alsa-ucm-data-max98090<br>
-ARTIK 5/10 : audio-hal-ak4953, alsa-ucm-data-ak4953<br>
-ARTIK 710 : audio-hal-alc5658, alsa-ucm-data-alc5658<br>
+ARTIK 530/710 : audio-hal-alc5658, alsa-ucm-data-alc5658<br>
 RPI3 : audio-hal-bcm2837, alsa-ucm-data-rpi3<br>
 
 %files sub2-domain_API-Multimedia-AudioCore
