@@ -274,6 +274,7 @@ Requires: %{name}-sub2-domain_API-UI-TBM_Surface
 Suggests: %{name}-sub2-domain_API-Network-WiFi
 
 # suggest building block for video rendering
+Suggests: capi-media-player-display
 Suggests: %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
 
 # target specific package list
@@ -291,7 +292,8 @@ It gives the ability to controlling media playback attributes, perform various s
 About OPTIONAL selection: <br><br>
 You have to choose wifi building block for network streaming. <br>
 - Wifi in Network API Group <br>
-You have to choose efl building block for video rendering. <br>
+You have to choose player display package and efl building block for video rendering. <br>
+- capi-media-player-display <br>
 - EFL_NativeUIToolkit in UI API Group <br>
 <br>
 You have to choose packages depends on target and hardware. <br>
