@@ -14,7 +14,6 @@ Requires: bash
 Requires: buxton2
 Requires: capi-appfw-app-common
 Requires: capi-appfw-app-manager
-Requires: capi-appfw-event
 Requires: capi-appfw-package-manager
 Requires: capi-appfw-preference
 Requires: capi-network-wifi
