@@ -11,6 +11,7 @@ Suggests: %{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
 Suggests: %{name}-sub2-domain_API-AppFramework-Alarm_API
 Suggests: %{name}-sub2-domain_API-AppFramework-Message_Port_API
 Suggests: %{name}-sub2-domain_API-AppFramework-Data_Control_API
+Suggests: %{name}-sub2-domain_API-AppFramework-Event_API
 Suggests: %{name}-sub2-domain_API-AppFramework-Native_EFL_Widget_App_Model
 Suggests: %{name}-sub2-domain_API-AppFramework-Notification_API
 Suggests: %{name}-sub2-domain_API-AppFramework-Shortcut_API
@@ -71,6 +72,14 @@ Requires: data-control
 %description sub2-domain_API-AppFramework-Data_Control_API
 This block supports data control API
 %files sub2-domain_API-AppFramework-Data_Control_API
+
+%package sub2-domain_API-AppFramework-Event_API
+Summary: Data Control API
+Requires: capi-appfw-event
+Requires: esd
+%description sub2-domain_API-AppFramework-Event_API
+This block supports system event listening for applications. It also supports event broadcasting among applications.
+%files sub2-domain_API-AppFramework-Event_API
 
 %package sub2-domain_API-AppFramework-Native_EFL_Widget_App_Model
 Summary: EFL widget app model
