@@ -61,6 +61,12 @@ Firstly select HALs and Feature to add to your image.
 %tizen_feature tizen.org/feature/sensor.linear_acceleration false
 %tizen_feature tizen.org/feature/sensor.proximity false
 %tizen_feature tizen.org/feature/sensor.temperature false
+%tizen_feature tizen.org/feature/peripheral_io.gpio true
+%tizen_feature tizen.org/feature/peripheral_io.i2c true
+%tizen_feature tizen.org/feature/peripheral_io.pwm true
+%tizen_feature tizen.org/feature/peripheral_io.spi true
+%tizen_feature tizen.org/feature/peripheral_io.uart true
+%tizen_feature tizen.org/system/model_name artik
 
 
 ### ARTIK530-System ###
@@ -228,7 +234,7 @@ Requires:	%{name}-sub2-domain_API-Network-Bluetooth_BREDR
 Requires:	bluetooth-frwk-profile_common
 Requires:	bluetooth-tools-profile_common
 Requires:	bluez-profile_common
-Suggests:	bluez-extension-bredr 
+Suggests:	bluez-extension-bredr
 Suggests:	bluetooth-frwk-plugin-headed
 Suggests:	org.tizen.bt-syspopup
 Suggests:	org.tizen.bt-syspopup-profile_common
