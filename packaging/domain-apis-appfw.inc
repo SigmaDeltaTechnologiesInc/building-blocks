@@ -74,7 +74,7 @@ This block supports data control API
 %files sub2-domain_API-AppFramework-Data_Control_API
 
 %package sub2-domain_API-AppFramework-Event_API
-Summary: Data Control API
+Summary: App Event API
 Requires: capi-appfw-event
 Requires: esd
 %description sub2-domain_API-AppFramework-Event_API
