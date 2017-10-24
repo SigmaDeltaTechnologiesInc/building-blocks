@@ -65,7 +65,7 @@ Firstly select HALs and Feature to add to your image.
 ### TM1-System ###
 %package sub2-Preset_boards-TM1-System
 Summary:	TM1_System
-Requires:	system-plugin-headless
+Requires:	system-plugin-profile-iot-headless
 Requires:	system-plugin-spreadtrum
 Requires:	model-config-tm1
 
