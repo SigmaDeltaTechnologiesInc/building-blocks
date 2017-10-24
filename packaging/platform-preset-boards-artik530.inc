@@ -66,7 +66,8 @@ Firstly select HALs and Feature to add to your image.
 ### ARTIK530-System ###
 %package sub2-Preset_boards-ARTIK530-System
 Summary:	ARTIK530_System
-Requires:	system-plugin-headless
+Requires:	system-plugin-profile-iot-headless
+Requires:	system-plugin-config-udev-sdbd
 Requires:	system-plugin-exynos
 Suggests:	system-plugin-u3
 Requires:	model-config-default
