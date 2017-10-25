@@ -102,6 +102,7 @@ Enabling Bluetooth BREDR and it is possible to Bluetooth BREDR API<br>
 %tizen_feature tizen.org/feature/network.bluetooth.health true
 %tizen_feature tizen.org/feature/network.bluetooth.hid true
 %tizen_feature tizen.org/feature/network.bluetooth.hid_device true
+%tizen_feature tizen.org/feature/network.bluetooth.oob true
 
 %package sub2-domain_API-Network-Bluetooth_Call_Audio
 Summary:    Bluetooth_Call_Audio
@@ -217,7 +218,9 @@ Enabling Bluetooth LE Only functionality<br>
 %files sub2-domain_API-Network-Bluetooth_LE
 %posttrans sub2-domain_API-Network-Bluetooth_LE
 %tizen_feature tizen.org/feature/network.bluetooth.le true
-%tizen_feature tizen.org/feature/network.bluetooth.ipsp true
+%tizen_feature tizen.org/feature/network.bluetooth.le.ipsp false
+%tizen_feature tizen.org/feature/network.bluetooth.le.gatt.server true
+%tizen_feature tizen.org/feature/network.bluetooth.le.gatt.client true
 
 %package sub2-domain_API-Network-ASP
 Summary:    ASP
