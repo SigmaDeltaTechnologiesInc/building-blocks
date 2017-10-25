@@ -32,8 +32,17 @@ Source1215:	domain-apis-ui.inc
 Source1216:	domain-apis-uix.inc
 Source1217:	domain-apis-web.inc
 
+Source1300: domain-features.inc
+Source1301: domain-features-dotnet.inc
+Source1302: domain-features-webapi.inc
+Source1303: domain-features-softap.inc
+Source1304: domain-features-bootanimation.inc
+Source1305: domain-features-starter.inc
+Source1306: domain-features-upgrade.inc
+Source1307: domain-features-tool_and_locale.inc
+
 Source2010:	epicfeature-development.inc
-Source2020:	epicfeature-platform.inc
+Source2020:	epicfeature-application.inc
 
 Source3500:	platform-preset-iot.inc
 Source3501:	platform-preset-iot-craftroom.inc
@@ -73,6 +82,7 @@ In Tizen building blocks,
 %package	category-domains
 Summary:	Tizen Techinical Domains
 Suggests:	%{name}-root-domain_API
+Suggests:   %{name}-root-domain_Feature
 #Suggests:	%{name}-root-domain_CSAPI
 #Suggests:	%{name}-root-domain_WebAPI
 %description	category-domains
@@ -85,7 +95,6 @@ technical domains.
 %package	category-epicfeatures
 Summary:	Tizen Major Features
 Suggests:	%{name}-root-feature_Development
-Suggests:	%{name}-root-feature_Platform
 Suggests:	%{name}-root-feature_App
 %description	category-epicfeatures
 This meta package lists all Tizen blocks (meta packages) designating
@@ -298,8 +307,15 @@ python ./rule_checker.py
 %{include_if_mainbuild %{SOURCE1215}}
 %{include_if_mainbuild %{SOURCE1216}}
 %{include_if_mainbuild %{SOURCE1217}}
-#%{include_if_mainbuild %{SOURCE1210}}
-#%{include_if_mainbuild %{SOURCE1220}}
+
+%{include_if_mainbuild %{SOURCE1300}}
+%{include_if_mainbuild %{SOURCE1301}}
+%{include_if_mainbuild %{SOURCE1302}}
+%{include_if_mainbuild %{SOURCE1303}}
+%{include_if_mainbuild %{SOURCE1304}}
+%{include_if_mainbuild %{SOURCE1305}}
+%{include_if_mainbuild %{SOURCE1306}}
+%{include_if_mainbuild %{SOURCE1307}}
 
 ############## EPIC FEATURES ######################
 
