@@ -52,6 +52,8 @@ Requires: tpk-backend
 Requires: util-linux
 Requires: vconf-internal-keys
 Requires: wpa_supplicant
+Requires: session-utils
+Requires: libnss-security-manager
 
 %description root-Preset_iot_core
 The packages of Tizen IoT Core.
