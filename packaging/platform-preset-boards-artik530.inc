@@ -312,7 +312,7 @@ Packages of Sensor HAL and Feature for ARTIK530.
 Summary:	ARTIK530_DALi
 Requires:	%{name}-sub2-domain_API-UI-DALi
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Display
-Requires:	dali-adaptor-dali-video-player-plugin
+Requires:	dali-extension-video-player-plugin
 Requires:	dali-extension-key-extension
 Requires:	dali-extension
 Requires:	dali-toolkit-resources_720x1280

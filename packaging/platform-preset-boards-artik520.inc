@@ -228,7 +228,7 @@ Requires:	bluetooth-firmware-bcm-artik
 Requires:	bluetooth-frwk-profile_common
 Requires:	bluetooth-tools-profile_common
 Requires:	bluez-profile_common
-Suggests:	bluez-extension-bredr 
+Suggests:	bluez-extension-bredr
 Suggests:	bluetooth-frwk-plugin-headed
 Suggests:	org.tizen.bt-syspopup
 Suggests:	org.tizen.bt-syspopup-profile_common
@@ -307,7 +307,7 @@ Packages of Sensor HAL and Feature for ARTIK520.
 Summary:	ARTIK520_DALi
 Requires:	%{name}-sub2-domain_API-UI-DALi
 Requires:	%{name}-sub2-Preset_boards-ARTIK520-Display
-Requires:	dali-adaptor-dali-video-player-plugin
+Requires:	dali-extension-video-player-plugin
 Requires:	dali-extension-key-extension
 Requires:	dali-extension
 Requires:	dali-toolkit-resources_720x1280

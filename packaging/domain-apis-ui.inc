@@ -76,7 +76,7 @@ Suggests: dali-toolkit-resources_1920x1080
 Suggests: dali-extension
 Suggests: dali-extension-key-extension
 # Video view support
-Suggests: dali-adaptor-dali-video-player-plugin
+Suggests: dali-extension-video-player-plugin
 Suggests: %{name}-sub2-domain_API-Multimedia-Player
 
 %description sub2-domain_API-UI-DALi

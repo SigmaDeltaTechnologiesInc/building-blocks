@@ -14,6 +14,7 @@ Requires: dotnet-launcher
 Requires: mscorlib
 Requires: keyutils
 Requires: csapi-tizenfx-common
+Suggests: dali-csharp-binder
 %description sub1-domain_Feature-DotNET
 Tizen block (set of packages) for supporting .NET of Tizen
 %files sub1-domain_Feature-DotNET
