@@ -11,5 +11,5 @@ Requires: dnsmasq
 Requires: iproute2
 Requires: mobileap-agent
 %description sub1-domain_Feature-SoftAP
-Tizen block (set of packages) for supporting .NET of Tizen
+Tizen block (set of packages) for supporting soft AP
 %files sub1-domain_Feature-SoftAP

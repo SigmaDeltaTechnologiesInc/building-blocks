@@ -5,7 +5,7 @@
 ## Starter & Menu screen ##
 ###########################
 %package sub1-domain_Feature-Starter
-Summary:	Stareter daemon and Menu screen App
+Summary:	Starter daemon and Menu screen App
 Requires: starter
 Requires: starter-profile_common
 Requires: org.tizen.menu-screen
