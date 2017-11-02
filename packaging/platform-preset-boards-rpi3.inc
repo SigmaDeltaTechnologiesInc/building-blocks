@@ -7,6 +7,7 @@
 %package sub1-Preset_boards-RPI3
 Summary:	RPI3 Selection for HAL and Feature
 Requires:	%{name}-sub2-Preset_boards-RPI3-System
+Suggests:	%{name}-sub2-Preset_boards-RPI3-System_Device
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Audio
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Audio_Recording
 Suggests:	%{name}-sub2-Preset_boards-RPI3-GPS
@@ -72,12 +73,23 @@ Firstly select HALs and Feature to add to your image.
 %package sub2-Preset_boards-RPI3-System
 Summary:	RPI3_System
 Requires:	system-plugin-profile-iot-headless
-Requires:	system-plugin-iot
+Requires:   system-plugin-config-udev-sdbd
+Suggests:   system-plugin-u3
 Requires:	model-config-default
 
 %description sub2-Preset_boards-RPI3-System
 Packages for System HAL and Feature. They are mandatory.
 %files sub2-Preset_boards-RPI3-System
+
+### RPI3-System_Device ###
+%package sub2-Preset_boards-RPI3-System_Device
+Summary:    RPI3_Deviced Plugin
+Requires:   device-manager-plugin-rpi3
+
+%description sub2-Preset_boards-RPI3-System_Device
+Packages for Deviced HAL and Feature.
+%files sub2-Preset_boards-RPI3-System_Device
+
 
 
 ### RPI3-Audio ###
@@ -303,7 +315,13 @@ Packages of Sensor HAL and Feature for RPI3.
 
 ### RPI3-DALi ###
 %package sub2-Preset_boards-RPI3-DALi
-Summary:	RPI3_DALi (Not Implemented)
+Summary:	RPI3_DALi
+Requires:   %{name}-sub2-domain_API-UI-DALi
+Requires:   %{name}-sub2-Preset_boards-RPI3-Display
+Requires:   dali-extension-video-player-plugin
+Requires:   dali-extension-key-extension
+Requires:   dali-extension
+Requires:   dali-toolkit-resources_720x1280
 
 %description sub2-Preset_boards-RPI3-DALi
 Packages of DALi HAL and Feature for RPI3.
