@@ -28,7 +28,6 @@ Suggests:	%{name}-sub2-Preset_boards-TM1-IM
 
 Conflicts:	%{name}-sub1-Preset_boards-RPI3
 Conflicts:	%{name}-sub1-Preset_boards-ARTIK530
-Conflicts:	%{name}-sub1-Preset_boards-ARTIK520
 
 %description sub1-Preset_boards-TM1
 Firstly select HALs and Feature to add to your image.
@@ -212,7 +211,7 @@ Requires:	bluetooth-firmware-sprd-TM1
 Requires:	bluetooth-frwk-profile_mobile
 Requires:	bluetooth-tools-profile_mobile
 Requires:	bluez-profile_common
-Suggests:	bluez-extension-bredr 
+Suggests:	bluez-extension-bredr
 Suggests: bluetooth-frwk-plugin-headed
 Suggests: org.tizen.bt-syspopup
 Suggests: org.tizen.bt-syspopup-profile_common
