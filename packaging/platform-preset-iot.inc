@@ -112,6 +112,7 @@ Requires:	%{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
 Requires:	%{name}-sub2-domain_API-UI-External_Output_Manager
 Requires:	%{name}-sub2-domain_API-UI-FontConfig
 Requires:	%{name}-sub2-domain_API-UI-HarfBuzz
+Reqreuis:	%{name}-sub2-domain_API-UI-Minicontrol
 Requires:	%{name}-sub2-domain_API-UI-TBM_Surface
 Requires:	%{name}-sub2-domain_API-UI-Tizen_WS_Shell
 Requires:	%{name}-sub2-domain_API-UIX-Input_Method
