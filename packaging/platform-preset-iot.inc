@@ -86,6 +86,7 @@ Requires:	%{name}-sub2-domain_API-Multimedia-Metadata_Editor
 Requires:	%{name}-sub2-domain_API-Multimedia-Player
 Requires:	%{name}-sub2-domain_API-Multimedia-Recorder
 Requires:	%{name}-sub2-domain_API-Multimedia-Thumbnail_Util
+Requires:	%{name}-sub2-domain_API-Multimedia-Tone_Player
 Requires:	%{name}-sub2-domain_API-Multimedia-Video_Util
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_BREDR
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_LE
