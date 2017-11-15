@@ -82,6 +82,7 @@ Requires:	%{name}-sub2-domain_API-Multimedia-Camera
 Requires:	%{name}-sub2-domain_API-Multimedia-Configuration
 Requires:	%{name}-sub2-domain_API-Multimedia-Media_Codec
 Requires:	%{name}-sub2-domain_API-Multimedia-Metadata_Extractor
+Requires:	%{name}-sub2-domain_API-Multimedia-Metadata_Editor
 Requires:	%{name}-sub2-domain_API-Multimedia-Player
 Requires:	%{name}-sub2-domain_API-Multimedia-Recorder
 Requires:	%{name}-sub2-domain_API-Multimedia-Thumbnail_Util
