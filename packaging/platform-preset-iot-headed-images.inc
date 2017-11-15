@@ -46,7 +46,6 @@ Requires:	%{name}-sub2-Preset_boards-ARTIK530-EFL
 Requires:	download-fonts-service
 Requires:	e-mod-tizen-eom
 Requires:	elementary-tools
-Requires:	elm-sharp-theme-common
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-IM
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Sensor
 Requires:	sensord-profile_common
@@ -114,7 +113,6 @@ Requires:	%{name}-sub2-Preset_boards-RPI3-EFL
 Requires:	download-fonts-service
 Requires:	e-mod-tizen-eom
 Requires:	elementary-tools
-Requires:	elm-sharp-theme-common
 Requires:	%{name}-sub2-Preset_boards-RPI3-IM
 Requires:	%{name}-sub2-Preset_boards-RPI3-Sensor
 Requires:	sensord-profile_common

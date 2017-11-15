@@ -11,6 +11,8 @@ Requires: cordova-api
 Requires: webapi-plugins
 Requires: webapi-plugins-profile_common
 Requires: wgt-backend
+Requires: browser-provider
+Requires: libwebsockets
 %description sub1-domain_Feature-WebAPI
 Tizen block (set of packages) for supporting WebAPI of Tizen
 %files sub1-domain_Feature-WebAPI
