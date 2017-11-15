@@ -7,6 +7,7 @@
 %package sub1-domain_API-AppFramework
 Summary:	Application Framework Native API Group
 Suggests: %{name}-sub2-domain_API-AppFramework-TPK_Installation
+Suggests: %{name}-sub2-domain_API-AppFramework-External_Storage_Installation
 Suggests: %{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
 Suggests: %{name}-sub2-domain_API-AppFramework-Alarm_API
 Suggests: %{name}-sub2-domain_API-AppFramework-Message_Port_API
@@ -29,6 +30,14 @@ Requires: pkgmgr-tool
 %description sub2-domain_API-AppFramework-TPK_Installation
 This block supports tpk package management (install/uninstall)
 %files sub2-domain_API-AppFramework-TPK_Installation
+
+%package sub2-domain_API-AppFramework-External_Storage_Installation
+Summary: Package management in external storage (SD card)
+Requires: app2sd
+Requires: app2sd-plugin
+%description sub2-domain_API-AppFramework-External_Storage_Installation
+This block supports package management in external storage (SD card)
+%files sub2-domain_API-AppFramework-External_Storage_Installation
 
 %package sub2-domain_API-AppFramework-Native_EFL_UI_app_model
 Summary: Native EFL UI app model
