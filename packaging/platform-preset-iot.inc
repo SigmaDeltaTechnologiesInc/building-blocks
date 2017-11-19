@@ -68,6 +68,7 @@ Requires:	%{name}-root-Preset_iot_core
 Requires:	%{name}-sub2-domain_API-AppFramework-Alarm_API
 Requires:	%{name}-sub2-domain_API-AppFramework-Data_Control_API
 Requires:	%{name}-sub2-domain_API-AppFramework-Event_API
+Requires:   %{name}-sub2-domain_API-AppFramework-External_Storage_Installation
 Requires:	%{name}-sub2-domain_API-AppFramework-Media_Key_API
 Requires:	%{name}-sub2-domain_API-AppFramework-Message_Port_API
 Requires:	%{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
