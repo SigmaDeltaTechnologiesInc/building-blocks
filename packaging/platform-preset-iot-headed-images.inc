@@ -51,6 +51,7 @@ Requires:	%{name}-sub2-Preset_boards-ARTIK530-Sensor
 Requires:	sensord-profile_common
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-System
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-System_Device
+Requires:	%{name}-sub2-Preset_boards-ARTIK530-WifiDirect
 ## Partition
 Requires:	%{name}-sub1-Preset_partition-3parts_ramdisk
 ## Feature
@@ -117,6 +118,7 @@ Requires:	%{name}-sub2-Preset_boards-RPI3-Sensor
 Requires:	sensord-profile_common
 Requires:	%{name}-sub2-Preset_boards-RPI3-System
 Requires:	%{name}-sub2-Preset_boards-RPI3-System_Device
+Requires:	%{name}-sub2-Preset_boards-RPI3-WifiDirect
 ## Partition
 Requires:	%{name}-sub1-Preset_partition-3parts_ramdisk
 ## Feature
