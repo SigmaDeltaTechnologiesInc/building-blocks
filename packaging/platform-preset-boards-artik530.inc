@@ -220,7 +220,10 @@ If you enable the UI, you can select net-config-plugin-headed.
 
 ### ARTIK530-WifiDirect ###
 %package sub2-Preset_boards-ARTIK530-WifiDirect
-Summary:	ARTIK530_WifiDirect ( Not Supported )
+Summary:	ARTIK530_WifiDirect
+Requires:	%{name}-sub2-domain_API-Network-WiFi_Direct
+Requires:	%{name}-sub2-Preset_boards-ARTIK530-Wifi
+Requires:	wifi-direct-manager-profile_common
 
 %description sub2-Preset_boards-ARTIK530-WifiDirect
 Packages of WifiDirect HAL and Feature for ARTIK530.
