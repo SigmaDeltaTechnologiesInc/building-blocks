@@ -414,7 +414,7 @@ common profile : wpa_supplicant-profile_common <br>
 
 %package sub2-domain_API-Network-WiFi_Manager
 Summary:    WiFi_Manager
-Requires:	capi-network-wifi
+Requires:	capi-network-wifi-manager
 Requires:	net-config
 Requires:	connman
 Requires:	wpa_supplicant
