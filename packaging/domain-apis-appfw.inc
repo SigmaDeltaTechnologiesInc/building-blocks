@@ -120,6 +120,7 @@ Requires: data-provider-master
 %description sub2-domain_API-AppFramework-Shortcut_API
 This block supports shortcut API
 %files sub2-domain_API-AppFramework-Shortcut_API
+%tizen_feature tizen.org/feature/shortcut true
 
 %package sub2-domain_API-AppFramework-Badge_API
 Summary: Badge API
