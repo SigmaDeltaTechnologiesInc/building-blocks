@@ -53,7 +53,7 @@ Requires:	%{name}-sub2-Preset_boards-ARTIK530-System
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-System_Device
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-WifiDirect
 ## Partition
-Requires:	%{name}-sub1-Preset_partition-3parts_ramdisk
+Requires:	%{name}-sub1-Preset_partition-3parts_ramdisk_recovery
 ## Feature
 Requires:	%{name}-sub1-domain_Feature-BootAni
 Requires:	%{name}-sub1-domain_Feature-DotNET
@@ -120,7 +120,7 @@ Requires:	%{name}-sub2-Preset_boards-RPI3-System
 Requires:	%{name}-sub2-Preset_boards-RPI3-System_Device
 Requires:	%{name}-sub2-Preset_boards-RPI3-WifiDirect
 ## Partition
-Requires:	%{name}-sub1-Preset_partition-3parts_ramdisk
+Requires:	%{name}-sub1-Preset_partition-3parts_ramdisk_recovery
 ## Feature
 Requires:	%{name}-sub1-domain_Feature-BootAni
 Requires:	%{name}-sub1-domain_Feature-DotNET
