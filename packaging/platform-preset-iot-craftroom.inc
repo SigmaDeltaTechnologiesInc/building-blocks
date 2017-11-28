@@ -21,7 +21,6 @@ The Presets for Craftroom.
 %package sub1-Preset_craftroom-iot_headless_artik530
 Summary:    IOT Headless ARTIK530 Presets for Craftrom
 %list_with_require %{_datadir}/image-configurations/iot-headless-2parts-armv7l-artik530_710.ks
-Requires: %{name}-sub1-Preset_partition-2parts_ramdisk
 
 Conflicts:	%{name}-sub1-Preset_craftroom-iot_headless_rpi3
 Conflicts:	%{name}-sub1-Preset_craftroom-iot_headed_artik530
@@ -36,7 +35,6 @@ The packages of Tizen IoT Headless for ARTIK530.
 %package sub1-Preset_craftroom-iot_headed_artik530
 Summary:    IOT Headed ARTIK530 Presets for Craftrom
 %list_with_require %{_datadir}/image-configurations/iot-headed-3parts-armv7l-artik530_710.ks
-Requires:	%{name}-sub1-Preset_partition-3parts_ramdisk_recovery
 
 Conflicts:	%{name}-sub1-Preset_craftroom-iot_headless_rpi3
 Conflicts:	%{name}-sub1-Preset_craftroom-iot_headless_artik530
@@ -51,7 +49,6 @@ The packages of Tizen IoT Headed for ARTIK530.
 %package sub1-Preset_craftroom-iot_headless_rpi3
 Summary:    IOT Headless RPI3 Presets for Craftrom
 %list_with_require %{_datadir}/image-configurations/iot-headless-2parts-armv7l-rpi3.ks
-Requires: %{name}-sub1-Preset_partition-2parts_ramdisk_recovery
 
 Conflicts:	%{name}-sub1-Preset_craftroom-iot_headless_artik530
 Conflicts:	%{name}-sub1-Preset_craftroom-iot_headed_artik530
