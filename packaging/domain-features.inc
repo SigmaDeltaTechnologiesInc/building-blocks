@@ -9,6 +9,7 @@ Suggests:	%{name}-sub1-domain_Feature-WebAPI
 Suggests:	%{name}-sub1-domain_Feature-BootAni
 Suggests:	%{name}-sub1-domain_Feature-Starter
 Suggests:	%{name}-sub1-domain_Feature-Upgrade
+Suggests:	%{name}-sub1-domain_Feature-Recovery
 Suggests:	%{name}-sub1-domain_Feature-Tool_And_Locale
 %description root-domain_Feature
 __EXPAND__: domains
