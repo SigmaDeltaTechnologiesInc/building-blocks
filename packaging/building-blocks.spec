@@ -40,6 +40,7 @@ Source1304: domain-features-bootanimation.inc
 Source1305: domain-features-starter.inc
 Source1306: domain-features-upgrade.inc
 Source1307: domain-features-tool_and_locale.inc
+Source1308: domain-features-recovery.inc
 
 Source2010:	epicfeature-development.inc
 Source2020:	epicfeature-application.inc
@@ -315,6 +316,7 @@ python ./rule_checker.py
 %{include_if_mainbuild %{SOURCE1305}}
 %{include_if_mainbuild %{SOURCE1306}}
 %{include_if_mainbuild %{SOURCE1307}}
+%{include_if_mainbuild %{SOURCE1308}}
 
 ############## EPIC FEATURES ######################
 
