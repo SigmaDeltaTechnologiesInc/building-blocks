@@ -13,6 +13,7 @@ Suggests: %{name}-sub2-domain_API-Security-Key_Manager
 Suggests: %{name}-sub2-domain_API-Security-OpenSSL
 Suggests: %{name}-sub2-domain_API-Security-Privilege_Info
 Suggests: %{name}-sub2-domain_API-Security-YACA
+Suggests: %{name}-sub2-domain_API-Security-Device_Certificate
 %description sub1-domain_API-Security
 Tizen block (set of packages) for Group of domain API-Security
 %files sub1-domain_API-Security
@@ -68,4 +69,11 @@ Requires:   yaca
 %description sub2-domain_API-Security-YACA
 The YACA (Yet Another Crypto Api) provides a crypto functions such as key management, data integrity, data en/decryption and low-level RSA operations.
 %files sub2-domain_API-Security-YACA
+
+%package sub2-domain_API-Security-Device_Certificate
+Summary:    Device_Certificate
+Requires:   device-certificate-manager
+%description sub2-domain_API-Security-Device_Certificate
+Device Certificate Manager provides cryptography services for the Iotivity framework with keys and certitifcates embedded into a device.
+%files sub2-domain_API-Security-Device_Certificate
 
