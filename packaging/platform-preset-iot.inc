@@ -151,7 +151,7 @@ Requires:	%{name}-sub2-domain_API-Social-Calendar
 Requires:	%{name}-sub2-domain_API-Social-Contacts
 Requires:	%{name}-sub2-domain_API-Social-Phonenumber_utils
 Requires:	%{name}-sub2-domain_API-System-Device
-Requires:	%{name}-sub2-domain_API-System-Runtime_information
+Requires:	%{name}-sub2-domain_API-System-Runtime_Information
 Requires:	%{name}-sub2-domain_API-System-Sensor_Listener
 Requires:	%{name}-sub2-domain_API-System-Sensor_Recorder
 Requires:	%{name}-sub2-domain_API-System-Storage

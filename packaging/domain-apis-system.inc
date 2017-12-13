@@ -10,9 +10,7 @@ Summary:	System API Group
 Suggests: %{name}-sub2-domain_API-System-Device
 Suggests: %{name}-sub2-domain_API-System-Device_Haptic
 Suggests: %{name}-sub2-domain_API-System-Feedback
-Suggests: %{name}-sub2-domain_API-System-Runtime_information
-Suggests: %{name}-sub2-domain_API-System-Runtime_information_Light
-Suggests: %{name}-sub2-domain_API-System-Runtime_information_Headless
+Suggests: %{name}-sub2-domain_API-System-Runtime_Information
 Suggests: %{name}-sub2-domain_API-System-Sensor_Listener
 Suggests: %{name}-sub2-domain_API-System-Sensor_Recorder
 Suggests: %{name}-sub2-domain_API-System-Storage
@@ -90,43 +88,19 @@ Then choose proper combination.
 For example, svi-data-profile_common for common
 %files sub2-domain_API-System-Feedback
 
-%package sub2-domain_API-System-Runtime_information
-Summary:    Runtime information with Resourced
+%package sub2-domain_API-System-Runtime_Information
+Summary:    Runtime information
 Requires:   capi-system-runtime-info
-Requires:   resourced
-Conflicts:  %{name}-sub2-domain_API-System-Runtime_information_Light
-Conflicts:  %{name}-sub2-domain_API-System-Runtime_information_Headless
-%description sub2-domain_API-System-Runtime_information
+Suggests:   %{name}-sub1-domain_Feature-Resource_manager
+Suggests:   %{name}-sub1-domain_Feature-Resource_manager_Light
+Suggests:   %{name}-sub1-domain_Feature-Resource_manager_Headless
+%description sub2-domain_API-System-Runtime_Information
 capi-system-runtime-info provides the current system state.<br>
-To get the process information, it needs resourced.<br>
-This building block uses full-featured resourced.
-%files sub2-domain_API-System-Runtime_information
-
-%package sub2-domain_API-System-Runtime_information_Light
-Summary:    Runtime information with Resourced-light
-Requires:   capi-system-runtime-info
-Requires:   resourced-light
-Conflicts:  %{name}-sub2-domain_API-System-Runtime_information
-Conflicts:  %{name}-sub2-domain_API-System-Runtime_information_Headless
-%description sub2-domain_API-System-Runtime_information_Light
-capi-system-runtime-info provides the current system state.<br>
-To get the process information, it needs resourced.<br>
-This building block uses light-weight resourced.
-%files sub2-domain_API-System-Runtime_information_Light
-
-%package sub2-domain_API-System-Runtime_information_Headless
-Summary:    Runtime information with Resourced-headless
-Requires:   capi-system-runtime-info
-Requires:   resourced-headless
-Requires:   resourced-headless-common
-Requires:   resourced-headless-proc-usage
-Conflicts:  %{name}-sub2-domain_API-System-Runtime_information
-Conflicts:  %{name}-sub2-domain_API-System-Runtime_information_Light
-%description sub2-domain_API-System-Runtime_information_Headless
-capi-system-runtime-info provides the current system state.<br>
-To get the process information, it needs resourced.<br>
-This building block uses the resourced for headless device.
-%files sub2-domain_API-System-Runtime_information_Headless
+To get the process information, you need to add one of these resource manager features below;<br>
+  * Tizen Resource Manager - Full Featured<br>
+  * Tizen Resource Manager - For Headless Devices<br>
+  * Tizen Resource Manager - Light-Weight   
+%files sub2-domain_API-System-Runtime_Information
 
 %package sub2-domain_API-System-Sensor_Listener
 Summary:    Sensor_Listener
