@@ -1,0 +1,456 @@
+<?xml version="1.0"?>
+<MappingInfo>
+	<buildingblock name="building-blocks-root-Preset_iot_core">
+		<rs_info>bundle-rs.xml</rs_info>
+		<rs_info>capi-appfw-app-common-rs.xml</rs_info>
+		<rs_info>capi-appfw-app-control-rs.xml</rs_info>
+		<rs_info>capi-appfw-app-manager-rs.xml</rs_info>
+		<rs_info>capi-appfw-preference-rs.xml</rs_info>
+		<rs_info>capi-appfw-service-application-rs.xml</rs_info>
+		<rs_info>capi-base-common-rs.xml</rs_info>
+		<rs_info>capi-network-connection-rs.xml</rs_info>
+		<rs_info>capi-network-wifi-manager-rs.xml</rs_info>
+		<rs_info>capi-network-wifi-rs.xml</rs_info>
+		<rs_info>capi-system-info-rs.xml</rs_info>
+		<rs_info>capi-system-peripheral-io-rs.xml</rs_info>
+		<rs_info>ecore-rs.xml</rs_info>
+		<rs_info>efl-rs.xml</rs_info>
+		<rs_info>eina-rs.xml</rs_info>
+		<rs_info>eo-rs.xml</rs_info>
+		<rs_info>glib2-rs.xml</rs_info>
+		<rs_info>glibc-rs.xml</rs_info>
+		<rs_info>iotcon-rs.xml</rs_info>
+		<rs_info>json-glib-rs.xml</rs_info>
+		<rs_info>key-manager-rs.xml</rs_info>
+		<rs_info>libdlog-rs.xml</rs_info>
+		<rs_info>libxml2-rs.xml</rs_info>
+		<rs_info>minizip-rs.xml</rs_info>
+		<rs_info>openssl-rs.xml</rs_info>
+		<rs_info>sqlite-rs.xml</rs_info>
+		<rs_info>trace-rs.xml</rs_info>
+		<rs_info>zlib-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Account-Account_Manager">
+		<rs_info>libaccount-service-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Account-FIDO_Client">
+		<rs_info>fido-client-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Account-OAuth2">
+		<rs_info>oauth2-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Account-Sync_Manager">
+		<rs_info>libcore-sync-client-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Account-libOAuth">
+		<rs_info>liboauth-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-AppFramework-Alarm_API">
+		<rs_info>capi-appfw-alarm-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-AppFramework-Attach_Panel">
+		<rs_info>attach-panel-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-AppFramework-Badge_API">
+		<rs_info>badge-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-AppFramework-Data_Control_API">
+		<rs_info>capi-data-control-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-AppFramework-Event_API">
+		<rs_info>capi-appfw-event-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-AppFramework-Media_Key_API">
+		<rs_info>capi-system-media-key-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-AppFramework-Message_Port_API">
+		<rs_info>capi-message-port-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-AppFramework-Native_EFL_UI_app_model">
+		<rs_info>capi-appfw-application-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-AppFramework-Native_EFL_Widget_App_Model">
+		<rs_info>appcore-widget-rs.xml</rs_info>
+		<rs_info>widget-service-rs.xml</rs_info>
+		<rs_info>widget-viewer-evas-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-AppFramework-Notification_API">
+		<rs_info>notification-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-AppFramework-Shortcut_API">
+		<rs_info>libshortcut-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-AppFramework-TPK_Installation">
+		<rs_info>capi-appfw-package-manager-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Base-Glib">
+		<rs_info>glib2-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Base-Glibc">
+		<rs_info>glibc-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Base-LibXML">
+		<rs_info>libxml2-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Base-Minizip">
+		<rs_info>minizip-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Base-Sqlite">
+		<rs_info>sqlite-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Base-Utils">
+		<rs_info>capi-base-utils-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Base-zlib">
+		<rs_info>zlib-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Content-Download">
+		<rs_info>capi-web-url-download-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Content-MIME_Type">
+		<rs_info>capi-content-mime-type-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Content-Media_Content">
+		<rs_info>capi-content-media-content-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Context-Activity_Geusture_Recognition">
+		<rs_info>capi-context-motion-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Context-Contextual_History">
+		<rs_info>capi-context-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Context-Contextual_Trigger">
+		<rs_info>capi-context-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Location-Geofence_Manager">
+		<rs_info>capi-geofence-manager-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Location-Location_Manager">
+		<rs_info>capi-location-manager-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Maps-Here_Plugin">
+		<rs_info>capi-maps-service-rs.xml</rs_info>
+		<rs_info>capi-maps-service-plugin-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Maps-Maps_Service">
+		<rs_info>capi-maps-service-rs.xml</rs_info>
+		<rs_info>capi-maps-service-plugin-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Maps-Mapzen_Plugin">
+		<rs_info>capi-maps-service-rs.xml</rs_info>
+		<rs_info>capi-maps-service-plugin-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Messaging-Email">
+		<rs_info>capi-messaging-email-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Messaging-Messages">
+		<rs_info>capi-messaging-messages-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Messaging-Push">
+		<rs_info>libpush-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Audio_IO">
+		<rs_info>capi-media-audio-io-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Camera">
+		<rs_info>capi-media-camera-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Image_Util">
+		<rs_info>capi-media-image-util-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Codec">
+		<rs_info>capi-media-codec-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Controller">
+		<rs_info>capi-media-controller-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Demuxer">
+		<rs_info>capi-mediademuxer-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Muxer">
+		<rs_info>capi-mediamuxer-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Streamer">
+		<rs_info>capi-media-streamer-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Tool">
+		<rs_info>capi-media-tool-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Vision_Barcode">
+		<rs_info>capi-media-vision-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Vision_Face">
+		<rs_info>capi-media-vision-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Vision_Image">
+		<rs_info>capi-media-vision-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Vision_Surveillance">
+		<rs_info>capi-media-vision-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Metadata_Editor">
+		<rs_info>capi-media-metadata-editor-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Metadata_Extractor">
+		<rs_info>capi-media-metadata-extractor-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-OpenAL">
+		<rs_info>openal-soft-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Player">
+		<rs_info>capi-media-player-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Radio">
+		<rs_info>capi-media-radio-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Recorder">
+		<rs_info>capi-media-recorder-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Screen_Mirroring">
+		<rs_info>capi-media-screen-mirroring-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Sound_Manager">
+		<rs_info>capi-media-sound-manager-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Stream_Recorder">
+		<rs_info>capi-media-streamrecorder-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Thumbnail_Util">
+		<rs_info>capi-media-thumbnail-util-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Tone_Player">
+		<rs_info>capi-media-tone-player-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Video_Util">
+		<rs_info>capi-media-video-util-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-WAV_Player">
+		<rs_info>capi-media-wav-player-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-libEXIF">
+		<rs_info>libexif-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-ASP">
+		<rs_info>capi-network-asp-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-Bluetooth_BREDR">
+		<rs_info>capi-network-bluetooth-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-Bluetooth_Call_Audio">
+		<rs_info>capi-network-bluetooth-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-Bluetooth_LE">
+		<rs_info>capi-network-bluetooth-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-Bluetooth_Media_Audio">
+		<rs_info>capi-network-bluetooth-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-Bluetooth_Transfer">
+		<rs_info>capi-network-bluetooth-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-Connection">
+		<rs_info>capi-network-connection-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-Curl">
+		<rs_info>libcurl-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-DNSSD">
+		<rs_info>capi-network-nsd-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-HTTP">
+		<rs_info>capi-network-http-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-IoTCon">
+		<rs_info>iotcon-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-MTP">
+		<rs_info>capi-network-mtp-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-NFC">
+		<rs_info>capi-network-nfc-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-SSDP">
+		<rs_info>capi-network-nsd-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-STC">
+		<rs_info>capi-network-stc-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-Smartcard">
+		<rs_info>capi-network-smartcard-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-VPN_Service">
+		<rs_info>capi-vpn-service-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-WiFi">
+		<rs_info>capi-network-wifi-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-WiFi_Direct">
+		<rs_info>capi-network-wifi-direct-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-WiFi_Manager">
+		<rs_info>capi-network-wifi-manager-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Security-CSR">
+		<rs_info>csr-framework-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Security-Device_Policy">
+		<rs_info>dpm-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Security-Key_Manager">
+		<rs_info>key-manager-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Security-OpenSSL">
+		<rs_info>openssl-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Security-Privilege_Info">
+		<rs_info>privilege-info-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Security-YACA">
+		<rs_info>yaca-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Social-Calendar">
+		<rs_info>calendar-service-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Social-Contacts">
+		<rs_info>contacts-service2-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Social-Phonenumber_utils">
+		<rs_info>phonenumber-utils-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-Device_Battery">
+		<rs_info>capi-system-device-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-Device_Callback">
+		<rs_info>capi-system-device-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-Device_Display">
+		<rs_info>capi-system-device-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-Device_Haptic">
+		<rs_info>capi-system-device-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-Device_IR">
+		<rs_info>capi-system-device-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-Device_Led">
+		<rs_info>capi-system-device-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-Device_Power">
+		<rs_info>capi-system-device-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-Feedback">
+		<rs_info>libfeedback-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-Runtime_information">
+		<rs_info>capi-system-runtime-info-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-Runtime_information_Headless">
+		<rs_info>capi-system-runtime-info-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-Runtime_information_Light">
+		<rs_info>capi-system-runtime-info-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-Sensor_Listener">
+		<rs_info>capi-system-sensor-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-Sensor_Recorder">
+		<rs_info>capi-system-sensor-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-Storage">
+		<rs_info>libstorage-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-System_Information">
+		<rs_info>capi-system-info-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-System_Settings">
+		<rs_info>capi-system-system-settings-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-T_Trace">
+		<rs_info>trace-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-USB_Host">
+		<rs_info>capi-system-usbhost-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-dlog">
+		<rs_info>libdlog-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub1-domain_API-Telephony">
+		<rs_info>capi-telephony-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-Cairo">
+		<rs_info>cairo-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-Clipboard_History_Manager">
+		<rs_info>cbhm-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-DALi">
+		<rs_info>dali-rs.xml</rs_info>
+		<rs_info>dali-toolkit-rs.xml</rs_info>
+		<rs_info>dali-adaptor-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-EFL_Extension">
+		<rs_info>efl-extension-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-EFL_MainLoop">
+		<rs_info>ecore-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-EFL_NativeUIToolkit">
+		<rs_info>ecore-rs.xml</rs_info>
+		<rs_info>elementary-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-External_Output_Manager">
+		<rs_info>libeom-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-FontConfig">
+		<rs_info>fontconfig-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-Freetype">
+		<rs_info>freetype-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-HarfBuzz">
+		<rs_info>harfbuzz-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-Minicontrol">
+		<rs_info>minicontrol-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-SDL_GL">
+		<rs_info>SDL2-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-SDL_Vulkan">
+		<rs_info>SDL2-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-TBM_Surface">
+		<rs_info>libtbm-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-Tizen_WS_Shell">
+		<rs_info>tzsh-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-UI_View_Manager">
+		<rs_info>ui-viewmgr-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-Vulkan">
+		<rs_info>Vulkan-LoaderAndValidationLayers-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UIX-Input_Method">
+		<rs_info>capi-ui-inputmethod-rs.xml</rs_info>
+		<rs_info>capi-ui-inputmethod-manager-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UIX-STT">
+		<rs_info>stt-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UIX-TTS">
+		<rs_info>tts-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UIX-Voice_control">
+		<rs_info>voice-control-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UIX-Voice_control_elementary">
+		<rs_info>voice-control-elm-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Web-WebView">
+		<rs_info>chromium-efl-rs.xml</rs_info>
+	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Web-json_Glib">
+		<rs_info>json-glib-rs.xml</rs_info>
+	</buildingblock>
+</MappingInfo>
