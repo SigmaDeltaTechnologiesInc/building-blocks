@@ -12,6 +12,10 @@ Suggests:	%{name}-sub1-domain_Feature-Upgrade
 Suggests:	%{name}-sub1-domain_Feature-Recovery
 Suggests:	%{name}-sub1-domain_Feature-Setup
 Suggests:	%{name}-sub1-domain_Feature-Tool_And_Locale
+Suggests:   %{name}-sub1-domain_Feature-Resource_manager
+Suggests:   %{name}-sub1-domain_Feature-Resource_manager_Light
+Suggests:   %{name}-sub1-domain_Feature-Resource_manager_Headless
+
 %description root-domain_Feature
 __EXPAND__: domains
 Tizen Platform Internal Feature Sets

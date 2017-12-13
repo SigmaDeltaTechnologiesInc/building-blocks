@@ -15,9 +15,7 @@ Suggests: %{name}-sub2-domain_API-System-Device_IR
 Suggests: %{name}-sub2-domain_API-System-Device_Led
 Suggests: %{name}-sub2-domain_API-System-Device_Power
 Suggests: %{name}-sub2-domain_API-System-Feedback
-Suggests: %{name}-sub2-domain_API-System-Runtime_information
-Suggests: %{name}-sub2-domain_API-System-Runtime_information_Light
-Suggests: %{name}-sub2-domain_API-System-Runtime_information_Headless
+Suggests: %{name}-sub2-domain_API-System-Runtime_Information
 Suggests: %{name}-sub2-domain_API-System-Sensor_Listener
 Suggests: %{name}-sub2-domain_API-System-Sensor_Recorder
 Suggests: %{name}-sub2-domain_API-System-Storage
@@ -241,43 +239,13 @@ For example, svi-data-profile_common for common
              feedbackd-profile_mobile and svi-data-profile_mobile for mobile
 %files sub2-domain_API-System-Feedback
 
-%package sub2-domain_API-System-Runtime_information
-Summary:    Runtime information with Resourced
+%package sub2-domain_API-System-Runtime_Information
+Summary:    Runtime information
 Requires:   capi-system-runtime-info
-Requires:   resourced
-Conflicts:  %{name}-sub2-domain_API-System-Runtime_information_Light
-Conflicts:  %{name}-sub2-domain_API-System-Runtime_information_Headless
-%description sub2-domain_API-System-Runtime_information
+%description sub2-domain_API-System-Runtime_Information
 capi-system-runtime-info provides the current system state.<br>
-To get the process information, it needs resourced.<br>
-This building block uses full-featured resourced.
-%files sub2-domain_API-System-Runtime_information
-
-%package sub2-domain_API-System-Runtime_information_Light
-Summary:    Runtime information with Resourced-light
-Requires:   capi-system-runtime-info
-Requires:   resourced-light
-Conflicts:  %{name}-sub2-domain_API-System-Runtime_information
-Conflicts:  %{name}-sub2-domain_API-System-Runtime_information_Headless
-%description sub2-domain_API-System-Runtime_information_Light
-capi-system-runtime-info provides the current system state.<br>
-To get the process information, it needs resourced.<br>
-This building block uses light-weight resourced.
-%files sub2-domain_API-System-Runtime_information_Light
-
-%package sub2-domain_API-System-Runtime_information_Headless
-Summary:    Runtime information with Resourced-headless
-Requires:   capi-system-runtime-info
-Requires:   resourced-headless
-Requires:   resourced-headless-common
-Requires:   resourced-headless-proc-usage
-Conflicts:  %{name}-sub2-domain_API-System-Runtime_information
-Conflicts:  %{name}-sub2-domain_API-System-Runtime_information_Light
-%description sub2-domain_API-System-Runtime_information_Headless
-capi-system-runtime-info provides the current system state.<br>
-To get the process information, it needs resourced.<br>
-This building block uses the resourced for headless device.
-%files sub2-domain_API-System-Runtime_information_Headless
+To get the process information, it needs resource manager.
+%files sub2-domain_API-System-Runtime_Information
 
 %package sub2-domain_API-System-Sensor_Listener
 Summary:    Sensor_Listener
