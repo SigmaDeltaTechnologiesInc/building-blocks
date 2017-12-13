@@ -44,7 +44,6 @@ Requires:	dali-toolkit-resources_720x1280
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Display
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-EFL
 Requires:	download-fonts-service
-Requires:	e-mod-tizen-eom
 Requires:	elementary-tools
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-IM
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Sensor
@@ -112,7 +111,6 @@ Requires:	dali-toolkit-resources_720x1280
 Requires:	%{name}-sub2-Preset_boards-RPI3-Display
 Requires:	%{name}-sub2-Preset_boards-RPI3-EFL
 Requires:	download-fonts-service
-Requires:	e-mod-tizen-eom
 Requires:	elementary-tools
 Requires:	%{name}-sub2-Preset_boards-RPI3-IM
 Requires:	%{name}-sub2-Preset_boards-RPI3-Sensor
