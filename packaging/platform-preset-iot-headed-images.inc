@@ -96,7 +96,7 @@ Requires:	alsa-utils
 Requires:	capi-media-player-display
 Requires:	gst-omx
 Requires:	gstreamer-utils
-#Requires:	libomxil-vc4
+Requires:	libomxil-vc4
 Requires:	pulseaudio-utils
 Requires:	%{name}-sub2-Preset_boards-RPI3-BLE
 Requires:	%{name}-sub2-Preset_boards-RPI3-Bluetooth
