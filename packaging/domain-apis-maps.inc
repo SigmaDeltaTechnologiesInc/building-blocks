@@ -8,7 +8,6 @@
 Summary:	Maps API Group
 Suggests: %{name}-sub2-domain_API-Maps-Maps_Service
 Suggests: %{name}-sub2-domain_API-Maps-Here_Plugin
-Suggests: %{name}-sub2-domain_API-Maps-Mapzen_Plugin
 %description sub1-domain_API-Maps
 Tizen block (set of packages) for Group of domain API-Maps
 %files sub1-domain_API-Maps
@@ -18,8 +17,7 @@ Summary:	Maps_Service
 Requires:	capi-maps-service
 Requires:	%{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
 Requires:	%{name}-sub2-domain_API-Network-Connection
-Suggests:	%{name}-sub2-domain_API-Maps-Here_Plugin
-Suggests:	%{name}-sub2-domain_API-Maps-Mapzen_Plugin
+Requires:	%{name}-sub2-domain_API-Maps-Here_Plugin
 
 %description sub2-domain_API-Maps-Maps_Service
 This block supports Maps Service.<br>
@@ -40,15 +38,4 @@ Requires:	org.tizen.heremaps-uc
 %description sub2-domain_API-Maps-Here_Plugin
 This block supports HERE Plugin.
 
-
 %files sub2-domain_API-Maps-Here_Plugin
-
-%package sub2-domain_API-Maps-Mapzen_Plugin
-Summary:    Mapzen_Plugin
-Requires:	maps-plugin-mapzen
-
-%description sub2-domain_API-Maps-Mapzen_Plugin
-This block supports MAPZEN plugin.
-
-%files sub2-domain_API-Maps-Mapzen_Plugin
-
