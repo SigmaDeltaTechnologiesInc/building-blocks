@@ -27,9 +27,7 @@ Requires:	%{name}-sub2-Preset_boards-ARTIK530-Audio
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Audio_Recording
 Requires:	alsa-utils
 Requires:	capi-media-player-display
-Requires:	gst-omx
 Requires:	gstreamer-utils
-Requires:	libomxil-e54xx
 Requires:	pulseaudio-utils
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-BLE
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Bluetooth
@@ -39,6 +37,7 @@ Requires:	org.tizen.bt-syspopup
 Requires:	org.tizen.bt-syspopup-profile_common
 Requires:	capi-network-bluetooth-test
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Camera
+Requires:	%{name}-sub2-Preset_boards-ARTIK530-Codec
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-DALi
 Requires:	dali-toolkit-resources_720x1280
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Display
@@ -106,6 +105,7 @@ Requires:	org.tizen.bt-syspopup
 Requires:	org.tizen.bt-syspopup-profile_common
 Requires:	capi-network-bluetooth-test
 Requires:	%{name}-sub2-Preset_boards-RPI3-Camera
+Requires:	%{name}-sub2-Preset_boards-RPI3-Codec
 Requires:	%{name}-sub2-Preset_boards-RPI3-DALi
 Requires:	dali-toolkit-resources_720x1280
 Requires:	%{name}-sub2-Preset_boards-RPI3-Display

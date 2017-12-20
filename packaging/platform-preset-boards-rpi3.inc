@@ -11,6 +11,7 @@ Suggests:	%{name}-sub2-Preset_boards-RPI3-System_Device
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Audio
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Audio_Recording
 Suggests:	%{name}-sub2-Preset_boards-RPI3-GPS
+Suggests:	%{name}-sub2-Preset_boards-RPI3-Codec
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Camera
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Display
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Display_Headless
@@ -135,6 +136,23 @@ Requires:	%{name}-sub2-domain_API-Location-Location_Manager
 %description sub2-Preset_boards-RPI3-GPS
 Packages of GPS HAL and Feature for RPI3.
 %files sub2-Preset_boards-RPI3-GPS
+
+### RPI3-Codec ###
+%package sub2-Preset_boards-RPI3-Codec
+Summary:	RPI3_Codec
+Suggests:	%{name}-sub2-Preset_boards-RPI3-Display
+Suggests:	%{name}-sub2-Preset_boards-RPI3-Display_Headless
+Requires:	gst-omx
+Requires:	libomxil-vc4
+Requires:	mmfw-sysconf-target-rpi3
+
+Suggests:	%{name}-sub2-domain_API-Multimedia-Player
+Suggests:	%{name}-sub2-domain_API-Multimedia-Media_Streamer
+Suggests:	%{name}-sub2-domain_API-Multimedia-Media_Codec
+
+%description sub2-Preset_boards-RPI3-Codec
+Packages of Codec HAL and Feature for RPI3.
+%files sub2-Preset_boards-RPI3-Codec
 
 ### RPI3-Camera ###
 %package sub2-Preset_boards-RPI3-Camera
