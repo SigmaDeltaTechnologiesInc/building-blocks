@@ -60,6 +60,7 @@ Requires:	%{name}-sub1-domain_Feature-SoftAP
 Requires:	%{name}-sub1-domain_Feature-Starter
 Requires:	%{name}-sub1-domain_Feature-Upgrade
 Requires:	%{name}-sub1-domain_Feature-WebAPI
+Requires:	%{name}-sub1-domain_Feature-Setup
 ## building-blocks-sub1-domain_Feature-Tool_And_Locale
 Requires:	crash-worker
 Requires:	glibc-locale
@@ -129,6 +130,7 @@ Requires:	%{name}-sub1-domain_Feature-Starter
 Requires:	%{name}-sub1-domain_Feature-Upgrade
 Requires:	%{name}-sub1-domain_Feature-Recovery
 Requires:	%{name}-sub1-domain_Feature-WebAPI
+Requires:	%{name}-sub1-domain_Feature-Setup
 ## building-blocks-sub1-domain_Feature-Tool_And_Locale
 Requires:	crash-worker
 Requires:	glibc-locale
