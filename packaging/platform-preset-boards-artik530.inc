@@ -11,6 +11,7 @@ Suggests:	%{name}-sub2-Preset_boards-ARTIK530-System_Device
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Audio
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Audio_Recording
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-GPS
+Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Codec
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Camera
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Display
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Display_Headless
@@ -136,6 +137,25 @@ Summary:	ARTIK530_GPS (Not Supported)
 %description sub2-Preset_boards-ARTIK530-GPS
 Packages of GPS HAL and Feature for ARTIK530.
 %files sub2-Preset_boards-ARTIK530-GPS
+
+### ARTIK530-Codec ###
+%package sub2-Preset_boards-ARTIK530-Codec
+Summary:	ARTIK530_Codec
+Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Display
+Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Display_Headless
+Requires:	nx-gst-meta
+Requires:	nx-video-api
+Requires:	gst-plugins-video-dec
+Requires:	gst-plugins-video-enc
+Requires:	mmfw-sysconf-target-artik10
+
+Suggests:	%{name}-sub2-domain_API-Multimedia-Player
+Suggests:	%{name}-sub2-domain_API-Multimedia-Media_Streamer
+Suggests:	%{name}-sub2-domain_API-Multimedia-Media_Codec
+
+%description sub2-Preset_boards-ARTIK530-Codec
+Packages of Codec HAL and Feature for ARTIK530.
+%files sub2-Preset_boards-ARTIK530-Codec
 
 ### ARTIK530-Camera ###
 %package sub2-Preset_boards-ARTIK530-Camera
