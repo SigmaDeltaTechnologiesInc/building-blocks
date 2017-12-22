@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <MappingInfo>
 	<buildingblock name="building-blocks-root-Preset_iot_core">
+		<rs_info>kernel-headers-linux-rs.xml</rs_info>
+		<rs_info>gcc-rs.xml</rs_info>
 		<rs_info>bundle-rs.xml</rs_info>
 		<rs_info>capi-appfw-app-common-rs.xml</rs_info>
 		<rs_info>capi-appfw-app-control-rs.xml</rs_info>
