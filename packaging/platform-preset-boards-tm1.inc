@@ -60,13 +60,11 @@ Firstly select HALs and Feature to add to your image.
 %tizen_feature tizen.org/feature/sensor.proximity true
 %tizen_feature tizen.org/feature/sensor.temperature false
 
-
-
 ### TM1-System ###
 %package sub2-Preset_boards-TM1-System
 Summary:	TM1_System
-Requires:	system-plugin-profile-iot-headless
-Requires:	system-plugin-spreadtrum
+Requires:	system-plugin-config-env-headless
+Requires:	system-plugin-device-spreadtrum
 Requires:	model-config-tm1
 
 %description sub2-Preset_boards-TM1-System
