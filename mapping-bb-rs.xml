@@ -436,6 +436,8 @@
 	<buildingblock name="building-blocks-sub2-domain_API-UIX-Input_Method">
 		<rs_info>capi-ui-inputmethod-rs.xml</rs_info>
 		<rs_info>capi-ui-inputmethod-manager-rs.xml</rs_info>
+		<rs_info>evas-rs.xml</rs_info>
+		<rs_info>emile-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-UIX-STT">
 		<rs_info>stt-rs.xml</rs_info>
