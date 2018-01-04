@@ -453,6 +453,7 @@
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Web-WebView">
 		<rs_info>chromium-efl-rs.xml</rs_info>
+		<rs_info>evas-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Web-json_Glib">
 		<rs_info>json-glib-rs.xml</rs_info>
