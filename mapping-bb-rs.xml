@@ -399,6 +399,13 @@
 	<buildingblock name="building-blocks-sub2-domain_API-UI-EFL_NativeUIToolkit">
 		<rs_info>ecore-rs.xml</rs_info>
 		<rs_info>elementary-rs.xml</rs_info>
+                <rs_info>evas-rs.xml</rs_info>
+                <rs_info>emile-rs.xml</rs_info>
+                <rs_info>eet-rs.xml</rs_info>
+                <rs_info>edje-rs.xml</rs_info>
+                <rs_info>eldbus-rs.xml</rs_info>
+                <rs_info>efreet-rs.xml</rs_info>
+             <rs_info>ethumb-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-UI-External_Output_Manager">
 		<rs_info>libeom-rs.xml</rs_info>
