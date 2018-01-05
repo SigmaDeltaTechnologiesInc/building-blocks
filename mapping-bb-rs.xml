@@ -72,11 +72,30 @@
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-AppFramework-Native_EFL_UI_app_model">
 		<rs_info>capi-appfw-application-rs.xml</rs_info>
+		<rs_info>ecore-rs.xml</rs_info>
+		<rs_info>elementary-rs.xml</rs_info>
+		<rs_info>evas-rs.xml</rs_info>
+		<rs_info>emile-rs.xml</rs_info>
+		<rs_info>eet-rs.xml</rs_info>
+		<rs_info>edje-rs.xml</rs_info>
+		<rs_info>eldbus-rs.xml</rs_info>
+		<rs_info>efreet-rs.xml</rs_info>
+		<rs_info>ethumb-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-AppFramework-Native_EFL_Widget_App_Model">
 		<rs_info>appcore-widget-rs.xml</rs_info>
 		<rs_info>widget-service-rs.xml</rs_info>
 		<rs_info>widget-viewer-evas-rs.xml</rs_info>
+		<rs_info>capi-appfw-application-rs.xml</rs_info>
+		<rs_info>ecore-rs.xml</rs_info>
+		<rs_info>elementary-rs.xml</rs_info>
+		<rs_info>evas-rs.xml</rs_info>
+		<rs_info>emile-rs.xml</rs_info>
+		<rs_info>eet-rs.xml</rs_info>
+		<rs_info>edje-rs.xml</rs_info>
+		<rs_info>eldbus-rs.xml</rs_info>
+		<rs_info>efreet-rs.xml</rs_info>
+		<rs_info>ethumb-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-AppFramework-Notification_API">
 		<rs_info>notification-rs.xml</rs_info>
