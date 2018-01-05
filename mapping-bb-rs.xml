@@ -149,6 +149,7 @@
 		<rs_info>capi-messaging-messages-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Messaging-Push">
+		<rs_info>capi-appfw-application-rs.xml</rs_info>
 		<rs_info>libpush-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Audio_IO">
