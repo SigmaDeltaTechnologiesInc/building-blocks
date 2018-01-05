@@ -164,18 +164,24 @@
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Codec">
 		<rs_info>capi-media-codec-rs.xml</rs_info>
+		<rs_info>capi-media-tool-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Controller">
 		<rs_info>capi-media-controller-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Demuxer">
 		<rs_info>capi-mediademuxer-rs.xml</rs_info>
+		<rs_info>capi-media-tool-rs.xml</rs_info>
+		<rs_info>libtbm-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Muxer">
 		<rs_info>capi-mediamuxer-rs.xml</rs_info>
+		<rs_info>capi-media-tool-rs.xml</rs_info>
+		<rs_info>libtbm-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Streamer">
 		<rs_info>capi-media-streamer-rs.xml</rs_info>
+		<rs_info>capi-media-tool-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Tool">
 		<rs_info>capi-media-tool-rs.xml</rs_info>
@@ -203,6 +209,8 @@
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Player">
 		<rs_info>capi-media-player-rs.xml</rs_info>
+		<rs_info>capi-media-sound-manager-rs.xml</rs_info>
+		<rs_info>capi-media-tool-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Radio">
 		<rs_info>capi-media-radio-rs.xml</rs_info>
