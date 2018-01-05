@@ -161,6 +161,7 @@
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Image_Util">
 		<rs_info>capi-media-image-util-rs.xml</rs_info>
 		<rs_info>capi-media-tool-rs.xml</rs_info>
+		<rs_info>libtbm-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Codec">
 		<rs_info>capi-media-codec-rs.xml</rs_info>
