@@ -208,15 +208,23 @@
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Vision_Barcode">
 		<rs_info>capi-media-vision-rs.xml</rs_info>
+		<rs_info>capi-media-tool-rs.xml</rs_info>
+		<rs_info>libtbm-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Vision_Face">
 		<rs_info>capi-media-vision-rs.xml</rs_info>
+		<rs_info>capi-media-tool-rs.xml</rs_info>
+		<rs_info>libtbm-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Vision_Image">
 		<rs_info>capi-media-vision-rs.xml</rs_info>
+		<rs_info>capi-media-tool-rs.xml</rs_info>
+		<rs_info>libtbm-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Media_Vision_Surveillance">
 		<rs_info>capi-media-vision-rs.xml</rs_info>
+		<rs_info>capi-media-tool-rs.xml</rs_info>
+		<rs_info>libtbm-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Metadata_Editor">
 		<rs_info>capi-media-metadata-editor-rs.xml</rs_info>
