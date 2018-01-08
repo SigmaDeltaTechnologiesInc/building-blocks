@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<MappingInfo>
+	<imageid name="TC0001">
+		<tct_info>appcore-agent</tct_info>
+		<tct_info>bundle</tct_info>
+		<tct_info>connection</tct_info>
+		<tct_info>dlog</tct_info>
+		<tct_info>iotcon</tct_info>
+		<tct_info>key-manager</tct_info>
+		<tct_info>native-common</tct_info>
+		<tct_info>peripheral-io</tct_info>
+		<tct_info>system-info</tct_info>
+		<tct_info>trace</tct_info>
+		<tct_info>wifi</tct_info>
+		<tct_info>wifi-manager</tct_info>
+		<bb_info>building-blocks-root-Preset_iot_core</bb_info>
+	</imageid>
+	<imageid name="TC0002">
+		<tct_info>accounts-svc</tct_info>
+		<tct_info>sync-manager</tct_info>
+		<tct_info>calendar-service2</tct_info>
+		<tct_info>contacts-service2</tct_info>
+		<tct_info>phonenumber-utils</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Account-Account_Manager</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Account-Sync_Manager</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Social-Calendar</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Social-Contacts</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Social-Phonenumber_utils</bb_info>
+	</imageid>
+	<imageid name="TC0003">
+		<tct_info>fido-client</tct_info>
+		<tct_info>oauth2</tct_info>
+		<tct_info>webkit2</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Account-FIDO_Client</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Account-OAuth2</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Account-libOAuth</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Web-WebView</bb_info>
+	</imageid>
+	<imageid name="TC0004">
+		<tct_info>alarm</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-AppFramework-Alarm_API</bb_info>
+	</imageid>
+	<imageid name="TC0005">
+		<tct_info>attach-panel</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-AppFramework-Attach_Panel</bb_info>
+	</imageid>
+    <imageid name="TC0006">
+        <tct_info>badge</tct_info>
+        <tct_info>data-control</tct_info>
+        <tct_info>application</tct_info>
+        <tct_info>media-key</tct_info>
+        <tct_info>app-manager</tct_info>
+        <tct_info>appcore-widget</tct_info>
+        <tct_info>widget_service</tct_info>
+        <tct_info>widget_viewer_evas</tct_info>
+        <tct_info>notification</tct_info>
+        <tct_info>shortcut</tct_info>
+        <bb_info>building-blocks-sub2-domain_API-AppFramework-Badge_API</bb_info>
+        <bb_info>building-blocks-sub2-domain_API-AppFramework-Data_Control_API</bb_info>
+        <bb_info>building-blocks-sub2-domain_API-AppFramework-Event_API</bb_info>
+        <bb_info>building-blocks-sub2-domain_API-AppFramework-Media_Key_API</bb_info>
+        <bb_info>building-blocks-sub2-domain_API-AppFramework-Native_EFL_UI_app_model</bb_info>
+        <bb_info>building-blocks-sub2-domain_API-AppFramework-Notification_API</bb_info>
+        <bb_info>building-blocks-sub2-domain_API-AppFramework-Shortcut_API</bb_info>
+    </imageid>
+	<imageid name="TC0007">
+		<tct_info>message-port</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-AppFramework-Message_Port_API</bb_info>
+	</imageid>
+	<imageid name="TC0008">
+		<tct_info>package-manager</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-AppFramework-External_Storage_Installation</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-AppFramework-TPK_Installation</bb_info>
+	</imageid>
+	<imageid name="TC0009">
+		<tct_info>base-utils</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Base-Utils</bb_info>
+	</imageid>
+	<imageid name="TC0010">
+		<tct_info>url-download</tct_info>
+		<tct_info>mime-type</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Content-Download</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Content-MIME_Type</bb_info>
+	</imageid>
+	<imageid name="TC0011">
+		<tct_info>media-content</tct_info>
+		<tct_info>image-util</tct_info>
+		<tct_info>mediatool</tct_info>
+		<tct_info>capi-media-vision</tct_info>
+		<tct_info>thumbnail-util</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Content-Media_Content</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Image_Util</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Tool</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Vision_Barcode</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Vision_Face</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Vision_Image</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Vision_Surveillance</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Thumbnail_Util</bb_info>
+	</imageid>
+	<imageid name="TC0012">
+		<tct_info>motion</tct_info>
+		<tct_info>context</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Context-Activity_Geusture_Recognition</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Context-Contextual_History</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Context-Contextual_Trigger</bb_info>
+	</imageid>
+	<imageid name="TC0013">
+		<tct_info>geofence-manager</tct_info>
+		<tct_info>location-manager</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Location-Geofence_Manager</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Location-Location_Manager</bb_info>
+	</imageid>
+	<imageid name="TC0014">
+		<tct_info>maps-service</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Maps-Maps_Service</bb_info>
+	</imageid>
+	<imageid name="TC0015">
+		<tct_info>push</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Messaging-Push</bb_info>
+	</imageid>
+	<imageid name="TC0016">
+		<tct_info>audio-io</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Audio_IO</bb_info>
+	</imageid>
+	<imageid name="TC0017">
+		<tct_info>camera</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Camera</bb_info>
+	</imageid>
+	<imageid name="TC0018">
+		<tct_info>mediacodec</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Codec</bb_info>
+	</imageid>
+	<imageid name="TC0019">
+		<tct_info>media-controller</tct_info>
+		<tct_info>player</tct_info>
+		<tct_info>recorder</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Controller</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Player</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Recorder</bb_info>
+	</imageid>
+	<imageid name="TC0020">
+		<tct_info>mediademuxer</tct_info>
+		<tct_info>mediamuxer</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Demuxer</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Muxer</bb_info>
+	</imageid>
+	<imageid name="TC0021">
+		<tct_info>mediademuxer</tct_info>
+		<tct_info>mediamuxer</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Demuxer</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Muxer</bb_info>
+	</imageid>
+	<imageid name="TC0022">
+		<tct_info>metadata-editor</tct_info>
+		<tct_info>metadata-extractor</tct_info>
+		<tct_info>openal</tct_info>
+		<tct_info>sound-manager</tct_info>
+		<tct_info>tone-player</tct_info>
+		<tct_info>wav-player</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Metadata_Editor</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Metadata_Extractor</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-OpenAL</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Sound_Manager</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Tone_Player</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-WAV_Player</bb_info>
+	</imageid>
+	<imageid name="TC0023">
+		<tct_info>asp</tct_info>
+		<tct_info>nsd</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Network-ASP</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Network-DNSSD</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Network-SSDP</bb_info>
+	</imageid>
+	<imageid name="TC0024">
+		<tct_info>bluetooth</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Network-Bluetooth_BREDR</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Network-Bluetooth_Call_Audio</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Network-Bluetooth_LE</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Network-Bluetooth_Media_Audio</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Network-Bluetooth_Transfer</bb_info>
+	</imageid>
+	<imageid name="TC0025">
+		<tct_info>http</tct_info>
+		<tct_info>stp</tct_info>
+		<tct_info>vpn-service</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Network-Curl</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Network-HTTP</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Network-STC</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Network-VPN_Service</bb_info>
+	</imageid>
+	<imageid name="TC0026">
+		<tct_info>mtp</tct_info>
+		<tct_info>wifi-direct</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Network-MTP</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Network-WiFi_Direct</bb_info>
+	</imageid>
+	<imageid name="TC0027">
+		<tct_info>privilege-info</tct_info>
+		<tct_info>yaca</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-Security-CSR</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Security-Device_Policy</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Security-OpenSSL</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Security-Privilege_Info</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Security-YACA</bb_info>
+	</imageid>
+	<imageid name="TC0028">
+		<tct_info>device</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-System-Device_Callback</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-System-Device_Display</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-System-Device_Power</bb_info>
+	</imageid>
+	<imageid name="TC0029">
+		<tct_info>runtime-info</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-System-Runtime_information</bb_info>
+	</imageid>
+	<imageid name="TC0030">
+		<tct_info>runtime-info</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-System-Runtime_information_Headless</bb_info>
+	</imageid>
+	<imageid name="TC0031">
+		<tct_info>runtime-info</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-System-Runtime_information_Light</bb_info>
+	</imageid>
+	<imageid name="TC0032">
+		<tct_info>sensor</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-System-Sensor_Listener</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-System-Sensor_Recorder</bb_info>
+	</imageid>
+	<imageid name="TC0033">
+		<tct_info>libstorage</tct_info>
+		<tct_info>libstorage64</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-System-Storage</bb_info>
+	</imageid>
+	<imageid name="TC0034">
+		<tct_info>system-settings</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-System-System_Settings</bb_info>
+	</imageid>
+	<imageid name="TC0035">
+		<tct_info>usb-host</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-System-USB_Host</bb_info>
+	</imageid>
+	<imageid name="TC0036">
+		<tct_info>cairo</tct_info>
+		<tct_info>elf-ext</tct_info>
+		<tct_info>elf-util</tct_info>
+		<tct_info>tzsh-quickpanel</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-UI-Cairo</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-UI-EFL_Extension</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-UI-EFL_MainLoop</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-UI-EFL_NativeUIToolkit</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-UI-FontConfig</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-UI-Freetype</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-UI-HarfBuzz</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-UI-Tizen_WS_Shell</bb_info>
+	</imageid>
+	<imageid name="TC0037">
+		<tct_info>cbhm</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-UI-Clipboard_History_Manager</bb_info>
+	</imageid>
+	<imageid name="TC0038">
+		<tct_info>dali-toolkit</tct_info>
+		<tct_info>dali-core</tct_info>
+		<tct_info>dali-adaptor</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-UI-DALi</bb_info>
+	</imageid>
+	<imageid name="TC0039">
+		<tct_info>eom</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-UI-External_Output_Manager</bb_info>
+	</imageid>
+	<imageid name="TC0040">
+		<tct_info>minicontrol</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-UI-Minicontrol</bb_info>
+	</imageid>
+	<imageid name="TC0041">
+		<tct_info>sdl2</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-UI-SDL_GL</bb_info>
+	</imageid>
+	<imageid name="TC0042">
+		<tct_info>tbm</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-UI-TBM_Surface</bb_info>
+	</imageid>
+	<imageid name="TC0043">
+		<tct_info>ui-viewmgr</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-UI-UI_View_Manager</bb_info>
+	</imageid>
+	<imageid name="TC0044">
+		<tct_info>capi-ui-inputmethod</tct_info>
+		<tct_info>capi-ui-inputmethod-manager</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-UIX-Input_Method</bb_info>
+	</imageid>
+	<imageid name="TC0045">
+		<tct_info>stt</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-UIX-STT</bb_info>
+	</imageid>
+	<imageid name="TC0046">
+		<tct_info>tts</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-UIX-TTS</bb_info>
+	</imageid>
+	<imageid name="TC0047">
+		<tct_info>voice-control</tct_info>
+		<tct_info>voice-control-elm</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-UIX-Voice_control</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-UIX-Voice_control_elementary</bb_info>
+	</imageid>
+</MappingInfo>
