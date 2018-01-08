@@ -159,10 +159,6 @@
 		<rs_info>capi-maps-service-rs.xml</rs_info>
 		<rs_info>capi-maps-service-plugin-rs.xml</rs_info>
 	</buildingblock>
-	<buildingblock name="building-blocks-sub2-domain_API-Maps-Mapzen_Plugin">
-		<rs_info>capi-maps-service-rs.xml</rs_info>
-		<rs_info>capi-maps-service-plugin-rs.xml</rs_info>
-	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Messaging-Email">
 		<rs_info>capi-messaging-email-rs.xml</rs_info>
 	</buildingblock>
