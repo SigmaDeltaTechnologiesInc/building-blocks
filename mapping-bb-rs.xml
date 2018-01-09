@@ -463,6 +463,7 @@
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-UI-SDL_GL">
 		<rs_info>SDL2-rs.xml</rs_info>
+		<rs_info>coregl-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-UI-SDL_Vulkan">
 		<rs_info>SDL2-rs.xml</rs_info>
