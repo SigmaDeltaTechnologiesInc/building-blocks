@@ -72,17 +72,15 @@ Firstly select HALs and Feature to add to your image.
 ### ARTIK530-System ###
 %package sub2-Preset_boards-ARTIK530-System
 Summary:	ARTIK530_System
-Requires:	system-plugin-profile-iot-headless
 Requires:	system-plugin-config-udev-sdbd
-Requires:	system-plugin-exynos
-Suggests:	system-plugin-u3
+Requires:	system-plugin-device-u3
 Requires:	model-config-default
-Suggests:	system-plugin-init_wrapper
+Suggests:	system-plugin-feature-init_wrapper
 
 %description sub2-Preset_boards-ARTIK530-System
 Packages for System HAL and Feature. They are mandatory.
-If you select 3 partitions, please select system-plugin-u3.
-If you don't use initrd partition, please select system-plugin-init_wrapper.
+If you select 3 partitions, please select system-plugin-device-u3.
+If you don't use initrd partition, please select system-plugin-feature-init_wrapper.
 %files sub2-Preset_boards-ARTIK530-System
 
 ### ARTIK530-System_Device ###

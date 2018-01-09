@@ -23,6 +23,7 @@ The Supported Partions.
 #########################################
 %package sub1-Preset_partition-2parts_ramdisk_recovery
 Summary:    Partition 2 with ramdisk and recovery
+Requires:	system-plugin-config-2parts
 
 Conflicts: %{name}-sub1-Preset_partition-2parts_ramdisk
 Conflicts: %{name}-sub1-Preset_partition-3parts_ramdisk
@@ -39,7 +40,7 @@ part '\' , '\opt', '\mnt\initrd', '\mnt\initrd-recovery'
 #########################################
 %package sub1-Preset_partition-3parts_ramdisk_recovery
 Summary:    Partition 3 with ramdisk and recovery
-Requires:	system-plugin-u3
+Requires:	system-plugin-config-3parts
 
 Conflicts: %{name}-sub1-Preset_partition-2parts_ramdisk_recovery
 Conflicts: %{name}-sub1-Preset_partition-2parts_ramdisk
@@ -56,6 +57,7 @@ part '\' , '\opt', '\opt\usr', '\mnt\initrd', '\mnt\initrd-recovery'
 ############################
 %package sub1-Preset_partition-2parts_ramdisk
 Summary:    Partition 2 with ramdisk
+Requires:	system-plugin-config-2parts
 
 Conflicts: %{name}-sub1-Preset_partition-2parts_ramdisk_recovery
 Conflicts: %{name}-sub1-Preset_partition-3parts_ramdisk_recovery
@@ -72,7 +74,7 @@ part "\" , "\opt", "\mnt\initrd"
 ############################
 %package sub1-Preset_partition-3parts_ramdisk
 Summary:    Partition 3 with ramdisk
-Requires:	system-plugin-u3
+Requires:	system-plugin-config-3parts
 
 Conflicts: %{name}-sub1-Preset_partition-2parts_ramdisk_recovery
 Conflicts: %{name}-sub1-Preset_partition-3parts_ramdisk_recovery
@@ -89,8 +91,8 @@ part "\" , "\opt", "\opt\usr", "\mnt\initrd"
 ###############
 %package sub1-Preset_partition-3parts
 Summary:    Partition 3
-Requires:	system-plugin-u3
-Requires:	system-plugin-init_wrapper
+Requires:	system-plugin-config-3parts
+Requires:	system-plugin-feature-init_wrapper
 
 Conflicts: %{name}-sub1-Preset_partition-2parts_ramdisk_recovery
 Conflicts: %{name}-sub1-Preset_partition-3parts_ramdisk_recovery
@@ -101,4 +103,3 @@ Conflicts: %{name}-sub1-Preset_partition-3parts_ramdisk
 __PARTITION__: common-mbr-3parts
 part "\" , "\opt", "\opt\usr"
 %files sub1-Preset_partition-3parts
-
