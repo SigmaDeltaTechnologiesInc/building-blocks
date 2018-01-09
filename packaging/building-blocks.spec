@@ -4,7 +4,7 @@
 %define tizen_feature() sed -i 's#\\\(\\\"%{1}\\\".\\\+>\\\).\\\+\\\(</key>\\\)#\\\1%{2}\\\2#' %{_sysconfdir}/config/model-config.xml;
 
 Name:		building-blocks
-Version:	0.0.5
+Version:	0.0.6
 Release:	0
 License:	Apache-2.0
 Summary:	The Root of All Tizen Meta Packages (building blocks)
@@ -47,10 +47,9 @@ Source2010:	epicfeature-development.inc
 Source2020:	epicfeature-application.inc
 
 Source3500:	platform-preset-iot.inc
-Source3501:	platform-preset-iot-craftroom.inc
-Source3502:	platform-preset-iot-headless-images.inc
-Source3503:	platform-preset-iot-headed-images.inc
-Source3504:	platform-preset-partitions.inc
+Source3501:	platform-preset-iot-headless-images.inc
+Source3502:	platform-preset-iot-headed-images.inc
+Source3503:	platform-preset-partitions.inc
 
 Source3800:	platform-preset-boards.inc
 Source3801:	platform-preset-boards-tm1.inc
@@ -110,7 +109,6 @@ Summary:	Tizen Presets
 Suggests:	%{name}-root-Preset_boards
 Suggests:	%{name}-root-Preset_iot_core
 Suggests:	%{name}-root-Preset_iot_headed
-Suggests:	%{name}-root-Preset_craftroom
 Suggests:	%{name}-root-Preset_img_headless
 Suggests:	%{name}-root-Preset_img_headed
 Suggests:	%{name}-root-Preset_partition
@@ -337,7 +335,6 @@ python ./rule_checker.py
 %{include_if_mainbuild %{SOURCE3501}}
 %{include_if_mainbuild %{SOURCE3502}}
 %{include_if_mainbuild %{SOURCE3503}}
-%{include_if_mainbuild %{SOURCE3504}}
 
 %{include_if_mainbuild %{SOURCE3800}}
 %{include_if_mainbuild %{SOURCE3801}}
