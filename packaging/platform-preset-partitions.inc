@@ -24,6 +24,7 @@ The Supported Partions.
 %package sub1-Preset_partition-2parts_ramdisk_recovery
 Summary:    Partition 2 with ramdisk and recovery
 
+Requires:  system-plugin-config-2parts
 Conflicts: %{name}-sub1-Preset_partition-2parts_ramdisk
 Conflicts: %{name}-sub1-Preset_partition-3parts_ramdisk
 Conflicts: %{name}-sub1-Preset_partition-3parts
@@ -57,6 +58,7 @@ part '\' , '\opt', '\opt\usr', '\mnt\initrd', '\mnt\initrd-recovery'
 %package sub1-Preset_partition-2parts_ramdisk
 Summary:    Partition 2 with ramdisk
 
+Requires:  system-plugin-config-2parts
 Conflicts: %{name}-sub1-Preset_partition-2parts_ramdisk_recovery
 Conflicts: %{name}-sub1-Preset_partition-3parts_ramdisk_recovery
 Conflicts: %{name}-sub1-Preset_partition-3parts_ramdisk
