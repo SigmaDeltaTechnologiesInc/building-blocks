@@ -38,7 +38,6 @@ Suggests: deviced-profile_mobile
 Suggests: deviced-profile_common
 Suggests: deviced-profile_wearable
 Suggests: deviced-profile_tv
-Suggests: deviced-profile_ivi
 Suggests: device-manager-plugin-sc7730
 Suggests: device-manager-plugin-artik
 Suggests: device-manager-plugin-emul
@@ -68,7 +67,6 @@ Suggests: deviced-profile_mobile
 Suggests: deviced-profile_common
 Suggests: deviced-profile_wearable
 Suggests: deviced-profile_tv
-Suggests: deviced-profile_ivi
 Suggests: device-manager-plugin-sc7730
 Suggests: device-manager-plugin-artik
 Suggests: device-manager-plugin-emul
@@ -96,7 +94,6 @@ Suggests: deviced-profile_mobile
 Suggests: deviced-profile_common
 Suggests: deviced-profile_wearable
 Suggests: deviced-profile_tv
-Suggests: deviced-profile_ivi
 Suggests: device-manager-plugin-sc7730
 Suggests: device-manager-plugin-artik
 Suggests: device-manager-plugin-emul
@@ -140,7 +137,6 @@ Suggests: deviced-profile_mobile
 Suggests: deviced-profile_common
 Suggests: deviced-profile_wearable
 Suggests: deviced-profile_tv
-Suggests: deviced-profile_ivi
 Suggests: device-manager-plugin-sc7730
 Suggests: device-manager-plugin-artik
 Suggests: device-manager-plugin-emul
@@ -170,7 +166,6 @@ Suggests: deviced-profile_mobile
 Suggests: deviced-profile_common
 Suggests: deviced-profile_wearable
 Suggests: deviced-profile_tv
-Suggests: deviced-profile_ivi
 Suggests: device-manager-plugin-sc7730
 Suggests: device-manager-plugin-artik
 Suggests: device-manager-plugin-emul
@@ -200,7 +195,6 @@ Suggests: deviced-profile_mobile
 Suggests: deviced-profile_common
 Suggests: deviced-profile_wearable
 Suggests: deviced-profile_tv
-Suggests: deviced-profile_ivi
 Suggests: device-manager-plugin-sc7730
 Suggests: device-manager-plugin-artik
 Suggests: device-manager-plugin-emul
