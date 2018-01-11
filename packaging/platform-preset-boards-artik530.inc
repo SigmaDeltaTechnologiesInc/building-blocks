@@ -161,6 +161,7 @@ Summary:	ARTIK530_Camera
 Requires:	%{name}-sub2-domain_API-Multimedia-Camera
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Display
 Requires:	mmfw-sysconf-target-artik10
+Requires:	gst-plugins-tizen
 
 %description sub2-Preset_boards-ARTIK530-Camera
 Packages of Camera HAL and Feature for ARTIK530.
@@ -181,6 +182,7 @@ Requires:	e-tizen-data-profile_common
 Requires:	libtbm-nexell
 Requires:	libtdm-nexell
 Requires:	coregl
+Requires:	gst-plugins-bad
 
 Conflicts:	%{name}-sub2-Preset_boards-ARTIK530-Display_Headless
 
