@@ -97,6 +97,7 @@ Requires: appcore-widget
 Requires: libwidget_service
 Requires: libwidget_viewer
 Requires: libwidget_viewer_evas
+Requires: amd-mod-widget
 %description sub2-domain_API-AppFramework-Native_EFL_Widget_App_Model
 This block supports native EFL widget app model
 %files sub2-domain_API-AppFramework-Native_EFL_Widget_App_Model
