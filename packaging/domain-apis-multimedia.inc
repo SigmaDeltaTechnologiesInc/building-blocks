@@ -144,12 +144,19 @@ Requires: %{name}-sub2-domain_API-UI-TBM_Surface
 Requires: %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
 Requires: %{name}-sub2-domain_API-Network-WiFi
 
+# camera
+Suggests: gst-plugins-camera-n4
+Suggests: camera-interface-sprd-sc7730
+
 %description sub2-domain_API-Multimedia-Media_Streamer
 This block supports constructing the custom player and it gives the ability to controlling playback attributes.<br>
 About OPTIONAL selection:<br>
 You should choose packages depends on target and hardware.<br>
 First, Select the config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1).<br>
 Second, Select the audio HAL depends on target. <br>
+Third, Select the camera plugin depends on target. <br>
+TM1:camera-interface-sprd-sc7730, gst-plugins-camera-sc7730s <br>
+TM2(n4):gst-plugins-camera-n4 <br>
 
 %files sub2-domain_API-Multimedia-Media_Streamer
 
