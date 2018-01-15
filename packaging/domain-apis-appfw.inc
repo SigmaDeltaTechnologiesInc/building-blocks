@@ -64,6 +64,7 @@ This block supports native EFL UI application model
 Summary: Alarm API
 Requires: capi-appfw-alarm
 Requires: alarm-server
+Requires: %{name}-sub2-domain_API-AppFramework-Notification_API
 %description sub2-domain_API-AppFramework-Alarm_API
 This block supports alarm API
 %files sub2-domain_API-AppFramework-Alarm_API
