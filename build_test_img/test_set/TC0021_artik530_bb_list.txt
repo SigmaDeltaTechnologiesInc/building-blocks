@@ -1,0 +1,24 @@
+# TC0021 Streamer for ARTIK530
+# iot core for ARTIK530
+building-blocks-root-Preset_iot_core
+building-blocks-sub1-Preset_boards-ARTIK530
+building-blocks-sub2-Preset_boards-ARTIK530-Wifi
+building-blocks-sub2-Preset_boards-ARTIK530-Camera
+building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
+# For TCT
+building-blocks-sub2-domain_API-AppFramework-TPK_Installation
+
+# For UI
+building-blocks-sub2-Preset_boards-ARTIK530-Display
+building-blocks-sub2-Preset_boards-ARTIK530-EFL
+building-blocks-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
+building-blocks-sub1-domain_Feature-BootAni
+building-blocks-sub1-domain_Feature-Starter
+
+# Streamer & screen-mirroring & stremaercorder
+building-blocks-sub2-domain_API-Multimedia-Media_Streamer
+building-blocks-sub2-domain_API-Multimedia-Screen_Mirroring
+building-blocks-sub2-domain_API-Multimedia-Stream_Recorder
+building-blocks-sub2-domain_API-Multimedia-Video_Util
+
+building-blocks-sub2-Preset_boards-ARTIK530-Audio_Recording

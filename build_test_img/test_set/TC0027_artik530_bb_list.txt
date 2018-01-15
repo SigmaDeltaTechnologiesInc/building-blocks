@@ -1,0 +1,14 @@
+# TC0027 Security for ARTIK530
+# iot core for ARTIK530
+building-blocks-root-Preset_iot_core
+building-blocks-sub1-Preset_boards-ARTIK530
+building-blocks-sub2-Preset_boards-ARTIK530-Wifi
+building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
+# For TCT
+building-blocks-sub2-domain_API-AppFramework-TPK_Installation
+
+# Security
+building-blocks-sub2-domain_API-Security-CSR
+building-blocks-sub2-domain_API-Security-Device_Policy
+building-blocks-sub2-domain_API-Security-Privilege_Info
+building-blocks-sub2-domain_API-Security-YACA

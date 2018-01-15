@@ -1,0 +1,20 @@
+# TC0011 media-content for ARTIK530
+# iot core for ARTIK530
+building-blocks-root-Preset_iot_core
+building-blocks-sub1-Preset_boards-ARTIK530
+building-blocks-sub2-Preset_boards-ARTIK530-Wifi
+building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
+# For TCT
+building-blocks-sub2-domain_API-AppFramework-TPK_Installation
+# media-content & Vision
+building-blocks-sub2-domain_API-Content-Media_Content
+building-blocks-sub2-domain_API-Multimedia-Image_Util
+building-blocks-sub2-domain_API-Multimedia-Media_Tool
+building-blocks-sub2-domain_API-Multimedia-Media_Vision_Face
+building-blocks-sub2-domain_API-Multimedia-Media_Vision_Barcode
+building-blocks-sub2-domain_API-Multimedia-Media_Vision_Image
+building-blocks-sub2-domain_API-Multimedia-Media_Vision_Surveillance
+building-blocks-sub2-domain_API-Multimedia-Thumbnail_Util
+
+building-blocks-sub2-domain_API-System-Storage
+building-blocks-sub2-Preset_boards-ARTIK530-Display_Headless
