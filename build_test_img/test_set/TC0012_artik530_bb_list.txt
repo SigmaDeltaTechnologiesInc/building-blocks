@@ -1,0 +1,12 @@
+# TC0012 Context for ARTIK530
+# iot core for ARTIK530
+building-blocks-root-Preset_iot_core
+building-blocks-sub1-Preset_boards-ARTIK530
+building-blocks-sub2-Preset_boards-ARTIK530-Wifi
+building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
+# For TCT
+building-blocks-sub2-domain_API-AppFramework-TPK_Installation
+# Context
+building-blocks-sub2-domain_API-Context-Activity_Geusture_Recognition
+building-blocks-sub2-domain_API-Context-Contextual_History
+building-blocks-sub2-domain_API-Context-Contextual_Trigger

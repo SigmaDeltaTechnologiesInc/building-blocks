@@ -1,0 +1,17 @@
+# TC0002 Sync Manager for ARTIK530
+# iot core for ARTIK530
+building-blocks-root-Preset_iot_core
+building-blocks-sub1-Preset_boards-ARTIK530
+building-blocks-sub2-Preset_boards-ARTIK530-Wifi
+building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
+# For TCT
+building-blocks-sub2-domain_API-AppFramework-TPK_Installation
+capi-telephony
+building-blocks-sub2-Preset_boards-ARTIK530-Display_Headless
+
+# Sync Manager (Account Manager, Contacts, Calendar, Phonenumberutils)
+building-blocks-sub2-domain_API-Account-Sync_Manager
+building-blocks-sub2-domain_API-Social-Calendar
+building-blocks-sub2-domain_API-Social-Contacts
+building-blocks-sub2-domain_API-Social-Phonenumber_utils
+building-blocks-sub2-domain_API-Messaging-Email

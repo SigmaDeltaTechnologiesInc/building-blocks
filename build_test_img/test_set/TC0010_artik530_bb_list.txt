@@ -1,0 +1,11 @@
+# TC0010 download for ARTIK530
+# iot core for ARTIK530
+building-blocks-root-Preset_iot_core
+building-blocks-sub1-Preset_boards-ARTIK530
+building-blocks-sub2-Preset_boards-ARTIK530-Wifi
+building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
+# For TCT
+building-blocks-sub2-domain_API-AppFramework-TPK_Installation
+# download & mime-type
+building-blocks-sub2-domain_API-Content-Download
+building-blocks-sub2-domain_API-Content-MIME_Type

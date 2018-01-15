@@ -1,0 +1,20 @@
+# TC0024 Bluetooth for ARTIK530
+# iot core for ARTIK530
+building-blocks-root-Preset_iot_core
+building-blocks-sub1-Preset_boards-ARTIK530
+building-blocks-sub2-Preset_boards-ARTIK530-Wifi
+building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
+# For TCT
+building-blocks-sub2-domain_API-AppFramework-TPK_Installation
+
+# Bluetooth
+building-blocks-sub2-domain_API-Network-Bluetooth_BREDR
+building-blocks-sub2-domain_API-Network-Bluetooth_Call_Audio
+building-blocks-sub2-domain_API-Network-Bluetooth_LE
+building-blocks-sub2-domain_API-Network-Bluetooth_Media_Audio
+building-blocks-sub2-domain_API-Network-Bluetooth_Transfer
+
+building-blocks-sub2-Preset_boards-ARTIK530-Audio
+building-blocks-sub2-Preset_boards-ARTIK530-BLE
+building-blocks-sub2-Preset_boards-ARTIK530-Bluetooth
+building-blocks-sub2-Preset_boards-ARTIK530-Bluetooth_CallAudio

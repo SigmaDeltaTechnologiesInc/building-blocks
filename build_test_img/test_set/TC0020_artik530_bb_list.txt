@@ -1,0 +1,12 @@
+# TC0020 Muxer & DeMuxer for ARTIK530
+# iot core for ARTIK530
+building-blocks-root-Preset_iot_core
+building-blocks-sub1-Preset_boards-ARTIK530
+building-blocks-sub2-Preset_boards-ARTIK530-Wifi
+building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
+# For TCT
+building-blocks-sub2-domain_API-AppFramework-TPK_Installation
+# Muxer & DeMuxer
+building-blocks-sub2-domain_API-Multimedia-Media_Demuxer
+building-blocks-sub2-domain_API-Multimedia-Media_Muxer
+

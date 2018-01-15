@@ -1,0 +1,26 @@
+# TC0006 UI app model for ARTIK530
+# iot core for ARTIK530
+building-blocks-root-Preset_iot_core
+building-blocks-sub1-Preset_boards-ARTIK530
+building-blocks-sub2-Preset_boards-ARTIK530-Wifi
+building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
+# For TCT
+building-blocks-sub2-domain_API-AppFramework-TPK_Installation
+
+# For UI
+building-blocks-sub2-Preset_boards-ARTIK530-Display
+building-blocks-sub2-Preset_boards-ARTIK530-EFL
+building-blocks-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
+building-blocks-sub1-domain_Feature-BootAni
+building-blocks-sub1-domain_Feature-Starter
+
+# UI App Model (Account Manager, Contacts)
+building-blocks-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
+building-blocks-sub2-domain_API-AppFramework-Native_EFL_Widget_App_Model
+building-blocks-sub2-domain_API-AppFramework-Badge_API
+building-blocks-sub2-domain_API-AppFramework-Data_Control_API
+building-blocks-sub2-domain_API-AppFramework-Event_API
+building-blocks-sub2-domain_API-AppFramework-Shortcut_API
+building-blocks-sub2-domain_API-AppFramework-Notification_API
+building-blocks-sub2-domain_API-AppFramework-Media_Key_API
+

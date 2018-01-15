@@ -1,0 +1,13 @@
+# TC0042 TBM for ARTIK530
+# iot core for ARTIK530
+building-blocks-root-Preset_iot_core
+building-blocks-sub1-Preset_boards-ARTIK530
+building-blocks-sub2-Preset_boards-ARTIK530-Wifi
+building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
+# For TCT
+building-blocks-sub2-domain_API-AppFramework-TPK_Installation
+# For UI
+building-blocks-sub2-Preset_boards-ARTIK530-Display_Headless
+
+# TBM
+building-blocks-sub2-domain_API-UI-TBM_Surface
