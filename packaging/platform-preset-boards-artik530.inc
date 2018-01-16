@@ -153,9 +153,13 @@ Requires:	mmfw-sysconf-target-artik10
 Suggests:	%{name}-sub2-domain_API-Multimedia-Player
 Suggests:	%{name}-sub2-domain_API-Multimedia-Media_Streamer
 Suggests:	%{name}-sub2-domain_API-Multimedia-Media_Codec
+Suggests:	%{name}-sub2-domain_API-Multimedia-Camera
+Suggests:	%{name}-sub2-domain_API-Multimedia-Recorder
+Suggests:	%{name}-sub2-domain_API-Multimedia-Screen_Mirroring
 
 %description sub2-Preset_boards-ARTIK530-Codec
 Packages of Codec HAL and Feature for ARTIK530.
+If you want to use hardware acceleration, select the required feature.
 %files sub2-Preset_boards-ARTIK530-Codec
 
 ### ARTIK530-Camera ###

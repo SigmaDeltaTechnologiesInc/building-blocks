@@ -90,26 +90,9 @@ Requires: gst-plugins-bad
 Requires: %{name}-sub2-domain_API-UI-TBM_Surface
 Requires: %{name}-sub2-domain_API-Multimedia-Configuration
 
-Suggests: gst-omx
-Suggests: libomxil-e54xx
-
-#TW1
-Suggests: libomxil-e3250-v4l2
-#TW2
-Suggests: libomxil-e7270-v4l2
-
 
 %description sub2-domain_API-Multimedia-Media_Codec
 Enabling Media Codec and it is possible to user Media Codec API
-About OPTIONAL selection:<br>
-You should choose packages depends on target and hardware.<br>
-Select the config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1).<br>
-TM2(n4) : libomxil-e54xx <br>
-TW1 : libomxil-e3250-v4l2 <br>
-TW2 : libomxil-e7270-v4l2 <br>
-XU3 : libomxil-e54xx <br>
-AT5/10 : libomxil-e54xx <br>
-ARTIK710 : libomxil-e54xx <br>
 %files sub2-domain_API-Multimedia-Media_Codec
 
 %package sub2-domain_API-Multimedia-Media_Controller
@@ -277,13 +260,6 @@ Suggests: %{name}-sub2-domain_API-Network-WiFi
 Suggests: capi-media-player-display
 Suggests: %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
 
-# target specific package list
-Suggests: gst-omx
-Suggests: libomxil-e54xx
-Suggests: libomxil-e3250-v4l2
-Suggests: libomxil-e7270-v4l2
-Suggests: libomxil-vc4
-
 
 %description sub2-domain_API-Multimedia-Player
 This block supports playing multimedia content. Content can be played from a file, from the network, or from memory. <br>
@@ -295,18 +271,7 @@ You have to choose wifi building block for network streaming. <br>
 You have to choose player display package and efl building block for video rendering. <br>
 - capi-media-player-display <br>
 - EFL_NativeUIToolkit in UI API Group <br>
-<br>
-You have to choose packages depends on target and hardware. <br>
-First, You have to select the gst-omx package except TM1 target to use hardware video decoder. <br>
-Second, Select the config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1). <br>
-Third, Select the audio HAL and libomx package depends on target. <br>
-TM2(n4) : libomxil-e54xx <br>
-TW1 : libomxil-e3250-v4l2 <br>
-TW2 : libomxil-e7270-v4l2 <br>
-XU3 : libomxil-e54xx <br>
-RPI3 : libomxil-vc4 <br>
-AT5/10 : libomxil-e54xx <br>
-ARTIK710 : libomxil-e54xx <br>
+
 %files sub2-domain_API-Multimedia-Player
 
 %package sub2-domain_API-Multimedia-Radio
@@ -334,21 +299,11 @@ Requires:%{name}-sub2-domain_API-Multimedia-Configuration
 Requires:%{name}-sub2-domain_API-UI-TBM_Surface
 Requires:%{name}-sub2-domain_API-System-Storage
 
-#codec
-Suggests:libomxil-e3250-v4l2
-Suggests:libomxil-e7270-v4l2
-Suggests:libomxil-e54xx
-
 %description sub2-domain_API-Multimedia-Recorder
 The recorder provides the ability to create audio/video recorder, to start, stop and save the recorded content. It also provides methods to get/set various attributes of recorder.
 OPTIONAL : You should choose packages depends on target and hardware.
 First, Check config file 'mmfw-sysconf-target-{DEVICE_WHAT_YOU_WANT}'(e.g mmfw-sysconf-target-tm1).
 Second, Check audio HAL depends on target.
-Third, Check codec depends on target.
-gst-plugins-sprdcodec-sc7730
-libomxil-e3250-v4l2
-libomxil-e7270-v4l2
-libomxil-e54xx
 
 %files sub2-domain_API-Multimedia-Recorder
 
