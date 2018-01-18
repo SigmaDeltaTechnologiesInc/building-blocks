@@ -224,6 +224,8 @@
 		<tct_info>tct-sound-manager-native-ctc</tct_info>
 		<tct_info>tct-sound-manager-native-itc</tct_info>
 		<tct_info>tct-sound-manager-native-utc</tct_info>
+		<tct_info>tct-sound-pool-native-itc</tct_info>
+		<tct_info>tct-sound-pool-native-utc</tct_info>
 		<tct_info>tct-tone-player-native-itc</tct_info>
 		<tct_info>tct-tone-player-native-utc</tct_info>
 		<tct_info>tct-wav-player-native-itc</tct_info>
@@ -232,6 +234,7 @@
 		<bb_info>building-blocks-sub2-domain_API-Multimedia-Metadata_Extractor</bb_info>
 		<bb_info>building-blocks-sub2-domain_API-Multimedia-OpenAL</bb_info>
 		<bb_info>building-blocks-sub2-domain_API-Multimedia-Sound_Manager</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Sound_Pool</bb_info>
 		<bb_info>building-blocks-sub2-domain_API-Multimedia-Tone_Player</bb_info>
 		<bb_info>building-blocks-sub2-domain_API-Multimedia-WAV_Player</bb_info>
 	</imageid>

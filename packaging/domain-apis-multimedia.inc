@@ -28,6 +28,7 @@ Suggests: %{name}-sub2-domain_API-Multimedia-Radio
 Suggests: %{name}-sub2-domain_API-Multimedia-Recorder
 Suggests: %{name}-sub2-domain_API-Multimedia-Screen_Mirroring
 Suggests: %{name}-sub2-domain_API-Multimedia-Sound_Manager
+Suggests: %{name}-sub2-domain_API-Multimedia-Sound_Pool
 Suggests: %{name}-sub2-domain_API-Multimedia-Stream_Recorder
 Suggests: %{name}-sub2-domain_API-Multimedia-Thumbnail_Util
 Suggests: %{name}-sub2-domain_API-Multimedia-Tone_Player
@@ -341,6 +342,18 @@ Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
 Sound_Manager provides functions to get and set of sound parameters such as volume,device and focus operations.
 
 %files sub2-domain_API-Multimedia-Sound_Manager
+
+%package sub2-domain_API-Multimedia-Sound_Pool
+Summary:    Sound_Pool
+
+# packakge list
+Requires:capi-media-sound-pool
+Requires:%{name}-sub2-domain_API-Multimedia-AudioCore
+
+%description sub2-domain_API-Multimedia-Sound_Pool
+Sound_Pool provides functions for easy sound management such as grouping sounds in pools, play, pause, resume, stop operations of sound streams and controlling stream/pool states.
+
+%files sub2-domain_API-Multimedia-Sound_Pool
 
 %package sub2-domain_API-Multimedia-Stream_Recorder
 Summary:    Stream Recorder
