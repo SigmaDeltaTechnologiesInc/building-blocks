@@ -127,6 +127,7 @@ Packages of Audio HAL and Feature for ARTIK530.
 %files sub2-Preset_boards-ARTIK530-Audio_Recording
 %posttrans sub2-Preset_boards-ARTIK530-Audio_Recording
 %tizen_feature tizen.org/feature/microphone true
+%tizen_feature tizen.org/feature/media.audio_recording true
 
 ### ARTIK530-GPS ###
 %package sub2-Preset_boards-ARTIK530-GPS
@@ -172,6 +173,7 @@ Packages of Camera HAL and Feature for ARTIK530.
 %tizen_feature tizen.org/feature/camera.back.flash false
 %tizen_feature tizen.org/feature/camera.front false
 %tizen_feature tizen.org/feature/camera.front.flash false
+%tizen_feature tizen.org/feature/media.video_recording true
 
 
 ### ARTIK530-Display ###

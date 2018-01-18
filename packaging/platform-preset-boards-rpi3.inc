@@ -126,6 +126,7 @@ Packages of Audio HAL and Feature for RPI3.
 %files sub2-Preset_boards-RPI3-Audio_Recording
 %posttrans sub2-Preset_boards-RPI3-Audio_Recording
 %tizen_feature tizen.org/feature/microphone true
+%tizen_feature tizen.org/feature/media.audio_recording true
 
 ### RPI3-GPS ###
 %package sub2-Preset_boards-RPI3-GPS
@@ -171,6 +172,7 @@ Not Implemented.
 %tizen_feature tizen.org/feature/camera.back.flash false
 %tizen_feature tizen.org/feature/camera.front false
 %tizen_feature tizen.org/feature/camera.front.flash false
+%tizen_feature tizen.org/feature/media.video_recording true
 
 
 ### RPI3-Display ###
