@@ -110,6 +110,7 @@ Packages of Audio HAL and Feature for TM1.
 %files sub2-Preset_boards-TM1-Audio_Recording
 %posttrans sub2-Preset_boards-TM1-Audio_Recording
 %tizen_feature tizen.org/feature/microphone true
+%tizen_feature tizen.org/feature/media.audio_recording true
 
 ### TM1-GPS ###
 %package sub2-Preset_boards-TM1-GPS
@@ -137,6 +138,7 @@ Not Implemented.
 %tizen_feature tizen.org/feature/camera.back.flash true
 %tizen_feature tizen.org/feature/camera.front true
 %tizen_feature tizen.org/feature/camera.front.flash false
+%tizen_feature tizen.org/feature/media.video_recording true
 
 ### TM1-Radio ###
 %package sub2-Preset_boards-TM1-Radio
