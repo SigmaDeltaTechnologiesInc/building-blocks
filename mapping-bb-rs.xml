@@ -257,6 +257,9 @@
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Sound_Manager">
 		<rs_info>capi-media-sound-manager-rs.xml</rs_info>
 	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Sound_Pool">
+		<rs_info>capi-media-sound-pool-rs.xml</rs_info>
+	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Stream_Recorder">
 		<rs_info>capi-media-streamrecorder-rs.xml</rs_info>
 		<rs_info>capi-media-tool-rs.xml</rs_info>

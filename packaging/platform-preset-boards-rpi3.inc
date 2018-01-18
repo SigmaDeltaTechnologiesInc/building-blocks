@@ -106,6 +106,7 @@ Suggests:	%{name}-sub2-domain_API-Multimedia-WAV_Player
 Suggests:	%{name}-sub2-domain_API-Multimedia-Tone_Player
 Suggests:	%{name}-sub2-domain_API-Multimedia-OpenAL
 Suggests:	%{name}-sub2-domain_API-Multimedia-Media_Streamer
+Suggests:	%{name}-sub2-domain_API-Multimedia-Sound_Pool
 
 %description sub2-Preset_boards-RPI3-Audio
 Packages of Audio HAL and Feature for RPI3.
