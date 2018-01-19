@@ -1,5 +1,5 @@
-./build_test_img/artik530
-./build_test_img/rpi3
-./build_test_img/download
-./build_test_img/result
-./build_test_img/*.log
+build_test_img/artik530/
+build_test_img/rpi3/
+build_test_img/download/
+build_test_img/result/
+build_test_img/*.log
