@@ -8,3 +8,4 @@ building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
 building-blocks-sub2-domain_API-AppFramework-TPK_Installation
 # package manager & external sd
 building-blocks-sub2-domain_API-Base-Utils
+tizen-locale
