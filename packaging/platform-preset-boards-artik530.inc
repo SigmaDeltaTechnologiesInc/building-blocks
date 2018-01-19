@@ -259,6 +259,7 @@ Summary:	ARTIK530_Bluetooth
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_BREDR
 Requires:	bluetooth-frwk-profile_common
 Requires:	bluetooth-tools-profile_common
+Requires:	bluetooth-firmware-marvell-artik530
 Requires:	bluez-profile_common
 Suggests:	bluez-extension-bredr
 Suggests:	bluetooth-frwk-plugin-headed
