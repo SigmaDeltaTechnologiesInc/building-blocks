@@ -117,16 +117,20 @@ For example, deviced-profile_mobile and device-manager-plugin-sc7730 for mobile
 Summary:    Device_Haptic
 Requires: feedbackd
 Requires: capi-system-device
-Suggests: feedbackd-profile_mobile
-Suggests: feedbackd-profile_wearable
+Suggests: feedbackd-driver-external
+Suggests: feedbackd-driver-standard
+Suggests: feedbackd-driver-gpio
+Suggests: feedbackd-driver-circle
+Suggests: feedbackd-conf-level3
+Suggests: feedbackd-conf-level6
 %description sub2-domain_API-System-Device_Haptic
 Tizen block (set of packages) for Group of sub domain Device_Haptic.
 If you do not want to use Device_Haptic APIs, you do not need to choose.
-However, if you want to use them, you have to choose at least one item in feedbackd-profile_xxxx.
+However, if you want to use them, you have to choose at least one item in feedbackd-driver-xxxx and in feedbackd-conf-levelx.
 Haptic has a dependancy on Profile.
 Before you select, you have to make sure that which Profile you have.
 Then choose proper one.
-For example, feedbackd-profile_mobile for mobile
+For example, feedbackd-driver-circle for tw1
 %files sub2-domain_API-System-Device_Haptic
 
 %package sub2-domain_API-System-Device_IR
@@ -218,8 +222,12 @@ Summary:    Feedback
 Requires: %{name}-sub2-domain_API-Multimedia-Audio_IO
 Requires: feedbackd
 Requires: libfeedback
-Suggests: feedbackd-profile_mobile
-Suggests: feedbackd-profile_wearable
+Suggests: feedbackd-driver-external
+Suggests: feedbackd-driver-standard
+Suggests: feedbackd-driver-gpio
+Suggests: feedbackd-driver-circle
+Suggests: feedbackd-conf-level3
+Suggests: feedbackd-conf-level6
 Suggests: svi-data-profile_common
 Suggests: svi-data-profile_mobile
 Suggests: svi-data-profile_wearable
@@ -227,12 +235,11 @@ Suggests: svi-data-profile_wearable
 Tizen block (set of packages) for Group of sub domain Feedback.
 Feedback is only available for mobile, wearable and common.
 If you do not want to use Feedback APIs, you do not need to choose.
-However, if you want to use them, you have to choose at least one item in each feedbackd-profile_xxxx and svi-data-profile_xxxx.
+However, if you want to use them, you have to choose at least one item in feedbackd-driver-xxxx and in feedbackd-conf-levelx.
 Those have a dependancy on Profile.
 Before you select, you have to make sure that which Profile you have.
 Then choose proper combination.
 For example, svi-data-profile_common for common
-             feedbackd-profile_mobile and svi-data-profile_mobile for mobile
 %files sub2-domain_API-System-Feedback
 
 %package sub2-domain_API-System-Runtime_information
