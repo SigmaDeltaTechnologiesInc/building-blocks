@@ -4,6 +4,7 @@ building-blocks-root-Preset_iot_core
 building-blocks-sub1-Preset_boards-ARTIK530
 building-blocks-sub2-Preset_boards-ARTIK530-Wifi
 building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
+building-blocks-sub2-Preset_boards-ARTIK530-Bluetooth
 # For TCT
 building-blocks-sub2-domain_API-AppFramework-TPK_Installation
 # Location
