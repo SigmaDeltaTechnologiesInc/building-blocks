@@ -171,6 +171,7 @@
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Audio_IO">
 		<rs_info>capi-media-audio-io-rs.xml</rs_info>
+		<rs_info>capi-media-sound-manager-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Camera">
 		<rs_info>capi-media-camera-rs.xml</rs_info>
@@ -233,6 +234,7 @@
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-OpenAL">
 		<rs_info>openal-soft-rs.xml</rs_info>
+		<rs_info>capi-media-sound-manager-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Player">
 		<rs_info>capi-media-player-rs.xml</rs_info>
@@ -264,12 +266,14 @@
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Tone_Player">
 		<rs_info>capi-media-tone-player-rs.xml</rs_info>
+		<rs_info>capi-media-sound-manager-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-Video_Util">
 		<rs_info>capi-media-video-util-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-WAV_Player">
 		<rs_info>capi-media-wav-player-rs.xml</rs_info>
+		<rs_info>capi-media-sound-manager-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Multimedia-libEXIF">
 		<rs_info>libexif-rs.xml</rs_info>
