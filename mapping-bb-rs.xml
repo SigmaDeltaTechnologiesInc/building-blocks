@@ -436,6 +436,12 @@
 		<rs_info>dali-toolkit-rs.xml</rs_info>
 		<rs_info>dali-adaptor-rs.xml</rs_info>
 	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-UI-WidgetViewerDALi">
+		<rs_info>dali-rs.xml</rs_info>
+		<rs_info>dali-toolkit-rs.xml</rs_info>
+		<rs_info>dali-adaptor-rs.xml</rs_info>
+		<rs_info>widget-viewer-dali-rs.xml</rs_info>
+	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-UI-EFL_Extension">
 		<rs_info>efl-extension-rs.xml</rs_info>
 	</buildingblock>

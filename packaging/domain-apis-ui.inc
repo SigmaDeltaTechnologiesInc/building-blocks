@@ -10,6 +10,7 @@ Summary:	UI API Group
 Suggests: %{name}-sub2-domain_API-UI-Cairo
 Suggests: %{name}-sub2-domain_API-UI-Clipboard_History_Manager
 Suggests: %{name}-sub2-domain_API-UI-DALi
+Suggests: %{name}-sub2-domain_API-UI-WidgetViewerDALi
 Suggests: %{name}-sub2-domain_API-UI-EFL_MainLoop
 Suggests: %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
 Suggests: %{name}-sub2-domain_API-UI-EFL_ELM_Accessbility
@@ -84,12 +85,27 @@ Cross-platform 3D UI Toolkit for embedded systems.
 DALi's 3D user interface engine enables you to create rich and high-performance UI applications.
 You should consider options
 1. dali-toolkit-resources_*x* for screen resolution.
-2. dali-adaptor-dali-video-player-plugin and Player if you use dali-toolkit::VideoView.
+2. dali-extension-video-player-plugin and Player if you use dali-toolkit::VideoView.
 3. dali-extension and dali-extension-key-extension if you want to add custom key map.
 
 
 %files sub2-domain_API-UI-DALi
 
+%package sub2-domain_API-UI-WidgetViewerDALi
+Summary:  WidgetViewerDALi
+Requires: appcore-widget
+Requires: amd-mod-ui-core
+Requires: amd-mod-wayland-core
+Requires: amd-mod-widget
+Requires: libwidget_viewer_dali
+Requires: %{name}-sub2-domain_API-UI-DALi
+
+%description sub2-domain_API-UI-WidgetViewerDALi
+API for creating a new instance of the widget and managing its life-cycle for widget viewer development.
+You should consider dali option for screen resolution
+%files sub2-domain_API-UI-WidgetViewerDALi
+%posttrans sub2-domain_API-UI-WidgetViewerDALi
+%tizen_feature tizen.org/feature/shell.appwidget true
 
 %package sub2-domain_API-UI-EFL_MainLoop
 Summary:    EFL_MainLoop

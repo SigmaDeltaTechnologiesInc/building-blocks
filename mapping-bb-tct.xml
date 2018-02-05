@@ -360,7 +360,9 @@
 		<tct_info>tct-dali-core-native-utc</tct_info>
 		<tct_info>tct-dali-adaptor-native-itc</tct_info>
 		<tct_info>tct-dali-adaptor-native-utc</tct_info>
+		<tct_info>tct-widget_viewer_dali-native-utc</tct_info>
 		<bb_info>building-blocks-sub2-domain_API-UI-DALi</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-UI-WidgetViewerDALi</bb_info>
 	</imageid>
 	<imageid name="TC0039">
 		<tct_info>tct-eom-native-itc</tct_info>

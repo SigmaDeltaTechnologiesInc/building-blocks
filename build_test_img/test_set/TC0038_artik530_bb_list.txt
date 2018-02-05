@@ -21,3 +21,6 @@ building-blocks-sub2-Preset_boards-ARTIK530-Audio
 # DALi
 building-blocks-sub2-domain_API-UI-DALi
 building-blocks-sub2-Preset_boards-ARTIK530-DALi
+
+# Widget
+building-blocks-sub2-domain_API-UI-WidgetViewerDALi
