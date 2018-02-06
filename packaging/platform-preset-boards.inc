@@ -7,6 +7,7 @@ Summary:	Board (Hardware Set) Support Packages (BSP) Presets
 Suggests:	%{name}-sub1-Preset_boards-ARTIK530
 Suggests:	%{name}-sub1-Preset_boards-RPI3
 Suggests:	%{name}-sub1-Preset_boards-TM1
+Suggests:	%{name}-sub1-Preset_boards-TM2
 %endif
 %description root-Preset_boards
 __EXPAND__: preset

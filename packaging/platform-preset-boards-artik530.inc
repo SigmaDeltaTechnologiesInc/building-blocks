@@ -29,6 +29,7 @@ Suggests:	%{name}-sub2-Preset_boards-ARTIK530-EFL
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-IM
 
 Conflicts:	%{name}-sub1-Preset_boards-TM1
+Conflicts:	%{name}-sub1-Preset_boards-TM2
 Conflicts:	%{name}-sub1-Preset_boards-RPI3
 
 %description sub1-Preset_boards-ARTIK530
