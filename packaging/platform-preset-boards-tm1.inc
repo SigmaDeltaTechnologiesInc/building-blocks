@@ -5,7 +5,7 @@
 ###  TM1  ###
 #############
 %package sub1-Preset_boards-TM1
-Summary:	TM1 Selection for HAL and Feature(For Test)
+Summary:	TM1 Selection for HAL and Feature
 Requires:	%{name}-sub2-Preset_boards-TM1-System
 Suggests:	%{name}-sub2-Preset_boards-TM1-Audio
 Suggests:	%{name}-sub2-Preset_boards-TM1-Audio_Recording
@@ -27,6 +27,7 @@ Suggests:	%{name}-sub2-Preset_boards-TM1-EFL
 Suggests:	%{name}-sub2-Preset_boards-TM1-IM
 
 Conflicts:	%{name}-sub1-Preset_boards-RPI3
+Conflicts:	%{name}-sub1-Preset_boards-TM2
 Conflicts:	%{name}-sub1-Preset_boards-ARTIK530
 
 %description sub1-Preset_boards-TM1
