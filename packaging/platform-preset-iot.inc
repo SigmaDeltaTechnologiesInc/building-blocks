@@ -54,6 +54,7 @@ Requires: vconf-internal-keys
 Requires: wpa_supplicant
 Requires: session-utils
 Requires: libnss-security-manager
+Requires: iotjs
 
 %description root-Preset_iot_core
 The packages of Tizen IoT Core.
