@@ -154,7 +154,7 @@ Requires: attach-panel-document
 Requires: attach-panel-voicerecorder
 
 Requires: %{name}-sub2-domain_API-Multimedia-Camera
-Requires: %{name}-sub2-domain_API-System-Device_Battery
+Requires: %{name}-sub2-domain_API-System-Device
 Requires: %{name}-sub2-domain_API-Multimedia-Recorder
 Requires: %{name}-sub2-domain_API-AppFramework-Native_EFL_UI_app_model
 Requires: %{name}-sub2-domain_API-System-Storage

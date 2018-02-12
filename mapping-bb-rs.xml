@@ -368,25 +368,10 @@
 	<buildingblock name="building-blocks-sub2-domain_API-Social-Phonenumber_utils">
 		<rs_info>phonenumber-utils-rs.xml</rs_info>
 	</buildingblock>
-	<buildingblock name="building-blocks-sub2-domain_API-System-Device_Battery">
-		<rs_info>capi-system-device-rs.xml</rs_info>
-	</buildingblock>
-	<buildingblock name="building-blocks-sub2-domain_API-System-Device_Callback">
-		<rs_info>capi-system-device-rs.xml</rs_info>
-	</buildingblock>
-	<buildingblock name="building-blocks-sub2-domain_API-System-Device_Display">
+	<buildingblock name="building-blocks-sub2-domain_API-System-Device">
 		<rs_info>capi-system-device-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-System-Device_Haptic">
-		<rs_info>capi-system-device-rs.xml</rs_info>
-	</buildingblock>
-	<buildingblock name="building-blocks-sub2-domain_API-System-Device_IR">
-		<rs_info>capi-system-device-rs.xml</rs_info>
-	</buildingblock>
-	<buildingblock name="building-blocks-sub2-domain_API-System-Device_Led">
-		<rs_info>capi-system-device-rs.xml</rs_info>
-	</buildingblock>
-	<buildingblock name="building-blocks-sub2-domain_API-System-Device_Power">
 		<rs_info>capi-system-device-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-System-Feedback">

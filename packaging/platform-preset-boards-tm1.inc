@@ -7,6 +7,7 @@
 %package sub1-Preset_boards-TM1
 Summary:	TM1 Selection for HAL and Feature
 Requires:	%{name}-sub2-Preset_boards-TM1-System
+Requires:	%{name}-sub2-Preset_boards-TM1-System_Device
 Suggests:	%{name}-sub2-Preset_boards-TM1-Audio
 Suggests:	%{name}-sub2-Preset_boards-TM1-Audio_Recording
 Suggests:	%{name}-sub2-Preset_boards-TM1-GPS
@@ -72,6 +73,17 @@ Requires:	model-config-tm1
 Packages for System HAL and Feature. They are mandatory.
 %files sub2-Preset_boards-TM1-System
 
+### TM1-System_Device ###
+%package sub2-Preset_boards-TM1-System_Device
+Summary:        TM1_Deviced Plugin
+Requires:       device-manager-plugin-sc7730
+
+%description sub2-Preset_boards-TM1-System_Device
+Packages for Deviced HAL and Feature.
+%files sub2-Preset_boards-TM1-System_Device
+%posttrans sub2-Preset_boards-TM1-System_Device
+%tizen_feature tizen.org/feature/battery true
+%tizen_feature tizen.org/feature/led true
 
 ### TM1-Audio ###
 %package sub2-Preset_boards-TM1-Audio

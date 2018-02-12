@@ -292,9 +292,7 @@
 		<tct_info>tct-device-native-ctc</tct_info>
 		<tct_info>tct-device-native-itc</tct_info>
 		<tct_info>tct-device-native-utc</tct_info>
-		<bb_info>building-blocks-sub2-domain_API-System-Device_Callback</bb_info>
-		<bb_info>building-blocks-sub2-domain_API-System-Device_Display</bb_info>
-		<bb_info>building-blocks-sub2-domain_API-System-Device_Power</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-System-Device</bb_info>
 	</imageid>
 	<imageid name="TC0029">
 		<tct_info>tct-runtime-info-native-itc</tct_info>

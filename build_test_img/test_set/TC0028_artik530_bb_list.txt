@@ -8,5 +8,5 @@ building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
 building-blocks-sub2-domain_API-AppFramework-TPK_Installation
 
 # Device
-building-blocks-sub2-domain_API-System-Device_Callback
+building-blocks-sub2-domain_API-System-Device
 building-blocks-sub2-Preset_boards-ARTIK530-System_Device

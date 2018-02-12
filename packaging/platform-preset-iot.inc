@@ -103,7 +103,7 @@ Requires:	%{name}-sub2-domain_API-Security-CSR
 Requires:	%{name}-sub2-domain_API-Security-Device_Policy
 Requires:	%{name}-sub2-domain_API-Security-Privilege_Info
 Requires:	%{name}-sub2-domain_API-Security-YACA
-Requires:	%{name}-sub2-domain_API-System-Device_Callback
+Requires:	%{name}-sub2-domain_API-System-Device
 Requires:	%{name}-sub2-domain_API-System-Runtime_information
 Requires:	%{name}-sub2-domain_API-System-Sensor_Listener
 Requires:	%{name}-sub2-domain_API-System-Storage

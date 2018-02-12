@@ -69,7 +69,6 @@ Firstly select HALs and Feature to add to your image.
 %tizen_feature tizen.org/feature/peripheral_io.uart true
 %tizen_feature tizen.org/system/model_name tm2
 
-
 ### TM2-System ###
 %package sub2-Preset_boards-TM2-System
 Summary:	TM2_System
@@ -79,7 +78,6 @@ Requires:	system-plugin-exynos
 Requires:	model-config-default
 Requires:	system-plugin-init_wrapper
 #Requires:	system-plugin-n4
-
 
 %description sub2-Preset_boards-TM2-System
 Packages for System HAL and Feature. They are mandatory.
@@ -95,7 +93,10 @@ Requires:	device-manager-plugin-exynos5433
 %description sub2-Preset_boards-TM2-System_Device
 Packages for Deviced HAL and Feature.
 %files sub2-Preset_boards-TM2-System_Device
-
+%posttrans sub2-Preset_boards-TM2-System_Device
+%tizen_feature tizen.org/feature/battery true
+%tizen_feature tizen.org/feature/led true
+%tizen_feature tizen.org/feature/consumer_ir true
 
 ### TM2-Audio ###
 %package sub2-Preset_boards-TM2-Audio
@@ -188,7 +189,6 @@ Packages of Camera HAL and Feature for TM2.
 %tizen_feature tizen.org/feature/camera.front.flash false
 %tizen_feature tizen.org/feature/media.video_recording true
 
-
 ### TM2-Display ###
 %package sub2-Preset_boards-TM2-Display
 Summary:	TM2_Display
@@ -252,7 +252,6 @@ Packages of Wifi HAL and Feature for TM2.
 If you enable the UI, you can select net-config-plugin-headed.
 %files sub2-Preset_boards-TM2-Wifi
 
-
 ### TM2-WifiDirect ###
 %package sub2-Preset_boards-TM2-WifiDirect
 Summary:	TM2_WifiDirect
@@ -291,7 +290,6 @@ Requires:	bluetooth-agent-profile_common
 %description sub2-Preset_boards-TM2-Bluetooth_CallAudio
 Packages of Bluetooth HAL and Feature for TM2.
 %files sub2-Preset_boards-TM2-Bluetooth_CallAudio
-
 
 ### TM2-BLE ###
 %package sub2-Preset_boards-TM2-BLE
@@ -332,7 +330,6 @@ Requires:	%{name}-sub2-Preset_boards-TM2-Audio
 Requires:	feedbackd-profile_mobile
 Requires:	svi-data-profile_common
 
-
 %description sub2-Preset_boards-TM2-Feedback
 Packages of Feedback HAL and Feature for TM2.
 %files sub2-Preset_boards-TM2-Feedback
@@ -369,7 +366,6 @@ Requires:	efl-modules-profile_common
 Requires:	efl-theme-tizen-common
 Requires:   elementary-tizen
 Suggests:   download-fonts-service
-
 
 %description sub2-Preset_boards-TM2-EFL
 Packages of EFL HAL and Feature for TM2.

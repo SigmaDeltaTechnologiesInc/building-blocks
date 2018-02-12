@@ -7,13 +7,8 @@
 ############
 %package sub1-domain_API-System
 Summary:	System API Group
-Suggests: %{name}-sub2-domain_API-System-Device_Battery
-Suggests: %{name}-sub2-domain_API-System-Device_Callback
-Suggests: %{name}-sub2-domain_API-System-Device_Display
+Suggests: %{name}-sub2-domain_API-System-Device
 Suggests: %{name}-sub2-domain_API-System-Device_Haptic
-Suggests: %{name}-sub2-domain_API-System-Device_IR
-Suggests: %{name}-sub2-domain_API-System-Device_Led
-Suggests: %{name}-sub2-domain_API-System-Device_Power
 Suggests: %{name}-sub2-domain_API-System-Feedback
 Suggests: %{name}-sub2-domain_API-System-Runtime_information
 Suggests: %{name}-sub2-domain_API-System-Runtime_information_Light
@@ -30,14 +25,10 @@ Suggests: %{name}-sub2-domain_API-System-dlog
 Tizen block (set of packages) for Group of domain API-System
 %files sub1-domain_API-System
 
-%package sub2-domain_API-System-Device_Battery
-Summary:    Device_Battery
+%package sub2-domain_API-System-Device
+Summary:  Device
 Requires: deviced
 Requires: capi-system-device
-Suggests: deviced-profile_mobile
-Suggests: deviced-profile_common
-Suggests: deviced-profile_wearable
-Suggests: deviced-profile_tv
 Suggests: device-manager-plugin-sc7730
 Suggests: device-manager-plugin-artik
 Suggests: device-manager-plugin-emul
@@ -46,75 +37,19 @@ Suggests: device-manager-plugin-exynos5433
 Suggests: device-manager-plugin-exynos7270
 Suggests: device-manager-plugin-odroid
 Suggests: device-manager-plugin-rpi3
-%description sub2-domain_API-System-Device_Battery
-Tizen block (set of packages) for Group of sub domain Device_Battery.
-If you do not want to use Device_Battery APIs, you do not need to choose.
-However, if you want to use them, you have to choose at least one item in each deviced-profile_xxxx and device-manager-plugin-xxxx.
-Those have a dependancy on Profile and Hardware.
-So, before you select, you have to make sure that which Profile and hardware you have.
+%description sub2-domain_API-System-Device
+Tizen block (set of packages) for Group of sub domain Device.
+If you do not want to use Device APIs, you do not need to choose.
+However, if you want to use them, you have to choose at least one item in each device-manager-plugin-xxxx.
+Those have a dependancy on Hardware.
+So, before you select, you have to make sure that which hardware you have.
 Then choose proper combination.
-For example, deviced-profile_mobile and device-manager-plugin-sc7730 for mobile
-             deviced-profile_common and device-manager-plugin-rpi3 for rpi3
-%files sub2-domain_API-System-Device_Battery
-%posttrans sub2-domain_API-System-Device_Battery
-%tizen_feature tizen.org/feature/battery true
-
-%package sub2-domain_API-System-Device_Callback
-Summary:    Device_Callback
-Requires: deviced
-Requires: capi-system-device
-Suggests: deviced-profile_mobile
-Suggests: deviced-profile_common
-Suggests: deviced-profile_wearable
-Suggests: deviced-profile_tv
-Suggests: device-manager-plugin-sc7730
-Suggests: device-manager-plugin-artik
-Suggests: device-manager-plugin-emul
-Suggests: device-manager-plugin-exynos3250
-Suggests: device-manager-plugin-exynos5433
-Suggests: device-manager-plugin-exynos7270
-Suggests: device-manager-plugin-odroid
-Suggests: device-manager-plugin-rpi3
-%description sub2-domain_API-System-Device_Callback
-Tizen block (set of packages) for Group of sub domain Device_Callback.
-If you do not want to use Device_Callback APIs, you do not need to choose.
-However, if you want to use them, you have to choose at least one item in each deviced-profile_xxxx and device-manager-plugin-xxxx.
-Those have a dependancy on Profile and Hardware.
-So, before you select, you have to make sure that which Profile and hardware you have.
-Then choose proper combination.
-For example, deviced-profile_mobile and device-manager-plugin-sc7730 for mobile
-             deviced-profile_common and device-manager-plugin-rpi3 for rpi3
-%files sub2-domain_API-System-Device_Callback
-
-%package sub2-domain_API-System-Device_Display
-Summary:  Device_Display
-Requires: deviced
-Requires: capi-system-device
-Suggests: deviced-profile_mobile
-Suggests: deviced-profile_common
-Suggests: deviced-profile_wearable
-Suggests: deviced-profile_tv
-Suggests: device-manager-plugin-sc7730
-Suggests: device-manager-plugin-artik
-Suggests: device-manager-plugin-emul
-Suggests: device-manager-plugin-exynos3250
-Suggests: device-manager-plugin-exynos5433
-Suggests: device-manager-plugin-exynos7270
-Suggests: device-manager-plugin-odroid
-Suggests: device-manager-plugin-rpi3
-%description sub2-domain_API-System-Device_Display
-Tizen block (set of packages) for Group of sub domain Device_Display.
-If you do not want to use Device_Display APIs, you do not need to choose.
-However, if you want to use them, you have to choose at least one item in each deviced-profile_xxxx and device-manager-plugin-xxxx.
-Those have a dependancy on Profile and Hardware.
-So, before you select, you have to make sure that which Profile and hardware you have.
-Then choose proper combination.
-For example, deviced-profile_mobile and device-manager-plugin-sc7730 for mobile
-             deviced-profile_common and device-manager-plugin-rpi3 for rpi3
-%files sub2-domain_API-System-Device_Display
+For example, device-manager-plugin-sc7730 for mobile
+             device-manager-plugin-rpi3 for rpi3
+%files sub2-domain_API-System-Device
 
 %package sub2-domain_API-System-Device_Haptic
-Summary:    Device_Haptic
+Summary:  Device_Haptic
 Requires: feedbackd
 Requires: capi-system-device
 Suggests: feedbackd-driver-external
@@ -133,92 +68,8 @@ Then choose proper one.
 For example, feedbackd-driver-circle for tw1
 %files sub2-domain_API-System-Device_Haptic
 
-%package sub2-domain_API-System-Device_IR
-Summary:    Device_IR
-Requires: deviced
-Requires: capi-system-device
-Suggests: deviced-profile_mobile
-Suggests: deviced-profile_common
-Suggests: deviced-profile_wearable
-Suggests: deviced-profile_tv
-Suggests: device-manager-plugin-sc7730
-Suggests: device-manager-plugin-artik
-Suggests: device-manager-plugin-emul
-Suggests: device-manager-plugin-exynos3250
-Suggests: device-manager-plugin-exynos5433
-Suggests: device-manager-plugin-exynos7270
-Suggests: device-manager-plugin-odroid
-Suggests: device-manager-plugin-rpi3
-%description sub2-domain_API-System-Device_IR
-Tizen block (set of packages) for Group of sub domain Device_IR.
-If you do not want to use Device_IR APIs, you do not need to choose.
-However, if you want to use them, you have to choose at least one item in each deviced-profile_xxxx and device-manager-plugin-xxxx.
-Those have a dependancy on Profile and Hardware.
-So, before you select, you have to make sure that which Profile and hardware you have.
-Then choose proper combination.
-For example, deviced-profile_mobile and device-manager-plugin-sc7730 for mobile
-             deviced-profile_common and device-manager-plugin-rpi3 for rpi3
-%files sub2-domain_API-System-Device_IR
-%posttrans sub2-domain_API-System-Device_IR
-%tizen_feature tizen.org/feature/consumer_ir true
-
-%package sub2-domain_API-System-Device_Led
-Summary:    Device_Led
-Requires: deviced
-Requires: capi-system-device
-Suggests: deviced-profile_mobile
-Suggests: deviced-profile_common
-Suggests: deviced-profile_wearable
-Suggests: deviced-profile_tv
-Suggests: device-manager-plugin-sc7730
-Suggests: device-manager-plugin-artik
-Suggests: device-manager-plugin-emul
-Suggests: device-manager-plugin-exynos3250
-Suggests: device-manager-plugin-exynos5433
-Suggests: device-manager-plugin-exynos7270
-Suggests: device-manager-plugin-odroid
-Suggests: device-manager-plugin-rpi3
-%description sub2-domain_API-System-Device_Led
-Tizen block (set of packages) for Group of sub domain Device_Led.
-If you do not want to use Device_Led APIs, you do not need to choose.
-However, if you want to use them, you have to choose at least one item in each deviced-profile_xxxx and device-manager-plugin-xxxx.
-Those have a dependancy on Profile and Hardware.
-So, before you select, you have to make sure that which Profile and hardware you have.
-Then choose proper combination.
-For example, deviced-profile_mobile and device-manager-plugin-sc7730 for mobile
-             deviced-profile_common and device-manager-plugin-rpi3 for rpi3
-%files sub2-domain_API-System-Device_Led
-%posttrans sub2-domain_API-System-Device_Led
-%tizen_feature tizen.org/feature/led true
-
-%package sub2-domain_API-System-Device_Power
-Summary:    Device_Power
-Requires: deviced
-Requires: capi-system-device
-Suggests: deviced-profile_mobile
-Suggests: deviced-profile_common
-Suggests: deviced-profile_wearable
-Suggests: deviced-profile_tv
-Suggests: device-manager-plugin-sc7730
-Suggests: device-manager-plugin-artik
-Suggests: device-manager-plugin-emul
-Suggests: device-manager-plugin-exynos3250
-Suggests: device-manager-plugin-exynos5433
-Suggests: device-manager-plugin-exynos7270
-Suggests: device-manager-plugin-odroid
-Suggests: device-manager-plugin-rpi3
-%description sub2-domain_API-System-Device_Power
-If you do not want to use Device_Power APIs, you do not need to choose.
-However, if you want to use them, you have to choose at least one item in each deviced-profile_xxxx and device-manager-plugin-xxxx.
-Those have a dependancy on Profile and Hardware.
-So, before you select, you have to make sure that which Profile and hardware you have
-Then choose proper combination.
-For example, deviced-profile_mobile and device-manager-plugin-sc7730 for mobile
-             deviced-profile_common and device-manager-plugin-rpi3 for rpi3
-%files sub2-domain_API-System-Device_Power
-
 %package sub2-domain_API-System-Feedback
-Summary:    Feedback
+Summary:  Feedback
 Requires: %{name}-sub2-domain_API-Multimedia-Audio_IO
 Requires: feedbackd
 Requires: libfeedback
@@ -336,7 +187,6 @@ System setting api for get,set configuration
 %tizen_feature tizen.org/feature/systemsetting true
 %tizen_feature tizen.org/feature/systemsetting.notification_email true
 
-
 %package sub2-domain_API-System-T_Trace
 Summary:    T_Trace
 Requires: ttrace
@@ -362,5 +212,3 @@ Requires: dlogutil
 %description sub2-domain_API-System-dlog
 Tizen block (set of packages) for Group of sub domain dlog
 %files sub2-domain_API-System-dlog
-
-
