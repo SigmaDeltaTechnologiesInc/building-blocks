@@ -77,6 +77,7 @@ Packages for System HAL and Feature. They are mandatory.
 %package sub2-Preset_boards-TM1-System_Device
 Summary:        TM1_Deviced Plugin
 Requires:       device-manager-plugin-sc7730
+Requires:	%{name}-sub2-domain_API-System-Device
 
 %description sub2-Preset_boards-TM1-System_Device
 Packages for Deviced HAL and Feature.

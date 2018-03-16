@@ -7,7 +7,7 @@
 %package sub1-Preset_boards-TM2
 Summary:	TM2 Selection for HAL and Feature
 Requires:	%{name}-sub2-Preset_boards-TM2-System
-Suggests:	%{name}-sub2-Preset_boards-TM2-System_Device
+Requires:	%{name}-sub2-Preset_boards-TM2-System_Device
 Suggests:	%{name}-sub2-Preset_boards-TM2-Audio
 Suggests:	%{name}-sub2-Preset_boards-TM2-Audio_Recording
 Suggests:	%{name}-sub2-Preset_boards-TM2-GPS
@@ -73,7 +73,6 @@ Firstly select HALs and Feature to add to your image.
 %package sub2-Preset_boards-TM2-System
 Summary:	TM2_System
 Requires:	system-plugin-profile-iot-headless
-#Requires:	system-plugin-config-udev-sdbd
 Requires:	system-plugin-exynos
 Requires:	model-config-default
 Requires:	system-plugin-init_wrapper
@@ -89,6 +88,7 @@ If you don't use initrd partition, please select system-plugin-init_wrapper.
 %package sub2-Preset_boards-TM2-System_Device
 Summary:	TM2_Deviced Plugin
 Requires:	device-manager-plugin-exynos5433
+Requires:	%{name}-sub2-domain_API-System-Device
 
 %description sub2-Preset_boards-TM2-System_Device
 Packages for Deviced HAL and Feature.

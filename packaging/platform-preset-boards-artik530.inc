@@ -7,7 +7,7 @@
 %package sub1-Preset_boards-ARTIK530
 Summary:	ARTIK530 Selection for HAL and Feature
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-System
-Suggests:	%{name}-sub2-Preset_boards-ARTIK530-System_Device
+Requires:	%{name}-sub2-Preset_boards-ARTIK530-System_Device
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Audio
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Audio_Recording
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-GPS
@@ -73,7 +73,6 @@ Firstly select HALs and Feature to add to your image.
 ### ARTIK530-System ###
 %package sub2-Preset_boards-ARTIK530-System
 Summary:	ARTIK530_System
-Requires:	system-plugin-config-udev-sdbd
 Requires:	system-plugin-device-u3
 Requires:	model-config-default
 Suggests:	system-plugin-feature-init_wrapper
@@ -88,6 +87,7 @@ If you don't use initrd partition, please select system-plugin-feature-init_wrap
 %package sub2-Preset_boards-ARTIK530-System_Device
 Summary:	ARTIK530_Deviced Plugin
 Requires:	device-manager-plugin-artik
+Requires:      %{name}-sub2-domain_API-System-Device
 
 %description sub2-Preset_boards-ARTIK530-System_Device
 Packages for Deviced HAL and Feature.
