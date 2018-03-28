@@ -124,7 +124,6 @@ events to appropriate callbacks.
 %package sub2-domain_API-UI-EFL_NativeUIToolkit
 Summary:    EFL_NativeUIToolkit
 Requires:   ecore-buffer
-Requires:   ecore-drm
 Requires:   elementary
 Requires:   %{name}-sub2-domain_API-UI-Display_Server
 #config
