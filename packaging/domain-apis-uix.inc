@@ -94,7 +94,7 @@ TTS(Text-To-Speech) provides functions to synthesize voice from text and play sy
 Summary:    Voice_control
 
 Requires: voice-control
-Requires: vc-engine-default
+Requires: org.tizen.vc-engine-default
 Requires: %{name}-sub2-domain_API-UIX-STT
 
 %description sub2-domain_API-UIX-Voice_control
