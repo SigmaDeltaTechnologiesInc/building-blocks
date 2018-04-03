@@ -166,4 +166,5 @@ Attach panel provides functions to attach images, voices, contacts, events and f
 Currently, only mobile is supported, and if there is a profile you want, you can select the app-selector package corresponding to profile.
 
 %files sub2-domain_API-AppFramework-Attach_Panel
-
+%posttrans sub2-domain_API-AppFramework-Attach_Panel
+%tizen_feature tizen.org/feature/attach_panel true
