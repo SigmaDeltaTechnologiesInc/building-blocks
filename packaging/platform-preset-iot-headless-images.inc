@@ -27,7 +27,7 @@ Requires:	%{name}-sub2-Preset_boards-ARTIK530-Bluetooth
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-BLE
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Display_Headless
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Wifi
-Requires:	%{name}-sub1-Preset_partition-2parts_ramdisk
+Requires:	%{name}-sub1-Preset_partition-2parts_ramdisk_recovery
 Requires:	%{name}-sub2-domain_API-AppFramework-Alarm_API
 Requires:	%{name}-sub2-domain_API-AppFramework-TPK_Installation
 Requires:	%{name}-sub2-domain_API-Base-Utils
