@@ -16,7 +16,6 @@ being useful for developers.
 Summary:	Build tools and compilers
 Suggests:	%{name}-sub2-feature_Development-Build-GCC
 Suggests:	%{name}-sub2-feature_Development-Build-LLVM
-Suggests:	%{name}-sub2-feature_Development-Build-CS_mono
 Suggests:	%{name}-sub2-feature_Development-Build-CS_dotnet
 Suggests:	make
 Suggests:	cmake
@@ -52,13 +51,6 @@ Suggests:	libllvm
 %description sub2-feature_Development-Build-LLVM
 %files sub2-feature_Development-Build-LLVM
 
-%package sub2-feature_Development-Build-CS_mono
-Summary:	C# Build Tools (mono)
-Requires:	mono-compiler
-Suggests:	mono-devel
-%description sub2-feature_Development-Build-CS_mono
-%files sub2-feature_Development-Build-CS_mono
-
 %package sub2-feature_Development-Build-CS_dotnet
 Summary:	C# Build Toold (dotnet-core)
 Requires:	dotnet-build-tools
@@ -76,31 +68,11 @@ Suggests:	%{name}-sub2-feature_Development-Language-python
 Suggests:	%{name}-sub2-feature_Development-Language-python3
 Suggests:	%{name}-sub2-feature_Development-Language-perl
 Suggests:	lua
-Suggests:	%{name}-sub2-feature_Development-Language-CS_mono
 Suggests:	%{name}-sub2-feature_Development-Language-CS_dotnet
 %description sub1-feature_Development-Language
 Language Support (Runtimes)
 %files sub1-feature_Development-Language
 
-%package sub2-feature_Development-Language-CS_mono
-Summary:	C# Runtime (mono)
-Requires:	mono
-Suggests:	mono-winfx
-Suggests:	mono-mvc
-Suggests:	mono-devel
-Suggests:	mono-local-extras
-Suggests:	mono-extras
-Suggests:	mono-reactive
-Suggests:	mono-reactive-winforms
-Suggests:	mono-winforms
-Suggests:	mono-wcf
-Suggests:	mono-web
-Suggests:	mono-data
-Suggests:	mono-data-sqlite
-Suggests:	mono-data-oracle
-Suggests:	ibm-data-db2
-%description sub2-feature_Development-Language-CS_mono
-%files sub2-feature_Development-Language-CS_mono
 
 %package sub2-feature_Development-Language-CS_dotnet
 Summary:	C# Runtime (dotnet-core)
