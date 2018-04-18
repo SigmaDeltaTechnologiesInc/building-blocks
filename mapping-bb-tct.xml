@@ -41,8 +41,6 @@
 		<tct_info>tct-contacts-service2-native-utc</tct_info>
 		<tct_info>tct-email-native-itc</tct_info>
 		<tct_info>tct-email-native-utc</tct_info>
-		<tct_info>tct-sync-manager-native-itc</tct_info>
-		<tct_info>tct-sync-manager-native-utc</tct_info>
 		<tct_info>tct-phonenumber-utils-native-itc</tct_info>
 		<tct_info>tct-phonenumber-utils-native-utc</tct_info>
 		<bb_info>building-blocks-sub2-domain_API-Account-Account_Manager</bb_info>
@@ -355,10 +353,10 @@
 	<imageid name="TC0036">
 		<tct_info>tct-cairo-native-itc</tct_info>
 		<tct_info>tct-cairo-native-utc</tct_info>
-		<tct_info>tct-elf-ext-native-itc</tct_info>
-		<tct_info>tct-elf-ext-native-utc</tct_info>
-		<tct_info>tct-elf-util-native-itc</tct_info>
-		<tct_info>tct-elf-util-native-utc</tct_info>
+		<tct_info>tct-efl-ext-native-itc</tct_info>
+		<tct_info>tct-efl-ext-native-utc</tct_info>
+		<tct_info>tct-efl-util-native-itc</tct_info>
+		<tct_info>tct-efl-util-native-utc</tct_info>
 		<tct_info>tct-tzsh-quickpanel-native-itc</tct_info>
 		<tct_info>tct-tzsh-quickpanel-native-utc</tct_info>
 		<bb_info>building-blocks-sub2-domain_API-UI-Cairo</bb_info>
