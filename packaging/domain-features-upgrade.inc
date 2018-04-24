@@ -12,6 +12,7 @@ Requires: initrd-recovery
 Requires: tota-ua
 Requires: factory-reset
 Requires: factory-reset-userdata-backup
+Requires: update-helper-service
 Suggests: building-blocks-sub1-Preset_partition-2parts_ramdisk_recovery
 Suggests: building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
 Suggests: reboot-param-helper
