@@ -168,3 +168,10 @@ Currently, only mobile is supported, and if there is a profile you want, you can
 %files sub2-domain_API-AppFramework-Attach_Panel
 %posttrans sub2-domain_API-AppFramework-Attach_Panel
 %tizen_feature tizen.org/feature/attach_panel true
+
+%package sub2-domain_API-AppFramework-RPC_Port_API
+Summary: RPC Port API
+Requires: rpc-port
+%description sub2-domain_API-AppFramework-RPC_Port_API
+This block supports rpc port API
+%files sub2-domain_API-AppFramework-RPC_Port_API
