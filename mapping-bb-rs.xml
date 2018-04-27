@@ -78,7 +78,6 @@
 		<rs_info>emile-rs.xml</rs_info>
 		<rs_info>eet-rs.xml</rs_info>
 		<rs_info>edje-rs.xml</rs_info>
-		<rs_info>eldbus-rs.xml</rs_info>
 		<rs_info>efreet-rs.xml</rs_info>
 		<rs_info>ethumb-rs.xml</rs_info>
 	</buildingblock>
@@ -93,7 +92,6 @@
 		<rs_info>emile-rs.xml</rs_info>
 		<rs_info>eet-rs.xml</rs_info>
 		<rs_info>edje-rs.xml</rs_info>
-		<rs_info>eldbus-rs.xml</rs_info>
 		<rs_info>efreet-rs.xml</rs_info>
 		<rs_info>ethumb-rs.xml</rs_info>
 	</buildingblock>
@@ -446,11 +444,9 @@
                 <rs_info>emile-rs.xml</rs_info>
                 <rs_info>eet-rs.xml</rs_info>
                 <rs_info>edje-rs.xml</rs_info>
-                <rs_info>eldbus-rs.xml</rs_info>
                 <rs_info>efreet-rs.xml</rs_info>
                 <rs_info>ethumb-rs.xml</rs_info>
                 <rs_info>ector-rs.xml</rs_info>
-                <rs_info>edbus-rs.xml</rs_info>
                 <rs_info>embryo-rs.xml</rs_info>
                 <rs_info>eio-rs.xml</rs_info>
 				<rs_info>capi-ui-efl-util-rs.xml</rs_info>
