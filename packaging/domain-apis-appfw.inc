@@ -19,6 +19,7 @@ Suggests: %{name}-sub2-domain_API-AppFramework-Shortcut_API
 Suggests: %{name}-sub2-domain_API-AppFramework-Badge_API
 Suggests: %{name}-sub2-domain_API-AppFramework-Media_Key_API
 Suggests: %{name}-sub2-domain_API-AppFramework-Attach_Panel
+Suggests: %{name}-sub2-domain_API-AppFramework-Job_Scheduler_API
 %description sub1-domain_API-AppFramework
 Tizen block (set of packages) for Group of domain API-AppFramework
 %files sub1-domain_API-AppFramework
@@ -167,3 +168,9 @@ Currently, only mobile is supported, and if there is a profile you want, you can
 
 %files sub2-domain_API-AppFramework-Attach_Panel
 
+%package sub2-domain_API-AppFramework-Job_Scheduler_API
+Summary: Job Scheduler API
+Requires: capi-appfw-job-scheduler
+%description sub2-domain_API-AppFramework-Job_Scheduler_API
+This block supports job scheduler API
+%files sub2-domain_API-AppFramework-Job_Scheduler_API
