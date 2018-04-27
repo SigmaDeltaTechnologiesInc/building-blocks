@@ -107,6 +107,9 @@
 	<buildingblock name="building-blocks-sub2-domain_API-AppFramework-RPC_Port_API">
 		<rs_info>rpc-port-rs.xml</rs_info>
 	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-AppFramework-Job_Scheduler_API">
+		<rs_info>capi-appfw-job-scheduler-rs.xml</rs_info>
+	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Base-Glib">
 		<rs_info>glib2-rs.xml</rs_info>
 	</buildingblock>
