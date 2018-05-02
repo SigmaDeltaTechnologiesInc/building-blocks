@@ -56,12 +56,10 @@ Suggests: feedbackd-driver-external
 Suggests: feedbackd-driver-standard
 Suggests: feedbackd-driver-gpio
 Suggests: feedbackd-driver-circle
-Suggests: feedbackd-conf-level3
-Suggests: feedbackd-conf-level6
 %description sub2-domain_API-System-Device_Haptic
 Tizen block (set of packages) for Group of sub domain Device_Haptic.
 If you do not want to use Device_Haptic APIs, you do not need to choose.
-However, if you want to use them, you have to choose at least one item in feedbackd-driver-xxxx and in feedbackd-conf-levelx.
+However, if you want to use them, you have to choose at least one item in feedbackd-driver-xxxx.
 Haptic has a dependancy on Profile.
 Before you select, you have to make sure that which Profile you have.
 Then choose proper one.
@@ -77,8 +75,6 @@ Suggests: feedbackd-driver-external
 Suggests: feedbackd-driver-standard
 Suggests: feedbackd-driver-gpio
 Suggests: feedbackd-driver-circle
-Suggests: feedbackd-conf-level3
-Suggests: feedbackd-conf-level6
 Suggests: svi-data-profile_common
 Suggests: svi-data-profile_mobile
 Suggests: svi-data-profile_wearable
@@ -86,7 +82,7 @@ Suggests: svi-data-profile_wearable
 Tizen block (set of packages) for Group of sub domain Feedback.
 Feedback is only available for mobile, wearable and common.
 If you do not want to use Feedback APIs, you do not need to choose.
-However, if you want to use them, you have to choose at least one item in feedbackd-driver-xxxx and in feedbackd-conf-levelx.
+However, if you want to use them, you have to choose at least one item in feedbackd-driver-xxxx.
 Those have a dependancy on Profile.
 Before you select, you have to make sure that which Profile you have.
 Then choose proper combination.

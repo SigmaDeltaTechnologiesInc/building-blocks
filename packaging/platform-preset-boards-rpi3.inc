@@ -323,7 +323,6 @@ Summary:	RPI3_Feedback
 Requires:	%{name}-sub2-domain_API-System-Feedback
 Requires:	%{name}-sub2-Preset_boards-RPI3-Audio
 Requires:	feedbackd-driver-gpio
-Requires:	feedbackd-conf-level6
 Requires:	svi-data-profile_mobile
 
 

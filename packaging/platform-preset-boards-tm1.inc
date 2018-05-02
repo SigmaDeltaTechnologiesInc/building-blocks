@@ -296,7 +296,6 @@ Summary:	TM1_Feedback
 Requires:	%{name}-sub2-domain_API-System-Feedback
 Requires:	%{name}-sub2-Preset_boards-TM1-Audio
 Requires:	feedbackd-driver-standard
-Requires:	feedbackd-conf-level6
 Requires:	svi-data-profile_mobile
 
 %description sub2-Preset_boards-TM1-Feedback
