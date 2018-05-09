@@ -393,6 +393,7 @@ Suggests:	wpa_supplicant-extension-TM2
 Suggests:	wpa_supplicant-profile_common
 Suggests:	wpa_supplicant-profile_tv
 Suggests:	net-config-profile_tv
+Suggests:	net-config-profile_wearable
 Suggests:	connman-extension-ivi
 Suggests:	connman-extension-tv
 
@@ -407,9 +408,10 @@ TM2 target (headed settgin UI) : wpa_supplicant-extension-TM2, net-config-plugin
 TM2 target (headless) : wpa_supplicant-extension-TM2 <br>
 TW1 target (headed setting UI) : wpa_supplicant-profile_common, net-config-plugin-headed <br>
 TW1 target (headless) : wpa_supplicant-profile_common <br>
-TW2 target (headed setting UI) : wpa_supplicant-profile_common, net-config-plugin-headed <br>
-TW2 target (headless): wpa_supplicant-profile_common <br>
-tv profile : wpa_supplicant-profile_common, net-config-profile_tv, connman-extension-tv <br>
+TW2 target (headed setting UI) : wpa_supplicant-profile_common, net-config-profile_wearable, net-config-plugin-headed <br>
+TW2 target (headless): wpa_supplicant-profile_common, net-config-profile_wearable <br>
+wearable profile : wpa_supplicant-profile_common, net-config-profile_wearable <br>
+tv profile : wpa_supplicant-profile_common, wpa_supplicant-profile_tv, net-config-profile_tv, connman-extension-tv <br>
 ivi profile : wpa_supplicant-profile_common, connman-extension-ivi <br>
 common profile : wpa_supplicant-profile_common <br>
 %files sub2-domain_API-Network-WiFi
@@ -429,6 +431,7 @@ Suggests:	wpa_supplicant-extension-TM2
 Suggests:	wpa_supplicant-profile_common
 Suggests:	wpa_supplicant-profile_tv
 Suggests:	net-config-profile_tv
+Suggests:	net-config-profile_wearable
 Suggests:	connman-extension-ivi
 Suggests:	connman-extension-tv
 
@@ -443,9 +446,10 @@ TM2 target (headed settgin UI) : wpa_supplicant-extension-TM2, net-config-plugin
 TM2 target (headless) : wpa_supplicant-extension-TM2 <br>
 TW1 target (headed setting UI) : wpa_supplicant-profile_common, net-config-plugin-headed <br>
 TW1 target (headless) : wpa_supplicant-profile_common <br>
-TW2 target (headed setting UI) : wpa_supplicant-profile_common, net-config-plugin-headed <br>
-TW2 target (headless): wpa_supplicant-profile_common <br>
-tv profile : wpa_supplicant-profile_common, net-config-profile_tv, connman-extension-tv <br>
+TW2 target (headed setting UI) : wpa_supplicant-profile_common, net-config-profile_wearable, net-config-plugin-headed <br>
+TW2 target (headless): wpa_supplicant-profile_common, net-config-profile_wearable <br>
+wearable profile : wpa_supplicant-profile_common, net-config-profile_wearable <br>
+tv profile : wpa_supplicant-profile_common, wpa_supplicant-profile_tv, net-config-profile_tv, connman-extension-tv <br>
 ivi profile : wpa_supplicant-profile_common, connman-extension-ivi <br>
 common profile : wpa_supplicant-profile_common <br>
 %files sub2-domain_API-Network-WiFi_Manager
