@@ -164,7 +164,9 @@ Requires: bluetooth-frwk-core
 Requires: libbluetooth
 Requires: bluez
 Requires: bluetooth-tools
-Requires: bluez-extension-le
+
+#LE only
+Suggests: bluez-extension-le
 
 #Firmware
 Suggests: bluetooth-firmware-bcm
@@ -206,13 +208,15 @@ Enabling Bluetooth LE Only functionality<br>
 - TW2 : bluetooth-firmware-bcm-exynos7270<br>
 - Artik : bluetooth-firmware-bcm-artik<br>
 - RPI3 : bluetooth-firmware-bcm-rpi3<br>
-2. Profiles<br>
+2. LE only<br>
+- bluez-extension-le<br>
+3. Profiles<br>
 - mobile : bluetooth-frwk-profile_mobile, bluetooth-tools-profile_mobile, bluez-profile_common<br>
 - wearable : bluetooth-frwk-profile_wearable, bluetooth-tools-profile_wearable, bluez-profile_wearable<br>
 - common : bluetooth-frwk-profile_common, bluetooth-tools-profile_common, bluez-profile_common<br>
 - tv : bluetooth-frwk-profile_tv, bluetooth-tools-profile_common, bluez-profile_tv<br>
 - ivi : bluetooth-frwk-profile_ivi, bluetooth-tools-profile_ivi, bluez-profile_common<br>
-3. Headed device<br>
+4. Headed device<br>
 - wearable : bluetooth-frwk-plugin-headed, org.tizen.bt-syspopup, org.tizen.bt-syspopup-profile_wearable<br>
 - not wearable : bluetooth-frwk-plugin-headed, org.tizen.bt-syspopup, org.tizen.bt-syspopup-profile_common
 %files sub2-domain_API-Network-Bluetooth_LE
