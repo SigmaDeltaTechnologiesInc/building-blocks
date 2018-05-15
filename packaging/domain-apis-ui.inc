@@ -247,6 +247,8 @@ Requires: minicontrol
 %description sub2-domain_API-UI-Minicontrol
 This block supports minicontol API which enables simple control UX in the notification panel
 %files sub2-domain_API-UI-Minicontrol
+%posttrans sub2-domain_API-UI-Minicontrol
+%tizen_feature tizen.org/feature/minicontrol true
 
 
 %package sub2-domain_API-UI-SDL_GL
