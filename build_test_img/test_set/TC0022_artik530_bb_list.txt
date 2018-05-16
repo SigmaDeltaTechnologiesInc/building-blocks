@@ -12,6 +12,7 @@ building-blocks-sub2-domain_API-Multimedia-Metadata_Editor
 building-blocks-sub2-domain_API-Multimedia-Metadata_Extractor
 building-blocks-sub2-domain_API-Multimedia-OpenAL
 building-blocks-sub2-domain_API-Multimedia-Sound_Manager
+building-blocks-sub2-domain_API-Multimedia-Sound_Pool
 building-blocks-sub2-domain_API-Multimedia-Tone_Player
 building-blocks-sub2-domain_API-Multimedia-WAV_Player
 

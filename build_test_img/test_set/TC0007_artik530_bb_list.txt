@@ -8,3 +8,7 @@ building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
 building-blocks-sub2-domain_API-AppFramework-TPK_Installation
 # Message Port
 building-blocks-sub2-domain_API-AppFramework-Message_Port_API
+# RPC-PORT
+building-blocks-sub2-domain_API-AppFramework-RPC_Port_API
+# JOB-SCHEDULER
+building-blocks-sub2-domain_API-AppFramework-Job_Scheduler_API
