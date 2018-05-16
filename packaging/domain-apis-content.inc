@@ -17,7 +17,6 @@ Tizen block (set of packages) for Group of domain API-Content
 Summary:    Download
 Requires:	capi-web-url-download
 Requires:	download-provider
-Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Content-Download

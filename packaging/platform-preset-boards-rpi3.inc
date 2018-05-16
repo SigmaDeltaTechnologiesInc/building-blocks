@@ -234,7 +234,6 @@ Packages of Display HAL and Feature for RPI3(Headless).
 ### RPI3-Wifi ###
 %package sub2-Preset_boards-RPI3-Wifi
 Summary:	RPI3_Wifi
-Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Requires:	wpa_supplicant-profile_common
 Suggests:	net-config-plugin-headed

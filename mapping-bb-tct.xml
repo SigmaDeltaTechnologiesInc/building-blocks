@@ -22,8 +22,6 @@
 		<tct_info>tct-system-info-native-utc</tct_info>
 		<tct_info>tct-ttrace-native-itc</tct_info>
 		<tct_info>tct-trace-native-utc</tct_info>
-		<tct_info>tct-wifi-native-itc</tct_info>
-		<tct_info>tct-wifi-native-utc</tct_info>
 		<tct_info>tct-wifi-manager-native-itc</tct_info>
 		<tct_info>tct-wifi-manager-native-utc</tct_info>
 		<bb_info>building-blocks-root-Preset_iot_core</bb_info>

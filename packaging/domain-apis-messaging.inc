@@ -19,7 +19,7 @@ Summary:Email
 Requires:capi-messaging-email
 Requires:email-service
 Suggests:%{name}-sub1-domain_API-Telephony
-Suggests:%{name}-sub2-domain_API-Network-WiFi
+Suggests:%{name}-sub2-domain_API-Network-WiFi_Manager
 
 %description sub2-domain_API-Messaging-Email
 This block supports managing Email service.<br>
@@ -54,7 +54,7 @@ This block supports managing Message service.
 Summary:	Push Client
 Requires:	libpush
 Suggests:	%{name}-sub1-domain_API-Telephony
-Suggests:	%{name}-sub2-domain_API-Network-WiFi
+Suggests:	%{name}-sub2-domain_API-Network-WiFi_Manager
 %description sub2-domain_API-Messaging-Push
 This block supports transferation push messages between devices and server. Also, to use this feature, either Data Network or Wi-Fi connection is required. Once you check the Push Client before Image Creation, it will be included the image. For this, either Data Network or Wi-Fi connection is required.
 %files sub2-domain_API-Messaging-Push

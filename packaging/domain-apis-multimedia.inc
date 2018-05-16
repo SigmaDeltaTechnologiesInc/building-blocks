@@ -142,7 +142,7 @@ Requires: %{name}-sub2-domain_API-Multimedia-Configuration
 Requires: %{name}-sub2-domain_API-System-Storage
 Requires: %{name}-sub2-domain_API-UI-TBM_Surface
 Requires: %{name}-sub2-domain_API-UI-EFL_NativeUIToolkit
-Requires: %{name}-sub2-domain_API-Network-WiFi
+Requires: %{name}-sub2-domain_API-Network-WiFi_Manager
 
 %description sub2-domain_API-Multimedia-Media_Streamer
 This block supports constructing the custom player and it gives the ability to controlling playback attributes.<br>
@@ -255,7 +255,7 @@ Requires: %{name}-sub2-domain_API-System-Storage
 Requires: %{name}-sub2-domain_API-UI-TBM_Surface
 
 # suggest building block for network streaming
-Suggests: %{name}-sub2-domain_API-Network-WiFi
+Suggests: %{name}-sub2-domain_API-Network-WiFi_Manager
 
 # suggest building block for video rendering
 Suggests: capi-media-player-display

@@ -242,7 +242,6 @@ Packages of Display HAL and Feature for TM2(Headless).
 ### TM2-Wifi ###
 %package sub2-Preset_boards-TM2-Wifi
 Summary:	TM2_Wifi
-Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Requires:	wpa_supplicant-extension-TM2
 Suggests:	net-config-plugin-headed

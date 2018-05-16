@@ -24,7 +24,6 @@ Suggests: %{name}-sub2-domain_API-Network-SSDP
 Suggests: %{name}-sub2-domain_API-Network-STC
 Suggests: %{name}-sub2-domain_API-Network-Smartcard
 Suggests: %{name}-sub2-domain_API-Network-VPN_Service
-Suggests: %{name}-sub2-domain_API-Network-WiFi
 Suggests: %{name}-sub2-domain_API-Network-WiFi_Manager
 Suggests: %{name}-sub2-domain_API-Network-WiFi_Direct
 %description sub1-domain_API-Network
@@ -243,7 +242,6 @@ and you need the package either DNSSD or WiFi Direct. A default is DNSSD.
 %package sub2-domain_API-Network-Connection
 Summary:    Connection
 Requires:	capi-network-connection
-Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-Connection
@@ -254,7 +252,6 @@ To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %package sub2-domain_API-Network-Curl
 Summary:    Curl
 Requires:	libcurl
-Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-Curl
@@ -266,7 +263,6 @@ To use this feature, either Data Network or Wi-Fi connection is required. <br>
 Summary:    DNS-SD
 Requires:	libnsd-dns-sd
 Requires:	mdnsresponder
-Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-DNSSD
@@ -279,7 +275,6 @@ To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %package sub2-domain_API-Network-HTTP
 Summary:    HTTP
 Requires:	capi-network-http
-Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-HTTP
@@ -290,7 +285,7 @@ To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %package sub2-domain_API-Network-IoTCon
 Summary:    IoTCon
 Requires: iotcon
-Requires: %{name}-sub2-domain_API-Network-WiFi
+Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 %description sub2-domain_API-Network-IoTCon
 This block supports Tizen IoT Connectivity Service & Library(Client) based on Iotivity. <br>
 It supports resource management, remote resource management, CRUDN request/response and resource representation. <br>
@@ -324,7 +319,6 @@ Enabling NFC Manager and it is possible to user NFC API
 %package sub2-domain_API-Network-SSDP
 Summary:    SSDP
 Requires:	libnsd-ssdp
-Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-SSDP
@@ -338,7 +332,6 @@ To use this feature, either Data Network or Wi-Fi connection is required. <br>
 Summary:    STC
 Requires:	capi-network-stc
 Requires:	stc-manager
-Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Suggests:	%{name}-sub1-domain_API-Telephony
 %description sub2-domain_API-Network-STC
@@ -371,7 +364,6 @@ In case of embedded SE, 'smartcard-plugin-nfc' and 'sub2-domain_API-Network-NFC'
 Summary:    VPN_Service
 Requires:	capi-vpnsvc
 #Requires:	net-config
-Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 %description sub2-domain_API-Network-VPN_Service
 Tizen block (set of packages) for API sets of domain API-Network-VPN_Service <br>
@@ -379,44 +371,6 @@ To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-VPN_Service
 %posttrans sub2-domain_API-Network-VPN_Service
 %tizen_feature tizen.org/feature/network.vpn true
-
-%package sub2-domain_API-Network-WiFi
-Summary:    WiFi
-Requires:	capi-network-wifi
-Requires:	net-config
-Requires:	connman
-Requires:	wpa_supplicant
-
-#Profiles
-Suggests:	wpa_supplicant-extension-TM1
-Suggests:	wpa_supplicant-extension-TM2
-Suggests:	wpa_supplicant-profile_common
-Suggests:	wpa_supplicant-profile_tv
-Suggests:	net-config-profile_tv
-Suggests:	net-config-profile_wearable
-Suggests:	connman-extension-ivi
-Suggests:	connman-extension-tv
-
-#Headed/Headless
-Suggests:	net-config-plugin-headed
-
-%description sub2-domain_API-Network-WiFi
-Tizen block (set of packages) for API sets of domain API-Network-WiFi <br>
-TM1 target (headed setting UI) : wpa_supplicant-extension-TM1, net-config-plugin-headed <br>
-TM1 target (headless) : wpa_supplicant-extension-TM1 <br>
-TM2 target (headed settgin UI) : wpa_supplicant-extension-TM2, net-config-plugin-headed <br>
-TM2 target (headless) : wpa_supplicant-extension-TM2 <br>
-TW1 target (headed setting UI) : wpa_supplicant-profile_common, net-config-plugin-headed <br>
-TW1 target (headless) : wpa_supplicant-profile_common <br>
-TW2 target (headed setting UI) : wpa_supplicant-profile_common, net-config-profile_wearable, net-config-plugin-headed <br>
-TW2 target (headless): wpa_supplicant-profile_common, net-config-profile_wearable <br>
-wearable profile : wpa_supplicant-profile_common, net-config-profile_wearable <br>
-tv profile : wpa_supplicant-profile_common, wpa_supplicant-profile_tv, net-config-profile_tv, connman-extension-tv <br>
-ivi profile : wpa_supplicant-profile_common, connman-extension-ivi <br>
-common profile : wpa_supplicant-profile_common <br>
-%files sub2-domain_API-Network-WiFi
-%posttrans sub2-domain_API-Network-WiFi
-%tizen_feature tizen.org/feature/network.wifi true
 
 %package sub2-domain_API-Network-WiFi_Manager
 Summary:    WiFi_Manager
@@ -461,7 +415,6 @@ Summary:    WiFi_Direct
 Requires:	capi-network-wifi-direct
 Requires:	wifi-direct-manager
 Requires:	wifi-direct-plugin-wpasupplicant
-Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 
 #Profiles

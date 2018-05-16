@@ -65,7 +65,7 @@ Requires:	libcore-sync-client
 Requires:	%{name}-sub2-domain_API-Account-Account_Manager
 Requires:	%{name}-sub2-domain_API-Social-Contacts
 Suggests:	%{name}-sub1-domain_API-Telephony
-Suggests:	%{name}-sub2-domain_API-Network-WiFi
+Suggests:	%{name}-sub2-domain_API-Network-WiFi_Manager
 %description sub2-domain_API-Account-Sync_Manager
 This block supports managing data synchronization. Also, to use this feature, either Data Network or Wi-Fi connection is required. Once you check the Sync Manager before Image Creation, it will be included the image.
 %files sub2-domain_API-Account-Sync_Manager

@@ -196,7 +196,6 @@ Packages of Display HAL and Feature for TM1.
 ### TM1-Wifi ###
 %package sub2-Preset_boards-TM1-Wifi
 Summary:	TM1_Wifi
-Requires: 	%{name}-sub2-domain_API-Network-WiFi
 Requires: 	%{name}-sub2-domain_API-Network-WiFi_Manager
 Requires:	wpa_supplicant-extension-TM1
 Suggests:	net-config-plugin-headed

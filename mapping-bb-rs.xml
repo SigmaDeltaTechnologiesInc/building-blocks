@@ -12,7 +12,6 @@
 		<rs_info>capi-base-common-rs.xml</rs_info>
 		<rs_info>capi-network-connection-rs.xml</rs_info>
 		<rs_info>capi-network-wifi-manager-rs.xml</rs_info>
-		<rs_info>capi-network-wifi-rs.xml</rs_info>
 		<rs_info>capi-system-info-rs.xml</rs_info>
 		<rs_info>capi-system-peripheral-io-rs.xml</rs_info>
 		<rs_info>ecore-rs.xml</rs_info>
@@ -335,9 +334,6 @@
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Network-VPN_Service">
 		<rs_info>capi-vpn-service-rs.xml</rs_info>
-	</buildingblock>
-	<buildingblock name="building-blocks-sub2-domain_API-Network-WiFi">
-		<rs_info>capi-network-wifi-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Network-WiFi_Direct">
 		<rs_info>capi-network-wifi-direct-rs.xml</rs_info>

@@ -16,7 +16,6 @@ Requires: capi-appfw-app-common
 Requires: capi-appfw-app-manager
 Requires: capi-appfw-package-manager
 Requires: capi-appfw-preference
-Requires: capi-network-wifi
 Requires: capi-network-wifi-manager
 Requires: capi-system-peripheral-io
 Requires: connman
@@ -97,7 +96,6 @@ Requires:	%{name}-sub2-domain_API-Network-Bluetooth_Transfer
 Requires:	%{name}-sub2-domain_API-Network-DNSSD
 Requires:	%{name}-sub2-domain_API-Network-MTP
 Requires:	%{name}-sub2-domain_API-Network-SSDP
-Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Requires:	%{name}-sub2-domain_API-Security-CSR
 Requires:	%{name}-sub2-domain_API-Security-Device_Policy

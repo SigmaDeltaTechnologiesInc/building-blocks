@@ -235,7 +235,6 @@ Packages of Display HAL and Feature for ARTIK530(Headless).
 ### ARTIK530-Wifi ###
 %package sub2-Preset_boards-ARTIK530-Wifi
 Summary:	ARTIK530_Wifi
-Requires:	%{name}-sub2-domain_API-Network-WiFi
 Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
 Requires:	wpa_supplicant-profile_common
 Suggests:	net-config-plugin-headed
