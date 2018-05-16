@@ -66,7 +66,7 @@ Requires:	%{name}-sub2-domain_API-Base-Utils
 Requires:	%{name}-sub2-domain_API-Multimedia-Player
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_Media_Audio
 Requires:	%{name}-sub2-domain_API-Network-Curl
-Requires:	%{name}-sub1-domain_Feature-SoftAP
+Requires:	%{name}-sub2-domain_API-Network-SoftAP
 Requires:	%{name}-sub1-domain_Feature-Setup
 Requires:	tar
 Requires:       system-plugin-config-env-headless

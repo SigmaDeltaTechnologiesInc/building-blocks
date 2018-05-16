@@ -125,7 +125,7 @@ Requires:	%{name}-sub1-Preset_partition-3parts_ramdisk_recovery
 Requires:	%{name}-sub1-domain_Feature-BootAni
 Requires:	%{name}-sub1-domain_Feature-DotNET
 Requires:	dali-csharp-binder
-Requires:	%{name}-sub1-domain_Feature-SoftAP
+Requires:	%{name}-sub2-domain_API-Network-SoftAP
 Requires:	%{name}-sub1-domain_Feature-Starter
 Requires:	%{name}-sub1-domain_Feature-Upgrade
 Requires:	%{name}-sub1-domain_Feature-Recovery
