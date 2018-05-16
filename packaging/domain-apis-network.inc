@@ -20,6 +20,7 @@ Suggests: %{name}-sub2-domain_API-Network-HTTP
 Suggests: %{name}-sub2-domain_API-Network-IoTCon
 Suggests: %{name}-sub2-domain_API-Network-MTP
 Suggests: %{name}-sub2-domain_API-Network-NFC
+Suggests: %{name}-sub2-domain_API-Network-SoftAP
 Suggests: %{name}-sub2-domain_API-Network-SSDP
 Suggests: %{name}-sub2-domain_API-Network-STC
 Suggests: %{name}-sub2-domain_API-Network-Smartcard
@@ -315,6 +316,24 @@ Enabling NFC Manager and it is possible to user NFC API
 %files sub2-domain_API-Network-NFC
 %posttrans sub2-domain_API-Network-NFC
 %tizen_feature tizen.org/feature/network.nfc true
+
+%package sub2-domain_API-Network-SoftAP
+Summary:	SoftAP
+Requires:	capi-network-softap
+Requires:	mobileap-agent
+Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
+
+Suggests:	mobileap-agent-extension-headed
+Suggests:	mobileap-agent-extension-TM1
+
+%description sub2-domain_API-Network-SoftAP
+Tizen block (set of packages) for API sets of domain API-Network-SoftAP <br>
+TM1 target : mobileap-agent-extension-TM1 <br>
+Headed devices except TM1 : mobileap-agent-extension-headed
+
+%files sub2-domain_API-Network-SoftAP
+%posttrans sub2-domain_API-Network-SoftAP
+%tizen_feature tizen.org/feature/network.wifi.softap true
 
 %package sub2-domain_API-Network-SSDP
 Summary:    SSDP

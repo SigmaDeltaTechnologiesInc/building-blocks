@@ -66,6 +66,7 @@
 	<imageid name="TC0004">
 		<tct_info>tct-alarm-native-itc</tct_info>
 		<tct_info>tct-alarm-native-utc</tct_info>
+		<tct_info>tct-softap-native-utc</tct_info>
 		<bb_info>building-blocks-sub2-domain_API-AppFramework-Alarm_API</bb_info>
 	</imageid>
 	<imageid name="TC0005">

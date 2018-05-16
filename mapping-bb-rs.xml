@@ -323,6 +323,9 @@
 	<buildingblock name="building-blocks-sub2-domain_API-Network-NFC">
 		<rs_info>capi-network-nfc-rs.xml</rs_info>
 	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-SoftAP">
+		<rs_info>capi-network-softap-rs.xml</rs_info>
+	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Network-SSDP">
 		<rs_info>capi-network-nsd-rs.xml</rs_info>
 	</buildingblock>
