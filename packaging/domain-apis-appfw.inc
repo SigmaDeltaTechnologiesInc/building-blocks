@@ -171,6 +171,10 @@ Currently, only mobile is supported, and if there is a profile you want, you can
 %package sub2-domain_API-AppFramework-Job_Scheduler_API
 Summary: Job Scheduler API
 Requires: capi-appfw-job-scheduler
+Requires: context-service
+Requires: context-agent
+Requires: context-job-scheduler
+Requires: context-common
 %description sub2-domain_API-AppFramework-Job_Scheduler_API
 This block supports job scheduler API
 %files sub2-domain_API-AppFramework-Job_Scheduler_API
