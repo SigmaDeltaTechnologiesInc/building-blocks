@@ -107,7 +107,6 @@
 	<imageid name="TC0007">
 		<tct_info>tct-capi-message-port-native-itc</tct_info>
 		<tct_info>tct-capi-message-port-native-utc</tct_info>
-		<tct_info>tct-rpc-port-native-itc</tct_info>
 		<tct_info>tct-rpc-port-native-utc</tct_info>
 		<tct_info>tct-job-scheduler-native-itc</tct_info>
 		<tct_info>tct-job-scheduler-native-utc</tct_info>
@@ -228,8 +227,8 @@
 		<tct_info>tct-streamrecorder-native-utc</tct_info>
 		<tct_info>tct-screen-mirroring-native-itc</tct_info>
 		<tct_info>tct-screen-mirroring-native-utc</tct_info>
-		<tct_info>tct-video-uti-native-native-itc</tct_info>
-		<tct_info>tct-video-uti-native-native-utc</tct_info>
+		<tct_info>tct-video-util-native-itc</tct_info>
+		<tct_info>tct-video-util-native-utc</tct_info>
 		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Demuxer</bb_info>
 		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Muxer</bb_info>
 		<precondition>wifi</precondition>
@@ -284,7 +283,7 @@
 		<tct_info>tct-stc-native-itc</tct_info>
 		<tct_info>tct-stc-native-utc</tct_info>
 		<tct_info>tct-vpn-service-native-itc</tct_info>
-		<tct_info>tct-vpn-service-native-utc</tct_info>
+		<tct_info>tct-vpn-native-utc</tct_info>
 		<bb_info>building-blocks-sub2-domain_API-Network-Curl</bb_info>
 		<bb_info>building-blocks-sub2-domain_API-Network-HTTP</bb_info>
 		<bb_info>building-blocks-sub2-domain_API-Network-STC</bb_info>
