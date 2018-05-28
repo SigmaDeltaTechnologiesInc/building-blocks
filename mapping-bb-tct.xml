@@ -227,7 +227,6 @@
 		<tct_info>tct-streamrecorder-native-utc</tct_info>
 		<tct_info>tct-screen-mirroring-native-itc</tct_info>
 		<tct_info>tct-screen-mirroring-native-utc</tct_info>
-		<tct_info>tct-video-util-native-itc</tct_info>
 		<tct_info>tct-video-util-native-utc</tct_info>
 		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Demuxer</bb_info>
 		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Muxer</bb_info>
