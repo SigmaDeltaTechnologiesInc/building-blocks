@@ -37,6 +37,7 @@ Requires:   %{name}-sub1-domain_Feature-Smartthings_App
 Requires:	%{name}-sub1-domain_Feature-Setup
 Requires:	tar
 Requires:       system-plugin-config-env-headless
+Requires:       bluez-plugin-headless
 
 Conflicts:	%{name}-sub1-Preset_img_headed-rpi3
 Conflicts:	%{name}-sub1-Preset_img_headed-artik530
@@ -68,6 +69,7 @@ Requires:   %{name}-sub1-domain_Feature-Smartthings_App
 Requires:	%{name}-sub1-domain_Feature-Setup
 Requires:	tar
 Requires:       system-plugin-config-env-headless
+Requires:       bluez-plugin-headless
 
 Conflicts:	%{name}-sub1-Preset_img_headed-rpi3
 Conflicts:	%{name}-sub1-Preset_img_headed-artik530
