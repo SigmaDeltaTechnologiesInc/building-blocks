@@ -30,6 +30,7 @@
 		<rs_info>sqlite-rs.xml</rs_info>
 		<rs_info>trace-rs.xml</rs_info>
 		<rs_info>zlib-rs.xml</rs_info>
+		<rs_info>iotjs-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Account-Account_Manager">
 		<rs_info>libaccount-service-rs.xml</rs_info>
