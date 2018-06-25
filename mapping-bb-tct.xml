@@ -129,6 +129,7 @@
 		<tct_info>tct-url-download-native-itc</tct_info>
 		<tct_info>tct-url-download-native-utc</tct_info>
 		<tct_info>tct-mime-type-native-itc</tct_info>
+		<tct_info>tct-mime-type-native-utc</tct_info>
 		<bb_info>building-blocks-sub2-domain_API-Content-Download</bb_info>
 		<bb_info>building-blocks-sub2-domain_API-Content-MIME_Type</bb_info>
 		<precondition>wifi</precondition>
@@ -231,8 +232,10 @@
 		<tct_info>tct-screen-mirroring-native-itc</tct_info>
 		<tct_info>tct-screen-mirroring-native-utc</tct_info>
 		<tct_info>tct-video-util-native-utc</tct_info>
-		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Demuxer</bb_info>
-		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Muxer</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Streamer</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Media_Stream_Recorder</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Screen_Mirroring</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Multimedia-Video_Util</bb_info>
 		<precondition>wifi</precondition>
 	</imageid>
 	<imageid name="TC0022">
