@@ -12,7 +12,9 @@ Suggests:	%{name}-sub2-Preset_boards-RPI3-Audio
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Audio_Recording
 Suggests:	%{name}-sub2-Preset_boards-RPI3-GPS
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Codec
+Suggests:	%{name}-sub2-Preset_boards-RPI3-Camera_Common
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Camera
+Suggests:	%{name}-sub2-Preset_boards-RPI3-Camera_Headless
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Display
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Display_Headless
 Suggests:	%{name}-sub2-Preset_boards-RPI3-Wifi
@@ -161,25 +163,54 @@ Packages of Codec HAL and Feature for RPI3.
 If you want to use hardware acceleration, select the required feature.
 %files sub2-Preset_boards-RPI3-Codec
 
-### RPI3-Camera ###
-%package sub2-Preset_boards-RPI3-Camera
-Summary:	RPI3_Camera
+
+### RPI3-Camera_Common ###
+%package sub2-Preset_boards-RPI3-Camera_Common
+Summary:	RPI3_Camera(Common)
 Requires:	%{name}-sub2-domain_API-Multimedia-Camera
 Requires:	gst-plugins-good
 Requires:	mmfw-sysconf-target-rpi3
 Requires:	camera-hal-v4l2
 
-%description sub2-Preset_boards-RPI3-Camera
-Packages of Camera HAL and Feature for RPI3.
-Not Implemented.
-%files sub2-Preset_boards-RPI3-Camera
-%posttrans sub2-Preset_boards-RPI3-Camera
+%description sub2-Preset_boards-RPI3-Camera_Common
+Packages of Camera HAL and Feature for RPI3(Common).
+(known issue: The preview and capture could be failed with some web cameras.)
+%files sub2-Preset_boards-RPI3-Camera_Common
+%posttrans sub2-Preset_boards-RPI3-Camera_Common
 %tizen_feature tizen.org/feature/camera true
 %tizen_feature tizen.org/feature/camera.back true
 %tizen_feature tizen.org/feature/camera.back.flash false
 %tizen_feature tizen.org/feature/camera.front false
 %tizen_feature tizen.org/feature/camera.front.flash false
 %tizen_feature tizen.org/feature/media.video_recording true
+
+
+### RPI3-Camera ###
+%package sub2-Preset_boards-RPI3-Camera
+Summary:	RPI3_Camera
+Requires:	%{name}-sub2-Preset_boards-RPI3-Camera_Common
+Requires:	%{name}-sub2-Preset_boards-RPI3-Display
+
+Conflicts:	%{name}-sub2-Preset_boards-RPI3-Camera_Headless
+
+%description sub2-Preset_boards-RPI3-Camera
+Packages of Camera HAL and Feature for RPI3.
+(known issue: The preview and capture could be failed with some web cameras.)
+%files sub2-Preset_boards-RPI3-Camera
+
+
+### RPI3-Camera_Headless ###
+%package sub2-Preset_boards-RPI3-Camera_Headless
+Summary:	RPI3_Camera(Headless)
+Requires:	%{name}-sub2-Preset_boards-RPI3-Camera_Common
+Requires:	%{name}-sub2-Preset_boards-RPI3-Display_Headless
+
+Conflicts:	%{name}-sub2-Preset_boards-RPI3-Camera
+
+%description sub2-Preset_boards-RPI3-Camera_Headless
+Packages of Camera HAL and Feature for RPI3(Headless).
+(known issue: camera preview and capture could be failed.)
+%files sub2-Preset_boards-RPI3-Camera_Headless
 
 
 ### RPI3-Display ###

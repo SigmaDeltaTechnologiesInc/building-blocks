@@ -12,7 +12,9 @@ Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Audio
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Audio_Recording
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-GPS
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Codec
+Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Camera_Common
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Camera
+Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Camera_Headless
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Display
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Display_Headless
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Wifi
@@ -162,25 +164,51 @@ Packages of Codec HAL and Feature for ARTIK530.
 If you want to use hardware acceleration, select the required feature.
 %files sub2-Preset_boards-ARTIK530-Codec
 
-### ARTIK530-Camera ###
-%package sub2-Preset_boards-ARTIK530-Camera
-Summary:	ARTIK530_Camera
+
+### ARTIK530-Camera_Common ###
+%package sub2-Preset_boards-ARTIK530-Camera_Common
+Summary:	ARTIK530_Camera_Common
 Requires:	%{name}-sub2-domain_API-Multimedia-Camera
-Requires:	%{name}-sub2-Preset_boards-ARTIK530-Display
 Requires:	mmfw-sysconf-target-artik10
 Requires:	gst-plugins-tizen
 Requires:	camera-hal-v4l2
 
-%description sub2-Preset_boards-ARTIK530-Camera
-Packages of Camera HAL and Feature for ARTIK530.
-%files sub2-Preset_boards-ARTIK530-Camera
-%posttrans sub2-Preset_boards-ARTIK530-Camera
+%description sub2-Preset_boards-ARTIK530-Camera_Common
+Packages of Camera HAL and Feature for ARTIK530(Common).
+%files sub2-Preset_boards-ARTIK530-Camera_Common
+%posttrans sub2-Preset_boards-ARTIK530-Camera_Common
 %tizen_feature tizen.org/feature/camera true
 %tizen_feature tizen.org/feature/camera.back true
 %tizen_feature tizen.org/feature/camera.back.flash false
 %tizen_feature tizen.org/feature/camera.front false
 %tizen_feature tizen.org/feature/camera.front.flash false
 %tizen_feature tizen.org/feature/media.video_recording true
+
+
+### ARTIK530-Camera ###
+%package sub2-Preset_boards-ARTIK530-Camera
+Summary:	ARTIK530_Camera
+Requires:	%{name}-sub2-Preset_boards-ARTIK530-Camera_Common
+Requires:	%{name}-sub2-Preset_boards-ARTIK530-Display
+
+Conflicts:	%{name}-sub2-Preset_boards-ARTIK530-Camera_Headless
+
+%description sub2-Preset_boards-ARTIK530-Camera
+Packages of Camera HAL and Feature for ARTIK530.
+%files sub2-Preset_boards-ARTIK530-Camera
+
+
+### ARTIK530-Camera_Headless ###
+%package sub2-Preset_boards-ARTIK530-Camera_Headless
+Summary:	ARTIK530_Camera(Headless)
+Requires:	%{name}-sub2-Preset_boards-ARTIK530-Camera_Common
+Requires:	%{name}-sub2-Preset_boards-ARTIK530-Display_Headless
+
+Conflicts:	%{name}-sub2-Preset_boards-ARTIK530-Camera
+
+%description sub2-Preset_boards-ARTIK530-Camera_Headless
+Packages of Camera HAL and Feature for ARTIK530(Headless).
+%files sub2-Preset_boards-ARTIK530-Camera_Headless
 
 
 ### ARTIK530-Display ###
