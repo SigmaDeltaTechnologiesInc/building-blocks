@@ -167,6 +167,7 @@ Summary:	RPI3_Camera
 Requires:	%{name}-sub2-domain_API-Multimedia-Camera
 Requires:	gst-plugins-good
 Requires:	mmfw-sysconf-target-rpi3
+Requires:	camera-hal-v4l2
 
 %description sub2-Preset_boards-RPI3-Camera
 Packages of Camera HAL and Feature for RPI3.
