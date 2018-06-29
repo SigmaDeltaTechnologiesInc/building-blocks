@@ -22,6 +22,7 @@ Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Bluetooth_CallAudio
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-BLE
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-NFC
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Telephony
+Suggests:	%{name}-sub2-Preset_boards-ARTIK530-ZigBee
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Feedback
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-Sensor
 Suggests:	%{name}-sub2-Preset_boards-ARTIK530-DALi
@@ -258,6 +259,15 @@ Requires:	wifi-direct-manager-profile_common
 %description sub2-Preset_boards-ARTIK530-WifiDirect
 Packages of WifiDirect HAL and Feature for ARTIK530.
 %files sub2-Preset_boards-ARTIK530-WifiDirect
+
+### ARTIK530-ZigBee ###
+%package sub2-Preset_boards-ARTIK530-ZigBee
+Summary:	ARTIK530_ZigBee
+Requires:	%{name}-sub2-domain_API-Network-ZigBee
+
+%description sub2-Preset_boards-ARTIK530-ZigBee
+Packages of ZigBee HAL and Feature for ARTIK530.
+%files sub2-Preset_boards-ARTIK530-ZigBee
 
 ### ARTIK530-Bluetooth ###
 %package sub2-Preset_boards-ARTIK530-Bluetooth
