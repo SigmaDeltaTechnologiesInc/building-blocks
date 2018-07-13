@@ -516,4 +516,7 @@
 	<buildingblock name="building-blocks-sub2-domain_API-Web-json_Glib">
 		<rs_info>json-glib-rs.xml</rs_info>
 	</buildingblock>
+	<buildingblock name="building-blocks-sub1-domain_Feature-Smartthings_App">
+		<rs_info>smartthings-rs.xml</rs_info>
+	</buildingblock>
 </MappingInfo>

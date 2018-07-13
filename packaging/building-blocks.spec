@@ -35,7 +35,7 @@ Source1217:	domain-apis-web.inc
 Source1300: domain-features.inc
 Source1301: domain-features-dotnet.inc
 Source1302: domain-features-webapi.inc
-Source1303: domain-features-softap.inc
+Source1303: domain-features-smartthings.inc
 Source1304: domain-features-bootanimation.inc
 Source1305: domain-features-starter.inc
 Source1306: domain-features-upgrade.inc
