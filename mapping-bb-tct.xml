@@ -287,11 +287,13 @@
 		<tct_info>tct-http-native-utc</tct_info>
 		<tct_info>tct-stc-native-itc</tct_info>
 		<tct_info>tct-stc-native-utc</tct_info>
+		<tct_info>tct-intelligent-network-monitoring-native-utc</tct_info>
 		<tct_info>tct-vpn-service-native-itc</tct_info>
 		<tct_info>tct-vpn-native-utc</tct_info>
 		<bb_info>building-blocks-sub2-domain_API-Network-Curl</bb_info>
 		<bb_info>building-blocks-sub2-domain_API-Network-HTTP</bb_info>
 		<bb_info>building-blocks-sub2-domain_API-Network-STC</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Network-INM</bb_info>
 		<bb_info>building-blocks-sub2-domain_API-Network-VPN_Service</bb_info>
 		<precondition>wifi</precondition>
 	</imageid>

@@ -23,6 +23,7 @@ Suggests: %{name}-sub2-domain_API-Network-NFC
 Suggests: %{name}-sub2-domain_API-Network-SoftAP
 Suggests: %{name}-sub2-domain_API-Network-SSDP
 Suggests: %{name}-sub2-domain_API-Network-STC
+Suggests: %{name}-sub2-domain_API-Network-INM
 Suggests: %{name}-sub2-domain_API-Network-Smartcard
 Suggests: %{name}-sub2-domain_API-Network-VPN_Service
 Suggests: %{name}-sub2-domain_API-Network-WiFi_Manager
@@ -359,6 +360,19 @@ To use this feature, either Data Network or Wi-Fi connection is required. <br>
 %files sub2-domain_API-Network-STC
 %posttrans sub2-domain_API-Network-STC
 %tizen_feature tizen.org/feature/network.traffic_control true
+
+%package sub2-domain_API-Network-INM
+Summary:    INM(Intelligent Network Monitoring)
+Requires:	capi-network-inm
+Requires:	inm-manager
+Requires:	%{name}-sub2-domain_API-Network-WiFi_Manager
+Suggests:	%{name}-sub1-domain_API-Telephony
+%description sub2-domain_API-Network-INM
+Tizen block (set of packages) for API sets of domain API-Network-INM <br>
+To use this feature, either Data Network or Wi-Fi connection is required. <br>
+%files sub2-domain_API-Network-INM
+%posttrans sub2-domain_API-Network-INM
+%tizen_feature tizen.org/feature/network.inm true
 
 %package sub2-domain_API-Network-Smartcard
 Summary:    Smartcard

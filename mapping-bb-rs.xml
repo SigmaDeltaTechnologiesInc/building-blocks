@@ -345,6 +345,9 @@
 	<buildingblock name="building-blocks-sub2-domain_API-Network-WiFi_Manager">
 		<rs_info>capi-network-wifi-manager-rs.xml</rs_info>
 	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-Network-INM">
+		<rs_info>capi-network-inm-rs.xml</rs_info>
+	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-Security-CSR">
 		<rs_info>csr-framework-rs.xml</rs_info>
 	</buildingblock>

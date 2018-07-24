@@ -1,4 +1,4 @@
-# TC0025 HTTP, STC, VPN for ARTIK530
+# TC0025 HTTP, curl, STC, VPN, INM for ARTIK530
 # iot core for ARTIK530
 building-blocks-root-Preset_iot_core
 building-blocks-sub1-Preset_boards-ARTIK530
@@ -12,3 +12,4 @@ building-blocks-sub2-domain_API-Network-HTTP
 building-blocks-sub2-domain_API-Network-Curl
 building-blocks-sub2-domain_API-Network-STC
 building-blocks-sub2-domain_API-Network-VPN_Service
+building-blocks-sub2-domain_API-Network-INM
