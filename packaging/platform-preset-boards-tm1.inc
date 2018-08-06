@@ -239,7 +239,7 @@ Packages of Bluetooth HAL and Feature for TM1.
 Summary:	TM1_Bluetooth CallAudio Function
 Requires:	%{name}-sub2-Preset_boards-TM1-Bluetooth
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_Call_Audio
-Requires:	bluetooth-agent-profile_common
+Requires:	bluetooth-agent-hfp_ag
 
 %description sub2-Preset_boards-TM1-Bluetooth_CallAudio
 Packages of Bluetooth Call Audio Function for TM1.

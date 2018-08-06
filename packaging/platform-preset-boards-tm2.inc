@@ -284,7 +284,7 @@ Packages of Bluetooth HAL and Feature for TM2.
 Summary:	TM2_Bluetooth Call Audio
 Requires:	%{name}-sub2-Preset_boards-TM2-Bluetooth
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_Call_Audio
-Requires:	bluetooth-agent-profile_common
+Requires:	bluetooth-agent-hfp_ag
 
 %description sub2-Preset_boards-TM2-Bluetooth_CallAudio
 Packages of Bluetooth HAL and Feature for TM2.

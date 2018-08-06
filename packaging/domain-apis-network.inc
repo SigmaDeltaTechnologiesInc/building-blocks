@@ -112,17 +112,19 @@ Requires: %{name}-sub2-domain_API-Network-Bluetooth_BREDR
 Requires: bluetooth-agent
 
 #Profiles
-Suggests: bluetooth-agent-profile_common
-Suggests: bluetooth-agent-profile_ivi
-Suggests: bluetooth-agent-profile_wearable
+Suggests: bluetooth-agent-hfp_ag
+Suggests: bluetooth-agent-hfp_hf
+Suggests: bluetooth-agent-map
+Suggests: bluetooth-agent-pbap
+Suggests: bluetooth-agent-hid
 
 %description sub2-domain_API-Network-Bluetooth_Call_Audio
 Enabling Bluetooth Call Audio functionality<br>
 [Select Packages]<br>
 1. Profiles<br>
-- mobile : bluetooth-agent-profile_common<br>
-- ivi : bluetooth-agent-profile_ivi<br>
-- wearable : bluetooth-agent-profile_wearable
+- mobile : bluetooth-agent-hfp_ag<br>
+- ivi : bluetooth-agent-hfp_ag<br>
+- wearable : bluetooth-agent-hfp_ag, bluetooth-agent-hfp_hf
 %files sub2-domain_API-Network-Bluetooth_Call_Audio
 %posttrans sub2-domain_API-Network-Bluetooth_Call_Audio
 %tizen_feature tizen.org/feature/network.bluetooth.audio.call true

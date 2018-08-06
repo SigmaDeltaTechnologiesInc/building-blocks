@@ -307,7 +307,7 @@ Packages of Bluetooth HAL and Feature for ARTIK530.
 Summary:	ARTIK530_Bluetooth Call Audio
 Requires:	%{name}-sub2-Preset_boards-ARTIK530-Bluetooth
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_Call_Audio
-Requires:	bluetooth-agent-profile_common
+Requires:	bluetooth-agent-hfp_ag
 
 %description sub2-Preset_boards-ARTIK530-Bluetooth_CallAudio
 Packages of Bluetooth HAL and Feature for ARTIK530.

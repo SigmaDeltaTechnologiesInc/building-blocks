@@ -309,7 +309,7 @@ Packages of Bluetooth HAL and Feature for RPI3.
 Summary:	RPI3_Bluetooth Call Audio
 Requires:	%{name}-sub2-Preset_boards-RPI3-Bluetooth
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_Call_Audio
-Requires:	bluetooth-agent-profile_common
+Requires:	bluetooth-agent-hfp_ag
 
 %description sub2-Preset_boards-RPI3-Bluetooth_CallAudio
 Packages of Bluetooth HAL and Feature for RPI3.
