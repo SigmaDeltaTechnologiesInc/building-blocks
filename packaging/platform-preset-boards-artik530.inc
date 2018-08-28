@@ -76,7 +76,6 @@ Firstly select HALs and Feature to add to your image.
 ### ARTIK530-System ###
 %package sub2-Preset_boards-ARTIK530-System
 Summary:	ARTIK530_System
-Requires:	system-plugin-device-u3
 Requires:	model-config-default
 Suggests:	system-plugin-feature-init_wrapper
 

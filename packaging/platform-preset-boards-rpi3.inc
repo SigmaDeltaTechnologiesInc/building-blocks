@@ -74,10 +74,9 @@ Firstly select HALs and Feature to add to your image.
 
 ### RPI3-System ###
 %package sub2-Preset_boards-RPI3-System
-Summary:	RPI3_System
-Requires:	system-plugin-config-env-headless
+Summary:    RPI3_System
 Suggests:   system-plugin-device-u3
-Requires:	model-config-default
+Requires:   model-config-default
 
 %description sub2-Preset_boards-RPI3-System
 Packages for System HAL and Feature. They are mandatory.
