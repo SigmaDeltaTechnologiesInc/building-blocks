@@ -28,6 +28,7 @@ Suggests: %{name}-sub2-domain_API-Network-Smartcard
 Suggests: %{name}-sub2-domain_API-Network-VPN_Service
 Suggests: %{name}-sub2-domain_API-Network-WiFi_Manager
 Suggests: %{name}-sub2-domain_API-Network-WiFi_Direct
+Suggests: %{name}-sub2-domain_API-Network-ZigBee
 %description sub1-domain_API-Network
 Tizen block (set of packages) for Group of domain API-Network
 %files sub1-domain_API-Network
@@ -473,4 +474,20 @@ common profile : Not supported <br>
 %tizen_feature tizen.org/feature/network.wifi.direct true
 %tizen_feature tizen.org/feature/network.wifi.direct.display true
 %tizen_feature tizen.org/feature/network.wifi.direct.service_discovery false
+
+%package sub2-domain_API-Network-ZigBee
+Summary:    ZigBee
+
+Requires: capi-network-zigbee
+Requires: zigbee-manager
+Requires: zigbee-lib
+Requires: awk
+
+%description sub2-domain_API-Network-ZigBee
+Enabling ZigBee Manager and provide to user ZigBee API <br>
+
+%files sub2-domain_API-Network-ZigBee
+%posttrans sub2-domain_API-Network-ZigBee
+%tizen_feature tizen.org/feature/network.zigbee true
+%tizen_feature tizen.org/feature/network.zigbee.admin true
 

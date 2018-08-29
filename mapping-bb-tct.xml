@@ -274,11 +274,13 @@
 	<imageid name="TC0024">
 		<tct_info>tct-bluetooth-native-itc</tct_info>
 		<tct_info>tct-bluetooth-native-utc</tct_info>
+		<tct_info>tct-zigbee-native-utc</tct_info>
 		<bb_info>building-blocks-sub2-domain_API-Network-Bluetooth_BREDR</bb_info>
 		<bb_info>building-blocks-sub2-domain_API-Network-Bluetooth_Call_Audio</bb_info>
 		<bb_info>building-blocks-sub2-domain_API-Network-Bluetooth_LE</bb_info>
 		<bb_info>building-blocks-sub2-domain_API-Network-Bluetooth_Media_Audio</bb_info>
 		<bb_info>building-blocks-sub2-domain_API-Network-Bluetooth_Transfer</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-Network-ZigBee</bb_info>
 		<precondition>wifi</precondition>
 		<precondition>bluetooth</precondition>
 	</imageid>
