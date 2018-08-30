@@ -12,6 +12,7 @@ Suggests:	%{name}-sub1-domain_Feature-Upgrade
 Suggests:	%{name}-sub1-domain_Feature-Recovery
 Suggests:	%{name}-sub1-domain_Feature-Setup
 Suggests:	%{name}-sub1-domain_Feature-Tool_And_Locale
+Suggests:	%{name}-sub1-domain_Feature-Docker
 Suggests:   %{name}-sub1-domain_Feature-Resource_manager
 Suggests:   %{name}-sub1-domain_Feature-Resource_manager_Light
 Suggests:   %{name}-sub1-domain_Feature-Resource_manager_Headless

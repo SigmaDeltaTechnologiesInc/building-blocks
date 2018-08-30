@@ -43,6 +43,7 @@ Source1307: domain-features-tool_and_locale.inc
 Source1308: domain-features-recovery.inc
 Source1309: domain-features-setup.inc
 Source1310: domain-features-resource_manager.inc
+Source1311: domain-features-docker.inc
 
 Source2010:	epicfeature-development.inc
 Source2020:	epicfeature-application.inc
@@ -320,6 +321,7 @@ python ./rule_checker.py
 %{include_if_mainbuild %{SOURCE1308}}
 %{include_if_mainbuild %{SOURCE1309}}
 %{include_if_mainbuild %{SOURCE1310}}
+%{include_if_mainbuild %{SOURCE1311}}
 
 ############## EPIC FEATURES ######################
 
