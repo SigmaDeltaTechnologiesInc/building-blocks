@@ -157,6 +157,7 @@ Requires:	%{name}-sub2-domain_API-System-Storage
 Requires:	%{name}-sub2-domain_API-System-System_Settings
 Requires:	%{name}-sub2-domain_API-System-USB_Host
 Requires:	%{name}-sub2-domain_API-UI-Cairo
+Requires:	%{name}-sub2-domain_API-UI-Clipboard_History_Manager
 Requires:	%{name}-sub2-domain_API-UI-DALi
 Requires:	%{name}-sub2-domain_API-UI-Display_Server
 Requires:	%{name}-sub2-domain_API-UI-EFL_Extension
