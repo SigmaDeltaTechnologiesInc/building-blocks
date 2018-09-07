@@ -21,6 +21,7 @@ Suggests: %{name}-sub2-domain_API-System-System_Settings
 Suggests: %{name}-sub2-domain_API-System-T_Trace
 Suggests: %{name}-sub2-domain_API-System-USB_Host
 Suggests: %{name}-sub2-domain_API-System-dlog
+Suggests: %{name}-sub2-domain_API-System-Update_Control
 %description sub1-domain_API-System
 Tizen block (set of packages) for Group of domain API-System
 %files sub1-domain_API-System
@@ -208,3 +209,12 @@ Requires: dlogutil
 %description sub2-domain_API-System-dlog
 Tizen block (set of packages) for Group of sub domain dlog
 %files sub2-domain_API-System-dlog
+
+%package sub2-domain_API-System-Update_Control
+Summary:    Update Control
+Requires: update-control
+%description sub2-domain_API-System-Update_Control
+Tizen block (set of packages) for Group of sub domain Update_Control
+%files sub2-domain_API-System-Update_Control
+%posttrans sub2-domain_API-System-Update_Control
+%tizen_feature tizen.org/feature/device_update true
