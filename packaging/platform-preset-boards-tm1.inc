@@ -233,6 +233,8 @@ Suggests: org.tizen.bt-syspopup-profile_common
 %description sub2-Preset_boards-TM1-Bluetooth
 Packages of Bluetooth HAL and Feature for TM1.
 %files sub2-Preset_boards-TM1-Bluetooth
+%posttrans sub2-Preset_boards-TM1-Bluetooth
+%tizen_feature tizen.org/feature/network.bluetooth.le.5_0 false
 
 ### TM1-Bluetooth_CallAudio ###
 %package sub2-Preset_boards-TM1-Bluetooth_CallAudio

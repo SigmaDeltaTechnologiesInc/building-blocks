@@ -301,6 +301,8 @@ Suggests: org.tizen.bt-syspopup-profile_common
 %description sub2-Preset_boards-RPI3-Bluetooth
 Packages of Bluetooth HAL and Feature for RPI3.
 %files sub2-Preset_boards-RPI3-Bluetooth
+%posttrans sub2-Preset_boards-RPI3-Bluetooth
+%tizen_feature tizen.org/feature/network.bluetooth.le.5_0 false
 
 ### RPI3-Bluetooth_CallAudio ###
 %package sub2-Preset_boards-RPI3-Bluetooth_CallAudio
