@@ -29,6 +29,7 @@ Summary:    Tizen Resource Manager - For Headless Devices
 Requires:   resourced-headless
 Requires:   resourced-headless-common
 Requires:   resourced-headless-memory
+Requires:   resourced-headless-proc-manager
 Requires:   resourced-headless-proc-usage
 Conflicts:  %{name}-sub1-domain_Feature-Resource_manager
 Conflicts:  %{name}-sub1-domain_Feature-Resource_manager_Light

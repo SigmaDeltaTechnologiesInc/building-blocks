@@ -180,6 +180,7 @@ Requires:	%{name}-sub2-domain_API-UIX-TTS
 Requires:	%{name}-sub2-domain_API-UIX-Voice_control
 Requires:	%{name}-sub2-domain_API-UIX-Voice_control_elementary
 Requires:	%{name}-sub2-domain_API-Web-WebView
+Requires:	%{name}-sub1-domain_Feature-Resource_manager
 
 %description root-Preset_iot_headed
 The packages of Tizen IoT Headed Common.

@@ -8,4 +8,7 @@ building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
 building-blocks-sub2-domain_API-AppFramework-TPK_Installation
 
 # Runtime Info
-building-blocks-sub2-domain_API-System-Runtime_information
+building-blocks-sub2-domain_API-System-Runtime_Information
+
+# Resource Manager
+building-blocks-sub1-domain_Feature-Resource_manager

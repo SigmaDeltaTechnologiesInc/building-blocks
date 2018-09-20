@@ -7,6 +7,8 @@ building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
 # For TCT
 building-blocks-sub2-domain_API-AppFramework-TPK_Installation
 
-# Runtime Info light
-building-blocks-sub2-domain_API-System-Runtime_information_Light
+# Runtime Info
+building-blocks-sub2-domain_API-System-Runtime_Information
 
+# Light-weight Resource Manager
+building-blocks-sub1-domain_Feature-Resource_manager_Light

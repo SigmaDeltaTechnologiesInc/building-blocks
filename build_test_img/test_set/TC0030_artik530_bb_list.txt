@@ -7,5 +7,8 @@ building-blocks-sub1-Preset_partition-3parts_ramdisk_recovery
 # For TCT
 building-blocks-sub2-domain_API-AppFramework-TPK_Installation
 
-# Runtime Info headless
-building-blocks-sub2-domain_API-System-Runtime_information_Headless
+# Runtime Info
+building-blocks-sub2-domain_API-System-Runtime_Information
+
+# Resourced Headless
+building-blocks-sub1-domain_Feature-Resource_manager_Headless

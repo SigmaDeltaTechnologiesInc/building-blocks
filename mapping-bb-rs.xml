@@ -387,13 +387,7 @@
 	<buildingblock name="building-blocks-sub2-domain_API-System-Feedback">
 		<rs_info>libfeedback-rs.xml</rs_info>
 	</buildingblock>
-	<buildingblock name="building-blocks-sub2-domain_API-System-Runtime_information">
-		<rs_info>capi-system-runtime-info-rs.xml</rs_info>
-	</buildingblock>
-	<buildingblock name="building-blocks-sub2-domain_API-System-Runtime_information_Headless">
-		<rs_info>capi-system-runtime-info-rs.xml</rs_info>
-	</buildingblock>
-	<buildingblock name="building-blocks-sub2-domain_API-System-Runtime_information_Light">
+	<buildingblock name="building-blocks-sub2-domain_API-System-Runtime_Information">
 		<rs_info>capi-system-runtime-info-rs.xml</rs_info>
 	</buildingblock>
 	<buildingblock name="building-blocks-sub2-domain_API-System-Sensor_Listener">
