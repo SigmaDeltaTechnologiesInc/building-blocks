@@ -12,6 +12,7 @@ Suggests: %{name}-sub2-domain_API-UIX-STT
 Suggests: %{name}-sub2-domain_API-UIX-TTS
 Suggests: %{name}-sub2-domain_API-UIX-Voice_control
 Suggests: %{name}-sub2-domain_API-UIX-Voice_control_elementary
+Suggests: %{name}-sub2-domain_API-UIX-Multi_assistant
 %description sub1-domain_API-UIX
 Tizen block (set of packages) for Group of domain API-UIX
 %files sub1-domain_API-UIX
@@ -118,3 +119,16 @@ Voice control elementary provides functions to control widget by voice commands.
 %posttrans sub2-domain_API-UIX-Voice_control_elementary
 %tizen_feature tizen.org/feature/speech.control true
 
+%package sub2-domain_API-UIX-Multi_assistant
+Summary:    Multi_assistant
+
+Requires: multi-assistant
+Requires: org.tizen.multi-assistant-service
+Requires: %{name}-sub2-domain_API-Multimedia-Audio_IO
+
+%description sub2-domain_API-UIX-Multi_assistant
+Multi assistant supports various AI assistants on the same time for giving a better usability and provides common interface for making an assistant of multi-assistant framework.
+
+%files sub2-domain_API-UIX-Multi_assistant
+%posttrans sub2-domain_API-UIX-Multi_assistant
+%tizen_feature tizen.org/feature/multi_assistant true

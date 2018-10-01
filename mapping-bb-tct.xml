@@ -452,4 +452,9 @@
 		<bb_info>building-blocks-sub2-domain_API-UIX-Voice_control_elementary</bb_info>
 		<precondition>wifi</precondition>
 	</imageid>
+	<imageid name="TC0048">
+		<tct_info>tct-multi-assistant-native-utc</tct_info>
+		<bb_info>building-blocks-sub2-domain_API-UIX-Multi_assistant</bb_info>
+		<precondition>wifi</precondition>
+	</imageid>
 </MappingInfo>
