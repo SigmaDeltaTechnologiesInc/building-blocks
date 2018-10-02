@@ -189,7 +189,10 @@
 		<tct_info>tct-audio-io-native-ctc</tct_info>
 		<tct_info>tct-audio-io-native-itc</tct_info>
 		<tct_info>tct-audio-io-native-utc</tct_info>
+		<tct_info>tct-multi-assistant-native-utc</tct_info>
 		<bb_info>building-blocks-sub2-domain_API-Multimedia-Audio_IO</bb_info>
+		<bb_info>building-blocks-sub2-domain_API-UIX-Multi_assistant</bb_info>
+		<precondition>wifi</precondition>
 	</imageid>
 	<imageid name="TC0017">
 		<tct_info>tct-camera-native-ctc</tct_info>
@@ -450,11 +453,6 @@
 		<tct_info>tct-voice-control-elm-native-utc</tct_info>
 		<bb_info>building-blocks-sub2-domain_API-UIX-Voice_control</bb_info>
 		<bb_info>building-blocks-sub2-domain_API-UIX-Voice_control_elementary</bb_info>
-		<precondition>wifi</precondition>
-	</imageid>
-	<imageid name="TC0048">
-		<tct_info>tct-multi-assistant-native-utc</tct_info>
-		<bb_info>building-blocks-sub2-domain_API-UIX-Multi_assistant</bb_info>
 		<precondition>wifi</precondition>
 	</imageid>
 </MappingInfo>
