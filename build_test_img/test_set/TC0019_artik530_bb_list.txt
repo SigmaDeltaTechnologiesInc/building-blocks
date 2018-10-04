@@ -10,6 +10,7 @@ building-blocks-sub2-domain_API-AppFramework-TPK_Installation
 building-blocks-sub2-domain_API-Multimedia-Media_Controller
 building-blocks-sub2-domain_API-Multimedia-Player
 building-blocks-sub2-domain_API-Multimedia-Recorder
+building-blocks-sub2-domain_API-Network-Curl
 
 gst-omx
 libomxil-e54xx
