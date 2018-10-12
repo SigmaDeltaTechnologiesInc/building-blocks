@@ -369,6 +369,8 @@ There are three categories to choose.<br>
    For example, if you want make binary for TM1, you can choose the libtbm-sprd and the libtdm-sprd<br>
 
 %files sub2-domain_API-UI-Display_Server
+%posttrans sub2-domain_API-UI-Display_Server
+%tizen_feature tizen.org/feature/display.state true
 
 %package sub2-domain_API-UI-Display_Server_Headless
 Summary:    Display_Server(Headless)
@@ -382,4 +384,5 @@ Display Server Block is core block for UI. It contains the wayland display serve
 support just simple protocol for user input and buffer management.
 
 %files sub2-domain_API-UI-Display_Server_Headless
-
+%posttrans sub2-domain_API-UI-Display_Server_Headless
+%tizen_feature tizen.org/feature/display.state false
