@@ -67,6 +67,7 @@ Firstly select HALs and Feature to add to your image.
 Summary:	TM1_System
 Requires:	system-plugin-config-env-headless
 Requires:	system-plugin-device-spreadtrum
+Requires:	deviced-plugin-profile-mobile
 Requires:	model-config-tm1
 
 %description sub2-Preset_boards-TM1-System
