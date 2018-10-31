@@ -89,8 +89,9 @@ If you don't use initrd partition, please select system-plugin-feature-init_wrap
 ### ARTIK530-System_Device ###
 %package sub2-Preset_boards-ARTIK530-System_Device
 Summary:	ARTIK530_Deviced Plugin
+Requires:	%{name}-sub2-domain_API-System-Device
+Requires:	deviced-plugin-profile-iot
 Requires:	device-manager-plugin-artik
-Requires:      %{name}-sub2-domain_API-System-Device
 
 %description sub2-Preset_boards-ARTIK530-System_Device
 Packages for Deviced HAL and Feature.

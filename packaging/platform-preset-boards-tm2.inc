@@ -72,11 +72,10 @@ Firstly select HALs and Feature to add to your image.
 ### TM2-System ###
 %package sub2-Preset_boards-TM2-System
 Summary:	TM2_System
-Requires:	system-plugin-profile-iot-headless
 Requires:	system-plugin-exynos
 Requires:	model-config-default
 Requires:	system-plugin-init_wrapper
-#Requires:	system-plugin-n4
+Requires:	deviced-plugin-profile-mobile
 
 %description sub2-Preset_boards-TM2-System
 Packages for System HAL and Feature. They are mandatory.
