@@ -414,6 +414,9 @@
 	<buildingblock name="building-blocks-sub2-domain_API-System-dlog">
 		<rs_info>libdlog-rs.xml</rs_info>
 	</buildingblock>
+	<buildingblock name="building-blocks-sub2-domain_API-System-Update_Control">
+		<rs_info>update-control-rs.xml</rs_info>
+	</buildingblock>
 	<buildingblock name="building-blocks-sub1-domain_API-Telephony">
 		<rs_info>capi-telephony-rs.xml</rs_info>
 	</buildingblock>
