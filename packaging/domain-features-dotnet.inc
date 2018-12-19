@@ -12,9 +12,8 @@ Requires: corefx-managed
 Requires: corefx-native
 Requires: dotnet-launcher
 Requires: mscorlib
-Requires: keyutils
 Requires: csapi-tizenfx-common
-Requires: elm-sharp-theme-common
+Suggests: elm-sharp-theme-common
 Suggests: dali-csharp-binder
 %description sub1-domain_Feature-DotNET
 Tizen block (set of packages) for supporting .NET of Tizen
