@@ -12,6 +12,8 @@ Requires: corefx-managed
 Requires: corefx-native
 Requires: dotnet-launcher
 Requires: mscorlib
+Requires: tar
+Requires: gzip
 Requires: csapi-tizenfx-common
 Suggests: elm-sharp-theme-common
 Suggests: dali-csharp-binder
