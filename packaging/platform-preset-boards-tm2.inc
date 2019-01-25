@@ -62,6 +62,7 @@ Firstly select HALs and Feature to add to your image.
 %tizen_feature tizen.org/feature/sensor.linear_acceleration false
 %tizen_feature tizen.org/feature/sensor.proximity false
 %tizen_feature tizen.org/feature/sensor.temperature false
+%tizen_feature tizen.org/feature/storage.external true
 %tizen_feature tizen.org/feature/peripheral_io.gpio true
 %tizen_feature tizen.org/feature/peripheral_io.i2c true
 %tizen_feature tizen.org/feature/peripheral_io.pwm true

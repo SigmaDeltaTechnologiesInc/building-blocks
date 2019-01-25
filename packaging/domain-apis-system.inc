@@ -64,6 +64,8 @@ Before you select, you have to make sure that which Profile you have.
 Then choose proper one.
 For example, feedbackd-driver-circle for tw1
 %files sub2-domain_API-System-Device_Haptic
+%posttrans sub2-domain_API-System-Device_Haptic
+%tizen_feature tizen.org/feature/feedback.vibration true
 
 %package sub2-domain_API-System-Feedback
 Summary:  Feedback
@@ -87,6 +89,8 @@ Before you select, you have to make sure that which Profile you have.
 Then choose proper combination.
 For example, svi-data-profile_common for common
 %files sub2-domain_API-System-Feedback
+%posttrans sub2-domain_API-System-Feedback
+%tizen_feature tizen.org/feature/feedback.vibration true
 
 %package sub2-domain_API-System-Runtime_Information
 Summary:    Runtime information
