@@ -6,7 +6,7 @@
 ############
 %package sub1-domain_Feature-WebAPI
 Summary:	Web API feature packages
-Requires: crosswalk-tizen
+Requires: wrtjs
 Requires: cordova-api
 Requires: webapi-plugins
 Requires: webapi-plugins-profile_common

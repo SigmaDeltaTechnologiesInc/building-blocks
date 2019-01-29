@@ -4,7 +4,7 @@
 %define tizen_feature() sed -i 's#\\\(\\\"%{1}\\\".\\\+>\\\).\\\+\\\(</key>\\\)#\\\1%{2}\\\2#' %{_sysconfdir}/config/model-config.xml;
 
 Name:		building-blocks
-Version:	0.0.6
+Version:	5.5.0
 Release:	0
 License:	Apache-2.0
 Summary:	The Root of All Tizen Meta Packages (building blocks)
