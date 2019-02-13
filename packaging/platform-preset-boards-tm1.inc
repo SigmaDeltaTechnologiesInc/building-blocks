@@ -65,6 +65,7 @@ Firstly select HALs and Feature to add to your image.
 %tizen_feature tizen.org/feature/accessibility.grayscale false
 %tizen_feature tizen.org/feature/accessibility.negativee false
 
+
 ### TM1-System ###
 %package sub2-Preset_boards-TM1-System
 Summary:	TM1_System
@@ -76,6 +77,7 @@ Requires:	model-config-tm1
 %description sub2-Preset_boards-TM1-System
 Packages for System HAL and Feature. They are mandatory.
 %files sub2-Preset_boards-TM1-System
+
 
 ### TM1-System_Device ###
 %package sub2-Preset_boards-TM1-System_Device
@@ -89,6 +91,8 @@ Packages for Deviced HAL and Feature.
 %posttrans sub2-Preset_boards-TM1-System_Device
 %tizen_feature tizen.org/feature/battery true
 %tizen_feature tizen.org/feature/led true
+%tizen_feature tizen.org/feature/thermistor.ap true
+%tizen_feature tizen.org/feature/thermistor.battery true
 
 ### TM1-Audio ###
 %package sub2-Preset_boards-TM1-Audio
