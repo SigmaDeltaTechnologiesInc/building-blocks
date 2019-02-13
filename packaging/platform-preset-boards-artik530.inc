@@ -87,6 +87,7 @@ If you select 3 partitions, please select system-plugin-device-u3.
 If you don't use initrd partition, please select system-plugin-feature-init_wrapper.
 %files sub2-Preset_boards-ARTIK530-System
 
+
 ### ARTIK530-System_Device ###
 %package sub2-Preset_boards-ARTIK530-System_Device
 Summary:	ARTIK530_Deviced Plugin
@@ -97,6 +98,8 @@ Requires:	device-manager-plugin-artik
 %description sub2-Preset_boards-ARTIK530-System_Device
 Packages for Deviced HAL and Feature.
 %files sub2-Preset_boards-ARTIK530-System_Device
+%posttrans sub2-Preset_boards-ARTIK530-System_Device
+%tizen_feature tizen.org/feature/thermistor.ap true
 
 
 ### ARTIK530-Audio ###

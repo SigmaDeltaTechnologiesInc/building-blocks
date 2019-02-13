@@ -84,6 +84,7 @@ If you select 3 partitions, please select system-plugin-u3.
 If you don't use initrd partition, please select system-plugin-init_wrapper.
 %files sub2-Preset_boards-TM2-System
 
+
 ### TM2-System_Device ###
 %package sub2-Preset_boards-TM2-System_Device
 Summary:	TM2_Deviced Plugin
@@ -97,6 +98,8 @@ Packages for Deviced HAL and Feature.
 %tizen_feature tizen.org/feature/battery true
 %tizen_feature tizen.org/feature/led true
 %tizen_feature tizen.org/feature/consumer_ir true
+%tizen_feature tizen.org/feature/thermistor.ap true
+%tizen_feature tizen.org/feature/thermistor.battery true
 
 ### TM2-Audio ###
 %package sub2-Preset_boards-TM2-Audio

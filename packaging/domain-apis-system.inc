@@ -103,7 +103,7 @@ capi-system-runtime-info provides the current system state.<br>
 To get the process information, you need to add one of these resource manager features below;<br>
   * Tizen Resource Manager - Full Featured<br>
   * Tizen Resource Manager - For Headless Devices<br>
-  * Tizen Resource Manager - Light-Weight   
+  * Tizen Resource Manager - Light-Weight
 %files sub2-domain_API-System-Runtime_Information
 
 %package sub2-domain_API-System-Sensor_Listener

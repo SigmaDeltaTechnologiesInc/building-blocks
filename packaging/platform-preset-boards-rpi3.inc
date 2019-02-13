@@ -83,6 +83,7 @@ Requires:	model-config-default
 Packages for System HAL and Feature. They are mandatory.
 %files sub2-Preset_boards-RPI3-System
 
+
 ### RPI3-System_Device ###
 %package sub2-Preset_boards-RPI3-System_Device
 Summary:	RPI3_Deviced Plugin
@@ -93,6 +94,8 @@ Requires:	device-manager-plugin-rpi3
 %description sub2-Preset_boards-RPI3-System_Device
 Packages for Deviced HAL and Feature.
 %files sub2-Preset_boards-RPI3-System_Device
+%posttrans sub2-Preset_boards-RPI3-System_Device
+%tizen_feature tizen.org/feature/thermistor.ap true
 
 
 ### RPI3-Audio ###
