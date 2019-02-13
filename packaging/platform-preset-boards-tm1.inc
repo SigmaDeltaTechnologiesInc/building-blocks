@@ -62,6 +62,8 @@ Firstly select HALs and Feature to add to your image.
 %tizen_feature tizen.org/feature/sensor.proximity true
 %tizen_feature tizen.org/feature/sensor.temperature false
 %tizen_feature tizen.org/feature/storage.external true
+%tizen_feature tizen.org/feature/accessibility.grayscale false
+%tizen_feature tizen.org/feature/accessibility.negativee false
 
 ### TM1-System ###
 %package sub2-Preset_boards-TM1-System

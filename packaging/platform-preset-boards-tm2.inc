@@ -68,6 +68,8 @@ Firstly select HALs and Feature to add to your image.
 %tizen_feature tizen.org/feature/peripheral_io.pwm true
 %tizen_feature tizen.org/feature/peripheral_io.spi true
 %tizen_feature tizen.org/feature/peripheral_io.uart true
+%tizen_feature tizen.org/feature/accessibility.grayscale false
+%tizen_feature tizen.org/feature/accessibility.negativee false
 %tizen_feature tizen.org/system/model_name tm2
 
 ### TM2-System ###
