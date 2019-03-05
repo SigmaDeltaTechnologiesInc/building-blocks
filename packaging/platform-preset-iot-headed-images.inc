@@ -7,6 +7,7 @@
 %package root-Preset_img_headed
 Summary:    IOT Headed Images
 Suggests:   %{name}-sub1-Preset_img_headed-artik530
+Suggests:   %{name}-sub1-Preset_img_headed-sdta7d
 Suggests:   %{name}-sub1-Preset_img_headed-rpi3
 
 %description root-Preset_img_headed
@@ -151,3 +152,72 @@ Conflicts:  %{name}-sub1-Preset_img_headless-rpi3
 %description sub1-Preset_img_headed-rpi3
 The packages of Tizen IoT Headed for RPI3.
 %files sub1-Preset_img_headed-rpi3
+
+#############################
+### IOT Headed SDTA7D ###
+#############################
+%package sub1-Preset_img_headed-sdta7d
+Summary:    IOT Headed SDTA7D Image
+Requires:   %{name}-root-Preset_iot_headed
+## BSP
+Requires:	%{name}-sub1-Preset_boards-SDTA7D
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-Audio
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-Audio_Recording
+Requires:	alsa-utils
+Requires:	capi-media-player-display
+Requires:	gstreamer-utils
+Requires:	pulseaudio-utils
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-BLE
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-Bluetooth
+Requires:	bluetooth-frwk-plugin-headed
+Requires:	bluetooth-share
+Requires:	org.tizen.bt-syspopup
+Requires:	org.tizen.bt-syspopup-profile_common
+Requires:	capi-network-bluetooth-test
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-Camera
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-Codec
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-DALi
+Requires:	dali-toolkit-resources_720x1280
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-Display
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-EFL
+Requires:	download-fonts-service
+Requires:	elementary-tools
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-IM
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-Sensor
+Requires:	sensord-profile_common
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-System
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-System_Device
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-WifiDirect
+## Partition
+Requires:	%{name}-sub1-Preset_partition-3parts_ramdisk_recovery
+## Feature
+Requires:	%{name}-sub1-domain_Feature-Smartthings_App
+Requires:	%{name}-sub1-domain_Feature-BootAni
+Requires:	%{name}-sub1-domain_Feature-DotNET
+Requires:	dali-csharp-binder
+Requires:	%{name}-sub1-domain_Feature-Starter
+Requires:	%{name}-sub1-domain_Feature-Upgrade
+Requires:	%{name}-sub1-domain_Feature-WebAPI
+Requires:	%{name}-sub1-domain_Feature-Setup
+## building-blocks-sub1-domain_Feature-Tool_And_Locale
+Requires:	crash-worker
+Requires:	glibc-locale
+Requires:	memps
+Requires:	psmisc
+Requires:	tizen-debug
+Requires:	tizen-locale
+## Applications
+## building-blocks-sub1-feature_App-IoT_Headed_Ref
+Requires:	org.tizen.setting-profile_common
+Requires:	ug-bluetooth-efl
+Requires:	wifi-efl-ug
+
+Conflicts:	%{name}-sub1-Preset_img_headed-rpi3
+Conflicts:	%{name}-sub1-Preset_img_headed-artik530
+Conflicts:  %{name}-sub1-Preset_img_headless-artik530
+Conflicts:  %{name}-sub1-Preset_img_headless-sdta7d
+Conflicts:  %{name}-sub1-Preset_img_headless-rpi3
+
+%description sub1-Preset_img_headed-sdta7d
+The packages of Tizen IoT Headed for SDTA7D.
+%files sub1-Preset_img_headed-sdta7d

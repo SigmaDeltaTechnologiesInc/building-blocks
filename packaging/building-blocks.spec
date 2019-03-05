@@ -57,6 +57,7 @@ Source3801:	platform-preset-boards-tm1.inc
 Source3802:	platform-preset-boards-rpi3.inc
 Source3803:	platform-preset-boards-artik530.inc
 Source3804:	platform-preset-boards-tm2.inc
+Source3805:	platform-preset-boards-sdta7d.inc
 
 # To get .ks files
 BuildRequires:	image-configurations
@@ -344,3 +345,4 @@ python ./rule_checker.py
 %{include_if_mainbuild %{SOURCE3802}}
 %{include_if_mainbuild %{SOURCE3803}}
 %{include_if_mainbuild %{SOURCE3804}}
+%{include_if_mainbuild %{SOURCE3805}}

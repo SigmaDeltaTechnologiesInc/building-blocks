@@ -30,6 +30,7 @@ Suggests:	%{name}-sub2-Preset_boards-TM1-IM
 Conflicts:	%{name}-sub1-Preset_boards-RPI3
 Conflicts:	%{name}-sub1-Preset_boards-TM2
 Conflicts:	%{name}-sub1-Preset_boards-ARTIK530
+Conflicts:	%{name}-sub1-Preset_boards-SDTA7D
 
 %description sub1-Preset_boards-TM1
 Firstly select HALs and Feature to add to your image.

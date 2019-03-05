@@ -8,6 +8,7 @@
 Summary:    IOT Headless Images
 Suggests:	%{name}-sub1-Preset_img_headless-rpi3
 Suggests:   %{name}-sub1-Preset_img_headless-artik530
+Suggests:   %{name}-sub1-Preset_img_headless-sdta7d
 
 %description root-Preset_img_headless
 __EXPAND__: preset
@@ -79,4 +80,38 @@ Conflicts:	%{name}-sub1-Preset_img_headless-artik530
 The packages of Tizen IoT Headless for RPI3.
 %files sub1-Preset_img_headless-rpi3
 
+
+#############################
+### IOT Headless SDTA7D ###
+#############################
+%package sub1-Preset_img_headless-sdta7d
+Summary:    IOT Headless SDTA7D Image
+Requires:   %{name}-root-Preset_iot_core
+Requires:	%{name}-sub1-Preset_boards-SDTA7D
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-Audio
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-Bluetooth
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-BLE
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-Display_Headless
+Requires:	%{name}-sub2-Preset_boards-SDTA7D-Wifi
+Requires:	%{name}-sub1-Preset_partition-2parts_ramdisk_recovery
+Requires:	%{name}-sub2-domain_API-AppFramework-TPK_Installation
+Requires:	%{name}-sub2-domain_API-Base-Utils
+Requires:	%{name}-sub2-domain_API-Multimedia-Player
+Requires:	%{name}-sub2-domain_API-Network-Bluetooth_Media_Audio
+Requires:	%{name}-sub2-domain_API-Network-Curl
+Requires:   %{name}-sub1-domain_Feature-Smartthings_App
+Requires:	%{name}-sub1-domain_Feature-Setup
+Requires:	tar
+Requires:       system-plugin-config-env-headless
+Requires:       bluez-plugin-headless
+
+Conflicts:	%{name}-sub1-Preset_img_headed-rpi3
+Conflicts:	%{name}-sub1-Preset_img_headed-artik530
+Conflicts:	%{name}-sub1-Preset_img_headed-sdta7d
+Conflicts:	%{name}-sub1-Preset_img_headless-rpi3
+Conflicts:	%{name}-sub1-Preset_img_headless-artik530
+
+%description sub1-Preset_img_headless-sdta7d
+The packages of Tizen IoT Headless for SDTA7D.
+%files sub1-Preset_img_headless-sdta7d
 

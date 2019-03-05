@@ -5,6 +5,7 @@
 Summary:	Board (Hardware Set) Support Packages (BSP) Presets
 %ifarch armv7l
 Suggests:	%{name}-sub1-Preset_boards-ARTIK530
+Suggests:	%{name}-sub1-Preset_boards-SDTA7D
 Suggests:	%{name}-sub1-Preset_boards-RPI3
 Suggests:	%{name}-sub1-Preset_boards-TM1
 Suggests:	%{name}-sub1-Preset_boards-TM2
