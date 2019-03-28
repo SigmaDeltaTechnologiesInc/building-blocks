@@ -52,6 +52,7 @@ Firstly select HALs and Feature to add to your image.
 %tizen_feature tizen.org/feature/profile common
 %tizen_feature tizen.org/feature/location.batch false
 %tizen_feature tizen.org/feature/network.ethernet true
+%tizen_feature tizen.org/feature/network.tethering false
 %tizen_feature tizen.org/feature/network.wifi.tdls false
 %tizen_feature tizen.org/feature/screen.auto_rotation false
 %tizen_feature tizen.org/feature/screen.height 1280
@@ -302,7 +303,7 @@ Summary:	SDTA7D_Bluetooth
 Requires:	%{name}-sub2-domain_API-Network-Bluetooth_BREDR
 Requires:	bluetooth-frwk-profile_common
 Requires:	bluetooth-tools-profile_common
-Requires:	bluetooth-firmware-bcm
+Requires:	bluetooth-firmware-bcm-sdta7d
 Requires:	bluez-profile_common
 Suggests:	bluez-extension-bredr
 Suggests:	bluetooth-frwk-plugin-headed
