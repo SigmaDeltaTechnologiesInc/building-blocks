@@ -219,8 +219,8 @@ Packages of Camera HAL and Feature for SDTA7D(Headless).
 Summary:	SDTA7D_Display
 Requires:	%{name}-sub2-domain_API-UI-Display_Server
 Requires:	e-tizen-data-profile_common
-Requires:	libtbm-nexell
-Requires:	libtdm-nexell
+Requires:	libtbm-vc4
+Requires:	libtdm-vc4
 Requires:	coregl
 Requires:	gst-plugins-bad
 
@@ -245,7 +245,7 @@ Packages of Display HAL and Feature for SDTA7D.
 %package sub2-Preset_boards-SDTA7D-Display_Headless
 Summary:	SDTA7D_Display(Headless)
 Requires:	%{name}-sub2-domain_API-UI-Display_Server_Headless
-Requires:	libtbm-nexell
+Requires:	libtbm-vc4
 
 Conflicts:	%{name}-sub2-Preset_boards-SDTA7D-Display
 
